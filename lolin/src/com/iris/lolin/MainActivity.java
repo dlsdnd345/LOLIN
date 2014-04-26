@@ -35,7 +35,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 		final ActionBar actionBar = getSupportActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-		actionBar.setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));   
+		actionBar.setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));  
 		
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the activity.
