@@ -54,5 +54,19 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		}
 		return null;
 	}
+	
+	public int getPageIcon(int position) {
+		
+		//탭바 icon 지정
+		switch (position) {
+		case 0:
+			return R.drawable.ic_launcher;
+		case 1:
+			return R.drawable.ic_launcher;
+		case 2:
+			return R.drawable.ic_launcher;
+		}
+		return 0;
+	}
 }
 

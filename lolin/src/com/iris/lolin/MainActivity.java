@@ -1,18 +1,12 @@
 package com.iris.lolin;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.iris.adapter.SectionsPagerAdapter;
 
@@ -41,6 +35,8 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 		final ActionBar actionBar = getSupportActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
+		actionBar.setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));   
+		
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the activity.
 		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), getApplicationContext());
@@ -67,7 +63,8 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 			// the TabListener interface, as the callback (listener) for when
 			// this tab is selected.
 			actionBar.addTab(actionBar.newTab()
-					.setText(mSectionsPagerAdapter.getPageTitle(i))
+					//.setText(mSectionsPagerAdapter.getPageTitle(i))
+					.setIcon(mSectionsPagerAdapter.getPageIcon(i))
 					.setTabListener(this));
 		}
 	}
