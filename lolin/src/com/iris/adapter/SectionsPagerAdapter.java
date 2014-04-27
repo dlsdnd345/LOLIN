@@ -1,5 +1,6 @@
 package com.iris.adapter;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 import android.content.Context;
@@ -7,7 +8,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.iris.fragment.PlaceholderFragment;
+import com.iris.entities.Board;
+import com.iris.fragment.BoardFragment;
+import com.iris.fragment.WriteTextFragment;
 import com.iris.lolin.R;
 
 /**
@@ -16,13 +19,19 @@ import com.iris.lolin.R;
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-	private Context context;
-	private PlaceholderFragment placeholderFragment;
+	private static final int BOARD_FRAGMENT = 0;
 	
-	public SectionsPagerAdapter(FragmentManager fm ,Context context) {
+	private Context context;
+	private ArrayList<Board> boardList;
+	private BoardFragment boardFragment;
+	private WriteTextFragment writeTextFragment;
+	
+	public SectionsPagerAdapter(FragmentManager fm ,Context context , ArrayList<Board> boardList) {
 		super(fm);
 		this.context = context;
-		placeholderFragment = new PlaceholderFragment();
+		this.boardList = boardList;
+		boardFragment = new BoardFragment();
+		writeTextFragment = new WriteTextFragment();
 	}
 
 	@Override
@@ -30,13 +39,17 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		// getItem is called to instantiate the fragment for the given page.
 		// Return a PlaceholderFragment (defined as a static inner class
 		// below).
-		return placeholderFragment.newInstance(position + 1);
+		
+		if(position == BOARD_FRAGMENT){
+			return boardFragment.newInstance(boardList);
+		}else{
+			return writeTextFragment.newInstance();
+		}
 	}
 
 	@Override
 	public int getCount() {
-		// Show 3 total pages.
-		return 3;
+		return 2;
 	}
 
 	@Override
@@ -49,8 +62,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 			return context.getString(R.string.title_section1).toUpperCase(l);
 		case 1:
 			return context.getString(R.string.title_section2).toUpperCase(l);
-		case 2:
-			return context.getString(R.string.title_section3).toUpperCase(l);
 		}
 		return null;
 	}
@@ -62,8 +73,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		case 0:
 			return R.drawable.ic_launcher;
 		case 1:
-			return R.drawable.ic_launcher;
-		case 2:
 			return R.drawable.ic_launcher;
 		}
 		return 0;

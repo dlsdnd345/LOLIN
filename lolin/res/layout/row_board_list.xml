@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/img_rank"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/img_rank_challenger" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_rank"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/img_rank"
+        android:text="듀오 하실분 모십니다." />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_title"
+        android:layout_below="@+id/txt_title"
+        android:layout_marginTop="5dp"
+        android:textSize="10sp"
+        android:text="소환사 : " />
+
+    <TextView
+        android:id="@+id/txt_summonerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/TextView01"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/TextView01"
+        android:textSize="10sp"
+        android:text="SK T1 Faker" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView01"
+        android:layout_below="@+id/TextView01"
+        android:layout_marginTop="5dp"
+        android:text="포지션 : "
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/txt_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView02"
+        android:layout_alignBottom="@+id/TextView02"
+        android:layout_alignLeft="@+id/txt_summonerName"
+        android:text="미드"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView02"
+        android:layout_below="@+id/TextView02"
+        android:text="내용 : "
+        android:layout_marginTop="5dp"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView03"
+        android:layout_alignBottom="@+id/TextView03"
+        android:layout_alignLeft="@+id/txt_position"
+        android:text="서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다."
+        android:textSize="10sp" />
+
+</RelativeLayout>

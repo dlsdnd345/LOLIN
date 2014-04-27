@@ -1,5 +1,7 @@
 package com.iris.lolin;
 
+import java.util.ArrayList;
+
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -9,37 +11,41 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 
 import com.iris.adapter.SectionsPagerAdapter;
+import com.iris.entities.Board;
 
 public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
 
-	/**
-	 * The {@link android.support.v4.view.PagerAdapter} that will provide
-	 * fragments for each of the sections. We use a {@link FragmentPagerAdapter}
-	 * derivative, which will keep every loaded fragment in memory. If this
-	 * becomes too memory intensive, it may be best to switch to a
-	 * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-	 */
-	SectionsPagerAdapter mSectionsPagerAdapter;
-
-	/**
-	 * The {@link ViewPager} that will host the section contents.
-	 */
-	ViewPager mViewPager;
+	private Board board;
+	private ViewPager mViewPager;
+	private ArrayList<Board> boardList; 
+	private SectionsPagerAdapter mSectionsPagerAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		boardList = new ArrayList<Board>();
+
+		board = new Board();
+		board.setRank("실버");
+		board.setPosition("미드");
+		board.setTitle("듀오 하실분 모십니다.");
+		board.setSummonerName("SK T1 Faker");
+		board.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
+		boardList.add(board);boardList.add(board);boardList.add(board);
+		boardList.add(board);boardList.add(board);boardList.add(board);
+		boardList.add(board);boardList.add(board);boardList.add(board);
+		boardList.add(board);boardList.add(board);boardList.add(board);
+		
 		// Set up the action bar.
 		final ActionBar actionBar = getSupportActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-
 		actionBar.setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));  
 		
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the activity.
-		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), getApplicationContext());
+		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), getApplicationContext(),boardList);
 
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
