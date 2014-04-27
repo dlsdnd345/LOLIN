@@ -48,9 +48,6 @@ public class BoardAdapter extends BaseAdapter{
 			convertView = Inflater.inflate(layout, parent,false);
 		}
 
-		//		ImageView image = (ImageView)convertView.findViewById(R.id.image); //아이템 가져와 이미지 뷰에 넣음
-		//		image.setImageResource(boardList.get(position).image);
-
 		TextView txtTitle = (TextView)convertView.findViewById(R.id.txt_title);
 		txtTitle.setText(boardList.get(position).getTitle());
 
