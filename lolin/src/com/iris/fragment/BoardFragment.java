@@ -43,7 +43,7 @@ public class BoardFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.board_fragment_main, container,false);
+		View rootView = inflater.inflate(R.layout.fragment_board, container,false);
 
 		ArrayList<Board> boardList = (ArrayList<Board>)getArguments().get("boardList");
 

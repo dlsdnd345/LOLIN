@@ -17,6 +17,8 @@ import android.util.TypedValue;
 import com.astuetz.PagerSlidingTabStrip;
 import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.entities.Board;
+
+@SuppressLint("NewApi")
 public class MainActivity extends FragmentActivity  {
 
 	private Board board;
@@ -33,7 +35,7 @@ public class MainActivity extends FragmentActivity  {
 		init();
 		dataInit();
 		viewPagerConfig();
-		
+		getActionBar().setDisplayShowHomeEnabled(false);
 	}
 
 	private void viewPagerConfig() {

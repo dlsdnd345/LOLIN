@@ -27,7 +27,7 @@ public class SettingFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.write_text_fragment_main, container,
+		View rootView = inflater.inflate(R.layout.fragment_setting, container,
 				false);
 		TextView textView = (TextView) rootView.findViewById(R.id.section_label);
 		textView.setText("설정");
