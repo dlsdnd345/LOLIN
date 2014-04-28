@@ -2,9 +2,10 @@
 <resources>
 
     <string name="app_name">lolin</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">게시판</string>
+    <string name="title_section2">전적 검색</string>
+    <string name="title_section3">내가 쓴글</string>
+    <string name="title_section4">설정</string>
     <string name="action_settings">Settings</string>
 
 </resources>

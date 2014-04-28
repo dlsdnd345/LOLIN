@@ -2,24 +2,29 @@ package com.iris.lolin;
 
 import java.util.ArrayList;
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
+import android.os.Handler;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.util.TypedValue;
 
+import com.astuetz.PagerSlidingTabStrip;
 import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.entities.Board;
-
-public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
+public class MainActivity extends FragmentActivity  {
 
 	private Board board;
 	private ViewPager mViewPager;
+	private PagerSlidingTabStrip tabs;
 	private ArrayList<Board> boardList; 
 	private SectionsPagerAdapter mSectionsPagerAdapter;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,37 +33,27 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 		init();
 		dataInit();
 		viewPagerConfig();
+		
 	}
 
 	private void viewPagerConfig() {
-		final ActionBar actionBar = actionBarConfig();  
 		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), getApplicationContext(),boardList);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
-		mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
-			@Override
-			public void onPageSelected(int position) {
-				actionBar.setSelectedNavigationItem(position);
-			}
-		});
-
-		for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
-			actionBar.addTab(actionBar.newTab()
-					//.setText(mSectionsPagerAdapter.getPageTitle(i))
-					.setIcon(mSectionsPagerAdapter.getPageIcon(i))
-					.setTabListener(this));
-		}
+		
+		final int pageMargin = (int) TypedValue.applyDimension
+				(TypedValue.COMPLEX_UNIT_DIP, 4, getResources().getDisplayMetrics());
+		mViewPager.setPageMargin(pageMargin);
+		
+		tabs.setIndicatorColor(Color.parseColor("#0099cc"));
+		tabs.setViewPager(mViewPager);
+		
 	}
 
 	private void init() {
 		mViewPager = (ViewPager) findViewById(R.id.pager);
+		tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 	}
 
-	private ActionBar actionBarConfig() {
-		final ActionBar actionBar = getSupportActionBar();
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-		actionBar.setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
-		return actionBar;
-	}
 
 	private void dataInit() {
 		boardList = new ArrayList<Board>();
@@ -72,22 +67,6 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 		boardList.add(board);boardList.add(board);boardList.add(board);
 		boardList.add(board);boardList.add(board);boardList.add(board);
 		boardList.add(board);boardList.add(board);boardList.add(board);
-	}
-
-	@Override
-	public void onTabSelected(ActionBar.Tab tab,
-			FragmentTransaction fragmentTransaction) {
-		mViewPager.setCurrentItem(tab.getPosition());
-	}
-
-	@Override
-	public void onTabUnselected(ActionBar.Tab tab,
-			FragmentTransaction fragmentTransaction) {
-	}
-
-	@Override
-	public void onTabReselected(ActionBar.Tab tab,
-			FragmentTransaction fragmentTransaction) {
 	}
 
 }
