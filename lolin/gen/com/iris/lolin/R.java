@@ -1382,46 +1382,48 @@ containing a value of this type.
         public static final int cab_background_top_actionbarstyle=0x7f020064;
         public static final int default_ptr_flip=0x7f020065;
         public static final int default_ptr_rotate=0x7f020066;
-        public static final int ic_launcher=0x7f020067;
-        public static final int img_rank_challenger=0x7f020068;
-        public static final int indicator_arrow=0x7f020069;
-        public static final int indicator_bg_bottom=0x7f02006a;
-        public static final int indicator_bg_top=0x7f02006b;
-        public static final int list_focused_actionbarstyle=0x7f02006c;
-        public static final int list_pressed_actionbarstyle=0x7f02006d;
-        public static final int menu_dropdown_panel_actionbarstyle=0x7f02006e;
-        public static final int progress_bg_actionbarstyle=0x7f02006f;
-        public static final int progress_bg_holo_light=0x7f020070;
-        public static final int progress_horizontal_actionbarstyle=0x7f020071;
-        public static final int progress_horizontal_holo_light=0x7f020072;
-        public static final int progress_horizontal_holo_light_right=0x7f020073;
-        public static final int progress_indeterminate_horizontal_holo=0x7f020074;
-        public static final int progress_primary_actionbarstyle=0x7f020075;
-        public static final int progress_primary_holo_light=0x7f020076;
-        public static final int progress_secondary_actionbarstyle=0x7f020077;
-        public static final int progress_secondary_holo_light=0x7f020078;
-        public static final int progressbar_indeterminate_holo1=0x7f020079;
-        public static final int progressbar_indeterminate_holo2=0x7f02007a;
-        public static final int progressbar_indeterminate_holo3=0x7f02007b;
-        public static final int progressbar_indeterminate_holo4=0x7f02007c;
-        public static final int progressbar_indeterminate_holo5=0x7f02007d;
-        public static final int progressbar_indeterminate_holo6=0x7f02007e;
-        public static final int progressbar_indeterminate_holo7=0x7f02007f;
-        public static final int progressbar_indeterminate_holo8=0x7f020080;
-        public static final int selectable_background_actionbarstyle=0x7f020081;
-        public static final int spinner_ab_default_actionbarstyle=0x7f020082;
-        public static final int spinner_ab_disabled_actionbarstyle=0x7f020083;
-        public static final int spinner_ab_focused_actionbarstyle=0x7f020084;
-        public static final int spinner_ab_pressed_actionbarstyle=0x7f020085;
-        public static final int spinner_background_ab_actionbarstyle=0x7f020086;
-        public static final int tab_indicator_ab_actionbarstyle=0x7f020087;
-        public static final int tab_selected_actionbarstyle=0x7f020088;
-        public static final int tab_selected_focused_actionbarstyle=0x7f020089;
-        public static final int tab_selected_pressed_actionbarstyle=0x7f02008a;
-        public static final int tab_unselected_actionbarstyle=0x7f02008b;
-        public static final int tab_unselected_focused_actionbarstyle=0x7f02008c;
-        public static final int tab_unselected_pressed_actionbarstyle=0x7f02008d;
-        public static final int tabs_pattern=0x7f02008e;
+        public static final int ic_action_new=0x7f020067;
+        public static final int ic_action_sort_by_size=0x7f020068;
+        public static final int ic_launcher=0x7f020069;
+        public static final int img_rank_challenger=0x7f02006a;
+        public static final int indicator_arrow=0x7f02006b;
+        public static final int indicator_bg_bottom=0x7f02006c;
+        public static final int indicator_bg_top=0x7f02006d;
+        public static final int list_focused_actionbarstyle=0x7f02006e;
+        public static final int list_pressed_actionbarstyle=0x7f02006f;
+        public static final int menu_dropdown_panel_actionbarstyle=0x7f020070;
+        public static final int progress_bg_actionbarstyle=0x7f020071;
+        public static final int progress_bg_holo_light=0x7f020072;
+        public static final int progress_horizontal_actionbarstyle=0x7f020073;
+        public static final int progress_horizontal_holo_light=0x7f020074;
+        public static final int progress_horizontal_holo_light_right=0x7f020075;
+        public static final int progress_indeterminate_horizontal_holo=0x7f020076;
+        public static final int progress_primary_actionbarstyle=0x7f020077;
+        public static final int progress_primary_holo_light=0x7f020078;
+        public static final int progress_secondary_actionbarstyle=0x7f020079;
+        public static final int progress_secondary_holo_light=0x7f02007a;
+        public static final int progressbar_indeterminate_holo1=0x7f02007b;
+        public static final int progressbar_indeterminate_holo2=0x7f02007c;
+        public static final int progressbar_indeterminate_holo3=0x7f02007d;
+        public static final int progressbar_indeterminate_holo4=0x7f02007e;
+        public static final int progressbar_indeterminate_holo5=0x7f02007f;
+        public static final int progressbar_indeterminate_holo6=0x7f020080;
+        public static final int progressbar_indeterminate_holo7=0x7f020081;
+        public static final int progressbar_indeterminate_holo8=0x7f020082;
+        public static final int selectable_background_actionbarstyle=0x7f020083;
+        public static final int spinner_ab_default_actionbarstyle=0x7f020084;
+        public static final int spinner_ab_disabled_actionbarstyle=0x7f020085;
+        public static final int spinner_ab_focused_actionbarstyle=0x7f020086;
+        public static final int spinner_ab_pressed_actionbarstyle=0x7f020087;
+        public static final int spinner_background_ab_actionbarstyle=0x7f020088;
+        public static final int tab_indicator_ab_actionbarstyle=0x7f020089;
+        public static final int tab_selected_actionbarstyle=0x7f02008a;
+        public static final int tab_selected_focused_actionbarstyle=0x7f02008b;
+        public static final int tab_selected_pressed_actionbarstyle=0x7f02008c;
+        public static final int tab_unselected_actionbarstyle=0x7f02008d;
+        public static final int tab_unselected_focused_actionbarstyle=0x7f02008e;
+        public static final int tab_unselected_pressed_actionbarstyle=0x7f02008f;
+        public static final int tabs_pattern=0x7f020090;
     }
     public static final class id {
         public static final int TextView01=0x7f070058;
@@ -1439,7 +1441,6 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f070021;
         public static final int action_menu_presenter=0x7f070022;
         public static final int action_mode_close_button=0x7f07002f;
-        public static final int action_settings=0x7f07005e;
         public static final int activity_chooser_view_content=0x7f070030;
         public static final int always=0x7f070016;
         public static final int beginning=0x7f07001c;
@@ -1461,6 +1462,8 @@ containing a value of this type.
         public static final int gridview=0x7f070008;
         public static final int home=0x7f07001f;
         public static final int homeAsUp=0x7f070010;
+        public static final int ic_action_new=0x7f07005f;
+        public static final int ic_action_sort_by_size=0x7f07005e;
         public static final int icon=0x7f070035;
         public static final int ifRoom=0x7f070015;
         public static final int image=0x7f070032;
@@ -1474,13 +1477,13 @@ containing a value of this type.
         public static final int none=0x7f07001b;
         public static final int normal=0x7f07000b;
         public static final int pager=0x7f070048;
-        public static final int progressBar=0x7f07004a;
         public static final int progress_circular=0x7f070023;
         public static final int progress_horizontal=0x7f070024;
         public static final int pullDownFromTop=0x7f070006;
         public static final int pullFromEnd=0x7f070002;
         public static final int pullFromStart=0x7f070001;
         public static final int pullUpFromBottom=0x7f070007;
+        public static final int pull_refresh_webview=0x7f07004a;
         public static final int pull_to_refresh_image=0x7f070050;
         public static final int pull_to_refresh_progress=0x7f070051;
         public static final int pull_to_refresh_sub_text=0x7f07004e;
@@ -1584,6 +1587,7 @@ containing a value of this type.
     }
     public static final class menu {
         public static final int main=0x7f0d0000;
+        public static final int write_text_menu=0x7f0d0001;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1626,8 +1630,12 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f090011;
-        public static final int action_settings=0x7f090018;
+        public static final int action_settings=0x7f090014;
         public static final int app_name=0x7f090013;
+        /**  Actionbar title Value 
+         */
+        public static final int ic_action_new=0x7f090019;
+        public static final int ic_action_sort_by_size=0x7f09001a;
         /**  Just use standard Pull Down String when pulling up. These can be set for languages which require it 
  Just use standard Pull Down String when pulling up. These can be set for languages which require it 
          */
@@ -1637,10 +1645,12 @@ containing a value of this type.
         public static final int pull_to_refresh_pull_label=0x7f090000;
         public static final int pull_to_refresh_refreshing_label=0x7f090002;
         public static final int pull_to_refresh_release_label=0x7f090001;
-        public static final int title_section1=0x7f090014;
-        public static final int title_section2=0x7f090015;
-        public static final int title_section3=0x7f090016;
-        public static final int title_section4=0x7f090017;
+        /**  ActionBar sevtion & Actionbar title 
+         */
+        public static final int title_section1=0x7f090015;
+        public static final int title_section2=0x7f090016;
+        public static final int title_section3=0x7f090017;
+        public static final int title_section4=0x7f090018;
     }
     public static final class style {
         public static final int ActionBar_Solid_Actionbarstyle=0x7f0c0086;

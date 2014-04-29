@@ -1,5 +1,6 @@
 package com.iris.fragment;
 
+import com.handmark.pulltorefresh.library.PullToRefreshWebView;
 import com.iris.lolin.R;
 
 import android.annotation.SuppressLint;
@@ -23,7 +24,7 @@ import android.widget.TextView;
 @SuppressLint("NewApi")
 public class RecordSearchFragment extends Fragment {
 
-	private ProgressBar progressBar;
+	private PullToRefreshWebView mPullRefreshWebView;
 	
 	public Fragment newInstance() {
 		RecordSearchFragment fragment = new RecordSearchFragment();
@@ -37,29 +38,24 @@ public class RecordSearchFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment_record_search, container,
-				false);
+		View rootView = inflater.inflate(R.layout.fragment_record_search, container,false);
 
-		WebView WebView = (WebView) rootView.findViewById(R.id.webview);
-		progressBar = (ProgressBar)rootView.findViewById(R.id.progressBar);
-		WebView.getSettings().setJavaScriptEnabled(true); 
-		WebView.loadUrl("http://www.op.gg/summoner/userName=dlsdnd345");
-		WebView.setWebChromeClient(new webViewChrome());  
+		mPullRefreshWebView = (PullToRefreshWebView)rootView.findViewById(R.id.pull_refresh_webview);
+		WebView webView = mPullRefreshWebView.getRefreshableView();
+		
+		webView.getSettings().setJavaScriptEnabled(true); 
+		webView.loadUrl("http://www.op.gg/summoner/userName=dlsdnd345");
+		webView.setWebViewClient(new BasicWebViewClient());  
 
 		return rootView;
 	}
 	
-	class webViewChrome extends WebChromeClient {
+	private class BasicWebViewClient extends WebViewClient {
 		
 		@Override
-		public void onProgressChanged(WebView view, int newProgress) {
-			//현제 페이지 진행사항을 ProgressBar를 통해 알린다.
-			if(newProgress < 100) {
-				progressBar.setProgress(newProgress);
-			} else {
-				progressBar.setVisibility(View.INVISIBLE);
-				progressBar.setLayoutParams(new LinearLayout.LayoutParams(0, 0));
-			}
+		public boolean shouldOverrideUrlLoading(WebView view, String url) {
+			view.loadUrl(url);
+			return true;
 		}
 	}
 	

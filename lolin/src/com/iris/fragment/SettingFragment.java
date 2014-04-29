@@ -16,6 +16,7 @@ import android.widget.TextView;
 @SuppressLint("NewApi")
 public class SettingFragment extends Fragment {
 
+	
 	public Fragment newInstance() {
 		SettingFragment fragment = new SettingFragment();
 		return fragment;
@@ -27,8 +28,8 @@ public class SettingFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment_setting, container,
-				false);
+		View rootView = inflater.inflate(R.layout.fragment_setting, container,false);
+		
 		TextView textView = (TextView) rootView.findViewById(R.id.section_label);
 		textView.setText("설정");
 		return rootView;
