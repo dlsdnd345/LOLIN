@@ -16,13 +16,12 @@ import android.view.MenuItem;
 import com.astuetz.PagerSlidingTabStrip;
 import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.entities.Board;
-import com.iris.lolin.R;
 
 @SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity  {
 
-	private final static int RECORD_SEARCH = 1;
-	private final static int WRITE_TEXT = 2;
+	private final static int RECORD_SEARCH = 2;
+	private final static int WRITE_TEXT = 1;
 	private final static int SETTING = 3;
 	
 	private int viewPagerPosition;
@@ -60,10 +59,10 @@ public class MainActivity extends ActionBarActivity  {
 	    // Handle presses on the action bar items
 	    switch (item.getItemId()) {
 	        case R.id.ic_action_new:
-	        	
-	        	Intent intent = new Intent(MainActivity.this, ComposerActivity.class);
-	        	startActivity(intent);
-	        	
+	        	Intent composerActivityintent = new Intent(MainActivity.this, ComposerActivity.class);
+	        	startActivity(composerActivityintent);
+	            return true;
+	        case R.id.ic_action_sort_by_size:
 	            return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
@@ -84,10 +83,10 @@ public class MainActivity extends ActionBarActivity  {
 				
 				viewPagerPosition = position;
 				
-				if(position == RECORD_SEARCH){
+				if(position == WRITE_TEXT){
 					getActionBar().setTitle(R.string.title_section2);
 					invalidateOptionsMenu();
-				}else if(position == WRITE_TEXT){
+				}else if(position == RECORD_SEARCH){
 					getActionBar().setTitle(R.string.title_section3);
 					invalidateOptionsMenu();
 				}else if(position == SETTING){

@@ -12,7 +12,7 @@ import com.iris.entities.Board;
 import com.iris.fragment.BoardFragment;
 import com.iris.fragment.RecordSearchFragment;
 import com.iris.fragment.SettingFragment;
-import com.iris.fragment.WriteTextFragment;
+import com.iris.fragment.ComposerFragment;
 import com.iris.lolin.R;
 
 /**
@@ -22,14 +22,14 @@ import com.iris.lolin.R;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
 	private static final int BOARD_FRAGMENT = 0;
-	private static final int RECORD_SEARCH_FRAGMENT = 1;
-	private static final int WRITE_TEXT_FRAGMENT = 2;
+	private static final int RECORD_SEARCH_FRAGMENT = 2;
+	private static final int WRITE_TEXT_FRAGMENT = 1;
 	
 	private Context context;
 	private ArrayList<Board> boardList;
 	private BoardFragment boardFragment;
 	private SettingFragment settingFragment;
-	private WriteTextFragment writeTextFragment;
+	private ComposerFragment writeTextFragment;
 	private RecordSearchFragment recordSearchFragment;
 	
 	public SectionsPagerAdapter(FragmentManager fm ,Context context , ArrayList<Board> boardList) {
@@ -38,7 +38,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		this.boardList = boardList;
 		boardFragment = new BoardFragment();
 		settingFragment = new SettingFragment();
-		writeTextFragment = new WriteTextFragment();
+		writeTextFragment = new ComposerFragment();
 		recordSearchFragment = new RecordSearchFragment();
 	}
 
@@ -50,10 +50,10 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		
 		if(position == BOARD_FRAGMENT){
 			return boardFragment.newInstance(boardList);
-		}else if(position == RECORD_SEARCH_FRAGMENT){
-			return recordSearchFragment.newInstance();
 		}else if(position == WRITE_TEXT_FRAGMENT){
 			return writeTextFragment.newInstance(boardList);
+		}else if(position == RECORD_SEARCH_FRAGMENT){
+			return recordSearchFragment.newInstance();
 		}else{
 			return settingFragment.newInstance();
 		}

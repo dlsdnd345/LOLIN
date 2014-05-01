@@ -8,8 +8,8 @@
 	<!-- ActionBar sevtion & Actionbar title -->    
  
     <string name="title_section1">게시판</string>
-    <string name="title_section2">전적 검색</string>
-    <string name="title_section3">내가 쓴글</string>
+    <string name="title_section2">내가 쓴글</string>
+    <string name="title_section3">전적 검색</string>
     <string name="title_section4">설정</string>
 
     <!-- Actionbar title Value -->    

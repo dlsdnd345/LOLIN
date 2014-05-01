@@ -7,9 +7,12 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.iris.adapter.BoardAdapter;
 import com.iris.entities.Board;
+import com.iris.lolin.BoardDetailActivity;
 import com.iris.lolin.R;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,6 +20,8 @@ import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -51,23 +56,36 @@ public class BoardFragment extends Fragment {
 		boardAdapter = new BoardAdapter(getActivity(), R.layout.row_board_list, boardList);
 		boardListView.setAdapter(boardAdapter);
 		
-		
-		
-		boardListView.setOnRefreshListener(new OnRefreshListener<ListView>() {
-			@Override
-			public void onRefresh(PullToRefreshBase<ListView> refreshView) {
-				String label = DateUtils.formatDateTime(getActivity(), System.currentTimeMillis(),
-						DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_ALL);
-				refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(label);
-				new GetDataTask().execute();
-			}
-		});
-		
+		boardListView.setOnRefreshListener(mOnRefreshListener);
+		boardListView.setOnItemClickListener(mOnItemClickListener);
 		ListView actualListView = boardListView.getRefreshableView();
 		registerForContextMenu(actualListView);
 		
 		return rootView;
 	}
+	
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	OnRefreshListener<ListView> mOnRefreshListener = new OnRefreshListener(){
+
+		@Override
+		public void onRefresh(PullToRefreshBase refreshView) {
+			String label = DateUtils.formatDateTime(getActivity(), System.currentTimeMillis(),
+					DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_ALL);
+			refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(label);
+			new GetDataTask().execute();
+		}
+		
+	};
+	
+	OnItemClickListener mOnItemClickListener = new OnItemClickListener(){
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
+			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
+			startActivity(intent);
+		}
+		
+	};
 	
 	// Pull To Refresh 시 실행되는 Task
 	private class GetDataTask extends AsyncTask<Void, Void, String[]> {
