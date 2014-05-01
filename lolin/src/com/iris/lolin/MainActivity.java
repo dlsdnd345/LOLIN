@@ -3,18 +3,12 @@ package com.iris.lolin;
 import java.util.ArrayList;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.LayerDrawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.ActionBarActivity;
-import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -22,6 +16,7 @@ import android.view.MenuItem;
 import com.astuetz.PagerSlidingTabStrip;
 import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.entities.Board;
+import com.iris.lolin.R;
 
 @SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity  {
@@ -30,7 +25,6 @@ public class MainActivity extends ActionBarActivity  {
 	private final static int WRITE_TEXT = 2;
 	private final static int SETTING = 3;
 	
-	private Board board;
 	private int viewPagerPosition;
 	private ViewPager mViewPager;
 	private PagerSlidingTabStrip tabs;
@@ -66,6 +60,10 @@ public class MainActivity extends ActionBarActivity  {
 	    // Handle presses on the action bar items
 	    switch (item.getItemId()) {
 	        case R.id.ic_action_new:
+	        	
+	        	Intent intent = new Intent(MainActivity.this, ComposerActivity.class);
+	        	startActivity(intent);
+	        	
 	            return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
@@ -73,6 +71,7 @@ public class MainActivity extends ActionBarActivity  {
 	}
 	
 	private void viewPagerConfig() {
+		
 		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), getApplicationContext(),boardList);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 		
@@ -115,16 +114,61 @@ public class MainActivity extends ActionBarActivity  {
 
 	private void dataInit() {
 		boardList = new ArrayList<Board>();
-		board = new Board();
-		board.setRank("실버");
-		board.setPosition("미드");
-		board.setTitle("듀오 하실분 모십니다.");
-		board.setSummonerName("SK T1 Faker");
-		board.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
-		boardList.add(board);boardList.add(board);boardList.add(board);
-		boardList.add(board);boardList.add(board);boardList.add(board);
-		boardList.add(board);boardList.add(board);boardList.add(board);
-		boardList.add(board);boardList.add(board);boardList.add(board);
+		Board board1 = new Board();
+		board1.setRank("unrank");
+		board1.setPosition("미드");
+		board1.setTitle("듀오 하실분 모십니다.");
+		board1.setSummonerName("SK T1 Faker");
+		board1.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
+		boardList.add(board1);
+		
+		Board board2 = new Board();
+		board2.setRank("bronze");
+		board2.setPosition("미드");
+		board2.setTitle("듀오 하실분 모십니다.");
+		board2.setSummonerName("SK T1 Faker");
+		board2.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
+		boardList.add(board2);
+		
+		Board board3 = new Board();
+		board3.setRank("silver");
+		board3.setPosition("미드");
+		board3.setTitle("듀오 하실분 모십니다.");
+		board3.setSummonerName("SK T1 Faker");
+		board3.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
+		boardList.add(board3);
+		
+		Board board4 = new Board();
+		board4.setRank("gold");
+		board4.setPosition("미드");
+		board4.setTitle("듀오 하실분 모십니다.");
+		board4.setSummonerName("SK T1 Faker");
+		board4.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
+		boardList.add(board4);
+		
+		Board board5 = new Board();
+		board5.setRank("platinum");
+		board5.setPosition("미드");
+		board5.setTitle("듀오 하실분 모십니다.");
+		board5.setSummonerName("SK T1 Faker");
+		board5.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
+		boardList.add(board5);
+		
+		Board board6 = new Board();
+		board6.setRank("diamond");
+		board6.setPosition("미드");
+		board6.setTitle("듀오 하실분 모십니다.");
+		board6.setSummonerName("SK T1 Faker");
+		board6.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
+		boardList.add(board6);
+		
+		Board board7 = new Board();
+		board7.setRank("challenger");
+		board7.setPosition("미드");
+		board7.setTitle("듀오 하실분 모십니다.");
+		board7.setSummonerName("SK T1 Faker");
+		board7.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
+		boardList.add(board7);
 		
 		getActionBar().setDisplayShowHomeEnabled(false);
 		getActionBar().setTitle(R.string.title_section1);

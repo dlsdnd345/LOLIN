@@ -51,6 +51,8 @@ public class BoardFragment extends Fragment {
 		boardAdapter = new BoardAdapter(getActivity(), R.layout.row_board_list, boardList);
 		boardListView.setAdapter(boardAdapter);
 		
+		
+		
 		boardListView.setOnRefreshListener(new OnRefreshListener<ListView>() {
 			@Override
 			public void onRefresh(PullToRefreshBase<ListView> refreshView) {
