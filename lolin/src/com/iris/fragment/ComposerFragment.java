@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.iris.adapter.BoardAdapter;
+import com.iris.adapter.ComposerAdapter;
 import com.iris.entities.Board;
 import com.iris.lolin.BoardDetailActivity;
 import com.iris.lolin.R;
@@ -26,7 +27,7 @@ import android.widget.AdapterView.OnItemClickListener;
 @SuppressLint("NewApi")
 public class ComposerFragment extends Fragment {
 
-	private BoardAdapter boardAdapter;
+	private ComposerAdapter composerAdapter;
 	private ListView writeTextListView;
 	
 	public Fragment newInstance(ArrayList<Board> boardList) {
@@ -47,8 +48,8 @@ public class ComposerFragment extends Fragment {
 		ArrayList<Board> boardList = (ArrayList<Board>)getArguments().get("boardList");
 		
 		writeTextListView = (ListView)rootView.findViewById(R.id.list_write_text);
-		boardAdapter = new BoardAdapter(getActivity(), R.layout.row_write_text_list, boardList);
-		writeTextListView.setAdapter(boardAdapter);
+		composerAdapter = new ComposerAdapter(getActivity(), R.layout.row_write_text_list, boardList);
+		writeTextListView.setAdapter(composerAdapter);
 		writeTextListView.setOnItemClickListener(mOnItemClickListener);
 		
 		return rootView;

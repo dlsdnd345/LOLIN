@@ -2,6 +2,9 @@ package com.iris.lolin;
 
 import java.util.ArrayList;
 
+import net.simonvt.menudrawer.MenuDrawer;
+import net.simonvt.menudrawer.MenuDrawer.Type;
+import net.simonvt.menudrawer.Position;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
@@ -24,6 +27,7 @@ public class MainActivity extends ActionBarActivity  {
 	private final static int WRITE_TEXT = 1;
 	private final static int SETTING = 3;
 	
+	private MenuDrawer menuTopDrawer;
 	private int viewPagerPosition;
 	private ViewPager mViewPager;
 	private PagerSlidingTabStrip tabs;
@@ -38,6 +42,9 @@ public class MainActivity extends ActionBarActivity  {
 		init();
 		dataInit();
 		viewPagerConfig();
+		
+		menuTopDrawer = MenuDrawer.attach(this, Type.OVERLAY, Position.TOP,MenuDrawer.MENU_DRAG_WINDOW);
+		menuTopDrawer.setMenuView(R.layout.sliding_top_menu);
 		
 	}
 
@@ -63,6 +70,7 @@ public class MainActivity extends ActionBarActivity  {
 	        	startActivity(composerActivityintent);
 	            return true;
 	        case R.id.ic_action_sort_by_size:
+	        	menuTopDrawer.openMenu();
 	            return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
