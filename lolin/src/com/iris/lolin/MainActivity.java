@@ -15,6 +15,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.HorizontalScrollView;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.iris.adapter.SectionsPagerAdapter;
@@ -26,6 +28,8 @@ public class MainActivity extends ActionBarActivity  {
 	private final static int RECORD_SEARCH = 2;
 	private final static int WRITE_TEXT = 1;
 	private final static int SETTING = 3;
+	
+	public HorizontalScrollView scrollViewRank, scrollViewPosition, scrollViewTime;
 	
 	private MenuDrawer menuTopDrawer;
 	private int viewPagerPosition;
@@ -43,9 +47,6 @@ public class MainActivity extends ActionBarActivity  {
 		dataInit();
 		viewPagerConfig();
 		
-		menuTopDrawer = MenuDrawer.attach(this, Type.OVERLAY, Position.TOP,MenuDrawer.MENU_DRAG_WINDOW);
-		menuTopDrawer.setMenuView(R.layout.sliding_top_menu);
-		
 	}
 
 	@Override
@@ -60,58 +61,6 @@ public class MainActivity extends ActionBarActivity  {
 	    
 	    return super.onCreateOptionsMenu(menu);
 	}
-	
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-	    // Handle presses on the action bar items
-	    switch (item.getItemId()) {
-	        case R.id.ic_action_new:
-	        	Intent composerActivityintent = new Intent(MainActivity.this, ComposerActivity.class);
-	        	startActivity(composerActivityintent);
-	            return true;
-	        case R.id.ic_action_sort_by_size:
-	        	menuTopDrawer.openMenu();
-	            return true;
-	        default:
-	            return super.onOptionsItemSelected(item);
-	    }
-	}
-	
-	private void viewPagerConfig() {
-		
-		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), getApplicationContext(),boardList);
-		mViewPager.setAdapter(mSectionsPagerAdapter);
-		
-		tabs.setIndicatorColor(Color.parseColor("#0099cc"));
-		tabs.setViewPager(mViewPager);
-		
-		tabs.setOnPageChangeListener(new OnPageChangeListener() {
-			@Override
-			public void onPageSelected(int position) {
-				
-				viewPagerPosition = position;
-				
-				if(position == WRITE_TEXT){
-					getActionBar().setTitle(R.string.title_section2);
-					invalidateOptionsMenu();
-				}else if(position == RECORD_SEARCH){
-					getActionBar().setTitle(R.string.title_section3);
-					invalidateOptionsMenu();
-				}else if(position == SETTING){
-					getActionBar().setTitle(R.string.title_section4);
-					invalidateOptionsMenu();
-				}else{
-					getActionBar().setTitle(R.string.title_section1);
-					invalidateOptionsMenu();
-				}
-			}
-			@Override
-			public void onPageScrolled(int position, float positionOffest, int positionOffestPixel) {}
-			@Override
-			public void onPageScrollStateChanged(int position) {}
-		});
-		
-	}
 
 	private void init() {
 		mViewPager = (ViewPager) findViewById(R.id.pager);
@@ -120,6 +69,11 @@ public class MainActivity extends ActionBarActivity  {
 
 
 	private void dataInit() {
+		
+		//Top MenuDrawer Init
+		menuTopDrawer = MenuDrawer.attach(this, Type.OVERLAY, Position.TOP,MenuDrawer.MENU_DRAG_WINDOW);
+		menuTopDrawer.setMenuView(R.layout.sliding_top_menu);
+		
 		boardList = new ArrayList<Board>();
 		Board board1 = new Board();
 		board1.setRank("unrank");
@@ -177,9 +131,93 @@ public class MainActivity extends ActionBarActivity  {
 		board7.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
 		boardList.add(board7);
 		
+		//ActionBar Init
 		getActionBar().setDisplayShowHomeEnabled(false);
 		getActionBar().setTitle(R.string.title_section1);
 		
+	}
+	
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle presses on the action bar items
+	    switch (item.getItemId()) {
+	        case R.id.ic_action_new:
+	        	Intent composerActivityintent = new Intent(MainActivity.this, ComposerActivity.class);
+	        	startActivity(composerActivityintent);
+	            return true;
+	        case R.id.ic_action_sort_by_size:
+	        	menuTopDrawer.openMenu();
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
+	}
+	
+	private void viewPagerConfig() {
+		
+		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), getApplicationContext(),boardList);
+		mViewPager.setAdapter(mSectionsPagerAdapter);
+		
+		tabs.setIndicatorColor(Color.parseColor("#0099cc"));
+		tabs.setViewPager(mViewPager);
+		
+		tabs.setOnPageChangeListener(new OnPageChangeListener() {
+			@Override
+			public void onPageSelected(int position) {
+				
+				viewPagerPosition = position;
+				
+				if(position == WRITE_TEXT){
+					getActionBar().setTitle(R.string.title_section2);
+					invalidateOptionsMenu();
+				}else if(position == RECORD_SEARCH){
+					getActionBar().setTitle(R.string.title_section3);
+					invalidateOptionsMenu();
+				}else if(position == SETTING){
+					getActionBar().setTitle(R.string.title_section4);
+					invalidateOptionsMenu();
+				}else{
+					getActionBar().setTitle(R.string.title_section1);
+					invalidateOptionsMenu();
+				}
+			}
+			@Override
+			public void onPageScrolled(int position, float positionOffest, int positionOffestPixel) {}
+			@Override
+			public void onPageScrollStateChanged(int position) {}
+		});
+		
+	}
+	
+	public void btnRank(View view){
+		
+		scrollViewRank = (HorizontalScrollView)findViewById(R.id.scrollView_rank);
+		scrollViewPosition = (HorizontalScrollView)findViewById(R.id.scrollView_position);
+		scrollViewTime = (HorizontalScrollView)findViewById(R.id.scrollView_time);
+		scrollViewRank.setVisibility(View.VISIBLE);
+		scrollViewTime.setVisibility(View.GONE);
+		scrollViewPosition.setVisibility(View.GONE);
+	}
+	
+	public void btnPosition(View view){
+		
+		scrollViewRank = (HorizontalScrollView)findViewById(R.id.scrollView_rank);
+		scrollViewPosition = (HorizontalScrollView)findViewById(R.id.scrollView_position);
+		scrollViewTime = (HorizontalScrollView)findViewById(R.id.scrollView_time);
+		scrollViewPosition.setVisibility(0);
+		scrollViewTime.setVisibility(View.GONE);
+		scrollViewRank.setVisibility(View.GONE);
+	}
+	
+	public void btnTime(View view){
+		
+		scrollViewRank = (HorizontalScrollView)findViewById(R.id.scrollView_rank);
+		scrollViewPosition = (HorizontalScrollView)findViewById(R.id.scrollView_position);
+		scrollViewTime = (HorizontalScrollView)findViewById(R.id.scrollView_time);
+		scrollViewTime.setVisibility(View.VISIBLE);
+		scrollViewPosition.setVisibility(View.GONE);
+		scrollViewRank.setVisibility(View.GONE);
 	}
 
 }

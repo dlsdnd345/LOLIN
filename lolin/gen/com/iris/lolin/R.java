@@ -1595,6 +1595,9 @@ containing a value of this type.
         public static final int beginning=0x7f060028;
         public static final int both=0x7f06000f;
         public static final int bottom=0x7f060003;
+        public static final int btn_position=0x7f06006d;
+        public static final int btn_rank=0x7f06006c;
+        public static final int btn_time=0x7f06006e;
         public static final int checkbox=0x7f060044;
         public static final int collapseActionView=0x7f060024;
         public static final int default_activity_button=0x7f06003f;
@@ -1612,8 +1615,8 @@ containing a value of this type.
         public static final int gridview=0x7f060014;
         public static final int home=0x7f06002b;
         public static final int homeAsUp=0x7f06001c;
-        public static final int ic_action_new=0x7f06006d;
-        public static final int ic_action_sort_by_size=0x7f06006c;
+        public static final int ic_action_new=0x7f060073;
+        public static final int ic_action_sort_by_size=0x7f060072;
         public static final int icon=0x7f060041;
         public static final int ifRoom=0x7f060021;
         public static final int image=0x7f06003e;
@@ -1666,6 +1669,9 @@ containing a value of this type.
         public static final int radio=0x7f060046;
         public static final int refreshing_progress=0x7f060061;
         public static final int right=0x7f060002;
+        public static final int scrollView_position=0x7f060070;
+        public static final int scrollView_rank=0x7f06006f;
+        public static final int scrollView_time=0x7f060071;
         public static final int scrollview=0x7f060016;
         public static final int search_badge=0x7f060049;
         public static final int search_bar=0x7f060048;

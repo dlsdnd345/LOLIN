@@ -385,6 +385,9 @@ int id always 0x7f060022
 int id beginning 0x7f060028
 int id both 0x7f06000f
 int id bottom 0x7f060003
+int id btn_position 0x7f06006d
+int id btn_rank 0x7f06006c
+int id btn_time 0x7f06006e
 int id checkbox 0x7f060044
 int id collapseActionView 0x7f060024
 int id default_activity_button 0x7f06003f
@@ -402,8 +405,8 @@ int id google 0x7f060011
 int id gridview 0x7f060014
 int id home 0x7f06002b
 int id homeAsUp 0x7f06001c
-int id ic_action_new 0x7f06006d
-int id ic_action_sort_by_size 0x7f06006c
+int id ic_action_new 0x7f060073
+int id ic_action_sort_by_size 0x7f060072
 int id icon 0x7f060041
 int id ifRoom 0x7f060021
 int id image 0x7f06003e
@@ -444,6 +447,9 @@ int id pulling_right_progressbar 0x7f060063
 int id radio 0x7f060046
 int id refreshing_progress 0x7f060061
 int id right 0x7f060002
+int id scrollView_position 0x7f060070
+int id scrollView_rank 0x7f06006f
+int id scrollView_time 0x7f060071
 int id scrollview 0x7f060016
 int id search_badge 0x7f060049
 int id search_bar 0x7f060048
