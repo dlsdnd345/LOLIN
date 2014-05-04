@@ -17,8 +17,13 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.format.DateUtils;
+import android.util.Log;
+import android.view.GestureDetector;
+import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -33,7 +38,7 @@ public class BoardFragment extends Fragment {
 
 	private BoardAdapter boardAdapter;
 	private PullToRefreshListView boardListView;
-	
+
 	public Fragment newInstance(ArrayList<Board> boardList) {
 		BoardFragment fragment = new BoardFragment();
 		Bundle args = new Bundle();
@@ -55,15 +60,16 @@ public class BoardFragment extends Fragment {
 		boardListView = (PullToRefreshListView)rootView.findViewById(R.id.list_board);
 		boardAdapter = new BoardAdapter(getActivity(), R.layout.row_board_list, boardList);
 		boardListView.setAdapter(boardAdapter);
-		
+
 		boardListView.setOnRefreshListener(mOnRefreshListener);
 		boardListView.setOnItemClickListener(mOnItemClickListener);
+
 		ListView actualListView = boardListView.getRefreshableView();
 		registerForContextMenu(actualListView);
-		
+
 		return rootView;
 	}
-	
+
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	OnRefreshListener<ListView> mOnRefreshListener = new OnRefreshListener(){
@@ -75,18 +81,18 @@ public class BoardFragment extends Fragment {
 			refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(label);
 			new GetDataTask().execute();
 		}
-		
+
 	};
-	
+
 	OnItemClickListener mOnItemClickListener = new OnItemClickListener(){
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
 			startActivity(intent);
 		}
-		
+
 	};
-	
+
 	// Pull To Refresh 시 실행되는 Task
 	private class GetDataTask extends AsyncTask<Void, Void, String[]> {
 
@@ -106,5 +112,5 @@ public class BoardFragment extends Fragment {
 			super.onPostExecute(result);
 		}
 	}
-	
+
 }
