@@ -2,9 +2,6 @@ package com.iris.lolin;
 
 import java.util.ArrayList;
 
-import net.simonvt.menudrawer.MenuDrawer;
-import net.simonvt.menudrawer.MenuDrawer.Type;
-import net.simonvt.menudrawer.Position;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
@@ -15,8 +12,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.HorizontalScrollView;
+import android.widget.Spinner;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.iris.adapter.SectionsPagerAdapter;
@@ -28,16 +26,16 @@ public class MainActivity extends ActionBarActivity  {
 	private final static int RECORD_SEARCH = 2;
 	private final static int WRITE_TEXT = 1;
 	private final static int SETTING = 3;
-	
-	public HorizontalScrollView scrollViewRank, scrollViewPosition, scrollViewTime;
-	
-	private MenuDrawer menuTopDrawer;
+
+	private Spinner rankSpinner,positionSpinner,timeSpinner;	
+	private ArrayAdapter<String> rankSpinnerAdapter,positionSpinnerAdapter,timeSpinnerAdapter;
 	private int viewPagerPosition;
 	private ViewPager mViewPager;
 	private PagerSlidingTabStrip tabs;
 	private ArrayList<Board> boardList; 
 	private SectionsPagerAdapter mSectionsPagerAdapter;
-	
+	public HorizontalScrollView scrollViewRank, scrollViewPosition, scrollViewTime;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -46,34 +44,45 @@ public class MainActivity extends ActionBarActivity  {
 		init();
 		dataInit();
 		viewPagerConfig();
-		
+
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-	    MenuInflater inflater = getMenuInflater();
-	    
-	    if(viewPagerPosition == 0){
-		    inflater.inflate(R.menu.main, menu);
-	    }else{
-	    	inflater.inflate(R.menu.write_text_menu, menu);
-	    }
-	    
-	    return super.onCreateOptionsMenu(menu);
+		MenuInflater inflater = getMenuInflater();
+
+		inflater.inflate(R.menu.write_text_menu, menu);
+
+		return super.onCreateOptionsMenu(menu);
 	}
 
 	private void init() {
+		rankSpinner = (Spinner)findViewById(R.id.spinner_rank);
+		positionSpinner = (Spinner)findViewById(R.id.spinner_position);
+		timeSpinner = (Spinner)findViewById(R.id.spinner_time);
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 	}
 
 
 	private void dataInit() {
-		
-		//Top MenuDrawer Init
-		menuTopDrawer = MenuDrawer.attach(this, Type.OVERLAY, Position.TOP,MenuDrawer.MENU_DRAG_WINDOW);
-		menuTopDrawer.setMenuView(R.layout.sliding_top_menu);
-		
+
+		//spinner init
+		rankSpinnerAdapter= new ArrayAdapter<>
+		(getApplicationContext(), android.R.layout.simple_spinner_item,(String[])getResources().getStringArray(R.array.rank_array_list));
+		rankSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
+		rankSpinner.setAdapter(rankSpinnerAdapter); 
+
+		positionSpinnerAdapter= new ArrayAdapter<>
+		(getApplicationContext(), android.R.layout.simple_spinner_item,(String[])getResources().getStringArray(R.array.position_array_list));
+		positionSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
+		positionSpinner.setAdapter(positionSpinnerAdapter); 
+
+		timeSpinnerAdapter= new ArrayAdapter<>
+		(getApplicationContext(), android.R.layout.simple_spinner_item,(String[])getResources().getStringArray(R.array.time_array_list));
+		timeSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
+		timeSpinner.setAdapter(timeSpinnerAdapter); 
+
 		boardList = new ArrayList<Board>();
 		Board board1 = new Board();
 		board1.setRank("unrank");
@@ -82,7 +91,7 @@ public class MainActivity extends ActionBarActivity  {
 		board1.setSummonerName("SK T1 Faker");
 		board1.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
 		boardList.add(board1);
-		
+
 		Board board2 = new Board();
 		board2.setRank("bronze");
 		board2.setPosition("미드");
@@ -90,7 +99,7 @@ public class MainActivity extends ActionBarActivity  {
 		board2.setSummonerName("SK T1 Faker");
 		board2.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
 		boardList.add(board2);
-		
+
 		Board board3 = new Board();
 		board3.setRank("silver");
 		board3.setPosition("미드");
@@ -98,7 +107,7 @@ public class MainActivity extends ActionBarActivity  {
 		board3.setSummonerName("SK T1 Faker");
 		board3.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
 		boardList.add(board3);
-		
+
 		Board board4 = new Board();
 		board4.setRank("gold");
 		board4.setPosition("미드");
@@ -106,7 +115,7 @@ public class MainActivity extends ActionBarActivity  {
 		board4.setSummonerName("SK T1 Faker");
 		board4.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
 		boardList.add(board4);
-		
+
 		Board board5 = new Board();
 		board5.setRank("platinum");
 		board5.setPosition("미드");
@@ -114,7 +123,7 @@ public class MainActivity extends ActionBarActivity  {
 		board5.setSummonerName("SK T1 Faker");
 		board5.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
 		boardList.add(board5);
-		
+
 		Board board6 = new Board();
 		board6.setRank("diamond");
 		board6.setPosition("미드");
@@ -122,7 +131,7 @@ public class MainActivity extends ActionBarActivity  {
 		board6.setSummonerName("SK T1 Faker");
 		board6.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
 		boardList.add(board6);
-		
+
 		Board board7 = new Board();
 		board7.setRank("challenger");
 		board7.setPosition("미드");
@@ -130,44 +139,41 @@ public class MainActivity extends ActionBarActivity  {
 		board7.setSummonerName("SK T1 Faker");
 		board7.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
 		boardList.add(board7);
-		
+
 		//ActionBar Init
 		getActionBar().setDisplayShowHomeEnabled(false);
 		getActionBar().setTitle(R.string.title_section1);
-		
+
 	}
-	
-	
+
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-	    // Handle presses on the action bar items
-	    switch (item.getItemId()) {
-	        case R.id.ic_action_new:
-	        	Intent composerActivityintent = new Intent(MainActivity.this, ComposerActivity.class);
-	        	startActivity(composerActivityintent);
-	            return true;
-	        case R.id.ic_action_sort_by_size:
-	        	menuTopDrawer.openMenu();
-	            return true;
-	        default:
-	            return super.onOptionsItemSelected(item);
-	    }
+		// Handle presses on the action bar items
+		switch (item.getItemId()) {
+		case R.id.ic_action_new:
+			Intent composerActivityintent = new Intent(MainActivity.this, ComposerActivity.class);
+			startActivity(composerActivityintent);
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
-	
+
 	private void viewPagerConfig() {
-		
+
 		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), getApplicationContext(),boardList);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
-		
+
 		tabs.setIndicatorColor(Color.parseColor("#0099cc"));
 		tabs.setViewPager(mViewPager);
-		
+
 		tabs.setOnPageChangeListener(new OnPageChangeListener() {
 			@Override
 			public void onPageSelected(int position) {
-				
+
 				viewPagerPosition = position;
-				
+
 				if(position == WRITE_TEXT){
 					getActionBar().setTitle(R.string.title_section2);
 					invalidateOptionsMenu();
@@ -187,37 +193,7 @@ public class MainActivity extends ActionBarActivity  {
 			@Override
 			public void onPageScrollStateChanged(int position) {}
 		});
-		
-	}
-	
-	public void btnRank(View view){
-		
-		scrollViewRank = (HorizontalScrollView)findViewById(R.id.scrollView_rank);
-		scrollViewPosition = (HorizontalScrollView)findViewById(R.id.scrollView_position);
-		scrollViewTime = (HorizontalScrollView)findViewById(R.id.scrollView_time);
-		scrollViewRank.setVisibility(View.VISIBLE);
-		scrollViewTime.setVisibility(View.GONE);
-		scrollViewPosition.setVisibility(View.GONE);
-	}
-	
-	public void btnPosition(View view){
-		
-		scrollViewRank = (HorizontalScrollView)findViewById(R.id.scrollView_rank);
-		scrollViewPosition = (HorizontalScrollView)findViewById(R.id.scrollView_position);
-		scrollViewTime = (HorizontalScrollView)findViewById(R.id.scrollView_time);
-		scrollViewPosition.setVisibility(0);
-		scrollViewTime.setVisibility(View.GONE);
-		scrollViewRank.setVisibility(View.GONE);
-	}
-	
-	public void btnTime(View view){
-		
-		scrollViewRank = (HorizontalScrollView)findViewById(R.id.scrollView_rank);
-		scrollViewPosition = (HorizontalScrollView)findViewById(R.id.scrollView_position);
-		scrollViewTime = (HorizontalScrollView)findViewById(R.id.scrollView_time);
-		scrollViewTime.setVisibility(View.VISIBLE);
-		scrollViewPosition.setVisibility(View.GONE);
-		scrollViewRank.setVisibility(View.GONE);
+
 	}
 
 }

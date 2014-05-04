@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="rank_array_list">
+        <item>계급[전체]</item>
+        <item>언랭크</item>
+        <item>브론즈</item>
+        <item>실버</item>
+        <item>골드</item>
+        <item>플래티넘</item>
+        <item>다이아</item>
+        <item>챌린져</item>
+    </string-array>
+    <string-array name="position_array_list">
+        <item>포지션[전체]</item>
+        <item>서폿</item>
+        <item>원딜</item>
+        <item>탑</item>
+        <item>미드</item>
+        <item>정글</item>
+    </string-array>
+    
+    <string-array name="time_array_list">
+        <item>시간[전체]</item>
+        <item>오전</item>
+        <item>오후</item>
+        <item>저녁</item>
+        <item>새벽</item>
+    </string-array>
+
+</resources>
