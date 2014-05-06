@@ -17,6 +17,9 @@
     <string name="ic_action_new">추가</string>
     <string name="ic_action_sort_by_size">카테고리</string>
 
+        <!-- Actionbar title Value -->    
+    
+    <string name="composer_activity_title">글쓰기</string>
     
     
 </resources>

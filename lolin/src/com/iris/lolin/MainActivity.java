@@ -87,7 +87,7 @@ public class MainActivity extends ActionBarActivity  {
 		bottomBarLayoutParams = (RelativeLayout.LayoutParams)bottomBar.getLayoutParams();
 
 		//spinner init
-		rankData = getResources().getStringArray(R.array.rank_array_list);
+		rankData = getResources().getStringArray(R.array.main_rank_array_list);
 		rankSpinnerAdapter= new ArrayAdapter<>
 		(getApplicationContext(), android.R.layout.simple_spinner_item,rankData);
 		rankSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
@@ -95,7 +95,7 @@ public class MainActivity extends ActionBarActivity  {
 		rankSpinner.setOnItemSelectedListener(rankOnItemSelectedListener);
 		rankSpinner.setSelection(sharedpreferencesUtil.getValue("RankDataPosition", 0));
 
-		positionData = getResources().getStringArray(R.array.position_array_list);
+		positionData = getResources().getStringArray(R.array.main_position_array_list);
 		positionSpinnerAdapter= new ArrayAdapter<>
 		(getApplicationContext(), android.R.layout.simple_spinner_item,positionData);
 		positionSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
@@ -103,7 +103,7 @@ public class MainActivity extends ActionBarActivity  {
 		positionSpinner.setOnItemSelectedListener(positionOnItemSelectedListener);
 		positionSpinner.setSelection(sharedpreferencesUtil.getValue("PositionDataPosition", 0));
 
-		timeData = getResources().getStringArray(R.array.time_array_list);
+		timeData = getResources().getStringArray(R.array.main_time_array_list);
 		timeSpinnerAdapter= new ArrayAdapter<>
 		(getApplicationContext(), android.R.layout.simple_spinner_item,timeData);
 		timeSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
