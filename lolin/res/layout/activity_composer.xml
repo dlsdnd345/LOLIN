@@ -22,10 +22,35 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
+                android:text="제목" />
+
+            <EditText
+                android:id="@+id/edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_below="@+id/textView1"
+                android:ems="10"
+                android:hint="게시판 제목을 입력 하세요." />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
                 android:text="소환사명" />
 
             <EditText
-                android:id="@+id/editText1"
+                android:id="@+id/edit_summoner_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView1"
@@ -70,7 +95,7 @@
                 android:layout_weight="1" >
 
                 <TextView
-                    android:id="@+id/TextView01"
+                    android:id="@+id/txt_tea"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -83,8 +108,8 @@
                     android:id="@+id/composer_spinner_tea"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_alignLeft="@+id/TextView01"
-                    android:layout_below="@+id/TextView01"
+                    android:layout_alignLeft="@+id/txt_tea"
+                    android:layout_below="@+id/txt_tea"
                     android:layout_marginTop="5dp" />
             </RelativeLayout>
         </LinearLayout>
@@ -147,31 +172,6 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" >
-
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:text="제목" />
-
-            <EditText
-                android:id="@+id/editText1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView1"
-                android:layout_below="@+id/textView1"
-                android:ems="10"
-                android:hint="게시판 제목을 입력 하세요." />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
             android:layout_weight="3" >
 
             <TextView
@@ -185,7 +185,7 @@
                 android:text="내용" />
 
             <EditText
-                android:id="@+id/editText1"
+                android:id="@+id/edit_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView1"

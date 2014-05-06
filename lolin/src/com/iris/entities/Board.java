@@ -13,8 +13,8 @@ public class Board implements Serializable {
 	private String summonerName;
 	private String position;
 	private String rank;
+	private String playTime;
 	private Date writeTime;
-	private Date playTime;
 	
 	public int getId() {
 		return id;
@@ -58,12 +58,11 @@ public class Board implements Serializable {
 	public void setWriteTime(Date writeTime) {
 		this.writeTime = writeTime;
 	}
-	public Date getPlayTime() {
+	public String getPlayTime() {
 		return playTime;
 	}
-	public void setPlayTime(Date playTime) {
+	public void setPlayTime(String playTime) {
 		this.playTime = playTime;
 	}
-	
 	
 }
