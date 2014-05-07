@@ -25,8 +25,12 @@ import android.widget.Toast;
 @SuppressLint("NewApi")
 public class ComposerActivity extends ActionBarActivity {
 
-	private static final String UNRANK = "언랭크"; 
-	private static final int RANK_UNRANK = 0; 
+	private static final String 		EMPRY_CONTENT_MESSAGE  		= "내용을 입력해 주세요.";
+	private static final String 		EMPRY_TITLE_MESSAGE  		= "제목을 입력해 주세요.";
+	private static final String 		EMPRY_SUMMONERNAME_MESSAGE  = "소환사 명을 입력해 주세요."; 
+	private static final String 		UNRANK 						= "언랭크"; 
+	private static final int 			RANK_UNRANK 				= 0; 
+	
 	
 	private Board						board;
 	private TextView					txtTea;
@@ -113,7 +117,7 @@ public class ComposerActivity extends ActionBarActivity {
 			}else{
 			    Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
 			    editSummonerName.startAnimation(shake);
-				Toast.makeText(getApplicationContext(), "소환사 명을 입력해 주세요.", Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), EMPRY_SUMMONERNAME_MESSAGE, Toast.LENGTH_LONG).show();
 			}
 			
 			if(!editTitle.getText().toString().equals("")){
@@ -121,7 +125,7 @@ public class ComposerActivity extends ActionBarActivity {
 			}else{
 			    Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
 			    editTitle.startAnimation(shake);
-				Toast.makeText(getApplicationContext(), "제목을 입력해 주세요.", Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), EMPRY_TITLE_MESSAGE, Toast.LENGTH_LONG).show();
 			}
 
 			if(!editContent.getText().toString().equals("")){
@@ -129,7 +133,7 @@ public class ComposerActivity extends ActionBarActivity {
 			}else{
 			    Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
 			    editContent.startAnimation(shake);
-				Toast.makeText(getApplicationContext(), "내용을 입력해 주세요.", Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), EMPRY_CONTENT_MESSAGE, Toast.LENGTH_LONG).show();
 			}
 			
 			if(!editSummonerName.getText().toString().equals("")

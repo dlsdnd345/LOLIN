@@ -37,17 +37,12 @@ public class MainActivity extends ActionBarActivity  {
 
 	float firstGetY , preGetY= 0;
 	
-	private SharedpreferencesUtil		sharedpreferencesUtil;
-	private String[] 					rankData,positionData,timeData;
-	private View 						bottomBar;
 	private ViewPager 					mViewPager;
 	private int 						viewPagerPosition;
 	private PagerSlidingTabStrip 		tabs;
 	private ArrayList<Board> 			boardList; 
 	RelativeLayout.LayoutParams  		bottomBarLayoutParams;
 	private SectionsPagerAdapter 		mSectionsPagerAdapter;
-	private Spinner 					rankSpinner,positionSpinner,timeSpinner;	
-	private ArrayAdapter<String> 		rankSpinnerAdapter,positionSpinnerAdapter,timeSpinnerAdapter;
 	public 	 HorizontalScrollView 		scrollViewRank, scrollViewPosition, scrollViewTime;
 
 	@Override
@@ -71,45 +66,12 @@ public class MainActivity extends ActionBarActivity  {
 	}
 
 	private void init() {
-		bottomBar = (LinearLayout)findViewById(R.id.bottom_bar);
-		rankSpinner = (Spinner)findViewById(R.id.spinner_rank);
-		positionSpinner = (Spinner)findViewById(R.id.spinner_position);
-		timeSpinner = (Spinner)findViewById(R.id.spinner_time);
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 	}
 
 
 	private void dataInit() {
-
-		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
-		
-		bottomBarLayoutParams = (RelativeLayout.LayoutParams)bottomBar.getLayoutParams();
-
-		//spinner init
-		rankData = getResources().getStringArray(R.array.main_rank_array_list);
-		rankSpinnerAdapter= new ArrayAdapter<>
-		(getApplicationContext(), android.R.layout.simple_spinner_item,rankData);
-		rankSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
-		rankSpinner.setAdapter(rankSpinnerAdapter); 
-		rankSpinner.setOnItemSelectedListener(rankOnItemSelectedListener);
-		rankSpinner.setSelection(sharedpreferencesUtil.getValue("RankDataPosition", 0));
-
-		positionData = getResources().getStringArray(R.array.main_position_array_list);
-		positionSpinnerAdapter= new ArrayAdapter<>
-		(getApplicationContext(), android.R.layout.simple_spinner_item,positionData);
-		positionSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
-		positionSpinner.setAdapter(positionSpinnerAdapter); 
-		positionSpinner.setOnItemSelectedListener(positionOnItemSelectedListener);
-		positionSpinner.setSelection(sharedpreferencesUtil.getValue("PositionDataPosition", 0));
-
-		timeData = getResources().getStringArray(R.array.main_time_array_list);
-		timeSpinnerAdapter= new ArrayAdapter<>
-		(getApplicationContext(), android.R.layout.simple_spinner_item,timeData);
-		timeSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
-		timeSpinner.setAdapter(timeSpinnerAdapter); 
-		timeSpinner.setOnItemSelectedListener(timeOnItemSelectedListener);
-		timeSpinner.setSelection(sharedpreferencesUtil.getValue("TimeDataPosition", 0));
 
 		//Data Init
 
@@ -175,33 +137,6 @@ public class MainActivity extends ActionBarActivity  {
 		getActionBar().setTitle(R.string.title_section1);
 
 	}
-
-	OnItemSelectedListener rankOnItemSelectedListener = new OnItemSelectedListener(){
-		@Override
-		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
-			sharedpreferencesUtil.put("RankDataPosition", position);
-		}
-		@Override
-		public void onNothingSelected(AdapterView<?> parent) {}
-	};
-	
-	OnItemSelectedListener positionOnItemSelectedListener = new OnItemSelectedListener(){
-		@Override
-		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
-			sharedpreferencesUtil.put("PositionDataPosition", position);
-		}
-		@Override
-		public void onNothingSelected(AdapterView<?> parent) {}
-	};
-	
-	OnItemSelectedListener timeOnItemSelectedListener = new OnItemSelectedListener(){
-		@Override
-		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
-			sharedpreferencesUtil.put("TimeDataPosition", position);
-		}
-		@Override
-		public void onNothingSelected(AdapterView<?> parent) {}
-	};
 	
 
 	@Override

@@ -376,7 +376,7 @@ int id activity_chooser_view_content 0x7f070030
 int id always 0x7f070016
 int id beginning 0x7f07001c
 int id both 0x7f070003
-int id bottom_bar 0x7f070054
+int id bottom_bar 0x7f070055
 int id checkbox 0x7f070038
 int id collapseActionView 0x7f070018
 int id composer_spinner_position 0x7f07004e
@@ -407,7 +407,7 @@ int id ifRoom 0x7f070015
 int id image 0x7f070032
 int id img_rank 0x7f070066
 int id listMode 0x7f07000c
-int id list_board 0x7f070058
+int id list_board 0x7f070054
 int id list_item 0x7f070034
 int id list_write_text 0x7f07005b
 int id manualOnly 0x7f070004
@@ -448,9 +448,9 @@ int id shortcut 0x7f070039
 int id showCustom 0x7f070012
 int id showHome 0x7f07000f
 int id showTitle 0x7f070011
-int id spinner_position 0x7f070056
-int id spinner_rank 0x7f070055
-int id spinner_time 0x7f070057
+int id spinner_position 0x7f070057
+int id spinner_rank 0x7f070056
+int id spinner_time 0x7f070058
 int id split_action_bar 0x7f070029
 int id submit_area 0x7f070044
 int id tabMode 0x7f07000d
@@ -508,6 +508,7 @@ int layout row_board_list 0x7f030023
 int layout row_write_text_list 0x7f030024
 int layout spinner_item 0x7f030025
 int layout support_simple_spinner_dropdown_item 0x7f030026
+int layout white_spinner_item 0x7f030027
 int menu write_text_menu 0x7f0e0000
 int string abc_action_bar_home_description 0x7f090007
 int string abc_action_bar_up_description 0x7f090008

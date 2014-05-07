@@ -1466,7 +1466,7 @@ containing a value of this type.
         public static final int always=0x7f070016;
         public static final int beginning=0x7f07001c;
         public static final int both=0x7f070003;
-        public static final int bottom_bar=0x7f070054;
+        public static final int bottom_bar=0x7f070055;
         public static final int checkbox=0x7f070038;
         public static final int collapseActionView=0x7f070018;
         public static final int composer_spinner_position=0x7f07004e;
@@ -1497,7 +1497,7 @@ containing a value of this type.
         public static final int image=0x7f070032;
         public static final int img_rank=0x7f070066;
         public static final int listMode=0x7f07000c;
-        public static final int list_board=0x7f070058;
+        public static final int list_board=0x7f070054;
         public static final int list_item=0x7f070034;
         public static final int list_write_text=0x7f07005b;
         public static final int manualOnly=0x7f070004;
@@ -1538,9 +1538,9 @@ containing a value of this type.
         public static final int showCustom=0x7f070012;
         public static final int showHome=0x7f07000f;
         public static final int showTitle=0x7f070011;
-        public static final int spinner_position=0x7f070056;
-        public static final int spinner_rank=0x7f070055;
-        public static final int spinner_time=0x7f070057;
+        public static final int spinner_position=0x7f070057;
+        public static final int spinner_rank=0x7f070056;
+        public static final int spinner_time=0x7f070058;
         public static final int split_action_bar=0x7f070029;
         public static final int submit_area=0x7f070044;
         public static final int tabMode=0x7f07000d;
@@ -1624,6 +1624,7 @@ containing a value of this type.
         public static final int row_write_text_list=0x7f030024;
         public static final int spinner_item=0x7f030025;
         public static final int support_simple_spinner_dropdown_item=0x7f030026;
+        public static final int white_spinner_item=0x7f030027;
     }
     public static final class menu {
         public static final int write_text_menu=0x7f0e0000;

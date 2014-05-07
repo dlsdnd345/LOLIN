@@ -49,7 +49,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		// below).
 		
 		if(position == BOARD_FRAGMENT){
-			return boardFragment.newInstance(boardList);
+			return boardFragment.newInstance(context,boardList);
 		}else if(position == WRITE_TEXT_FRAGMENT){
 			return writeTextFragment.newInstance(boardList);
 		}else if(position == RECORD_SEARCH_FRAGMENT){
