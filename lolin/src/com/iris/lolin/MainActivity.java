@@ -9,24 +9,15 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
 import android.widget.HorizontalScrollView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Spinner;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.entities.Board;
-import com.iris.util.SharedpreferencesUtil;
 
 @SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity  {
@@ -41,7 +32,6 @@ public class MainActivity extends ActionBarActivity  {
 	private int 						viewPagerPosition;
 	private PagerSlidingTabStrip 		tabs;
 	private ArrayList<Board> 			boardList; 
-	RelativeLayout.LayoutParams  		bottomBarLayoutParams;
 	private SectionsPagerAdapter 		mSectionsPagerAdapter;
 	public 	 HorizontalScrollView 		scrollViewRank, scrollViewPosition, scrollViewTime;
 

@@ -3,23 +3,25 @@
 
     <string name="app_name">lolin</string>
     <string name="action_settings">Settings</string>
-    
-    
-	<!-- ActionBar sevtion & Actionbar title -->    
- 
+
+    <!-- ActionBar sevtion & Actionbar title -->
     <string name="title_section1">게시판</string>
     <string name="title_section2">내가 쓴글</string>
     <string name="title_section3">전적 검색</string>
     <string name="title_section4">설정</string>
-
-    <!-- Actionbar title Value -->    
     
+    <!-- Board detail Activity -->
+    <string name="detail_title_section1">상세내용</string>
+    <string name="detail_title_section2">전적 검색</string>
+    <string name="detail_title_section3">댓글</string>
+
+    <!-- Actionbar title Value -->
+
     <string name="ic_action_new">추가</string>
     <string name="ic_action_sort_by_size">카테고리</string>
 
-        <!-- Actionbar title Value -->    
-    
+    <!-- Actionbar title Value -->
     <string name="composer_activity_title">글쓰기</string>
-    
-    
+    <string name="board_detail_activity_title">상세 내용</string>
+
 </resources>
