@@ -23,5 +23,7 @@
     <!-- Actionbar title Value -->
     <string name="composer_activity_title">글쓰기</string>
     <string name="board_detail_activity_title">상세 내용</string>
-
+	<string name="intro_activity_title">인트로</string>
+    
+    
 </resources>

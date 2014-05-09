@@ -30,8 +30,7 @@ public class RepleFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_content, container, false);
-		((TextView) rootView.findViewById(R.id.number)).setText(mPageNumber + "");
+		ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_reple, container, false);
 		return rootView;
 	}
 }

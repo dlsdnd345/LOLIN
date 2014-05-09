@@ -4,10 +4,31 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TextView07"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="내용"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/TextView08"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="어떤 이유에서건 대리 관련 게시물을 작성할 시 1개월 간 이용 정지 처리됩니다. \n 불이익을 받지 않도록 유의하시기 바랍니다. \n 제주포지션은정글입니다. \n 톡 / 스카이프 가능합니다. \n 멘탈좋고 멘탈잘잡고하실분만..친추주세요 \n 최대한근처로듀오구해봅니다.낮던높던상관은없지만저랑티어가비슷했으면좋겠습니다. \n 어떤 이유에서건 대리 관련 게시물을 작성할 시 1개월 간 이용 정지 처리됩니다. \n 불이익을 받지 않도록 유의하시기 바랍니다. \n 제주포지션은정글입니다. \n 톡 / 스카이프 가능합니다. \n 멘탈좋고 멘탈잘잡고하실분만..친추주세요 \n 최대한근처로듀오구해봅니다.낮던높던상관은없지만저랑티어가비슷했으면좋겠습니다."
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
