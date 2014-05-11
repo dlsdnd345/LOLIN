@@ -18,6 +18,7 @@
     <!-- Actionbar title Value -->
 
     <string name="ic_action_new">추가</string>
+      <string name="ic_action_next">다음</string>
     <string name="ic_action_sort_by_size">카테고리</string>
 
     <!-- Actionbar title Value -->

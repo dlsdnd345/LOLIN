@@ -115,7 +115,7 @@ public class ComposerActivity extends ActionBarActivity {
 			if(!editSummonerName.getText().toString().equals("")){
 				board.setSummonerName(editSummonerName.getText().toString());
 			}else{
-			    Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+			    Animation shake = AnimationUtils.loadAnimation(this, R.anim.horizontal_shake);
 			    editSummonerName.startAnimation(shake);
 				Toast.makeText(getApplicationContext(), EMPRY_SUMMONERNAME_MESSAGE, Toast.LENGTH_LONG).show();
 			}
@@ -123,7 +123,7 @@ public class ComposerActivity extends ActionBarActivity {
 			if(!editTitle.getText().toString().equals("")){
 				board.setTitle(editTitle.getText().toString());
 			}else{
-			    Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+			    Animation shake = AnimationUtils.loadAnimation(this, R.anim.horizontal_shake);
 			    editTitle.startAnimation(shake);
 				Toast.makeText(getApplicationContext(), EMPRY_TITLE_MESSAGE, Toast.LENGTH_LONG).show();
 			}
@@ -131,7 +131,7 @@ public class ComposerActivity extends ActionBarActivity {
 			if(!editContent.getText().toString().equals("")){
 				board.setContent(editContent.getText().toString());
 			}else{
-			    Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);
+			    Animation shake = AnimationUtils.loadAnimation(this, R.anim.horizontal_shake);
 			    editContent.startAnimation(shake);
 				Toast.makeText(getApplicationContext(), EMPRY_CONTENT_MESSAGE, Toast.LENGTH_LONG).show();
 			}

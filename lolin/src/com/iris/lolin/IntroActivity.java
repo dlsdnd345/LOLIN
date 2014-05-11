@@ -1,5 +1,7 @@
 package com.iris.lolin;
 
+import com.iris.util.SharedpreferencesUtil;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +10,14 @@ public class IntroActivity extends Activity {
 
 	private static final int SLEEP_TIME = 2000;
 	
+	private SharedpreferencesUtil sharedpreferencesUtil;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.activity_intro);
+	    
+	    dataInit();
 	    
 	    new Thread(new Runnable() {
             @Override
@@ -21,12 +27,23 @@ public class IntroActivity extends Activity {
                 } catch (Throwable ex) {
                     ex.printStackTrace();
                 }
-                Intent i = new Intent(IntroActivity.this, FaceBookLoginActivity.class);
-                startActivity(i);
+                
+                if(sharedpreferencesUtil.getValue("ACCESS_TOKEN", "").equals("")){
+                	Intent i = new Intent(IntroActivity.this, FaceBookLoginActivity.class);
+                	startActivity(i);
+                }else{
+                	Intent i = new Intent(IntroActivity.this, MainActivity.class);
+                	startActivity(i);
+                }
+                
                 finish();
             }
         }).start();
 	    
+	}
+
+	private void dataInit() {
+		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 	}
 
 }

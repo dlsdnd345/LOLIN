@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.iris.lolin.MainActivity" >
+
+    <item
+        android:id="@+id/ic_action_next"
+        android:icon="@drawable/ic_action_next_item"
+        android:title="@string/ic_action_next"
+        app:showAsAction="always|withText"/>
+
+</menu>

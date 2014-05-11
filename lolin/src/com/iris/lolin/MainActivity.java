@@ -16,6 +16,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.RelativeLayout;
 
 import com.astuetz.PagerSlidingTabStrip;
+import com.facebook.Session;
 import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.entities.Board;
 
@@ -43,15 +44,12 @@ public class MainActivity extends ActionBarActivity  {
 		init();
 		dataInit();
 		viewPagerConfig();
-
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
-
 		inflater.inflate(R.menu.write_text_menu, menu);
-
 		return super.onCreateOptionsMenu(menu);
 	}
 
