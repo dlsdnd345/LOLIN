@@ -25,12 +25,12 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 	private static final int RECORD_SEARCH_FRAGMENT = 2;
 	private static final int WRITE_TEXT_FRAGMENT = 1;
 	
-	private Context context;
-	private ArrayList<Board> boardList;
-	private BoardFragment boardFragment;
-	private SettingFragment settingFragment;
-	private ComposerFragment writeTextFragment;
-	private RecordSearchFragment recordSearchFragment;
+	private Context 				context;
+	private ArrayList<Board> 		boardList;
+	private BoardFragment 			boardFragment;
+	private SettingFragment 		settingFragment;
+	private ComposerFragment 		writeTextFragment;
+	private RecordSearchFragment 	recordSearchFragment;
 	
 	public SectionsPagerAdapter(FragmentManager fm ,Context context , ArrayList<Board> boardList) {
 		super(fm);
@@ -44,10 +44,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
 	@Override
 	public Fragment getItem(int position) {
-		// getItem is called to instantiate the fragment for the given page.
-		// Return a PlaceholderFragment (defined as a static inner class
-		// below).
-		
 		if(position == BOARD_FRAGMENT){
 			return boardFragment.newInstance(context,boardList);
 		}else if(position == WRITE_TEXT_FRAGMENT){
@@ -82,18 +78,5 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		return null;
 	}
 	
-//	public int getPageIcon(int position) {
-//		
-//		//탭바 icon 지정
-//		switch (position) {
-//		case 0:
-//			return R.drawable.ic_launcher;
-//		case 1:
-//			return R.drawable.ic_launcher;
-//		case 2:
-//			return R.drawable.ic_launcher;
-//		}
-//		return 0;
-//	}
 }
 

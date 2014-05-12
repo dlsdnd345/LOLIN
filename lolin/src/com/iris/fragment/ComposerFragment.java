@@ -27,13 +27,15 @@ import android.widget.AdapterView.OnItemClickListener;
 @SuppressLint("NewApi")
 public class ComposerFragment extends Fragment {
 
-	private ComposerAdapter composerAdapter;
-	private ListView writeTextListView;
+	private static final String BOOK_LIST 				= "boardList";
+	
+	private ComposerAdapter 		composerAdapter;
+	private ListView 				writeTextListView;
 	
 	public Fragment newInstance(ArrayList<Board> boardList) {
 		ComposerFragment fragment = new ComposerFragment();
 		Bundle args = new Bundle();
-		args.putSerializable("boardList", boardList);
+		args.putSerializable(BOOK_LIST, boardList);
 		fragment.setArguments(args);
 		return fragment;
 	}
@@ -45,14 +47,22 @@ public class ComposerFragment extends Fragment {
 		
 		View rootView = inflater.inflate(R.layout.fragment_write_text, container,false);
 		
-		ArrayList<Board> boardList = (ArrayList<Board>)getArguments().get("boardList");
+		init(rootView);
+		listViewIInit();
 		
-		writeTextListView = (ListView)rootView.findViewById(R.id.list_write_text);
+		return rootView;
+	}
+
+	@SuppressWarnings("unchecked")
+	private void listViewIInit() {
+		ArrayList<Board> boardList = (ArrayList<Board>)getArguments().get(BOOK_LIST);
 		composerAdapter = new ComposerAdapter(getActivity(), R.layout.row_write_text_list, boardList);
 		writeTextListView.setAdapter(composerAdapter);
 		writeTextListView.setOnItemClickListener(mOnItemClickListener);
-		
-		return rootView;
+	}
+
+	private void init(View rootView) {
+		writeTextListView = (ListView)rootView.findViewById(R.id.list_write_text);
 	}
 	
 	OnItemClickListener mOnItemClickListener = new OnItemClickListener(){

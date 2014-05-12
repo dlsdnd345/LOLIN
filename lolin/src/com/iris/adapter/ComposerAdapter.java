@@ -18,18 +18,18 @@ import com.iris.util.ViewHolder;
 
 public class ComposerAdapter extends BaseAdapter{
 
-	private int layout; 
-	private Context context; 
-	private LayoutInflater Inflater;
-	private ArrayList<Board> boardList; 
-	private SparseArray<WeakReference<View>> viewArray;
+	private int 								layout; 
+	private Context 							context; 
+	private LayoutInflater 						inflater;
+	private ArrayList<Board> 					boardList; 
+	private SparseArray<WeakReference<View>> 	viewArray;
 	
 	public ComposerAdapter(Context context , int layout , ArrayList<Board> boardList){
 
 		this.context=context;
 		this.layout = layout;
 		this.boardList =boardList;
-		Inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		this.viewArray = new SparseArray<WeakReference<View>>(boardList.size());
 	}
 
@@ -57,7 +57,7 @@ public class ComposerAdapter extends BaseAdapter{
 		}
 		
 		if (convertView == null) {
-			convertView = Inflater.inflate(layout, parent, false);
+			convertView = inflater.inflate(layout, parent, false);
 			}
 		
 		ImageView rankImage = ViewHolder.get(convertView ,R.id.img_rank);		

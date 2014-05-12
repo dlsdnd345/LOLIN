@@ -18,6 +18,9 @@ import com.iris.lolin.R;
 @SuppressLint("NewApi")
 public class DetailRecordSearchFragment extends Fragment {
 
+	private static final String BASE_URL = "http://www.op.gg/summoner/userName=";
+	private static final String SUMMERNER_NAME = "dlsdnd345";
+	
 	private PullToRefreshWebView mPullRefreshWebView;
 	
 	public Fragment newInstance() {
@@ -33,18 +36,24 @@ public class DetailRecordSearchFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_detail_record_search, container,false);
 
-		mPullRefreshWebView = (PullToRefreshWebView)rootView.findViewById(R.id.pull_refresh_webview);
-		WebView webView = mPullRefreshWebView.getRefreshableView();
-		
-		//webView.getSettings().setJavaScriptEnabled(true); 
-		webView.loadUrl("http://www.op.gg/summoner/userName=dlsdnd345");
-		webView.setWebViewClient(new BasicWebViewClient());  
-
+		init(rootView);
+		webViewInit();  
 		return rootView;
+	}
+
+	private void init(View rootView) {
+		mPullRefreshWebView = (PullToRefreshWebView)rootView.findViewById(R.id.pull_refresh_webview);
+	}
+	
+	@SuppressLint("SetJavaScriptEnabled")
+	private void webViewInit() {
+		WebView webView = mPullRefreshWebView.getRefreshableView();
+		webView.getSettings().setJavaScriptEnabled(true); 
+		webView.loadUrl(BASE_URL +SUMMERNER_NAME);
+		webView.setWebViewClient(new BasicWebViewClient());
 	}
 	
 	private class BasicWebViewClient extends WebViewClient {
-		
 		@Override
 		public boolean shouldOverrideUrlLoading(WebView view, String url) {
 			view.loadUrl(url);

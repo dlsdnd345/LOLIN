@@ -50,7 +50,6 @@ public class BoardFragment extends Fragment {
 	private static final String TIME_DATA_POSITION 		= "TimeDataPosition";
 	
 	private ArrayList<Board> 			boardList;
-	private Context 					context;
 	private BoardAdapter 				boardAdapter;
 	private PullToRefreshListView 		boardListView;
 	private SharedpreferencesUtil		sharedpreferencesUtil;
@@ -60,7 +59,6 @@ public class BoardFragment extends Fragment {
 
 	public Fragment newInstance(Context context ,ArrayList<Board> boardList) {
 		
-		this.context = context;
 		BoardFragment fragment = new BoardFragment();
 		Bundle args = new Bundle();
 		args.putSerializable(BOOK_LIST, boardList);
@@ -83,17 +81,20 @@ public class BoardFragment extends Fragment {
 
 	private void init(View rootView) {
 		rankSpinner = (Spinner)rootView.findViewById(R.id.spinner_rank);
-		positionSpinner = (Spinner)rootView.findViewById(R.id.spinner_position);
 		timeSpinner = (Spinner)rootView.findViewById(R.id.spinner_time);
+		positionSpinner = (Spinner)rootView.findViewById(R.id.spinner_position);
+		boardListView = (PullToRefreshListView)rootView.findViewById(R.id.list_board);
 	}
 
 	
-	@SuppressWarnings("unchecked")
 	private void dataInit(View rootView){
 		
-		boardList = (ArrayList<Board>)getArguments().get("boardList");
-		boardListView = (PullToRefreshListView)rootView.findViewById(R.id.list_board);
+		spinnerInit(rootView);
+		listViewInit();
 		
+	}
+
+	private void spinnerInit(View rootView) {
 		sharedpreferencesUtil = new SharedpreferencesUtil(rootView.getContext());
 		//spinner init
 		rankData = rootView.getResources().getStringArray(R.array.main_rank_array_list);
@@ -120,12 +121,11 @@ public class BoardFragment extends Fragment {
 		timeSpinner.setAdapter(timeSpinnerAdapter); 
 		timeSpinner.setOnItemSelectedListener(timeOnItemSelectedListener);
 		timeSpinner.setSelection(sharedpreferencesUtil.getValue(TIME_DATA_POSITION, 0));
-		
-		listViewInit();
-		
 	}
 	
+	@SuppressWarnings("unchecked")
 	private void listViewInit() {
+		boardList = (ArrayList<Board>)getArguments().get(BOOK_LIST);
 		boardAdapter = new BoardAdapter(getActivity(), R.layout.row_board_list, boardList);
 		boardListView.setAdapter(boardAdapter);
 		boardListView.setOnRefreshListener(mOnRefreshListener);

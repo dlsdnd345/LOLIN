@@ -62,7 +62,7 @@ public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 	
 	@Override
 	public int getCount() {
-		return 3;  // 총 5개의 page를 보여줍니다.
+		return 3;
 	}
 
 }

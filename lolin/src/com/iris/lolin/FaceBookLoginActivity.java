@@ -52,18 +52,22 @@ import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 public class FaceBookLoginActivity extends ActionBarActivity {
 
 	private static final String 		EMPRY_SUMMERNER_MESSAGE  		= "소환사 명 을 입력해 주세요.";
-
+	private static final String 		ACCESS_TOKEN  					= "ACCESS_TOKEN";
+	private static final String 		HELLO_MESSAGE  					= "HELLO ";
+	private static final String 		FACEBOOK_BASE_URL  				= "http://graph.facebook.com/";
+	private static final String 		PICTURE_TYPE					= "/picture?type=large";
+	
+	private DisplayImageOptions 		options;
 	private Animation 					verticalShake;
 	private Session 					sessionTemp;
-	private View 						layoutLogin , layoutBtnLogin;
 	private ProgressBar 				progressBar;
 	private ImageView 					imgProfile;
 	private ImageLoader 				imageLoader;
-	private DisplayImageOptions 		options;
 	private FaceBookUser 				faceBookUser;
-	private TextView 					txtHello , txtWarnningMessage;
 	private EditText 					editSummerner;
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
+	private TextView 					txtHello , txtWarnningMessage;
+	private View 						layoutLogin , layoutBtnLogin;
 	private ImageButton 				btnFacebookLogin , btnNotFacebookLogin;
 	private Session.StatusCallback 		statusCallback = new SessionStatusCallback();
 
@@ -91,7 +95,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		case R.id.ic_action_next:
 			//서버에 프로필 정보 전송 코드 들어가야함.
 			if(!editSummerner.getText().toString().equals("")){
-				sharedpreferencesUtil.put("ACCESS_TOKEN", sessionTemp.getAccessToken());
+				sharedpreferencesUtil.put(ACCESS_TOKEN, sessionTemp.getAccessToken());
 				Intent intent = new Intent(FaceBookLoginActivity.this, MainActivity.class);
 				startActivity(intent);
 				finish();
@@ -125,6 +129,24 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 
 		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 
+		imageLoderInit();
+		faceBookInit();
+		actionBarInit();
+	}
+
+	@SuppressLint("NewApi")
+	private void actionBarInit() {
+		//ActionBar Init
+		getActionBar().setDisplayShowHomeEnabled(false);
+		getActionBar().setTitle(R.string.facebook_login_activity_title);
+	}
+
+	private void faceBookInit(){
+		// FaceBook Init
+		faceBookUser = new FaceBookUser();
+	}
+
+	private void imageLoderInit() {
 		options = new DisplayImageOptions.Builder()
 		.showImageOnFail(Color.TRANSPARENT) // 에러 났을때 나타나는 이미지
 		.cacheInMemory(true)
@@ -142,13 +164,6 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		.build();
 		ImageLoader.getInstance().init(config);
 		imageLoader = ImageLoader.getInstance();
-
-		// FaceBook Init
-		faceBookUser = new FaceBookUser();
-
-		//ActionBar Init
-		getActionBar().setDisplayShowHomeEnabled(false);
-		getActionBar().setTitle(R.string.facebook_login_activity_title);
 	}
 
 	private void facebookInit(Bundle savedInstanceState) {
@@ -238,30 +253,30 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 				public void onCompleted(GraphUser user, Response response) {
 					response.getError();
 
-					txtHello.setText("Hello "+ user.getName());
-
-					String url = "http://graph.facebook.com/"+ user.getId()+"/picture?type=large";
-
-					imageLoader.displayImage(url, imgProfile, options, new ImageLoadingListener() {
-						@Override
-						public void onLoadingStarted(String imageUri, View view) {
-							progressBar.setVisibility(View.VISIBLE);
-						}
-						@Override
-						public void onLoadingCancelled(String imageUri, View view) {}
-						@Override
-						public void onLoadingComplete(String arg0, View arg1,Bitmap arg2) {
-							progressBar.setVisibility(View.INVISIBLE);
-						}
-						@Override
-						public void onLoadingFailed(String arg0, View arg1,FailReason arg2) {}
-					});
+					txtHello.setText(HELLO_MESSAGE+ user.getName());
+					String url = FACEBOOK_BASE_URL+ user.getId()+PICTURE_TYPE;
+					imageLoader.displayImage(url, imgProfile, options, mImageLoadingListener);
 					faceBookUser.setUserId( user.getId());
 				}
 			}).executeAsync();
 		}
 	}
 
+	ImageLoadingListener mImageLoadingListener = new ImageLoadingListener(){
+		@Override
+		public void onLoadingStarted(String imageUri, View view) {
+			progressBar.setVisibility(View.VISIBLE);
+		}
+		@Override
+		public void onLoadingCancelled(String imageUri, View view) {}
+		@Override
+		public void onLoadingComplete(String arg0, View arg1,Bitmap arg2) {
+			progressBar.setVisibility(View.INVISIBLE);
+		}
+		@Override
+		public void onLoadingFailed(String arg0, View arg1,FailReason arg2) {}
+	};
+	
 	public void notFacebookLogin(View view){
 
 		Intent inetnt = new Intent(FaceBookLoginActivity.this , MainActivity.class);
@@ -290,8 +305,8 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		@Override
 		public void onAnimationEnd(Animation animation) {
 			verticalShake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.vertical_shake);
-			verticalShake.setRepeatCount(Animation.INFINITE);
 			Animation alphaFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_fade_in);
+			verticalShake.setRepeatCount(Animation.INFINITE);
 			imgProfile.setVisibility(View.VISIBLE);
 			txtHello.setVisibility(View.VISIBLE);
 			editSummerner.setVisibility(View.VISIBLE);

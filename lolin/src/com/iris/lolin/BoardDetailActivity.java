@@ -17,10 +17,10 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private static final int CONTENT_FRAGMENT = 0;
 	private static final int RECORD_SEARCH_FRAGMENT = 1;
 
-	private int 						viewPagerPosition;
+	private PagerSlidingTabStrip 		tabs;
 	private ViewPager 					mViewPager;
 	private PagerAdapter 				mPagerAdapter;
-	private PagerSlidingTabStrip 		tabs;
+	private int 						viewPagerPosition;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -37,39 +37,48 @@ public class BoardDetailActivity extends ActionBarActivity {
 		tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 	}
 	
-	@SuppressLint("NewApi")
 	private void dataInit() {
 		
 		//Pager Init
-		mPagerAdapter = new BoardDetailPagerAdapter(getApplicationContext(),getSupportFragmentManager());
-		mViewPager.setAdapter(mPagerAdapter);
-		
-		tabs.setIndicatorColor(Color.parseColor("#0099cc"));
-		tabs.setViewPager(mViewPager);
-
-		tabs.setOnPageChangeListener(new OnPageChangeListener() {
-			@Override
-			public void onPageSelected(int position) {
-
-				viewPagerPosition = position;
-
-				if(position == CONTENT_FRAGMENT){
-					getActionBar().setTitle(R.string.detail_title_section1);
-				}else if(position == RECORD_SEARCH_FRAGMENT){
-					getActionBar().setTitle(R.string.detail_title_section2);
-				}else{
-					getActionBar().setTitle(R.string.detail_title_section3);
-				}
-			}
-			@Override
-			public void onPageScrolled(int position, float positionOffest, int positionOffestPixel) {}
-			@Override
-			public void onPageScrollStateChanged(int position) {}
-		});
-		
+		viewPagerInit();
+		actionBarInit();
+	}
+	
+	@SuppressLint("NewApi")
+	private void actionBarInit() {
 		//ActionBar Init
 		getActionBar().setDisplayShowHomeEnabled(false);
 		getActionBar().setTitle(R.string.board_detail_activity_title);
 	}
+
+	private void viewPagerInit() {
+		mPagerAdapter = new BoardDetailPagerAdapter(getApplicationContext(),getSupportFragmentManager());
+		mViewPager.setAdapter(mPagerAdapter);
+		
+		tabs.setIndicatorColor(Color.parseColor("#0099cc"));
+		tabs.setOnPageChangeListener(mOnPageChangeListener);
+		tabs.setViewPager(mViewPager);
+	}
+	
+	OnPageChangeListener mOnPageChangeListener = new OnPageChangeListener(){
+		@SuppressLint("NewApi")
+		@Override
+		public void onPageSelected(int position) {
+
+			viewPagerPosition = position;
+
+			if(position == CONTENT_FRAGMENT){
+				getActionBar().setTitle(R.string.detail_title_section1);
+			}else if(position == RECORD_SEARCH_FRAGMENT){
+				getActionBar().setTitle(R.string.detail_title_section2);
+			}else{
+				getActionBar().setTitle(R.string.detail_title_section3);
+			}
+		}
+		@Override
+		public void onPageScrolled(int position, float positionOffest, int positionOffestPixel) {}
+		@Override
+		public void onPageScrollStateChanged(int position) {}
+	};
 	
 }

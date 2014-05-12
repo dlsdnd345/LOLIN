@@ -34,9 +34,9 @@ public class ComposerActivity extends ActionBarActivity {
 	
 	private Board						board;
 	private TextView					txtTea;
+	private String[] 					rankData,teaData,positionData,timeData;
 	private EditText					editSummonerName , editTitle, editContent;
 	private Spinner 					rankSpinner,teaSpinner,positionSpinner,timeSpinner;		
-	private String[] 					rankData,teaData,positionData,timeData;
 	private ArrayAdapter<String> 		rankSpinnerAdapter,teaSpinnerAdapter,positionSpinnerAdapter,timeSpinnerAdapter;
 	
 	@Override
@@ -46,28 +46,28 @@ public class ComposerActivity extends ActionBarActivity {
 	    
 		init();
 		DataInit();
-	    
 	}
 
 	private void init() {
 		txtTea = (TextView)findViewById(R.id.txt_tea);
-		editSummonerName = (EditText)findViewById(R.id.edit_summoner_name);
 		editTitle = (EditText)findViewById(R.id.edit_title);
 		editContent = (EditText)findViewById(R.id.edit_content);
 		rankSpinner = (Spinner)findViewById(R.id.composer_spinner_rank);
 		teaSpinner = (Spinner)findViewById(R.id.composer_spinner_tea);
-		positionSpinner = (Spinner)findViewById(R.id.composer_spinner_position);
 		timeSpinner = (Spinner)findViewById(R.id.composer_spinner_time);
+		editSummonerName = (EditText)findViewById(R.id.edit_summoner_name);
+		positionSpinner = (Spinner)findViewById(R.id.composer_spinner_position);
 	}
 
 	private void DataInit() {
 		
 		board = new Board();
 		
-		//ActionBar Init
-		getActionBar().setDisplayShowHomeEnabled(false);
-		getActionBar().setTitle(R.string.composer_activity_title);
-		
+		actionbarInit();
+		spinnerInit();
+	}
+
+	private void spinnerInit() {
 		//spinner init
 		rankData = getResources().getStringArray(R.array.composer_rank_array_list);
 		rankSpinnerAdapter= new ArrayAdapter<>
@@ -96,6 +96,12 @@ public class ComposerActivity extends ActionBarActivity {
 		timeSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
 		timeSpinner.setAdapter(timeSpinnerAdapter); 
 		timeSpinner.setOnItemSelectedListener(timeOnItemSelectedListener);
+	}
+
+	private void actionbarInit() {
+		//ActionBar Init
+		getActionBar().setDisplayShowHomeEnabled(false);
+		getActionBar().setTitle(R.string.composer_activity_title);
 	}
 	
 	@Override

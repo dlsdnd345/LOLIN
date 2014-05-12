@@ -120,10 +120,14 @@ public class MainActivity extends ActionBarActivity  {
 		board7.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
 		boardList.add(board7);
 
+		actionvarInit();
+
+	}
+
+	private void actionvarInit() {
 		//ActionBar Init
 		getActionBar().setDisplayShowHomeEnabled(false);
 		getActionBar().setTitle(R.string.title_section1);
-
 	}
 	
 
@@ -144,36 +148,35 @@ public class MainActivity extends ActionBarActivity  {
 
 		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), getApplicationContext(),boardList);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
-
 		tabs.setIndicatorColor(Color.parseColor("#0099cc"));
+		tabs.setOnPageChangeListener(mOnPageChangeListener);
 		tabs.setViewPager(mViewPager);
-
-		tabs.setOnPageChangeListener(new OnPageChangeListener() {
-			@Override
-			public void onPageSelected(int position) {
-
-				viewPagerPosition = position;
-
-				if(position == WRITE_TEXT){
-					getActionBar().setTitle(R.string.title_section2);
-					invalidateOptionsMenu();
-				}else if(position == RECORD_SEARCH){
-					getActionBar().setTitle(R.string.title_section3);
-					invalidateOptionsMenu();
-				}else if(position == SETTING){
-					getActionBar().setTitle(R.string.title_section4);
-					invalidateOptionsMenu();
-				}else{
-					getActionBar().setTitle(R.string.title_section1);
-					invalidateOptionsMenu();
-				}
-			}
-			@Override
-			public void onPageScrolled(int position, float positionOffest, int positionOffestPixel) {}
-			@Override
-			public void onPageScrollStateChanged(int position) {}
-		});
-
 	}
 
+	OnPageChangeListener mOnPageChangeListener = new OnPageChangeListener(){
+		@Override
+		public void onPageSelected(int position) {
+
+			viewPagerPosition = position;
+
+			if(position == WRITE_TEXT){
+				getActionBar().setTitle(R.string.title_section2);
+				invalidateOptionsMenu();
+			}else if(position == RECORD_SEARCH){
+				getActionBar().setTitle(R.string.title_section3);
+				invalidateOptionsMenu();
+			}else if(position == SETTING){
+				getActionBar().setTitle(R.string.title_section4);
+				invalidateOptionsMenu();
+			}else{
+				getActionBar().setTitle(R.string.title_section1);
+				invalidateOptionsMenu();
+			}
+		}
+		@Override
+		public void onPageScrolled(int position, float positionOffest, int positionOffestPixel) {}
+		@Override
+		public void onPageScrollStateChanged(int position) {}
+	};
+	
 }

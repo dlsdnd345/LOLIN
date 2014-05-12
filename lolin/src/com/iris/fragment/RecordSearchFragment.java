@@ -24,6 +24,9 @@ import android.widget.TextView;
 @SuppressLint("NewApi")
 public class RecordSearchFragment extends Fragment {
 
+	private static final String BASE_URL = "http://www.op.gg/summoner/userName=";
+	private static final String SUMMERNER_NAME = "dlsdnd345";
+	
 	private PullToRefreshWebView mPullRefreshWebView;
 	
 	public Fragment newInstance() {
@@ -40,14 +43,21 @@ public class RecordSearchFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_record_search, container,false);
 
-		mPullRefreshWebView = (PullToRefreshWebView)rootView.findViewById(R.id.pull_refresh_webview);
-		WebView webView = mPullRefreshWebView.getRefreshableView();
-		
-		//webView.getSettings().setJavaScriptEnabled(true); 
-		webView.loadUrl("http://www.op.gg/summoner/userName=dlsdnd345");
-		webView.setWebViewClient(new BasicWebViewClient());  
-
+		init(rootView);
+		webViewInit();  
 		return rootView;
+	}
+
+	@SuppressLint("SetJavaScriptEnabled")
+	private void webViewInit() {
+		WebView webView = mPullRefreshWebView.getRefreshableView();
+		webView.getSettings().setJavaScriptEnabled(true); 
+		webView.loadUrl(BASE_URL+SUMMERNER_NAME);
+		webView.setWebViewClient(new BasicWebViewClient());
+	}
+
+	private void init(View rootView) {
+		mPullRefreshWebView = (PullToRefreshWebView)rootView.findViewById(R.id.pull_refresh_webview);
 	}
 	
 	private class BasicWebViewClient extends WebViewClient {
