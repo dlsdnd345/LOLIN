@@ -1,10 +1,16 @@
 package com.iris.lolin;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -13,22 +19,38 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.HorizontalScrollView;
-import android.widget.RelativeLayout;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.astuetz.PagerSlidingTabStrip;
-import com.facebook.Session;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonParser;
+import com.google.gson.reflect.TypeToken;
 import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.entities.Board;
+import com.iris.service.MainService;
+import com.iris.util.HttpUtil;
 
 @SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity  {
 
-	private final static int RECORD_SEARCH = 2;
+	private final static String BOARD_FINDALL = "http://192.168.219.6:8080/board/findAll";
+	private final static String ERROR = "Error";
+	
 	private final static int WRITE_TEXT = 1;
+	private final static int RECORD_SEARCH = 2;
 	private final static int SETTING = 3;
 
 	float firstGetY , preGetY= 0;
-	
+
+
+	private MainService 				mainService;
 	private ViewPager 					mViewPager;
 	private int 						viewPagerPosition;
 	private PagerSlidingTabStrip 		tabs;
@@ -43,7 +65,25 @@ public class MainActivity extends ActionBarActivity  {
 
 		init();
 		dataInit();
-		viewPagerConfig();
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+
+		RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
+		request.add(new StringRequest(Request.Method.GET, BOARD_FINDALL,new Response.Listener<String>() {  
+			@Override  
+			public void onResponse(String response) {  
+				boardList = mainService.getBoardFindAll(response);
+				viewPagerConfig();
+			}  
+		}, new Response.ErrorListener() {  
+			@Override  
+			public void onErrorResponse(VolleyError error) {  
+				VolleyLog.d(ERROR, error.getMessage());  
+			}  
+		}));  
 	}
 
 	@Override
@@ -61,67 +101,11 @@ public class MainActivity extends ActionBarActivity  {
 
 	private void dataInit() {
 
+		mainService = new MainService();
 		//Data Init
-
 		boardList = new ArrayList<Board>();
-		Board board1 = new Board();
-		board1.setRank("unrank");
-		board1.setPosition("미드");
-		board1.setTitle("듀오 하실분 모십니다.");
-		board1.setSummonerName("SK T1 Faker");
-		board1.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
-		boardList.add(board1);
-
-		Board board2 = new Board();
-		board2.setRank("bronze");
-		board2.setPosition("미드");
-		board2.setTitle("듀오 하실분 모십니다.");
-		board2.setSummonerName("SK T1 Faker");
-		board2.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
-		boardList.add(board2);
-
-		Board board3 = new Board();
-		board3.setRank("silver");
-		board3.setPosition("미드");
-		board3.setTitle("듀오 하실분 모십니다.");
-		board3.setSummonerName("SK T1 Faker");
-		board3.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
-		boardList.add(board3);
-
-		Board board4 = new Board();
-		board4.setRank("gold");
-		board4.setPosition("미드");
-		board4.setTitle("듀오 하실분 모십니다.");
-		board4.setSummonerName("SK T1 Faker");
-		board4.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
-		boardList.add(board4);
-
-		Board board5 = new Board();
-		board5.setRank("platinum");
-		board5.setPosition("미드");
-		board5.setTitle("듀오 하실분 모십니다.");
-		board5.setSummonerName("SK T1 Faker");
-		board5.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
-		boardList.add(board5);
-
-		Board board6 = new Board();
-		board6.setRank("diamond");
-		board6.setPosition("미드");
-		board6.setTitle("듀오 하실분 모십니다.");
-		board6.setSummonerName("SK T1 Faker");
-		board6.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
-		boardList.add(board6);
-
-		Board board7 = new Board();
-		board7.setRank("challenger");
-		board7.setPosition("미드");
-		board7.setTitle("듀오 하실분 모십니다.");
-		board7.setSummonerName("SK T1 Faker");
-		board7.setContent("서폿 유저 입니다 . 블랭크 , 쓰레쉬 , 서폿 말파 유져 입니다.");
-		boardList.add(board7);
 
 		actionvarInit();
-
 	}
 
 	private void actionvarInit() {
@@ -129,7 +113,7 @@ public class MainActivity extends ActionBarActivity  {
 		getActionBar().setDisplayShowHomeEnabled(false);
 		getActionBar().setTitle(R.string.title_section1);
 	}
-	
+
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -178,5 +162,5 @@ public class MainActivity extends ActionBarActivity  {
 		@Override
 		public void onPageScrollStateChanged(int position) {}
 	};
-	
+
 }

@@ -14,7 +14,7 @@ public class Board implements Serializable {
 	private String position;
 	private String rank;
 	private String playTime;
-	private Date writeTime;
+	private String writeTime;
 	
 	public int getId() {
 		return id;
@@ -52,12 +52,14 @@ public class Board implements Serializable {
 	public void setRank(String rank) {
 		this.rank = rank;
 	}
-	public Date getWriteTime() {
+	
+	public String getWriteTime() {
 		return writeTime;
 	}
-	public void setWriteTime(Date writeTime) {
+	public void setWriteTime(String writeTime) {
 		this.writeTime = writeTime;
 	}
+	
 	public String getPlayTime() {
 		return playTime;
 	}

@@ -1,9 +1,5 @@
 package com.iris.lolin;
 
-import com.astuetz.PagerSlidingTabStrip;
-import com.iris.adapter.BoardDetailPagerAdapter;
-import com.iris.adapter.SectionsPagerAdapter;
-
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,6 +7,9 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.ActionBarActivity;
+
+import com.astuetz.PagerSlidingTabStrip;
+import com.iris.adapter.BoardDetailPagerAdapter;
 
 public class BoardDetailActivity extends ActionBarActivity {
 

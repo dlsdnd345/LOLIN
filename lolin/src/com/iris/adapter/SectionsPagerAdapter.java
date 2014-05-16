@@ -10,9 +10,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.iris.entities.Board;
 import com.iris.fragment.BoardFragment;
+import com.iris.fragment.ComposerFragment;
 import com.iris.fragment.RecordSearchFragment;
 import com.iris.fragment.SettingFragment;
-import com.iris.fragment.ComposerFragment;
 import com.iris.lolin.R;
 
 /**

@@ -2,10 +2,8 @@ package com.iris.lolin;
 
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Bitmap.CompressFormat;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -17,7 +15,6 @@ import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -34,19 +31,14 @@ import com.facebook.Settings;
 import com.facebook.model.GraphUser;
 import com.iris.entities.FaceBookUser;
 import com.iris.util.SharedpreferencesUtil;
-import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
-import com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
-import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
-import com.nostra13.universalimageloader.core.decode.BaseImageDecoder;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
-import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 
 
 public class FaceBookLoginActivity extends ActionBarActivity {
@@ -94,6 +86,11 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		switch (item.getItemId()) {
 		case R.id.ic_action_next:
 			//서버에 프로필 정보 전송 코드 들어가야함.
+			
+
+			
+			
+			
 			if(!editSummerner.getText().toString().equals("")){
 				sharedpreferencesUtil.put(ACCESS_TOKEN, sessionTemp.getAccessToken());
 				Intent intent = new Intent(FaceBookLoginActivity.this, MainActivity.class);
@@ -104,7 +101,6 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 				editSummerner.startAnimation(shake);
 				Toast.makeText(getApplicationContext(), EMPRY_SUMMERNER_MESSAGE, Toast.LENGTH_LONG).show();
 			}
-
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);

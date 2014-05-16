@@ -1,10 +1,10 @@
 package com.iris.lolin;
 
-import com.iris.util.SharedpreferencesUtil;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.iris.util.SharedpreferencesUtil;
 
 public class IntroActivity extends Activity {
 

@@ -1,22 +1,16 @@
 package com.iris.fragment;
 
-import com.handmark.pulltorefresh.library.PullToRefreshWebView;
-import com.iris.lolin.R;
-
 import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.webkit.WebView.FindListener;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-import android.widget.TextView;
+
+import com.handmark.pulltorefresh.library.PullToRefreshWebView;
+import com.iris.lolin.R;
 
 /**
  * A placeholder fragment containing a simple view.

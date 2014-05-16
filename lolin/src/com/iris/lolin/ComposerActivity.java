@@ -1,11 +1,6 @@
 package com.iris.lolin;
 
-import com.iris.entities.Board;
-import com.iris.lolin.R;
-
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -15,12 +10,14 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.iris.entities.Board;
 
 @SuppressLint("NewApi")
 public class ComposerActivity extends ActionBarActivity {

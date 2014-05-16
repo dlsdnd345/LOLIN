@@ -2,13 +2,6 @@ package com.iris.fragment;
 
 import java.util.ArrayList;
 
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
-import com.iris.adapter.BoardAdapter;
-import com.iris.adapter.ComposerAdapter;
-import com.iris.entities.Board;
-import com.iris.lolin.BoardDetailActivity;
-import com.iris.lolin.R;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,9 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+
+import com.iris.adapter.ComposerAdapter;
+import com.iris.entities.Board;
+import com.iris.lolin.BoardDetailActivity;
+import com.iris.lolin.R;
 
 /**
  * A placeholder fragment containing a simple view.
