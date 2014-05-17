@@ -1,6 +1,14 @@
 package com.iris.lolin;
 
 
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -22,13 +30,31 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+
+
+
+
+
+
+
+
+import com.android.volley.Request.Method;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.facebook.LoggingBehavior;
 import com.facebook.Request;
-import com.facebook.Response;
 import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.Settings;
 import com.facebook.model.GraphUser;
+import com.google.gson.reflect.TypeToken;
+import com.iris.entities.Board;
 import com.iris.entities.FaceBookUser;
 import com.iris.util.SharedpreferencesUtil;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
@@ -43,12 +69,21 @@ import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 public class FaceBookLoginActivity extends ActionBarActivity {
 
+	private static final String OK = "ok";
+	private static final String TRUE = "true";
+	private static final String DATA = "data";
+	
+	private final static String USER_SAVE = "http://192.168.219.6:8080/user/save";
+
+	private final static String 		ERROR 							= "Error";
 	private static final String 		EMPRY_SUMMERNER_MESSAGE  		= "소환사 명 을 입력해 주세요.";
 	private static final String 		ACCESS_TOKEN  					= "ACCESS_TOKEN";
 	private static final String 		HELLO_MESSAGE  					= "HELLO ";
 	private static final String 		FACEBOOK_BASE_URL  				= "http://graph.facebook.com/";
 	private static final String 		PICTURE_TYPE					= "/picture?type=large";
-	
+
+	private StringRequest 				stringRequest;
+	private RequestQueue 				request;
 	private DisplayImageOptions 		options;
 	private Animation 					verticalShake;
 	private Session 					sessionTemp;
@@ -87,15 +122,10 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		case R.id.ic_action_next:
 			//서버에 프로필 정보 전송 코드 들어가야함.
 			
-
-			
-			
+			saveLoginInfo();
 			
 			if(!editSummerner.getText().toString().equals("")){
-				sharedpreferencesUtil.put(ACCESS_TOKEN, sessionTemp.getAccessToken());
-				Intent intent = new Intent(FaceBookLoginActivity.this, MainActivity.class);
-				startActivity(intent);
-				finish();
+				request.add(stringRequest);
 			}else{
 				Animation shake = AnimationUtils.loadAnimation(this, R.anim.horizontal_shake);
 				editSummerner.startAnimation(shake);
@@ -107,6 +137,36 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		}
 	}
 
+	public void saveLoginInfo(){
+		
+		String sub_url = "?faceBookId="+faceBookUser.getUserId()+"&summonerName="+editSummerner.getText().toString();
+		stringRequest =new StringRequest(Method.GET, USER_SAVE+sub_url,new Response.Listener<String>() {  
+			@Override  
+			public void onResponse(String response) {  
+				JSONObject JsonObject;
+				String ok = null;
+				
+				try {
+					JsonObject = new JSONObject(response);
+					ok = JsonObject.getString(OK);
+					if(ok.equals(TRUE)){
+						sharedpreferencesUtil.put(ACCESS_TOKEN, sessionTemp.getAccessToken());
+						Intent intent = new Intent(FaceBookLoginActivity.this, MainActivity.class);
+						startActivity(intent);
+						finish();
+					}
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+			}  
+		}, new Response.ErrorListener() {  
+			@Override  
+			public void onErrorResponse(VolleyError error) {  
+				VolleyLog.d(ERROR, error.getMessage());  
+			}  
+		});
+	}
+	
 	private void init() {
 
 		layoutBtnLogin = (View)findViewById(R.id.layout_btn_login);
@@ -124,7 +184,8 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	private void dataInit() {
 
 		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
-
+		request = Volley.newRequestQueue(getApplicationContext());  
+		
 		imageLoderInit();
 		faceBookInit();
 		actionBarInit();
@@ -239,16 +300,15 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 			updateView();    
 		}
 	}
-	
+
 	private void getFaceBookMe(Session session){
 
 		if(session.isOpened()){
-			Request.newMeRequest(session, new Request.GraphUserCallback() {
+			Request.newMeRequest(session, new  com.facebook.Request.GraphUserCallback() {
 
 				@Override
-				public void onCompleted(GraphUser user, Response response) {
+				public void onCompleted(GraphUser user,com.facebook.Response response) {
 					response.getError();
-
 					txtHello.setText(HELLO_MESSAGE+ user.getName());
 					String url = FACEBOOK_BASE_URL+ user.getId()+PICTURE_TYPE;
 					imageLoader.displayImage(url, imgProfile, options, mImageLoadingListener);
@@ -272,15 +332,15 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		@Override
 		public void onLoadingFailed(String arg0, View arg1,FailReason arg2) {}
 	};
-	
+
 	public void notFacebookLogin(View view){
 
 		Intent inetnt = new Intent(FaceBookLoginActivity.this , MainActivity.class);
 		startActivity(inetnt);
 	}
-	
+
 	AnimationListener alphaFadeInAnimationListener = new AnimationListener(){
-		
+
 		@Override
 		public void onAnimationStart(Animation animation) {}
 		@Override
@@ -291,7 +351,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 			imgProfile.startAnimation(verticalShake);
 		}
 	};
-	
+
 	AnimationListener alphaFadeOutAnimationListener = new AnimationListener(){
 
 		@Override
@@ -313,7 +373,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 			txtWarnningMessage.startAnimation(alphaFadeIn);
 			alphaFadeIn.setAnimationListener(alphaFadeInAnimationListener);
 		}
-		
+
 	};
 
 }

@@ -1,16 +1,10 @@
 package com.iris.lolin;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.List;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -28,14 +22,9 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.astuetz.PagerSlidingTabStrip;
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonParser;
-import com.google.gson.reflect.TypeToken;
 import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.entities.Board;
 import com.iris.service.MainService;
-import com.iris.util.HttpUtil;
 
 @SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity  {
@@ -71,12 +60,16 @@ public class MainActivity extends ActionBarActivity  {
 	protected void onResume() {
 		super.onResume();
 
+		System.err.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+		
 		RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
 		request.add(new StringRequest(Request.Method.GET, BOARD_FINDALL,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
 				boardList = mainService.getBoardFindAll(response);
 				viewPagerConfig();
+				
+				
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  
