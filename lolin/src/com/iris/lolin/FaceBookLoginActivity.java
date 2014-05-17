@@ -78,6 +78,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	private final static String 		ERROR 							= "Error";
 	private static final String 		EMPRY_SUMMERNER_MESSAGE  		= "소환사 명 을 입력해 주세요.";
 	private static final String 		ACCESS_TOKEN  					= "ACCESS_TOKEN";
+	private static final String 		FACEBOOK_ID  					= "FACEBOOK_ID";
 	private static final String 		HELLO_MESSAGE  					= "HELLO ";
 	private static final String 		FACEBOOK_BASE_URL  				= "http://graph.facebook.com/";
 	private static final String 		PICTURE_TYPE					= "/picture?type=large";
@@ -151,6 +152,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 					ok = JsonObject.getString(OK);
 					if(ok.equals(TRUE)){
 						sharedpreferencesUtil.put(ACCESS_TOKEN, sessionTemp.getAccessToken());
+						sharedpreferencesUtil.put(FACEBOOK_ID, faceBookUser.getUserId());
 						Intent intent = new Intent(FaceBookLoginActivity.this, MainActivity.class);
 						startActivity(intent);
 						finish();

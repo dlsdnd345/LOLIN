@@ -11,7 +11,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.iris.entities.Board;
 
-public class MainService {
+public class BoardService {
 
 	private static final String OK = "ok";
 	private static final String TRUE = "true";
@@ -20,7 +20,7 @@ public class MainService {
 	private Gson 						gson;
 	private ArrayList<Board> 			boardListFromGson;
 	
-	public MainService(){
+	public BoardService(){
 		gson = new Gson();
 	}
 	

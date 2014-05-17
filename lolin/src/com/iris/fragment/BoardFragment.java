@@ -19,6 +19,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
@@ -26,6 +33,7 @@ import com.iris.adapter.BoardAdapter;
 import com.iris.entities.Board;
 import com.iris.lolin.BoardDetailActivity;
 import com.iris.lolin.R;
+import com.iris.service.BoardService;
 import com.iris.util.SharedpreferencesUtil;
 
 /**
@@ -34,11 +42,14 @@ import com.iris.util.SharedpreferencesUtil;
 @SuppressLint("NewApi")
 public class BoardFragment extends Fragment {
 
-	private static final String BOOK_LIST 				= "boardList";
+	private final static String BOARD_FINDALL = "http://192.168.219.6:8080/board/findAll";
+	private final static String ERROR = "Error";
+	
 	private static final String RANK_DATA_POSITION 		= "RankDataPosition";
 	private static final String POSITION_DATA__POSITION 	= "PositionDataPosition";
 	private static final String TIME_DATA_POSITION 		= "TimeDataPosition";
 	
+	private BoardService 				boardService;
 	private ArrayList<Board> 			boardList;
 	private BoardAdapter 				boardAdapter;
 	private PullToRefreshListView 		boardListView;
@@ -47,11 +58,10 @@ public class BoardFragment extends Fragment {
 	private Spinner 					rankSpinner,positionSpinner,timeSpinner;	
 	private ArrayAdapter<String> 		rankSpinnerAdapter,positionSpinnerAdapter,timeSpinnerAdapter;
 
-	public Fragment newInstance(Context context ,ArrayList<Board> boardList) {
+	public Fragment newInstance(Context context) {
 		
 		BoardFragment fragment = new BoardFragment();
 		Bundle args = new Bundle();
-		args.putSerializable(BOOK_LIST, boardList);
 		fragment.setArguments(args);
 		return fragment;
 	}
@@ -79,9 +89,29 @@ public class BoardFragment extends Fragment {
 	
 	private void dataInit(View rootView){
 		
+		boardService = new BoardService();
+		getBoardFindAll(); 
 		spinnerInit(rootView);
-		listViewInit();
 		
+	}
+
+	private void getBoardFindAll() {
+		RequestQueue request = Volley.newRequestQueue(getActivity());  
+		request.add(new StringRequest(Request.Method.GET, BOARD_FINDALL,new Response.Listener<String>() {  
+			@Override  
+			public void onResponse(String response) {  
+				
+				System.err.println("@@@@@@@@@@@@@@@@@@   :  " + response);
+				
+				boardList = boardService.getBoardFindAll(response);
+				listViewInit();
+			}  
+		}, new Response.ErrorListener() {  
+			@Override  
+			public void onErrorResponse(VolleyError error) {  
+				VolleyLog.d(ERROR, error.getMessage());  
+			}  
+		}));
 	}
 
 	private void spinnerInit(View rootView) {
@@ -113,9 +143,7 @@ public class BoardFragment extends Fragment {
 		timeSpinner.setSelection(sharedpreferencesUtil.getValue(TIME_DATA_POSITION, 0));
 	}
 	
-	@SuppressWarnings("unchecked")
 	private void listViewInit() {
-		boardList = (ArrayList<Board>)getArguments().get(BOOK_LIST);
 		boardAdapter = new BoardAdapter(getActivity(), R.layout.row_board_list, boardList);
 		boardListView.setAdapter(boardAdapter);
 		boardListView.setOnRefreshListener(mOnRefreshListener);
@@ -179,7 +207,8 @@ public class BoardFragment extends Fragment {
 		@Override
 		protected String[] doInBackground(Void... params) {
 			try {
-				Thread.sleep(4000);
+				Thread.sleep(3000);
+				getBoardFindAll();
 			} catch (InterruptedException e) {
 			}
 			return null;
@@ -187,7 +216,6 @@ public class BoardFragment extends Fragment {
 
 		@Override
 		protected void onPostExecute(String[] result) {
-			boardAdapter.notifyDataSetChanged();
 			boardListView.onRefreshComplete();
 			super.onPostExecute(result);
 		}

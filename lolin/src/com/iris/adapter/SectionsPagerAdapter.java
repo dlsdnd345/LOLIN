@@ -32,10 +32,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 	private ComposerFragment 		writeTextFragment;
 	private RecordSearchFragment 	recordSearchFragment;
 	
-	public SectionsPagerAdapter(FragmentManager fm ,Context context , ArrayList<Board> boardList) {
+	public SectionsPagerAdapter(FragmentManager fm ,Context context) {
 		super(fm);
 		this.context = context;
-		this.boardList = boardList;
 		boardFragment = new BoardFragment();
 		settingFragment = new SettingFragment();
 		writeTextFragment = new ComposerFragment();
@@ -45,9 +44,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 	@Override
 	public Fragment getItem(int position) {
 		if(position == BOARD_FRAGMENT){
-			return boardFragment.newInstance(context,boardList);
+			return boardFragment.newInstance(context);
 		}else if(position == WRITE_TEXT_FRAGMENT){
-			return writeTextFragment.newInstance(boardList);
+			return writeTextFragment.newInstance();
 		}else if(position == RECORD_SEARCH_FRAGMENT){
 			return recordSearchFragment.newInstance();
 		}else{

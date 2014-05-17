@@ -24,26 +24,20 @@ import com.android.volley.toolbox.Volley;
 import com.astuetz.PagerSlidingTabStrip;
 import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.entities.Board;
-import com.iris.service.MainService;
+import com.iris.service.BoardService;
 
 @SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity  {
 
-	private final static String BOARD_FINDALL = "http://192.168.219.6:8080/board/findAll";
-	private final static String ERROR = "Error";
-	
 	private final static int WRITE_TEXT = 1;
 	private final static int RECORD_SEARCH = 2;
 	private final static int SETTING = 3;
 
 	float firstGetY , preGetY= 0;
 
-
-	private MainService 				mainService;
 	private ViewPager 					mViewPager;
 	private int 						viewPagerPosition;
 	private PagerSlidingTabStrip 		tabs;
-	private ArrayList<Board> 			boardList; 
 	private SectionsPagerAdapter 		mSectionsPagerAdapter;
 	public 	 HorizontalScrollView 		scrollViewRank, scrollViewPosition, scrollViewTime;
 
@@ -58,25 +52,7 @@ public class MainActivity extends ActionBarActivity  {
 
 	@Override
 	protected void onResume() {
-		super.onResume();
-
-		System.err.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-		
-		RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
-		request.add(new StringRequest(Request.Method.GET, BOARD_FINDALL,new Response.Listener<String>() {  
-			@Override  
-			public void onResponse(String response) {  
-				boardList = mainService.getBoardFindAll(response);
-				viewPagerConfig();
-				
-				
-			}  
-		}, new Response.ErrorListener() {  
-			@Override  
-			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(ERROR, error.getMessage());  
-			}  
-		}));  
+		super.onResume(); 
 	}
 
 	@Override
@@ -94,11 +70,8 @@ public class MainActivity extends ActionBarActivity  {
 
 	private void dataInit() {
 
-		mainService = new MainService();
-		//Data Init
-		boardList = new ArrayList<Board>();
-
 		actionvarInit();
+		viewPagerConfig();
 	}
 
 	private void actionvarInit() {
@@ -123,7 +96,7 @@ public class MainActivity extends ActionBarActivity  {
 
 	private void viewPagerConfig() {
 
-		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), getApplicationContext(),boardList);
+		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), getApplicationContext());
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 		tabs.setIndicatorColor(Color.parseColor("#0099cc"));
 		tabs.setOnPageChangeListener(mOnPageChangeListener);
