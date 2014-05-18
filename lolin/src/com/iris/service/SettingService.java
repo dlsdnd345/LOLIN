@@ -1,6 +1,8 @@
 package com.iris.service;
 
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
+import java.net.URLEncoder;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -10,7 +12,7 @@ import com.google.gson.reflect.TypeToken;
 import com.iris.entities.User;
 import com.iris.util.SharedpreferencesUtil;
 
-public class RecordSearchService {
+public class SettingService {
 
 	private static final String OK = "ok";
 	private static final String TRUE = "true";
@@ -19,7 +21,7 @@ public class RecordSearchService {
 	private User 						user;
 	private Gson 						gson;
 	
-	public RecordSearchService(){
+	public SettingService(){
 		gson = new Gson();
 	}
 	
@@ -43,5 +45,17 @@ public class RecordSearchService {
 		
 		return user;
 	}
+	
+		public String getEncodeSummonerName(String summonerName){
+			
+			String encodeSummonerName = null;
+			try {
+				encodeSummonerName = URLEncoder.encode(summonerName,"UTF-8");
+			} catch (UnsupportedEncodingException e1) {
+				e1.printStackTrace();
+			}
+			return encodeSummonerName;
+		}
+	
 	
 }

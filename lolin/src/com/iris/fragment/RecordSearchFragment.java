@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -29,7 +31,6 @@ import com.iris.util.SharedpreferencesUtil;
 public class RecordSearchFragment extends Fragment {
 
 	private final static String 		ERROR 							= "Error";
-	private static final String 		SUMMERNER_NAME 					= "dlsdnd345";
 	private static final String 		FACEBOOK_ID  					= "FACEBOOK_ID";
 	private static final String 		BASE_URL 						= "http://www.op.gg/summoner/userName=";
 	private final static String 		USER_FIND_ONE					= "http://192.168.219.6:8080/user/findOne";
