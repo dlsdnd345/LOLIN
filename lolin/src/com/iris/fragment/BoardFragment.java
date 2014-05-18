@@ -1,6 +1,10 @@
 package com.iris.fragment;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
+
+import org.apache.http.protocol.HTTP;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -89,22 +93,24 @@ public class BoardFragment extends Fragment {
 	
 	private void dataInit(View rootView){
 		
-		boardService = new BoardService();
-		getBoardFindAll(); 
+		boardService = new BoardService(getActivity());
 		spinnerInit(rootView);
+		getBoardFindAll(); 
 		
 	}
 
 	private void getBoardFindAll() {
+		
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
-		request.add(new StringRequest(Request.Method.GET, BOARD_FINDALL,new Response.Listener<String>() {  
+		
+		System.err.println("@@@@@@@@@@@@@@@  :  "+boardService.getSubUrl());
+		
+		request.add(new StringRequest(Request.Method.GET, BOARD_FINDALL+boardService.getSubUrl(),new Response.Listener<String>() {  
+			
 			@Override  
 			public void onResponse(String response) {  
-				
-				System.err.println("@@@@@@@@@@@@@@@@@@   :  " + response);
-				
 				boardList = boardService.getBoardFindAll(response);
-				listViewInit();
+				listViewInit(boardList);
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  
@@ -113,7 +119,7 @@ public class BoardFragment extends Fragment {
 			}  
 		}));
 	}
-
+	
 	private void spinnerInit(View rootView) {
 		sharedpreferencesUtil = new SharedpreferencesUtil(rootView.getContext());
 		//spinner init
@@ -143,7 +149,7 @@ public class BoardFragment extends Fragment {
 		timeSpinner.setSelection(sharedpreferencesUtil.getValue(TIME_DATA_POSITION, 0));
 	}
 	
-	private void listViewInit() {
+	private void listViewInit(ArrayList<Board> boardList) {
 		boardAdapter = new BoardAdapter(getActivity(), R.layout.row_board_list, boardList);
 		boardListView.setAdapter(boardAdapter);
 		boardListView.setOnRefreshListener(mOnRefreshListener);
@@ -156,6 +162,7 @@ public class BoardFragment extends Fragment {
 		@Override
 		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
 			sharedpreferencesUtil.put(RANK_DATA_POSITION, position);
+			getBoardFindAll();
 		}
 		@Override
 		public void onNothingSelected(AdapterView<?> parent) {}
@@ -165,6 +172,7 @@ public class BoardFragment extends Fragment {
 		@Override
 		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
 			sharedpreferencesUtil.put(POSITION_DATA__POSITION, position);
+			getBoardFindAll();
 		}
 		@Override
 		public void onNothingSelected(AdapterView<?> parent) {}
@@ -174,6 +182,7 @@ public class BoardFragment extends Fragment {
 		@Override
 		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
 			sharedpreferencesUtil.put(TIME_DATA_POSITION, position);
+			getBoardFindAll();
 		}
 		@Override
 		public void onNothingSelected(AdapterView<?> parent) {}
