@@ -10,6 +10,8 @@ import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.DialogInterface.OnClickListener;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -44,20 +46,21 @@ public class SettingFragment extends Fragment {
 	private static final String OK = "ok";
 	private static final String TRUE = "true";
 	private static final String DATA = "data";
-	
+
 	private final static String 		ERROR 							= "Error";
 	private static final String 		FACEBOOK_ID  					= "FACEBOOK_ID";
 	private final static String 		USER_SAVE 						= "http://192.168.219.6:8080/user/save";
 	private final static String 		USER_FIND_ONE					= "http://192.168.219.6:8080/user/findOne";
-	
+
 	private User						user;
+	private TextView					txtVersion;
 	private RequestQueue 				request;
 	private	 Button						btnUpdate;
 	private StringRequest 				stringRequest;
 	private EditText					editSummonerName;
 	private SettingService				settingService;
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
-	
+
 	public Fragment newInstance() {
 		SettingFragment fragment = new SettingFragment();
 		return fragment;
@@ -70,15 +73,16 @@ public class SettingFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_setting, container,false);
-		
+
 		init(rootView);
 		dataInit();
 		getUser();
-		
+
 		return rootView;
 	}
 
 	private void init(View rootView) {
+		txtVersion = (TextView)rootView.findViewById(R.id.txt_version);
 		editSummonerName = (EditText)rootView.findViewById(R.id.setting_edit_summonerName);
 		btnUpdate = (Button)rootView.findViewById(R.id.btn_update);
 		btnUpdate.setOnClickListener(mClickListener);
@@ -88,19 +92,31 @@ public class SettingFragment extends Fragment {
 		settingService = new SettingService();
 		request = Volley.newRequestQueue(getActivity());  
 		sharedpreferencesUtil = new SharedpreferencesUtil(getActivity());
+		txtVersion.setText(getVersion());
+
 	}
-	
+
+	private String getVersion() {
+			PackageInfo packageInfo = null;
+			try {
+				packageInfo = getActivity().getPackageManager().getPackageInfo(getActivity().getPackageName(), 0);
+			} catch (NameNotFoundException e) {
+				e.printStackTrace();
+			}
+			return packageInfo.versionName;
+	}
+
 	public void getUser(){
-		
+
 		String sub_url = "?faceBookId="+ sharedpreferencesUtil.getValue(FACEBOOK_ID, "");
-		
+
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
 		request.add(new StringRequest(Request.Method.GET, USER_FIND_ONE+sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
 				user = settingService.getUser(response);
 				editSummonerName.setText(user.getSummonerName());
-				
+
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  
@@ -108,11 +124,11 @@ public class SettingFragment extends Fragment {
 				VolleyLog.d(ERROR, error.getMessage());  
 			}  
 		}));
-		
+
 	}
-	
+
 	public void updateSummonerName(){
-		
+
 		String encodeSummonerName = settingService.getEncodeSummonerName(editSummonerName.getText().toString());
 		String sub_url = "?faceBookId="+user.getFacebookId()+"&summonerName="+encodeSummonerName;
 		stringRequest =new StringRequest(Method.GET, USER_SAVE+sub_url,new Response.Listener<String>() {  
@@ -120,14 +136,14 @@ public class SettingFragment extends Fragment {
 			public void onResponse(String response) {  
 				JSONObject JsonObject;
 				String ok = null;
-				
+
 				try {
 					JsonObject = new JSONObject(response);
-					
+
 					ok = JsonObject.getString(OK);
 					if(ok.equals(TRUE)){
 						Toast.makeText(getActivity(), "소환사 명이  " +editSummonerName.getText().toString()+ "  으로 변경 되었습니다.",
-						Toast.LENGTH_SHORT).show();
+								Toast.LENGTH_SHORT).show();
 					}
 				} catch (JSONException e) {
 					e.printStackTrace();
@@ -140,9 +156,9 @@ public class SettingFragment extends Fragment {
 			}  
 		});
 		request.add(stringRequest);
-		
+
 	}
-	
+
 	Button.OnClickListener mClickListener = new View.OnClickListener() {
 		public void onClick(View v) {
 			switch (v.getId()) {

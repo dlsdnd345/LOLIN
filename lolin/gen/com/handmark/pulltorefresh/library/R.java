@@ -83,8 +83,8 @@ public final class R {
 	public static final class id {
 		public static final int both = 0x7f060006;
 		public static final int disabled = 0x7f060003;
-		public static final int fl_inner = 0x7f06008f;
-		public static final int fl_inner_for_google_style = 0x7f06008c;
+		public static final int fl_inner = 0x7f060090;
+		public static final int fl_inner_for_google_style = 0x7f06008d;
 		public static final int google = 0x7f060008;
 		public static final int gridview = 0x7f06000b;
 		public static final int manualOnly = 0x7f060007;
@@ -92,14 +92,14 @@ public final class R {
 		public static final int pullFromEnd = 0x7f060005;
 		public static final int pullFromStart = 0x7f060004;
 		public static final int pullUpFromBottom = 0x7f06000a;
-		public static final int pull_to_refresh_image = 0x7f060090;
-		public static final int pull_to_refresh_progress = 0x7f060091;
-		public static final int pull_to_refresh_sub_text = 0x7f06008e;
-		public static final int pull_to_refresh_text = 0x7f06008d;
-		public static final int pulling_left_progressbar = 0x7f060094;
-		public static final int pulling_progress = 0x7f060092;
-		public static final int pulling_right_progressbar = 0x7f060095;
-		public static final int refreshing_progress = 0x7f060093;
+		public static final int pull_to_refresh_image = 0x7f060091;
+		public static final int pull_to_refresh_progress = 0x7f060092;
+		public static final int pull_to_refresh_sub_text = 0x7f06008f;
+		public static final int pull_to_refresh_text = 0x7f06008e;
+		public static final int pulling_left_progressbar = 0x7f060095;
+		public static final int pulling_progress = 0x7f060093;
+		public static final int pulling_right_progressbar = 0x7f060096;
+		public static final int refreshing_progress = 0x7f060094;
 		public static final int scrollview = 0x7f06000d;
 		public static final int webview = 0x7f06000c;
 	}
