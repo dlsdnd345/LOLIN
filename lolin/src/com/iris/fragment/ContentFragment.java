@@ -5,17 +5,22 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.iris.entities.Board;
 import com.iris.lolin.R;
 
 public class ContentFragment extends Fragment {
 
-	private int mPageNumber;
 
-	public Fragment newInstance(int pageNumber) {
+	private static final String BOARD_CONTENT = "boardContent"; 
+	
+	private String boardContent;
+	
+	public Fragment newInstance(String boardContent) {
 		ContentFragment fragment = new ContentFragment();
 		Bundle args = new Bundle();
-		args.putInt("page", pageNumber);
+		args.putString(BOARD_CONTENT, boardContent);
 		fragment.setArguments(args);
 		return fragment;
 	}
@@ -23,13 +28,21 @@ public class ContentFragment extends Fragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		mPageNumber = getArguments().getInt("page");
 	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_content, container, false);
+		
+		dataInit();
+		TextView textContent = (TextView)rootView.findViewById(R.id.text_content);
+		textContent.setText(boardContent);
+		
 		return rootView;
+	}
+
+	private void dataInit() {
+		boardContent = getArguments().getString(BOARD_CONTENT);
 	}
 }

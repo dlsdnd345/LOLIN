@@ -97,13 +97,13 @@ public class SettingFragment extends Fragment {
 	}
 
 	private String getVersion() {
-			PackageInfo packageInfo = null;
-			try {
-				packageInfo = getActivity().getPackageManager().getPackageInfo(getActivity().getPackageName(), 0);
-			} catch (NameNotFoundException e) {
-				e.printStackTrace();
-			}
-			return packageInfo.versionName;
+		PackageInfo packageInfo = null;
+		try {
+			packageInfo = getActivity().getPackageManager().getPackageInfo(getActivity().getPackageName(), 0);
+		} catch (NameNotFoundException e) {
+			e.printStackTrace();
+		}
+		return packageInfo.versionName;
 	}
 
 	public void getUser(){

@@ -11,6 +11,7 @@
         android:layout_weight="0.5" >
 
         <TextView
+            android:id="@+id/text_detail_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -55,14 +56,13 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/TextView02"
+                android:id="@+id/text_summernerName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/TextView01"
                 android:layout_alignBottom="@+id/TextView01"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@+id/TextView01"
-                android:text="고래의참치쑈"
                 android:textSize="15sp" />
 
             <TextView
@@ -76,12 +76,12 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/TextView04"
+                android:id="@+id/text_position"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/TextView03"
                 android:layout_alignBottom="@+id/TextView03"
-                android:layout_alignLeft="@+id/TextView02"
+                android:layout_alignLeft="@+id/text_summernerName"
                 android:text="미드"
                 android:textSize="15sp" />
 
@@ -96,12 +96,12 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/TextView06"
+                android:id="@+id/text_play_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/TextView05"
                 android:layout_alignBottom="@+id/TextView05"
-                android:layout_alignLeft="@+id/TextView04"
+                android:layout_alignLeft="@+id/text_position"
                 android:text="오후"
                 android:textSize="15sp" />
         </RelativeLayout>

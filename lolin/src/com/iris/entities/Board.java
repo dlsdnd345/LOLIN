@@ -2,6 +2,7 @@ package com.iris.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class Board implements Serializable {
 
@@ -15,6 +16,7 @@ public class Board implements Serializable {
 	private String rank;
 	private String playTime;
 	private String writeTime;
+	private	 List<Reple> repleList;
 	
 	public int getId() {
 		return id;
@@ -65,6 +67,12 @@ public class Board implements Serializable {
 	}
 	public void setPlayTime(String playTime) {
 		this.playTime = playTime;
+	}
+	public List<Reple> getRepleList() {
+		return repleList;
+	}
+	public void setRepleList(List<Reple> repleList) {
+		this.repleList = repleList;
 	}
 	
 }

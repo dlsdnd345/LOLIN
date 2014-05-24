@@ -103,8 +103,6 @@ public class BoardFragment extends Fragment {
 		
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
 		
-		System.err.println("@@@@@@@@@@@@@@@  :  "+boardService.getSubUrl());
-		
 		request.add(new StringRequest(Request.Method.GET, BOARD_FINDALL+boardService.getSubUrl(),new Response.Listener<String>() {  
 			
 			@Override  
@@ -204,7 +202,9 @@ public class BoardFragment extends Fragment {
 	OnItemClickListener mOnItemClickListener = new OnItemClickListener(){
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
+			
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
+			intent.putExtra("id", boardList.get(position-1).getId());
 			startActivity(intent);
 		}
 

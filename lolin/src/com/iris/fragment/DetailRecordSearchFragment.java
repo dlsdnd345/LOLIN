@@ -18,13 +18,17 @@ import com.iris.lolin.R;
 @SuppressLint("NewApi")
 public class DetailRecordSearchFragment extends Fragment {
 
+	private static final String SUMMERNER_NAME = "summernerName";
 	private static final String BASE_URL = "http://www.op.gg/summoner/userName=";
-	private static final String SUMMERNER_NAME = "dlsdnd345";
 	
+	private String summernerName ;
 	private PullToRefreshWebView mPullRefreshWebView;
 	
-	public Fragment newInstance() {
+	public Fragment newInstance(String smmonerName) {
 		RecordSearchFragment fragment = new RecordSearchFragment();
+		Bundle args = new Bundle();
+		args.putString(SUMMERNER_NAME, smmonerName);
+		fragment.setArguments(args);
 		return fragment;
 	}
 
@@ -37,8 +41,14 @@ public class DetailRecordSearchFragment extends Fragment {
 		View rootView = inflater.inflate(R.layout.fragment_detail_record_search, container,false);
 
 		init(rootView);
+		dataInit();
 		webViewInit();  
 		return rootView;
+	}
+
+	private void dataInit() {
+		// DetailActivity 로 부터 넘겨 받은 summernerName
+		summernerName = getArguments().getString(SUMMERNER_NAME);
 	}
 
 	private void init(View rootView) {
@@ -49,7 +59,7 @@ public class DetailRecordSearchFragment extends Fragment {
 	private void webViewInit() {
 		WebView webView = mPullRefreshWebView.getRefreshableView();
 		webView.getSettings().setJavaScriptEnabled(true); 
-		webView.loadUrl(BASE_URL +SUMMERNER_NAME);
+		webView.loadUrl(BASE_URL +summernerName);
 		webView.setWebViewClient(new BasicWebViewClient());
 	}
 	

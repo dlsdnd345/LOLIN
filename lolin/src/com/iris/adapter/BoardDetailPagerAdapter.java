@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.iris.entities.Board;
 import com.iris.fragment.ContentFragment;
 import com.iris.fragment.DetailRecordSearchFragment;
 import com.iris.fragment.RepleFragment;
@@ -18,14 +19,17 @@ public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 	private static final int CONTENT_FRAGMENT = 0;
 	private static final int RECORD_SEARCH_FRAGMENT = 1;
 	
+	private Board							board;
 	private Context 						context;
 	private RepleFragment 					repleFragment;
 	private ContentFragment 				contentFragment;
 	private DetailRecordSearchFragment 		detailRecordSearchFragment;
 	
 	
-	public BoardDetailPagerAdapter(Context context ,FragmentManager fragmentManager) {
+	public BoardDetailPagerAdapter(Context context ,FragmentManager fragmentManager, Board board) {
 		super(fragmentManager);
+		
+		this.board =board;
 		this.context = context;
 		repleFragment = new RepleFragment();
 		contentFragment = new ContentFragment();
@@ -36,11 +40,11 @@ public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 	public Fragment getItem(int position) {
 		
 		if(position == CONTENT_FRAGMENT){
-			return contentFragment.newInstance(1);
+			return contentFragment.newInstance(board.getContent());
 		}else if(position == RECORD_SEARCH_FRAGMENT){
-			return detailRecordSearchFragment.newInstance();
+			return detailRecordSearchFragment.newInstance(board.getSummonerName());
 		}else{
-			return repleFragment.newInstance(3);
+			return repleFragment.newInstance(board.getRepleList());
 		}
 	}
 	
