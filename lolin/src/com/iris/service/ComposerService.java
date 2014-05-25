@@ -1,49 +1,51 @@
 package com.iris.service;
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.iris.entities.Board;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 public class ComposerService {
 
-	private static final String OK = "ok";
-	private static final String TRUE = "true";
-	private static final String DATA = "data";
-	
-	private Gson 						gson;
-	private ArrayList<Board> 			boardListFromGson;
-	
-	public ComposerService(){
-		gson = new Gson();
-	}
-	
-	public ArrayList<Board> getBoardFindAll(String jsonData){
+	public String getSubUrl(String facebookId , String title , String content, String rank,
+			 				  String position , String playTime){
 		
-		JSONObject JsonObject;
-		String ok = null;
-		String data = null;
-		
+		String encodeTitle = null;
+		String encodeContent = null;
+		String encodeRank = null;
+		String encodePosition = null;
+		String encodePlayTime = null;
 		try {
-			JsonObject = new JSONObject(jsonData);
-			ok = JsonObject.getString(OK);
-			if(ok.equals(TRUE)){
-				data = JsonObject.getString(DATA);
-				Type type = new TypeToken<List<Board>>(){}.getType();
-				boardListFromGson = gson.fromJson(data, type);
-			}
-		} catch (JSONException e) {
+			encodeTitle = URLEncoder.encode(title,"UTF-8");
+			encodeContent = URLEncoder.encode(content,"UTF-8");
+			encodeRank = URLEncoder.encode(rank,"UTF-8");
+			encodePosition = URLEncoder.encode(position,"UTF-8");
+			encodePlayTime = URLEncoder.encode(playTime,"UTF-8");
+		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
 		
-		
-		return boardListFromGson;
+		String sub_url="?facebookId="+facebookId+"&title="+encodeTitle+"&content="+encodeContent+
+				"&position="+encodePosition+"&rank="+encodeRank+"&playTime="+ encodePlayTime;
+		return sub_url;
+	}
+	
+	public String transformRank(String rank){
+		if(rank.equals("언랭크")){
+			return "unrank";
+		}else if(rank.equals("브론즈")){
+			return "bronze";
+		}else if(rank.equals("실버")){
+			return "silver";
+		}else if(rank.equals("골드")){
+			return "gold";
+		}else if(rank.equals("플래티넘")){
+			return "platinum";
+		}else if(rank.equals("다이아")){
+			return "diamond";
+		}else if(rank.equals("챌린져")){
+			return "challenger";
+		}else{
+			return "";
+		}
 	}
 	
 }

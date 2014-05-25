@@ -78,9 +78,16 @@ public class BoardFragment extends Fragment {
 		View rootView = inflater.inflate(R.layout.fragment_board, container,false);
 
 		init(rootView);
-		dataInit(rootView);
 		
 		return rootView;
+	}
+	
+	
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		dataInit();
 	}
 
 	private void init(View rootView) {
@@ -91,10 +98,10 @@ public class BoardFragment extends Fragment {
 	}
 
 	
-	private void dataInit(View rootView){
+	private void dataInit(){
 		
 		boardService = new BoardService(getActivity());
-		spinnerInit(rootView);
+		spinnerInit();
 		getBoardFindAll(); 
 		
 	}
@@ -118,29 +125,31 @@ public class BoardFragment extends Fragment {
 		}));
 	}
 	
-	private void spinnerInit(View rootView) {
-		sharedpreferencesUtil = new SharedpreferencesUtil(rootView.getContext());
+	private void spinnerInit() {
+		
+		Context context = getActivity();
+		sharedpreferencesUtil = new SharedpreferencesUtil(context);
 		//spinner init
-		rankData = rootView.getResources().getStringArray(R.array.main_rank_array_list);
+		rankData = context.getResources().getStringArray(R.array.main_rank_array_list);
 		
 		rankSpinnerAdapter= new ArrayAdapter<>
-		(rootView.getContext(), R.layout.white_spinner_item,rankData);
+		(context, R.layout.white_spinner_item,rankData);
 		rankSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
 		rankSpinner.setAdapter(rankSpinnerAdapter); 
 		rankSpinner.setOnItemSelectedListener(rankOnItemSelectedListener);
 		rankSpinner.setSelection(sharedpreferencesUtil.getValue(RANK_DATA_POSITION, 0));
 
-		positionData = rootView.getResources().getStringArray(R.array.main_position_array_list);
+		positionData = context.getResources().getStringArray(R.array.main_position_array_list);
 		positionSpinnerAdapter= new ArrayAdapter<>
-		(rootView.getContext(), R.layout.white_spinner_item,positionData);
+		(context, R.layout.white_spinner_item,positionData);
 		positionSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
 		positionSpinner.setAdapter(positionSpinnerAdapter); 
 		positionSpinner.setOnItemSelectedListener(positionOnItemSelectedListener);
 		positionSpinner.setSelection(sharedpreferencesUtil.getValue(POSITION_DATA__POSITION, 0));
 
-		timeData = rootView.getResources().getStringArray(R.array.main_time_array_list);
+		timeData = context.getResources().getStringArray(R.array.main_time_array_list);
 		timeSpinnerAdapter= new ArrayAdapter<>
-		(rootView.getContext(), R.layout.white_spinner_item,timeData);
+		(context, R.layout.white_spinner_item,timeData);
 		timeSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
 		timeSpinner.setAdapter(timeSpinnerAdapter); 
 		timeSpinner.setOnItemSelectedListener(timeOnItemSelectedListener);

@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="다1 부캐 플2 서포터 모스트 구합니다" />
+             />
     </RelativeLayout>
 
     <LinearLayout
@@ -36,7 +36,7 @@
                 android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:background="@drawable/img_rank_challenger" />
+                 />
         </RelativeLayout>
 
         <RelativeLayout
@@ -82,7 +82,6 @@
                 android:layout_alignBaseline="@+id/TextView03"
                 android:layout_alignBottom="@+id/TextView03"
                 android:layout_alignLeft="@+id/text_summernerName"
-                android:text="미드"
                 android:textSize="15sp" />
 
             <TextView
@@ -102,7 +101,6 @@
                 android:layout_alignBaseline="@+id/TextView05"
                 android:layout_alignBottom="@+id/TextView05"
                 android:layout_alignLeft="@+id/text_position"
-                android:text="오후"
                 android:textSize="15sp" />
         </RelativeLayout>
     </LinearLayout>

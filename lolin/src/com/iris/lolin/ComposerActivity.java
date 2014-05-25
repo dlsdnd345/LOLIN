@@ -17,18 +17,33 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.iris.entities.Board;
+import com.iris.service.ComposerService;
+import com.iris.util.SharedpreferencesUtil;
 
 @SuppressLint("NewApi")
 public class ComposerActivity extends ActionBarActivity {
 
+	private final static String BOARD_SAVE = "http://192.168.219.6:8080/board/save";
+	private final static String ERROR = "Error";
+	
+	private static final String 		FACEBOOK_ID  				= "FACEBOOK_ID";
 	private static final String 		EMPRY_CONTENT_MESSAGE  		= "내용을 입력해 주세요.";
 	private static final String 		EMPRY_TITLE_MESSAGE  		= "제목을 입력해 주세요.";
 	private static final String 		EMPRY_SUMMONERNAME_MESSAGE  = "소환사 명을 입력해 주세요."; 
 	private static final String 		UNRANK 						= "언랭크"; 
 	private static final int 			RANK_UNRANK 				= 0; 
 	
+	private SharedpreferencesUtil 		sharedpreferencesUtil;
 	
+	private ComposerService				composerService;
 	private Board						board;
 	private TextView					txtTea;
 	private String[] 					rankData,teaData,positionData,timeData;
@@ -58,7 +73,8 @@ public class ComposerActivity extends ActionBarActivity {
 	private void DataInit() {
 		
 		board = new Board();
-		
+		composerService = new ComposerService();
+		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 		actionbarInit();
 		spinnerInit();
 	}
@@ -134,14 +150,28 @@ public class ComposerActivity extends ActionBarActivity {
 			 ||!editContent.getText().toString().equals("")){
 				
 				// 서버로 데이터 전송
+				String facebookId = sharedpreferencesUtil.getValue(FACEBOOK_ID, "");
+				RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
+				String subUrl = composerService.getSubUrl(facebookId, board.getTitle(), board.getContent(),
+						composerService.transformRank(board.getRank()), board.getPosition(), board.getPlayTime());
+				
+				System.err.println("@@@@@@@@@@@@@@@@@@@   board.getRank()   :  " + board.getRank());
+				
+				request.add(new StringRequest(Request.Method.GET, BOARD_SAVE+subUrl,new Response.Listener<String>() {  
+					@Override  
+					public void onResponse(String response) {
+						
+						System.err.println("@@@@@@@@@@@@@@@@@@@   response   :  " + response);
+						finish();
+					}  
+				}, new Response.ErrorListener() {  
+					@Override  
+					public void onErrorResponse(VolleyError error) {  
+						VolleyLog.d(ERROR, error.getMessage());  
+					}  
+				}));
+				
 			}
-			
-			System.err.println("소환사 명  :  " + board.getSummonerName());
-			System.err.println("계급  :  " + board.getRank());
-			System.err.println("포지션  :  " + board.getPosition());
-			System.err.println("시간  :  " + board.getPlayTime());
-			System.err.println("제목  :  " + board.getTitle());
-			System.err.println("내용  :  " + board.getContent());
 			
 			return true;
 		default:

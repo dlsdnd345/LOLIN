@@ -65,6 +65,8 @@ public class ComposerAdapter extends BaseAdapter{
 		TextView txtPosition = ViewHolder.get(convertView ,R.id.txt_position);
 		TextView txtSummonerName = ViewHolder.get(convertView ,R.id.txt_summonerName);
 		TextView txtContent = ViewHolder.get(convertView ,R.id.txt_content);
+		TextView textPlayTime = ViewHolder.get(convertView ,R.id.text_playTime);
+		TextView textWriteTime = ViewHolder.get(convertView ,R.id.text_write_time);
 		
 		// 이름별 랭크 이미지 삽입
 		int resource = convertView.getResources().getIdentifier
@@ -75,6 +77,8 @@ public class ComposerAdapter extends BaseAdapter{
 		txtPosition.setText(boardList.get(position).getPosition());
 		txtSummonerName.setText(boardList.get(position).getSummonerName());
 		txtContent.setText(boardList.get(position).getContent());
+		textPlayTime.setText(boardList.get(position).getPlayTime());
+		textWriteTime.setText(boardList.get(position).getWriteTime());
 
 		return convertView;
 	}

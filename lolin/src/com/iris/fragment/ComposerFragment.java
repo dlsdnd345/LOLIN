@@ -24,7 +24,7 @@ import com.iris.adapter.ComposerAdapter;
 import com.iris.entities.Board;
 import com.iris.lolin.BoardDetailActivity;
 import com.iris.lolin.R;
-import com.iris.service.ComposerService;
+import com.iris.service.ComposerFragmentService;
 import com.iris.util.SharedpreferencesUtil;
 
 /**
@@ -40,7 +40,7 @@ public class ComposerFragment extends Fragment {
 	
 	
 	private SharedpreferencesUtil  		sharedpreferencesUtil;
-	private ComposerService 			composerService;
+	private ComposerFragmentService 	composerService;
 	private ArrayList<Board> 			boardList;
 	private ComposerAdapter 			composerAdapter;
 	private ListView 					writeTextListView;
@@ -56,7 +56,7 @@ public class ComposerFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		
-		View rootView = inflater.inflate(R.layout.fragment_write_text, container,false);
+		View rootView = inflater.inflate(R.layout.fragment_composer, container,false);
 		
 		init(rootView);
 		dataInit();
@@ -66,12 +66,12 @@ public class ComposerFragment extends Fragment {
 	}
 
 	private void dataInit() {
-		composerService = new ComposerService();
+		composerService = new ComposerFragmentService();
 		sharedpreferencesUtil = new SharedpreferencesUtil(getActivity());
-		getBoardFindAll();
+		getBoardFindMyAll();
 	}
 
-	private void getBoardFindAll() {
+	private void getBoardFindMyAll() {
 		
 		String sub_url = "?faceBookId="+ sharedpreferencesUtil.getValue(FACEBOOK_ID, "");
 	
@@ -105,6 +105,7 @@ public class ComposerFragment extends Fragment {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
+			intent.putExtra("id", boardList.get(position).getId());
 			startActivity(intent);
 		}
 		

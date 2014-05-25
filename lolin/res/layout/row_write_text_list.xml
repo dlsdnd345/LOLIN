@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
+    android:layout_height="140dp"
     android:orientation="vertical" >
 
     <ImageView
         android:id="@+id/img_rank"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/img_rank_challenger" />
 
     <TextView
@@ -67,17 +67,46 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/TextView02"
         android:layout_below="@+id/TextView02"
-        android:text="내용 : "
+        android:text="시간 : "
         android:layout_marginTop="5dp"
         android:textSize="10sp" />
 
     <TextView
-        android:id="@+id/txt_content"
+        android:id="@+id/text_playTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/TextView03"
         android:layout_alignBottom="@+id/TextView03"
         android:layout_alignLeft="@+id/txt_position"
         android:textSize="10sp" />
+    
+    <TextView
+         android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView03"
+        android:layout_below="@+id/TextView03"
+        android:text="내용 : "
+        android:layout_marginTop="5dp"
+        android:textSize="10sp" />
+    
+        <TextView
+        android:id="@+id/txt_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView04"
+        android:layout_alignBottom="@+id/TextView04"
+        android:layout_alignLeft="@+id/txt_position"
+        android:textSize="10sp" />
 
+        <TextView
+            android:id="@+id/text_write_time"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textSize="10sp" />
+    
 </RelativeLayout>
