@@ -15,6 +15,9 @@
     <string name="detail_title_section2">전적 검색</string>
     <string name="detail_title_section3">댓글</string>
 
+    <!-- Reple Fragment -->
+    <string name="reple_fragment_text_no_reple_message">댓글이 없습니다.</string>
+    
     <!-- Actionbar title Value -->
 
     <string name="ic_action_new">추가</string>

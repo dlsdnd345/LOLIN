@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_sky_blue">#B6DAF2</color>
+    <color name="background_blue">#A0CFEE</color>
+    <color name="background_sky_red">#EBC6C3</color>
+    <color name="background_red">#E4B4B0</color>
+
+</resources>

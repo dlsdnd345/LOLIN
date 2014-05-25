@@ -92,6 +92,9 @@ public class BoardDetailActivity extends ActionBarActivity {
 			
 			@Override  
 			public void onResponse(String response) {  
+				
+				System.err.println("!!!!!!!!!!!!!!   :   " + response);
+				
 				board = boardDetailService.getBoardFindOne(response);
 				
 				textDetailTitle.setText(board.getTitle());
@@ -121,6 +124,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 	}
 
 	private void viewPagerInit() {
+		
+		System.out.println("#########################  repleList :  " + board.getRepleList());
 		
 		mPagerAdapter = new BoardDetailPagerAdapter(getApplicationContext(),getSupportFragmentManager(),board);
 		mViewPager.setAdapter(mPagerAdapter);

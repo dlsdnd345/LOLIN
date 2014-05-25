@@ -32,7 +32,7 @@ public class ComposerActivity extends ActionBarActivity {
 	private Board						board;
 	private TextView					txtTea;
 	private String[] 					rankData,teaData,positionData,timeData;
-	private EditText					editSummonerName , editTitle, editContent;
+	private EditText					editTitle, editContent;
 	private Spinner 					rankSpinner,teaSpinner,positionSpinner,timeSpinner;		
 	private ArrayAdapter<String> 		rankSpinnerAdapter,teaSpinnerAdapter,positionSpinnerAdapter,timeSpinnerAdapter;
 	
@@ -52,7 +52,6 @@ public class ComposerActivity extends ActionBarActivity {
 		rankSpinner = (Spinner)findViewById(R.id.composer_spinner_rank);
 		teaSpinner = (Spinner)findViewById(R.id.composer_spinner_tea);
 		timeSpinner = (Spinner)findViewById(R.id.composer_spinner_time);
-		editSummonerName = (EditText)findViewById(R.id.edit_summoner_name);
 		positionSpinner = (Spinner)findViewById(R.id.composer_spinner_position);
 	}
 
@@ -115,14 +114,6 @@ public class ComposerActivity extends ActionBarActivity {
 		switch (item.getItemId()) {
 		case R.id.ic_action_new:
 			
-			if(!editSummonerName.getText().toString().equals("")){
-				board.setSummonerName(editSummonerName.getText().toString());
-			}else{
-			    Animation shake = AnimationUtils.loadAnimation(this, R.anim.horizontal_shake);
-			    editSummonerName.startAnimation(shake);
-				Toast.makeText(getApplicationContext(), EMPRY_SUMMONERNAME_MESSAGE, Toast.LENGTH_LONG).show();
-			}
-			
 			if(!editTitle.getText().toString().equals("")){
 				board.setTitle(editTitle.getText().toString());
 			}else{
@@ -139,8 +130,7 @@ public class ComposerActivity extends ActionBarActivity {
 				Toast.makeText(getApplicationContext(), EMPRY_CONTENT_MESSAGE, Toast.LENGTH_LONG).show();
 			}
 			
-			if(!editSummonerName.getText().toString().equals("")
-			 ||!editTitle.getText().toString().equals("")
+			if(!editTitle.getText().toString().equals("")
 			 ||!editContent.getText().toString().equals("")){
 				
 				// 서버로 데이터 전송

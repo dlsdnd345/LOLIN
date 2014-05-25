@@ -19,6 +19,7 @@ public class BoardDetailService {
 	private static final String OK = "ok";
 	private static final String TRUE = "true";
 	private static final String DATA = "data";
+	private static final String REPLE_DATA = "repleList";
 	
 	private Gson 						gson;
 	private Context						context;
@@ -35,6 +36,7 @@ public class BoardDetailService {
 		JSONObject JsonObject;
 		String ok = null;
 		String data = null;
+		String repleData = null;
 		
 		try {
 			JsonObject = new JSONObject(jsonData);

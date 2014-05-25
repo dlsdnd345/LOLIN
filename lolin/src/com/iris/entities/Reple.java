@@ -2,16 +2,18 @@ package com.iris.entities;
 
 public class Reple {
 
-	private int 	repleId;
+	private int 	id;
 	private String repleContent;
 	private String writeTime;
 	private String userName;
+	private String facebookId;
 	
-	public int getRepleId() {
-		return repleId;
+	
+	public int getId() {
+		return id;
 	}
-	public void setRepleId(int repleId) {
-		this.repleId = repleId;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getRepleContent() {
 		return repleContent;
@@ -30,6 +32,12 @@ public class Reple {
 	}
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+	public String getFacebookId() {
+		return facebookId;
+	}
+	public void setFacebookId(String facebookId) {
+		this.facebookId = facebookId;
 	}
 	
 }
