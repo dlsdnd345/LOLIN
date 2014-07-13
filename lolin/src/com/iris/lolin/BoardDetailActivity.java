@@ -25,7 +25,10 @@ import com.astuetz.PagerSlidingTabStrip;
 import com.iris.adapter.BoardDetailPagerAdapter;
 import com.iris.config.Config;
 import com.iris.entities.Board;
+import com.iris.entities.User;
 import com.iris.service.BoardDetailService;
+import com.iris.service.SettingService;
+import com.iris.util.SharedpreferencesUtil;
 
 public class BoardDetailActivity extends ActionBarActivity {
 
@@ -48,8 +51,10 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private TextView					textDetailTitle;
 	private TextView					textSummernerName;
 	
-	private int						id;
 	private Board						board;
+	
+	private boolean					editState;
+	private int						id;
 	private int 						viewPagerPosition;
 	
 	@Override
@@ -81,6 +86,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 		
 		Intent intent = getIntent();
 		id = intent.getIntExtra(ID, 0);
+		editState = intent.getBooleanExtra(Config.FLAG.EDIT_STATE , false);
 		
 		getFindOne(request);
 		
@@ -94,9 +100,13 @@ public class BoardDetailActivity extends ActionBarActivity {
 	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.board_detail_menu, menu);
+
+		if(editState){
+			MenuInflater inflater = getMenuInflater();
+			inflater.inflate(R.menu.board_detail_menu, menu);
+		}
 		return super.onCreateOptionsMenu(menu);
+		
 	}
 	
 	/**
@@ -147,6 +157,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 			}  
 		}));
 	}
+	
 	
 	@SuppressLint("NewApi")
 	private void actionBarInit() {

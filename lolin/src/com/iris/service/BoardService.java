@@ -41,6 +41,8 @@ public class BoardService {
 	
 	public ArrayList<Board> getBoardFindAll(String jsonData){
 		
+		System.err.println("#########   jsonData :  "+ jsonData);
+		
 		JSONObject JsonObject;
 		String ok = null;
 		String data = null;

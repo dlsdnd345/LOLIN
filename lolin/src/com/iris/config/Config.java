@@ -46,4 +46,20 @@ public class Config {
 		public final static String FIVE 	= "5티어";
 	}
 	
+	public static class FACEBOOK {
+		
+		public static final String FACEBOOK_ID  	= "FACEBOOK_ID";
+	}
+	
+	public static class API {
+		
+		public final static String 		USER_SAVE 						= "http://192.168.219.6:8080/user/save";
+		public final static String 		USER_FIND_ONE					= "http://192.168.219.6:8080/user/findOne";
+	}
+	
+	public static class FLAG {
+		
+		public final static String	  EDIT_STATE = "editState";
+	}
+	
 }

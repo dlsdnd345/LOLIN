@@ -30,6 +30,7 @@ import com.android.volley.VolleyLog;
 import com.android.volley.Request.Method;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.iris.config.Config;
 import com.iris.entities.User;
 import com.iris.lolin.FaceBookLoginActivity;
 import com.iris.lolin.MainActivity;
@@ -48,9 +49,6 @@ public class SettingFragment extends Fragment {
 	private static final String DATA = "data";
 
 	private final static String 		ERROR 							= "Error";
-	private static final String 		FACEBOOK_ID  					= "FACEBOOK_ID";
-	private final static String 		USER_SAVE 						= "http://192.168.219.6:8080/user/save";
-	private final static String 		USER_FIND_ONE					= "http://192.168.219.6:8080/user/findOne";
 
 	private User						user;
 	private TextView					txtVersion;
@@ -108,10 +106,10 @@ public class SettingFragment extends Fragment {
 
 	public void getUser(){
 
-		String sub_url = "?faceBookId="+ sharedpreferencesUtil.getValue(FACEBOOK_ID, "");
+		String sub_url = "?faceBookId="+ sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
 
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
-		request.add(new StringRequest(Request.Method.GET, USER_FIND_ONE+sub_url,new Response.Listener<String>() {  
+		request.add(new StringRequest(Request.Method.GET, Config.API.USER_FIND_ONE+sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
 				user = settingService.getUser(response);
@@ -131,7 +129,7 @@ public class SettingFragment extends Fragment {
 
 		String encodeSummonerName = settingService.getEncodeSummonerName(editSummonerName.getText().toString());
 		String sub_url = "?faceBookId="+user.getFacebookId()+"&summonerName="+encodeSummonerName;
-		stringRequest =new StringRequest(Method.GET, USER_SAVE+sub_url,new Response.Listener<String>() {  
+		stringRequest =new StringRequest(Method.GET, Config.API.USER_SAVE+sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
 				JSONObject JsonObject;

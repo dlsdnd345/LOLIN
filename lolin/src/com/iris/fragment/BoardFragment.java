@@ -34,10 +34,13 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.iris.adapter.BoardAdapter;
+import com.iris.config.Config;
 import com.iris.entities.Board;
+import com.iris.entities.User;
 import com.iris.lolin.BoardDetailActivity;
 import com.iris.lolin.R;
 import com.iris.service.BoardService;
+import com.iris.service.SettingService;
 import com.iris.util.SharedpreferencesUtil;
 
 /**
@@ -62,6 +65,10 @@ public class BoardFragment extends Fragment {
 	private Spinner 					rankSpinner,positionSpinner,timeSpinner;	
 	private ArrayAdapter<String> 		rankSpinnerAdapter,positionSpinnerAdapter,timeSpinnerAdapter;
 
+	private User 						user;
+	
+	private SettingService				settingService;
+	
 	public Fragment newInstance(Context context) {
 		
 		BoardFragment fragment = new BoardFragment();
@@ -100,9 +107,11 @@ public class BoardFragment extends Fragment {
 	
 	private void dataInit(){
 		
+		settingService = new SettingService();
 		boardService = new BoardService(getActivity());
 		spinnerInit();
 		getBoardFindAll(); 
+		getUser();
 		
 	}
 
@@ -123,6 +132,28 @@ public class BoardFragment extends Fragment {
 				VolleyLog.d(ERROR, error.getMessage());  
 			}  
 		}));
+	}
+	
+	/**
+	 * 유정 정보 get
+	 */
+	public void getUser(){
+
+		String sub_url = "?faceBookId="+ sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
+
+		RequestQueue request = Volley.newRequestQueue(getActivity());  
+		request.add(new StringRequest(Request.Method.GET, Config.API.USER_FIND_ONE+sub_url,new Response.Listener<String>() {  
+			@Override  
+			public void onResponse(String response) {  
+				user = settingService.getUser(response);
+			}  
+		}, new Response.ErrorListener() {  
+			@Override  
+			public void onErrorResponse(VolleyError error) {  
+				VolleyLog.d(ERROR, error.getMessage());  
+			}  
+		}));
+
 	}
 	
 	private void spinnerInit() {
@@ -212,8 +243,13 @@ public class BoardFragment extends Fragment {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 			
+			//자기 것만 수정 , 삭제 할 수 있게 아이콘을 보여주기 위함.
+			Boolean editState = boardList.get(position-1).getUserId() == user.getId();
+			
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
 			intent.putExtra("id", boardList.get(position-1).getId());
+			intent.putExtra("editState", editState);
+			
 			startActivity(intent);
 		}
 
