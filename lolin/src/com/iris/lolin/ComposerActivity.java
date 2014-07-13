@@ -1,6 +1,7 @@
 package com.iris.lolin;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -24,7 +25,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.iris.config.Config;
 import com.iris.entities.Board;
+import com.iris.service.BoardDetailService;
 import com.iris.service.ComposerService;
 import com.iris.util.SharedpreferencesUtil;
 
@@ -41,7 +44,11 @@ public class ComposerActivity extends ActionBarActivity {
 	private static final String 		UNRANK 						= "언랭크"; 
 	private static final int 			RANK_UNRANK 				= 0; 
 	
+	private int boardId  =-1;
+	
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
+	
+	private BoardDetailService 			boardDetailService;
 	
 	private ComposerService				composerService;
 	private Board						board;
@@ -72,11 +79,23 @@ public class ComposerActivity extends ActionBarActivity {
 
 	private void DataInit() {
 		
+		Intent intent = getIntent();
+		
+		boardId = intent.getIntExtra(Config.BOARD.BOARD_ID, -1);
+		RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
+		
+		if(boardId != -1){
+			// 게시판 정보 api 요청
+			getFindOne(request);
+		}
+		
 		board = new Board();
 		composerService = new ComposerService();
+		boardDetailService = new BoardDetailService(getApplicationContext());
 		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 		actionbarInit();
 		spinnerInit();
+		board.setTea(teaData[0]);
 	}
 
 	private void spinnerInit() {
@@ -124,6 +143,35 @@ public class ComposerActivity extends ActionBarActivity {
 		return super.onCreateOptionsMenu(menu);
 	}
 	
+	
+	/**
+	 * 아이디를 통해서 게시판 한개의 데이터를 얻음.
+	 * @param request
+	 */
+	private void getFindOne(RequestQueue request) {
+		request.add(new StringRequest(Request.Method.GET
+				, Config.BOARD.BOARD_FIND_ONE + Config.BOARD.SUB_URL+boardId ,new Response.Listener<String>() {  
+			
+			@Override  
+			public void onResponse(String response) {  
+				
+				board = boardDetailService.getBoardFindOne(response);
+				editTitle.setText(board.getTitle());
+				editContent.setText(board.getContent());
+				rankSpinner.setSelection(board.converterRank(board.getRank()));
+				positionSpinner.setSelection(board.converterPosition(board.getPosition()));
+				timeSpinner.setSelection(board.converterTime(board.getPlayTime()));
+				teaSpinner.setSelection(board.converterTea(board.getTea()));
+				
+			}  
+		}, new Response.ErrorListener() {  
+			@Override  
+			public void onErrorResponse(VolleyError error) {  
+				VolleyLog.d(ERROR, error.getMessage());  
+			}  
+		}));
+	}
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle presses on the action bar items
@@ -147,22 +195,20 @@ public class ComposerActivity extends ActionBarActivity {
 			}
 			
 			if(!editTitle.getText().toString().equals("")
-			 ||!editContent.getText().toString().equals("")){
+			 &&!editContent.getText().toString().equals("")){
 				
 				// 서버로 데이터 전송
 				String facebookId = sharedpreferencesUtil.getValue(FACEBOOK_ID, "");
 				RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
-				String subUrl = composerService.getSubUrl(facebookId, board.getTitle(), board.getContent(),
-						composerService.transformRank(board.getRank()), board.getPosition(), board.getPlayTime());
-				
-				System.err.println("@@@@@@@@@@@@@@@@@@@   board.getRank()   :  " + board.getRank());
+				String subUrl = composerService.getSubUrl(boardId ,facebookId, board.getTitle(), board.getContent(),
+						composerService.transformRank(board.getRank()), board.getPosition(), board.getPlayTime(),board.getTea());
 				
 				request.add(new StringRequest(Request.Method.GET, BOARD_SAVE+subUrl,new Response.Listener<String>() {  
 					@Override  
 					public void onResponse(String response) {
-						
-						System.err.println("@@@@@@@@@@@@@@@@@@@   response   :  " + response);
-						finish();
+						Intent intent = new Intent(ComposerActivity.this , MainActivity.class);
+						intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+						startActivity(intent);
 					}  
 				}, new Response.ErrorListener() {  
 					@Override  
@@ -192,6 +238,7 @@ public class ComposerActivity extends ActionBarActivity {
 			}
 			
 			board.setRank(rankData[position]);
+
 		}
 		@Override
 		public void onNothingSelected(AdapterView<?> parent) {}
@@ -201,7 +248,9 @@ public class ComposerActivity extends ActionBarActivity {
 		@Override
 		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
 			if(!board.getRank().equals(UNRANK)){
-				board.setRank(board.getRank() + teaData[position]);
+				//board.setRank(board.getRank());
+				board.setTea(teaData[position]);
+				System.err.println("@@@@@@@@@  티어 선택시   :  " + teaData[position]);
 			}
 		}
 		@Override

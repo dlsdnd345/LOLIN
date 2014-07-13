@@ -1734,8 +1734,9 @@ containing a value of this type.
         public static final int gridview=0x7f06000b;
         public static final int home=0x7f060021;
         public static final int homeAsUp=0x7f060012;
-        public static final int ic_action_new=0x7f0600a8;
-        public static final int ic_action_next=0x7f0600a7;
+        public static final int ic_action_edit=0x7f0600a7;
+        public static final int ic_action_new=0x7f0600a9;
+        public static final int ic_action_next=0x7f0600a8;
         public static final int icon=0x7f060037;
         public static final int ifRoom=0x7f060017;
         public static final int image=0x7f060034;
@@ -1918,8 +1919,9 @@ containing a value of this type.
         public static final int white_spinner_item=0x7f03003c;
     }
     public static final class menu {
-        public static final int facebook_next_menu=0x7f0e0000;
-        public static final int write_text_menu=0x7f0e0001;
+        public static final int board_detail_menu=0x7f0e0000;
+        public static final int facebook_next_menu=0x7f0e0001;
+        public static final int write_text_menu=0x7f0e0002;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 

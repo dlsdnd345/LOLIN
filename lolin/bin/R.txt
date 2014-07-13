@@ -522,8 +522,9 @@ int id google 0x7f060008
 int id gridview 0x7f06000b
 int id home 0x7f060021
 int id homeAsUp 0x7f060012
-int id ic_action_new 0x7f0600a8
-int id ic_action_next 0x7f0600a7
+int id ic_action_edit 0x7f0600a7
+int id ic_action_new 0x7f0600a9
+int id ic_action_next 0x7f0600a8
 int id icon 0x7f060037
 int id ifRoom 0x7f060017
 int id image 0x7f060034
@@ -678,8 +679,9 @@ int layout row_write_text_list 0x7f030039
 int layout spinner_item 0x7f03003a
 int layout support_simple_spinner_dropdown_item 0x7f03003b
 int layout white_spinner_item 0x7f03003c
-int menu facebook_next_menu 0x7f0e0000
-int menu write_text_menu 0x7f0e0001
+int menu board_detail_menu 0x7f0e0000
+int menu facebook_next_menu 0x7f0e0001
+int menu write_text_menu 0x7f0e0002
 int string abc_action_bar_home_description 0x7f090021
 int string abc_action_bar_up_description 0x7f090022
 int string abc_action_menu_overflow_description 0x7f090023

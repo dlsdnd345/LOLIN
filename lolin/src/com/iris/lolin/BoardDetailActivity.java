@@ -8,6 +8,9 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,13 +23,12 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.astuetz.PagerSlidingTabStrip;
 import com.iris.adapter.BoardDetailPagerAdapter;
+import com.iris.config.Config;
 import com.iris.entities.Board;
 import com.iris.service.BoardDetailService;
 
 public class BoardDetailActivity extends ActionBarActivity {
 
-	private final static String BOARD_FIND_ONE = "http://192.168.219.6:8080/board/findOne";
-	private final static String SUB_URL = "?id=";
 	
 	private final static String ERROR = "Error";
 	private final static String ID = "id";
@@ -34,7 +36,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private static final int CONTENT_FRAGMENT = 0;
 	private static final int RECORD_SEARCH_FRAGMENT = 1;
 
-	BoardDetailService 					boardDetailService;
+	private BoardDetailService 			boardDetailService;
 	
 	private PagerSlidingTabStrip 		tabs;
 	private ViewPager 					mViewPager;
@@ -87,13 +89,43 @@ public class BoardDetailActivity extends ActionBarActivity {
 		
 	}
 
+	/**
+	 * 액션바 생성
+	 */
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.board_detail_menu, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+	
+	/**
+	 * 액션바 클릭 리스터
+	 */
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle presses on the action bar items
+		switch (item.getItemId()) {
+		case R.id.ic_action_edit:
+			
+			Intent intent = new Intent(BoardDetailActivity.this,ComposerActivity.class);
+			intent.putExtra(Config.BOARD.BOARD_ID, id);
+			startActivity(intent);
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+	
+	/**
+	 * 아이디를 통해서 게시판 한개의 데이터를 얻음.
+	 * @param request
+	 */
 	private void getFindOne(RequestQueue request) {
-		request.add(new StringRequest(Request.Method.GET, BOARD_FIND_ONE + SUB_URL+id ,new Response.Listener<String>() {  
+		request.add(new StringRequest(Request.Method.GET, Config.BOARD.BOARD_FIND_ONE + Config.BOARD.SUB_URL+id ,new Response.Listener<String>() {  
 			
 			@Override  
 			public void onResponse(String response) {  
-				
-				System.err.println("!!!!!!!!!!!!!!   :   " + response);
 				
 				board = boardDetailService.getBoardFindOne(response);
 				
@@ -124,8 +156,6 @@ public class BoardDetailActivity extends ActionBarActivity {
 	}
 
 	private void viewPagerInit() {
-		
-		System.out.println("#########################  repleList :  " + board.getRepleList());
 		
 		mPagerAdapter = new BoardDetailPagerAdapter(getApplicationContext(),getSupportFragmentManager(),board);
 		mViewPager.setAdapter(mPagerAdapter);
