@@ -1579,7 +1579,7 @@ containing a value of this type.
         public static final int com_facebook_list_section_header_background=0x7f020072;
         public static final int com_facebook_loginbutton_silver=0x7f020073;
         public static final int com_facebook_logo=0x7f020074;
-        public static final int com_facebook_picker_default_separator_color=0x7f0200c2;
+        public static final int com_facebook_picker_default_separator_color=0x7f0200c3;
         public static final int com_facebook_picker_item_background=0x7f020075;
         public static final int com_facebook_picker_list_focused=0x7f020076;
         public static final int com_facebook_picker_list_longpressed=0x7f020077;
@@ -1608,55 +1608,56 @@ containing a value of this type.
         public static final int default_ptr_rotate=0x7f02008e;
         public static final int ic_action_new=0x7f02008f;
         public static final int ic_action_next_item=0x7f020090;
-        public static final int ic_action_sort_by_size=0x7f020091;
-        public static final int ic_launcher=0x7f020092;
-        public static final int img_facebook_login=0x7f020093;
-        public static final int img_intro=0x7f020094;
-        public static final int img_rank_bronze=0x7f020095;
-        public static final int img_rank_challenger=0x7f020096;
-        public static final int img_rank_diamond=0x7f020097;
-        public static final int img_rank_gold=0x7f020098;
-        public static final int img_rank_platinum=0x7f020099;
-        public static final int img_rank_silver=0x7f02009a;
-        public static final int img_rank_unrank=0x7f02009b;
-        public static final int indicator_arrow=0x7f02009c;
-        public static final int indicator_bg_bottom=0x7f02009d;
-        public static final int indicator_bg_top=0x7f02009e;
-        public static final int list_focused_example=0x7f02009f;
-        public static final int list_pressed_example=0x7f0200a0;
-        public static final int menu_dropdown_panel_example=0x7f0200a1;
-        public static final int progress_bg_example=0x7f0200a2;
-        public static final int progress_bg_holo_light=0x7f0200a3;
-        public static final int progress_horizontal_example=0x7f0200a4;
-        public static final int progress_horizontal_holo_light=0x7f0200a5;
-        public static final int progress_horizontal_holo_light_right=0x7f0200a6;
-        public static final int progress_indeterminate_horizontal_holo=0x7f0200a7;
-        public static final int progress_primary_example=0x7f0200a8;
-        public static final int progress_primary_holo_light=0x7f0200a9;
-        public static final int progress_secondary_example=0x7f0200aa;
-        public static final int progress_secondary_holo_light=0x7f0200ab;
-        public static final int progressbar_indeterminate_holo1=0x7f0200ac;
-        public static final int progressbar_indeterminate_holo2=0x7f0200ad;
-        public static final int progressbar_indeterminate_holo3=0x7f0200ae;
-        public static final int progressbar_indeterminate_holo4=0x7f0200af;
-        public static final int progressbar_indeterminate_holo5=0x7f0200b0;
-        public static final int progressbar_indeterminate_holo6=0x7f0200b1;
-        public static final int progressbar_indeterminate_holo7=0x7f0200b2;
-        public static final int progressbar_indeterminate_holo8=0x7f0200b3;
-        public static final int selectable_background_example=0x7f0200b4;
-        public static final int spinner_ab_default_example=0x7f0200b5;
-        public static final int spinner_ab_disabled_example=0x7f0200b6;
-        public static final int spinner_ab_focused_example=0x7f0200b7;
-        public static final int spinner_ab_pressed_example=0x7f0200b8;
-        public static final int spinner_background_ab_example=0x7f0200b9;
-        public static final int tab_indicator_ab_example=0x7f0200ba;
-        public static final int tab_selected_example=0x7f0200bb;
-        public static final int tab_selected_focused_example=0x7f0200bc;
-        public static final int tab_selected_pressed_example=0x7f0200bd;
-        public static final int tab_unselected_example=0x7f0200be;
-        public static final int tab_unselected_focused_example=0x7f0200bf;
-        public static final int tab_unselected_pressed_example=0x7f0200c0;
-        public static final int tabs_pattern=0x7f0200c1;
+        public static final int ic_action_remove=0x7f020091;
+        public static final int ic_action_sort_by_size=0x7f020092;
+        public static final int ic_launcher=0x7f020093;
+        public static final int img_facebook_login=0x7f020094;
+        public static final int img_intro=0x7f020095;
+        public static final int img_rank_bronze=0x7f020096;
+        public static final int img_rank_challenger=0x7f020097;
+        public static final int img_rank_diamond=0x7f020098;
+        public static final int img_rank_gold=0x7f020099;
+        public static final int img_rank_platinum=0x7f02009a;
+        public static final int img_rank_silver=0x7f02009b;
+        public static final int img_rank_unrank=0x7f02009c;
+        public static final int indicator_arrow=0x7f02009d;
+        public static final int indicator_bg_bottom=0x7f02009e;
+        public static final int indicator_bg_top=0x7f02009f;
+        public static final int list_focused_example=0x7f0200a0;
+        public static final int list_pressed_example=0x7f0200a1;
+        public static final int menu_dropdown_panel_example=0x7f0200a2;
+        public static final int progress_bg_example=0x7f0200a3;
+        public static final int progress_bg_holo_light=0x7f0200a4;
+        public static final int progress_horizontal_example=0x7f0200a5;
+        public static final int progress_horizontal_holo_light=0x7f0200a6;
+        public static final int progress_horizontal_holo_light_right=0x7f0200a7;
+        public static final int progress_indeterminate_horizontal_holo=0x7f0200a8;
+        public static final int progress_primary_example=0x7f0200a9;
+        public static final int progress_primary_holo_light=0x7f0200aa;
+        public static final int progress_secondary_example=0x7f0200ab;
+        public static final int progress_secondary_holo_light=0x7f0200ac;
+        public static final int progressbar_indeterminate_holo1=0x7f0200ad;
+        public static final int progressbar_indeterminate_holo2=0x7f0200ae;
+        public static final int progressbar_indeterminate_holo3=0x7f0200af;
+        public static final int progressbar_indeterminate_holo4=0x7f0200b0;
+        public static final int progressbar_indeterminate_holo5=0x7f0200b1;
+        public static final int progressbar_indeterminate_holo6=0x7f0200b2;
+        public static final int progressbar_indeterminate_holo7=0x7f0200b3;
+        public static final int progressbar_indeterminate_holo8=0x7f0200b4;
+        public static final int selectable_background_example=0x7f0200b5;
+        public static final int spinner_ab_default_example=0x7f0200b6;
+        public static final int spinner_ab_disabled_example=0x7f0200b7;
+        public static final int spinner_ab_focused_example=0x7f0200b8;
+        public static final int spinner_ab_pressed_example=0x7f0200b9;
+        public static final int spinner_background_ab_example=0x7f0200ba;
+        public static final int tab_indicator_ab_example=0x7f0200bb;
+        public static final int tab_selected_example=0x7f0200bc;
+        public static final int tab_selected_focused_example=0x7f0200bd;
+        public static final int tab_selected_pressed_example=0x7f0200be;
+        public static final int tab_unselected_example=0x7f0200bf;
+        public static final int tab_unselected_focused_example=0x7f0200c0;
+        public static final int tab_unselected_pressed_example=0x7f0200c1;
+        public static final int tabs_pattern=0x7f0200c2;
     }
     public static final class id {
         public static final int TextView01=0x7f06004b;
@@ -1735,8 +1736,9 @@ containing a value of this type.
         public static final int home=0x7f060021;
         public static final int homeAsUp=0x7f060012;
         public static final int ic_action_edit=0x7f0600a7;
-        public static final int ic_action_new=0x7f0600a9;
-        public static final int ic_action_next=0x7f0600a8;
+        public static final int ic_action_new=0x7f0600aa;
+        public static final int ic_action_next=0x7f0600a9;
+        public static final int ic_action_remove=0x7f0600a8;
         public static final int icon=0x7f060037;
         public static final int ifRoom=0x7f060017;
         public static final int image=0x7f060034;
@@ -1965,9 +1967,9 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f09002b;
         public static final int action_settings=0x7f09002e;
-        public static final int app_id=0x7f09003e;
+        public static final int app_id=0x7f09003f;
         public static final int app_name=0x7f09002d;
-        public static final int board_detail_activity_title=0x7f09003b;
+        public static final int board_detail_activity_title=0x7f09003c;
         public static final int com_facebook_choose_friends=0x7f09000f;
         public static final int com_facebook_dialogloginactivity_ok_button=0x7f090000;
         public static final int com_facebook_internet_permission_error_message=0x7f090013;
@@ -1996,19 +1998,20 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_not_logged_in=0x7f09000a;
         /**  Actionbar title Value 
          */
-        public static final int composer_activity_title=0x7f09003a;
+        public static final int composer_activity_title=0x7f09003b;
         /**  Board detail Activity 
          */
         public static final int detail_title_section1=0x7f090033;
         public static final int detail_title_section2=0x7f090034;
         public static final int detail_title_section3=0x7f090035;
-        public static final int facebook_login_activity_title=0x7f09003d;
+        public static final int facebook_login_activity_title=0x7f09003e;
         /**  Actionbar title Value 
          */
         public static final int ic_action_new=0x7f090037;
-        public static final int ic_action_next=0x7f090038;
-        public static final int ic_action_sort_by_size=0x7f090039;
-        public static final int intro_activity_title=0x7f09003c;
+        public static final int ic_action_next=0x7f090039;
+        public static final int ic_action_remove=0x7f090038;
+        public static final int ic_action_sort_by_size=0x7f09003a;
+        public static final int intro_activity_title=0x7f09003d;
         /**  Just use standard Pull Down String when pulling up. These can be set for languages which require it 
  Just use standard Pull Down String when pulling up. These can be set for languages which require it 
          */
@@ -2021,7 +2024,7 @@ containing a value of this type.
         /**  Reple Fragment 
          */
         public static final int reple_fragment_text_no_reple_message=0x7f090036;
-        public static final int title_facebook_login=0x7f09003f;
+        public static final int title_facebook_login=0x7f090040;
         /**  ActionBar sevtion & Actionbar title 
          */
         public static final int title_section1=0x7f09002f;

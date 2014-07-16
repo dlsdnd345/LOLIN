@@ -51,6 +51,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private TextView					textDetailTitle;
 	private TextView					textSummernerName;
 	
+	private RequestQueue 				request;
+	
 	private Board						board;
 	
 	private boolean					editState;
@@ -81,7 +83,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 	
 	private void dataInit() {
 		
-		RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
+		request = Volley.newRequestQueue(getApplicationContext());  
 		boardDetailService = new BoardDetailService(getApplicationContext());
 		
 		Intent intent = getIntent();
@@ -122,6 +124,10 @@ public class BoardDetailActivity extends ActionBarActivity {
 			intent.putExtra(Config.BOARD.BOARD_ID, id);
 			startActivity(intent);
 			return true;
+		case R.id.ic_action_remove:
+			// 게시물 삭제
+			delete(request);
+			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
@@ -158,6 +164,24 @@ public class BoardDetailActivity extends ActionBarActivity {
 		}));
 	}
 	
+	/**
+	 * 게시물 삭제 Api
+	 * @param request
+	 */
+	private void delete(RequestQueue request) {
+		request.add(new StringRequest(Request.Method.GET, Config.BOARD.BOARD_DELETE + Config.BOARD.SUB_URL+id ,new Response.Listener<String>() {  
+			@Override  
+			public void onResponse(String response) {
+				Intent intent = new Intent(BoardDetailActivity.this, MainActivity.class);
+				startActivity(intent);
+			}  
+		}, new Response.ErrorListener() {  
+			@Override  
+			public void onErrorResponse(VolleyError error) {  
+				VolleyLog.d(ERROR, error.getMessage());  
+			}  
+		}));
+	}
 	
 	@SuppressLint("NewApi")
 	private void actionBarInit() {

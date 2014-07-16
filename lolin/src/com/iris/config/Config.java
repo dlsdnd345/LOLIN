@@ -6,6 +6,7 @@ public class Config {
 		
 		public final static String SUB_URL 		= "?id=";
 		public static final String BOARD_ID 		= "BoardId";
+		public final static String BOARD_DELETE = "http://192.168.219.6:8080/board/delete";
 		public final static String BOARD_FIND_ONE = "http://192.168.219.6:8080/board/findOne";
 	}
 	
