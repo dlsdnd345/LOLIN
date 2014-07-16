@@ -46,6 +46,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private PagerAdapter 				mPagerAdapter;
 	
 	private ImageView					imgRank;
+	
+	private TextView					textRank;
 	private	 TextView					textPosition;
 	private TextView					textPlayTime;
 	private TextView					textDetailTitle;
@@ -72,6 +74,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private void init() {
 		
 		imgRank				= (ImageView)findViewById(R.id.img_rank);
+		textRank			= (TextView)findViewById(R.id.text_rank);
 		textPlayTime        = (TextView)findViewById(R.id.text_play_time);
 		textPosition 		= (TextView)findViewById(R.id.text_position);
 		textSummernerName 	= (TextView)findViewById(R.id.text_summernerName);
@@ -149,6 +152,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 				textSummernerName.setText(board.getSummonerName());
 				textPosition.setText(board.getPosition());
 				textPlayTime.setText(board.getPlayTime());
+				textRank.setText(board.reverseTransformRank(board.getRank())+ " " + board.getTea());
+				
 				// 이름별 랭크 이미지 삽입
 				int resource = getResources().getIdentifier
 				( "img_rank_"+board.getRank(), "drawable", getApplicationContext().getPackageName());

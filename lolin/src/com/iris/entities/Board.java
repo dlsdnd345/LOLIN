@@ -21,6 +21,7 @@ public class Board implements Serializable {
 	private String rank;
 	private String playTime;
 	private String writeTime;
+	private String repleCount;
 	private	 List<Reple> repleList;
 	
 	public int getId() {
@@ -81,17 +82,23 @@ public class Board implements Serializable {
 	public void setPlayTime(String playTime) {
 		this.playTime = playTime;
 	}
-	public List<Reple> getRepleList() {
-		return repleList;
-	}
-	public void setRepleList(List<Reple> repleList) {
-		this.repleList = repleList;
-	}
 	public String getTea() {
 		return tea;
 	}
 	public void setTea(String tea) {
 		this.tea = tea;
+	}
+	public String getRepleCount() {
+		return repleCount;
+	}
+	public void setRepleCount(String repleCount) {
+		this.repleCount = repleCount;
+	}
+	public List<Reple> getRepleList() {
+		return repleList;
+	}
+	public void setRepleList(List<Reple> repleList) {
+		this.repleList = repleList;
 	}
 	/**
 	 * 랭크를 스피너에서 사용할 수 있도록 position 으로 변경
@@ -197,5 +204,49 @@ public class Board implements Serializable {
 
 		return -1;
 	}
+	
+	public String transformRank(String rank){
+		
+		if(rank.equals("언랭크")){
+			return "unrank";
+		}else if(rank.equals("브론즈")){
+			return "bronze";
+		}else if(rank.equals("실버")){
+			return "silver";
+		}else if(rank.equals("골드")){
+			return "gold";
+		}else if(rank.equals("플래티넘")){
+			return "platinum";
+		}else if(rank.equals("다이아")){
+			return "diamond";
+		}else if(rank.equals("챌린져")){
+			return "challenger";
+		}else{
+			return "";
+		}
+	}
+	
+	public String reverseTransformRank(String rank){
+		
+		if(rank.equals("unrank")){
+			return "언랭크";
+		}else if(rank.equals("bronze")){
+			return "브론즈";
+		}else if(rank.equals("silver")){
+			return "실버";
+		}else if(rank.equals("gold")){
+			return "골드";
+		}else if(rank.equals("platinum")){
+			return "플래티넘";
+		}else if(rank.equals("diamond")){
+			return "다이아";
+		}else if(rank.equals("challenger")){
+			return "챌린져";
+		}else{
+			return "";
+		}
+	}
+	
+	
 	
 }

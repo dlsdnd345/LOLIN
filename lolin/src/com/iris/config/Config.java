@@ -2,6 +2,11 @@ package com.iris.config;
 
 public class Config {
 
+	public static class NUMBER {
+		
+		public final static String ZERO		= "0";
+	}
+	
 	public static class BOARD {
 		
 		public final static String SUB_URL 		= "?id=";
@@ -54,13 +59,18 @@ public class Config {
 	
 	public static class API {
 		
+		public final static String			SUB_URL 						= "?id=";
 		public final static String 		USER_SAVE 						= "http://192.168.219.6:8080/user/save";
 		public final static String 		USER_FIND_ONE					= "http://192.168.219.6:8080/user/findOne";
+		public final static String 		REPLE_SAVE						= "http://192.168.219.6:8080/reple/save";
 	}
 	
 	public static class FLAG {
 		
-		public final static String	  EDIT_STATE = "editState";
+		public static final String 	  TRUE 		 = "true";
+		public final static  String	  EDIT_STATE = "editState";
 	}
+
+	
 	
 }

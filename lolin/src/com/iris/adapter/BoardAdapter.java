@@ -12,12 +12,16 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.iris.config.Config;
 import com.iris.entities.Board;
 import com.iris.lolin.R;
+import com.iris.service.BoardService;
 import com.iris.util.ViewHolder;
 
 public class BoardAdapter extends BaseAdapter{
 
+	private BoardService						boardService;
+	
 	private int 								layout; 
 	private Context 							context; 
 	private LayoutInflater 						inflater;
@@ -29,6 +33,7 @@ public class BoardAdapter extends BaseAdapter{
 		this.context=context;
 		this.layout = layout;
 		this.boardList =boardList;
+		boardService = new BoardService(context);
 		inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		this.viewArray = new SparseArray<WeakReference<View>>(boardList.size());
 	}
@@ -67,6 +72,7 @@ public class BoardAdapter extends BaseAdapter{
 		TextView txtContent = ViewHolder.get(convertView ,R.id.txt_content);
 		TextView textPlayTime = ViewHolder.get(convertView ,R.id.text_playTime);
 		TextView textWriteTime = ViewHolder.get(convertView ,R.id.text_write_time);
+		TextView textRepleCount = ViewHolder.get(convertView ,R.id.text_reple_count);
 		
 		// 이름별 랭크 이미지 삽입
 		int resource = convertView.getResources().getIdentifier
@@ -79,8 +85,23 @@ public class BoardAdapter extends BaseAdapter{
 		txtContent.setText(boardList.get(position).getContent());
 		textPlayTime.setText(boardList.get(position).getPlayTime());
 		textWriteTime.setText(boardList.get(position).getWriteTime());
+		visibleRepleCount(position, textRepleCount);
 		
 		return convertView;
+	}
+
+	/**
+	 * 댓글이 존재 하는 경우만 리플 숫자를 표시
+	 * @param position
+	 * @param textRepleCount
+	 */
+	private void visibleRepleCount(int position, TextView textRepleCount) {
+		if(boardList.get(position).getRepleCount() != null 
+		   && !boardList.get(position).getRepleCount().equals(Config.NUMBER.ZERO)){
+			textRepleCount.setText(boardService.transformRepleCount(boardList.get(position).getRepleCount()));
+		}else{
+			textRepleCount.setText("");
+		}
 	}
 
 }

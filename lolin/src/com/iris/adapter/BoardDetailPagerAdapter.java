@@ -46,7 +46,7 @@ public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 		}else if(position == RECORD_SEARCH_FRAGMENT){
 			return detailRecordSearchFragment.newInstance(board.getSummonerName());
 		}else{
-			return repleFragment.newInstance((ArrayList<Reple>) board.getRepleList(),board.getSummonerName());
+			return repleFragment.newInstance(board.getId(),(ArrayList<Reple>) board.getRepleList(),board.getSummonerName());
 		}
 	}
 	

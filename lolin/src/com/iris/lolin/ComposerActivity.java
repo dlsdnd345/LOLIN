@@ -201,7 +201,7 @@ public class ComposerActivity extends ActionBarActivity {
 				String facebookId = sharedpreferencesUtil.getValue(FACEBOOK_ID, "");
 				RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
 				String subUrl = composerService.getSubUrl(boardId ,facebookId, board.getTitle(), board.getContent(),
-						composerService.transformRank(board.getRank()), board.getPosition(), board.getPlayTime(),board.getTea());
+						board.transformRank(board.getRank()), board.getPosition(), board.getPlayTime(),board.getTea());
 				
 				request.add(new StringRequest(Request.Method.GET, BOARD_SAVE+subUrl,new Response.Listener<String>() {  
 					@Override  

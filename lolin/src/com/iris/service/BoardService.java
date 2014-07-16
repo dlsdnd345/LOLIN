@@ -29,19 +29,22 @@ public class BoardService {
 	
 	private Context						context;
 	private Gson 						gson;
+	private Board 						board;
 	private ArrayList<Board> 			boardListFromGson;
 	private SharedpreferencesUtil		sharedpreferencesUtil;
 	private String[] 					rankData,positionData,timeData;
 	
+	
 	public BoardService(Context context){
 		this.context =context;
 		gson = new Gson();
+		board = new Board();
 		sharedpreferencesUtil = new SharedpreferencesUtil(context);
 	}
 	
 	public ArrayList<Board> getBoardFindAll(String jsonData){
 		
-		System.err.println("#########   jsonData :  "+ jsonData);
+		System.out.println("############   :  " + jsonData);
 		
 		JSONObject JsonObject;
 		String ok = null;
@@ -75,7 +78,7 @@ public class BoardService {
 		String encodePosition = null;
 		String encodeTime = null;
 		
-		String transformRank = transformRank(rankData[rankCount]);
+		String transformRank = board.transformRank(rankData[rankCount]);
 		String transformPosition = transformPosition(positionData[positionCount]);
 		String transformTime = transformTime(timeData[timeCount]);
 		
@@ -92,26 +95,6 @@ public class BoardService {
 		
 	}
 	
-	public String transformRank(String rank){
-		if(rank.equals("언랭크")){
-			return "unrank";
-		}else if(rank.equals("브론즈")){
-			return "bronze";
-		}else if(rank.equals("실버")){
-			return "silver";
-		}else if(rank.equals("골드")){
-			return "gold";
-		}else if(rank.equals("플래티넘")){
-			return "platinum";
-		}else if(rank.equals("다이아")){
-			return "diamond";
-		}else if(rank.equals("챌린져")){
-			return "challenger";
-		}else{
-			return "";
-		}
-	}
-	
 	public String transformPosition(String position){
 		if(position.equals("포지션[전체]")){
 			return "";
@@ -126,6 +109,10 @@ public class BoardService {
 		}else{
 			return time;
 		}
+	}
+	
+	public String transformRepleCount(String repleCount){
+		return "[" +repleCount+"]";
 	}
 	
 }

@@ -7,25 +7,52 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.iris.adapter.RepleAdapter;
+import com.iris.config.Config;
 import com.iris.entities.Reple;
+import com.iris.entities.User;
 import com.iris.lolin.R;
+import com.iris.service.RepleService;
+import com.iris.service.SettingService;
+import com.iris.util.SharedpreferencesUtil;
 
 public class RepleFragment extends Fragment {
 
-	private static final String USER_NAME = "userName";	
-	private static final String REPLE = "reple";	
+	private static final String USER_NAME 							= "userName";
+	private static final String BOARD_ID 								= "boardId";	
+	private static final String REPLE 								= "reple";	
+	private final static String ERROR 								= "Error";
 	
-	private RepleAdapter 		repleAdapter;
-	private ListView 			repleListView;
-	private TextView			textNoRepleMessage;
+	private int						boardId;
+	private String 						userName;
+	private RepleService				repleService;
+	private EditText					editReple;
+	private RepleAdapter 				repleAdapter;
+	private ListView 					repleListView;
+	private TextView					textNoRepleMessage;
+	private TextView					textAddReple;
+	private SettingService				settingService;
+	private SharedpreferencesUtil 		sharedpreferencesUtil;
+
 	
-	public Fragment newInstance(ArrayList<Reple> repleList,String userName) {
+	public Fragment newInstance(int boardId ,ArrayList<Reple> repleList,String userName) {
+		
 		RepleFragment fragment = new RepleFragment();
+		
 		Bundle args = new Bundle();
+		args.putInt(BOARD_ID, boardId);
 		args.putSerializable(REPLE, repleList);
 		args.putString(USER_NAME, userName);
 		fragment.setArguments(args);
@@ -44,21 +71,85 @@ public class RepleFragment extends Fragment {
 		
 		@SuppressWarnings("unchecked")
 		ArrayList<Reple> repleList = (ArrayList<Reple>) getArguments().get(REPLE);
-		String userName = getArguments().getString(USER_NAME);
+		userName = getArguments().getString(USER_NAME);
+		boardId  = getArguments().getInt(BOARD_ID);
 		
 		init(rootView);
+		dataInit();
+		visibleReple(repleList);
 		
-		if(repleList.size() == 0){
-			textNoRepleMessage.setVisibility(View.VISIBLE);
-		}
 		repleAdapter = new RepleAdapter(getActivity(), R.layout.row_left_reple, repleList,userName);
 		repleListView.setAdapter(repleAdapter);
 		
 		return rootView;
 	}
 
+	private void dataInit() {
+		repleService = new RepleService();
+		settingService = new SettingService();
+		sharedpreferencesUtil = new SharedpreferencesUtil(getActivity());
+	}
+
+	private void visibleReple(ArrayList<Reple> repleList) {
+		if(repleList.size() == 0){
+			textNoRepleMessage.setVisibility(View.VISIBLE);
+			repleListView.setVisibility(View.GONE);
+		}else{
+			textNoRepleMessage.setVisibility(View.INVISIBLE);
+			repleListView.setVisibility(View.VISIBLE);
+		}
+	}
+
 	private void init(ViewGroup rootView) {
+		
+		editReple			= (EditText)rootView.findViewById(R.id.edit_reple);
+		textAddReple 		= (TextView)rootView.findViewById(R.id.text_add_reple);
 		textNoRepleMessage 	= (TextView)rootView.findViewById(R.id.text_no_reple_message);
 		repleListView 		= (ListView)rootView.findViewById(R.id.list_reple);
+		
+		textAddReple.setOnClickListener(mClickListener);
+		
 	}
+	
+	
+	/**
+	 * 댓글 추가 Api
+	 */
+	public void saveReple(){
+		
+		RequestQueue request = Volley.newRequestQueue(getActivity());  
+		request.add(new StringRequest
+				(Request.Method.GET, Config.API.REPLE_SAVE+repleService.getSubUrl(boardId, userName, editReple.getText().toString())
+				,new Response.Listener<String>() {  
+			@Override  
+			public void onResponse(String response) {  
+
+				String resultOk = repleService.saveReplePasing(response);
+				if(resultOk.equals(Config.FLAG.TRUE)){
+					
+					System.out.println("갱신갱신갱신갱신갱신갱신갱신");
+					
+				}
+				System.out.println(response);
+				
+			}  
+		}, new Response.ErrorListener() {  
+			@Override  
+			public void onErrorResponse(VolleyError error) {  
+				VolleyLog.d(ERROR, error.getMessage());  
+			}  
+		}));
+
+	}
+	
+	Button.OnClickListener mClickListener = new View.OnClickListener() {
+		public void onClick(View v) {
+			switch (v.getId()) {
+			case R.id.text_add_reple:	
+				saveReple();
+				break;
+			}
+		}
+	};
+	
 }

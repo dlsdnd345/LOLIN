@@ -32,25 +32,4 @@ public class ComposerService {
 		return sub_url;
 	}
 	
-	public String transformRank(String rank){
-		
-		if(rank.equals("언랭크")){
-			return "unrank";
-		}else if(rank.equals("브론즈")){
-			return "bronze";
-		}else if(rank.equals("실버")){
-			return "silver";
-		}else if(rank.equals("골드")){
-			return "gold";
-		}else if(rank.equals("플래티넘")){
-			return "platinum";
-		}else if(rank.equals("다이아")){
-			return "diamond";
-		}else if(rank.equals("챌린져")){
-			return "challenger";
-		}else{
-			return "";
-		}
-	}
-	
 }

@@ -17,7 +17,7 @@
 
     <!-- Reple Fragment -->
     <string name="reple_fragment_text_no_reple_message">댓글이 없습니다.</string>
-    
+    <string name="reple_fragment_text_reple_hint">댓글을 입력해 주세요.</string>
     <!-- Actionbar title Value -->
 
     <string name="ic_action_new">추가</string>
