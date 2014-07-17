@@ -1,16 +1,20 @@
 package com.iris.fragment;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -30,6 +34,8 @@ import com.iris.util.SharedpreferencesUtil;
 
 public class RepleFragment extends Fragment {
 
+	private static final String REPLE_WARNING_MWSSAGE					= "댓글을 입력 하세요.";
+	
 	private static final String USER_NAME 							= "userName";
 	private static final String BOARD_ID 								= "boardId";	
 	private static final String REPLE 								= "reple";	
@@ -117,6 +123,15 @@ public class RepleFragment extends Fragment {
 	 */
 	public void saveReple(){
 		
+		// 댓글 내용 없을시 쉐이크 애니메이션 및 토스트 진행
+		if(editReple.getText().toString().equals("")){
+			Toast.makeText(getActivity(), REPLE_WARNING_MWSSAGE, Toast.LENGTH_LONG).show();
+			
+		    Animation shake = AnimationUtils.loadAnimation(getActivity(), R.anim.horizontal_shake);
+		    editReple.startAnimation(shake);
+			return;
+		}
+		
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
 		request.add(new StringRequest
 				(Request.Method.GET, Config.API.REPLE_SAVE+repleService.getSubUrl(boardId, userName, editReple.getText().toString())
@@ -128,6 +143,39 @@ public class RepleFragment extends Fragment {
 				if(resultOk.equals(Config.FLAG.TRUE)){
 					
 					System.out.println("갱신갱신갱신갱신갱신갱신갱신");
+					findReple();
+				}
+				System.out.println(response);
+				
+			}  
+		}, new Response.ErrorListener() {  
+			@Override  
+			public void onErrorResponse(VolleyError error) {  
+				VolleyLog.d(ERROR, error.getMessage());  
+			}  
+		}));
+
+	}
+	
+	/**
+	 * 댓글 갱신 Api
+	 */
+	public void findReple(){
+		
+		RequestQueue request = Volley.newRequestQueue(getActivity());  
+		request.add(new StringRequest
+				(Request.Method.GET, Config.API.REPLE_FIND_ONE+Config.API.SUB_URL_BOARD_ID+boardId,new Response.Listener<String>() {  
+			@Override  
+			public void onResponse(String response) {  
+
+				String resultOk = repleService.saveReplePasing(response);
+				if(resultOk.equals(Config.FLAG.TRUE)){
+					
+					editReple.setText("");
+					ArrayList<Reple> repleList = repleService.getRepleFindOne(response);
+					visibleReple(repleList);
+					repleAdapter = new RepleAdapter(getActivity(), R.layout.row_left_reple, repleList,userName);
+					repleListView.setAdapter(repleAdapter);
 					
 				}
 				System.out.println(response);

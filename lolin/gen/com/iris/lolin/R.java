@@ -1731,7 +1731,7 @@ containing a value of this type.
         public static final int dropdown=0x7f06001c;
         public static final int edit_content=0x7f06005d;
         public static final int edit_query=0x7f06003d;
-        public static final int edit_reple=0x7f06008b;
+        public static final int edit_reple=0x7f06008c;
         public static final int edit_summerner=0x7f060061;
         public static final int edit_title=0x7f060056;
         public static final int end=0x7f060020;
@@ -1813,10 +1813,10 @@ containing a value of this type.
         public static final int tabs=0x7f060053;
         public static final int textView1=0x7f060055;
         public static final int textView2=0x7f060090;
-        public static final int text_add_reple=0x7f06008c;
+        public static final int text_add_reple=0x7f06008d;
         public static final int text_content=0x7f060088;
         public static final int text_detail_title=0x7f060049;
-        public static final int text_no_reple_message=0x7f06008d;
+        public static final int text_no_reple_message=0x7f06008b;
         public static final int text_playTime=0x7f06009f;
         public static final int text_play_time=0x7f060050;
         public static final int text_position=0x7f06004e;

@@ -33,6 +33,8 @@ public class BoardDetailService {
 	
 	public Board getBoardFindOne(String jsonData){
 		
+		System.out.println("###########   :   " + jsonData);
+		
 		JSONObject JsonObject;
 		String ok = null;
 		String data = null;
