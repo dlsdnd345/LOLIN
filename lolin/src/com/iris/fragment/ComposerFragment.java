@@ -21,10 +21,13 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.iris.adapter.ComposerAdapter;
+import com.iris.config.Config;
 import com.iris.entities.Board;
+import com.iris.entities.User;
 import com.iris.lolin.BoardDetailActivity;
 import com.iris.lolin.R;
 import com.iris.service.ComposerFragmentService;
+import com.iris.service.SettingService;
 import com.iris.util.SharedpreferencesUtil;
 
 /**
@@ -37,7 +40,6 @@ public class ComposerFragment extends Fragment {
 	private static final String 		FACEBOOK_ID  					= "FACEBOOK_ID";
 	private final static String 		BOARD_FIND_MY_ALL 				= "http://192.168.219.6:8080/board/findMyAll";
 	private final static String 		ERROR 							= "Error";
-	
 	
 	private SharedpreferencesUtil  		sharedpreferencesUtil;
 	private ComposerFragmentService 	composerService;
@@ -66,8 +68,10 @@ public class ComposerFragment extends Fragment {
 	}
 
 	private void dataInit() {
+		
 		composerService = new ComposerFragmentService();
 		sharedpreferencesUtil = new SharedpreferencesUtil(getActivity());
+		
 		getBoardFindMyAll();
 	}
 
@@ -104,8 +108,10 @@ public class ComposerFragment extends Fragment {
 	OnItemClickListener mOnItemClickListener = new OnItemClickListener(){
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
+			
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
 			intent.putExtra("id", boardList.get(position).getId());
+			intent.putExtra("editState", true);
 			startActivity(intent);
 		}
 		
