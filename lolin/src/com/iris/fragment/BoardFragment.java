@@ -200,7 +200,7 @@ public class BoardFragment extends Fragment {
 		boardListView.setOnRefreshListener(mOnRefreshListener);
 		boardListView.setOnItemClickListener(mOnItemClickListener);
 		ListView actualListView = boardListView.getRefreshableView();
-		actualListView.setOnTouchListener(mOnTouchListener);
+		//actualListView.setOnTouchListener(mOnTouchListener);
 		registerForContextMenu(actualListView);
 	}
 
@@ -252,6 +252,9 @@ public class BoardFragment extends Fragment {
 		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 
 			//자기 것만 수정 , 삭제 할 수 있게 아이콘을 보여주기 위함.
+			
+			System.err.println("#########   user.getId(  :  " + user.getId());
+			
 			Boolean editState = boardList.get(position-1).getUserId() == user.getId();
 
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);

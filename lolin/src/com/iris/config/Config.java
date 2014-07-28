@@ -61,14 +61,17 @@ public class Config {
 		
 		public final static String			SUB_URL 						= "?id=";
 		public final static String 		SUB_URL_BOARD_ID 	 			= "?boardId=";
+		public final static String 		SUB_URL_REPLE_ID 	 			= "?repleId=";
 		public final static String 		USER_SAVE 						= "http://192.168.219.6:8080/user/save";
 		public final static String 		USER_FIND_ONE					= "http://192.168.219.6:8080/user/findOne";
 		public final static String 		REPLE_SAVE						= "http://192.168.219.6:8080/reple/save";
 		public final static String 		REPLE_FIND_ONE					= "http://192.168.219.6:8080/reple/findOne";
+		public final static String 		REPLE_DELETE					= "http://192.168.219.6:8080/reple/delete";
 	}
 	
 	public static class FLAG {
 		
+		public final static String 	  ERROR 	 = "Error";
 		public static final String 	  TRUE 		 = "true";
 		public static final String 	  DATA 		 = "data";
 		public final static  String	  EDIT_STATE = "editState";

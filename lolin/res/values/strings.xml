@@ -9,7 +9,7 @@
     <string name="title_section2">내가 쓴글</string>
     <string name="title_section3">전적 검색</string>
     <string name="title_section4">설정</string>
-    
+
     <!-- Board detail Activity -->
     <string name="detail_title_section1">상세내용</string>
     <string name="detail_title_section2">전적 검색</string>
@@ -18,6 +18,10 @@
     <!-- Reple Fragment -->
     <string name="reple_fragment_text_no_reple_message">댓글이 없습니다.</string>
     <string name="reple_fragment_text_reple_hint">댓글을 입력해 주세요.</string>
+
+    <!-- Composor Fragment -->
+    <string name="composor_fragment_text_no_list_message">내가 쓴글이 없습니다.</string>
+
     <!-- Actionbar title Value -->
 
     <string name="ic_action_new">추가</string>
@@ -28,10 +32,9 @@
     <!-- Actionbar title Value -->
     <string name="composer_activity_title">글쓰기</string>
     <string name="board_detail_activity_title">상세 내용</string>
-	<string name="intro_activity_title">인트로</string>
-	<string name="facebook_login_activity_title">로그인</string>
-    
-	<string name="app_id">229508427242791</string>
+    <string name="intro_activity_title">인트로</string>
+    <string name="facebook_login_activity_title">로그인</string>
+    <string name="app_id">229508427242791</string>
     <string name="title_facebook_login">login</string>
-	
+
 </resources>
