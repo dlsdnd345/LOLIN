@@ -1,96 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-    <RelativeLayout
-        android:id="@+id/layout_login"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5"
-         >
-
-        <ImageView
-            android:id="@+id/img_profile"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"
-            android:visibility="invisible"
-             />
-
-        <TextView
-            android:id="@+id/txt_hello"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/img_profile"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:visibility="invisible"
-             />
-
-        <EditText
-            android:id="@+id/edit_summerner"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_hello"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:hint="소환사 명을 입력해 주세요."
-            android:visibility="invisible"
-             >
-        </EditText>
-
-        <TextView
-            android:id="@+id/txt_warnning_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edit_summerner"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="소환사 명을 정확히 입력해주세요. \n 사용자 소환사 명을 정확히 입력하지 않으면 파티매칭이 이루어질수 없습니다."
-            android:textSize="10sp"
-            android:textStyle="bold"
-            android:visibility="invisible"
-             />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:visibility="invisible" />
-    </RelativeLayout>
+    android:layout_height="match_parent" >
 
     <LinearLayout
-        android:id="@+id/layout_btn_login"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="vertical"
-         >
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-        <ImageButton
-            android:id="@+id/btn_facebook_login"
+        <RelativeLayout
+            android:id="@+id/layout_login"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/img_facebook_login" />
+            android:layout_weight="5" >
 
-        <ImageButton
-            android:id="@+id/btn_not_facebook_login"
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/txt_hello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_profile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edit_summerner"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_hello"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:hint="소환사 명을 입력해 주세요."
+                android:visibility="invisible" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/txt_warnning_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_summerner"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="소환사 명을 정확히 입력해주세요. \n 사용자 소환사 명을 정확히 입력하지 않으면 파티매칭이 이루어질수 없습니다."
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_btn_login"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/img_facebook_login" />
+            android:layout_weight="2"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/btn_facebook_login"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/img_facebook_login" />
+
+            <ImageButton
+                android:id="@+id/btn_not_facebook_login"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/img_facebook_login" />
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

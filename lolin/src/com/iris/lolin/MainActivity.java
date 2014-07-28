@@ -29,14 +29,14 @@ import com.iris.service.BoardService;
 @SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity  {
 
-	private final static int WRITE_TEXT = 1;
-	private final static int RECORD_SEARCH = 2;
-	private final static int SETTING = 3;
+	private final static int WRITE_TEXT 		= 1;
+	private final static int RECORD_SEARCH 	= 2;
+	private final static int SETTING 			= 3;
 
-	float firstGetY , preGetY= 0;
+	private float 						firstGetY , preGetY= 0;
+	private int 						viewPagerPosition;
 
 	private ViewPager 					mViewPager;
-	private int 						viewPagerPosition;
 	private PagerSlidingTabStrip 		tabs;
 	private SectionsPagerAdapter 		mSectionsPagerAdapter;
 	public 	 HorizontalScrollView 		scrollViewRank, scrollViewPosition, scrollViewTime;
@@ -50,11 +50,9 @@ public class MainActivity extends ActionBarActivity  {
 		dataInit();
 	}
 
-	@Override
-	protected void onResume() {
-		super.onResume(); 
-	}
-
+	/**
+	 * 액션바 아이콘 생성
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
@@ -62,14 +60,18 @@ public class MainActivity extends ActionBarActivity  {
 		return super.onCreateOptionsMenu(menu);
 	}
 
+	/**
+	 * 레이아웃 초기화
+	 */
 	private void init() {
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 	}
 
-
+	/**
+	 * 데이터 초기화
+	 */
 	private void dataInit() {
-
 		actionvarInit();
 		viewPagerConfig();
 	}
@@ -81,6 +83,9 @@ public class MainActivity extends ActionBarActivity  {
 	}
 
 
+	/**
+	 * 액션바 아이템 선택시 이벤트 발생
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle presses on the action bar items

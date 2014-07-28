@@ -88,17 +88,18 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	private DisplayImageOptions 		options;
 	private Animation 					verticalShake;
 	private Session 					sessionTemp;
-	private ProgressBar 				progressBar;
-	private ImageView 					imgProfile;
 	private ImageLoader 				imageLoader;
 	private FaceBookUser 				faceBookUser;
-	private EditText 					editSummerner;
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
-	private TextView 					txtHello , txtWarnningMessage;
-	private View 						layoutLogin , layoutBtnLogin;
-	private ImageButton 				btnFacebookLogin , btnNotFacebookLogin;
 	private Session.StatusCallback 		statusCallback = new SessionStatusCallback();
 
+	private EditText 					editSummerner;
+	private TextView 					txtHello , txtWarnningMessage;
+	private View 						layoutLogin , layoutBtnLogin;
+	private ProgressBar 				progressBar;
+	private ImageView 					imgProfile;
+	private ImageButton 				btnFacebookLogin , btnNotFacebookLogin;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -109,6 +110,9 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		facebookInit(savedInstanceState);
 	}
 
+	/**
+	 * 액션바 아이템 생성
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
@@ -116,29 +120,46 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		return super.onCreateOptionsMenu(menu);
 	}
 
+	/**
+	 * 액션바 이벤트 발생
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle presses on the action bar items
 		switch (item.getItemId()) {
 		case R.id.ic_action_next:
-			//서버에 프로필 정보 전송 코드 들어가야함.
 			
 			saveLoginInfo();
-			
-			if(!editSummerner.getText().toString().equals("")){
-				request.add(stringRequest);
-			}else{
-				Animation shake = AnimationUtils.loadAnimation(this, R.anim.horizontal_shake);
-				editSummerner.startAnimation(shake);
-				Toast.makeText(getApplicationContext(), EMPRY_SUMMERNER_MESSAGE, Toast.LENGTH_LONG).show();
-			}
+			checkEmptyEditSummerner();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
 
+	/**
+	 * 소환사 명이 입력이 되었는지 판단
+	 */
+	private void checkEmptyEditSummerner() {
+		if(!editSummerner.getText().toString().equals("")){
+			request.add(stringRequest);
+		}else{
+			// 비어있을시 쉐이크 애니메이션 및 토스트
+			Animation shake = AnimationUtils.loadAnimation(this, R.anim.horizontal_shake);
+			editSummerner.startAnimation(shake);
+			Toast.makeText(getApplicationContext(), EMPRY_SUMMERNER_MESSAGE, Toast.LENGTH_LONG).show();
+			
+			progressBar.setVisibility(View.INVISIBLE);
+		}
+	}
+
+	/**
+	 * 로그인 정보 저장
+	 * facebookId , 소환사명 저장
+	 */
 	public void saveLoginInfo(){
+		
+		progressBar.setVisibility(View.VISIBLE);
 		
 		String sub_url = "?faceBookId="+faceBookUser.getUserId()+"&summonerName="+editSummerner.getText().toString();
 		stringRequest =new StringRequest(Method.GET, USER_SAVE+sub_url,new Response.Listener<String>() {  
@@ -157,6 +178,9 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 						startActivity(intent);
 						finish();
 					}
+					
+					progressBar.setVisibility(View.INVISIBLE);
+					
 				} catch (JSONException e) {
 					e.printStackTrace();
 				}
@@ -169,6 +193,9 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		});
 	}
 	
+	/**
+	 * 레이아웃 초기화
+	 */
 	private void init() {
 
 		layoutBtnLogin = (View)findViewById(R.id.layout_btn_login);
@@ -182,6 +209,9 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		btnFacebookLogin = (ImageButton)findViewById(R.id.btn_facebook_login);
 	}
 
+	/**
+	 * 데이터 초기화
+	 */
 	@SuppressLint("NewApi")
 	private void dataInit() {
 
@@ -193,6 +223,9 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		actionBarInit();
 	}
 
+	/**
+	 * 액션바 초기화
+	 */
 	@SuppressLint("NewApi")
 	private void actionBarInit() {
 		//ActionBar Init
@@ -200,11 +233,9 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		getActionBar().setTitle(R.string.facebook_login_activity_title);
 	}
 
-	private void faceBookInit(){
-		// FaceBook Init
-		faceBookUser = new FaceBookUser();
-	}
-
+	/**
+	 * imageLoder초기화
+	 */
 	private void imageLoderInit() {
 		options = new DisplayImageOptions.Builder()
 		.showImageOnFail(Color.TRANSPARENT) // 에러 났을때 나타나는 이미지
@@ -225,6 +256,14 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		imageLoader = ImageLoader.getInstance();
 	}
 
+	/**
+	 * 페이스북 초기화
+	 */
+	private void faceBookInit(){
+		// FaceBook Init
+		faceBookUser = new FaceBookUser();
+	}
+	
 	private void facebookInit(Bundle savedInstanceState) {
 
 		Settings.addLoggingBehavior(LoggingBehavior.INCLUDE_ACCESS_TOKENS);
@@ -277,6 +316,9 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		});
 	}
 
+	/**
+	 * 로그인 시
+	 */
 	private void onClickLogin() {
 		Session session = Session.getActiveSession();
 		if (!session.isOpened() && !session.isClosed()) {
@@ -286,6 +328,11 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		}
 	}
 
+	/**
+	 * 페이스북 세션 
+	 * @author 박인웅
+	 *
+	 */
 	private class SessionStatusCallback implements Session.StatusCallback {
 		@Override
 		public void call(Session session, SessionState state, Exception exception) {
@@ -303,6 +350,10 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		}
 	}
 
+	/**
+	 * 페이스북 정보 조회
+	 * @param session
+	 */
 	private void getFaceBookMe(Session session){
 
 		if(session.isOpened()){
@@ -335,6 +386,10 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		public void onLoadingFailed(String arg0, View arg1,FailReason arg2) {}
 	};
 
+	/**
+	 * 비로그인 시
+	 * @param view
+	 */
 	public void notFacebookLogin(View view){
 
 		Intent inetnt = new Intent(FaceBookLoginActivity.this , MainActivity.class);

@@ -2,6 +2,8 @@ package com.iris.fragment;
 
 import java.util.ArrayList;
 
+import org.w3c.dom.Text;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
@@ -36,7 +39,6 @@ import com.iris.util.SharedpreferencesUtil;
 @SuppressLint("NewApi")
 public class ComposerFragment extends Fragment {
 
-	//?faceBookId=566784443436995
 	private static final String 		FACEBOOK_ID  					= "FACEBOOK_ID";
 	private final static String 		BOARD_FIND_MY_ALL 				= "http://192.168.219.6:8080/board/findMyAll";
 	private final static String 		ERROR 							= "Error";
@@ -45,6 +47,8 @@ public class ComposerFragment extends Fragment {
 	private ComposerFragmentService 	composerService;
 	private ArrayList<Board> 			boardList;
 	private ComposerAdapter 			composerAdapter;
+	
+	private TextView					txtEmptyMessage;
 	private ListView 					writeTextListView;
 	
 	public Fragment newInstance() {
@@ -63,10 +67,12 @@ public class ComposerFragment extends Fragment {
 		init(rootView);
 		dataInit();
 		
-		
 		return rootView;
 	}
 
+	/**
+	 * 데이터 초기화
+	 */
 	private void dataInit() {
 		
 		composerService = new ComposerFragmentService();
@@ -75,6 +81,9 @@ public class ComposerFragment extends Fragment {
 		getBoardFindMyAll();
 	}
 
+	/**
+	 * 내가 쓴 게시판 조회
+	 */
 	private void getBoardFindMyAll() {
 		
 		String sub_url = "?faceBookId="+ sharedpreferencesUtil.getValue(FACEBOOK_ID, "");
@@ -85,7 +94,10 @@ public class ComposerFragment extends Fragment {
 			public void onResponse(String response) {  
 				boardList = composerService.getBoardFindAll(response);
 				listViewInit();
-			}  
+				visibleComposorEmptyMessage();
+				
+			}
+
 		}, new Response.ErrorListener() {  
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
@@ -94,6 +106,20 @@ public class ComposerFragment extends Fragment {
 		}));
 	}
 	
+	/**
+	 * 리스트가 없을시 Empty 메세지
+	 */
+	private void visibleComposorEmptyMessage() {
+		if(boardList.size() == 0){
+			txtEmptyMessage.setVisibility(View.VISIBLE);
+		}else{
+			txtEmptyMessage.setVisibility(View.INVISIBLE);
+		}
+	}  
+	
+	/**
+	 * 내가쓴글 리스트 초기화
+	 */
 	private void listViewInit() {
 		
 		composerAdapter = new ComposerAdapter(getActivity(), R.layout.row_write_text_list, boardList);
@@ -101,10 +127,18 @@ public class ComposerFragment extends Fragment {
 		writeTextListView.setOnItemClickListener(mOnItemClickListener);
 	}
 
+	/**
+	 * 레이아웃 초기화
+	 * @param rootView
+	 */
 	private void init(View rootView) {
+		txtEmptyMessage   = (TextView)rootView.findViewById(R.id.txt_empty_message);
 		writeTextListView = (ListView)rootView.findViewById(R.id.list_write_text);
 	}
 	
+	/**
+	 * 리스트 row 선택시
+	 */
 	OnItemClickListener mOnItemClickListener = new OnItemClickListener(){
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {

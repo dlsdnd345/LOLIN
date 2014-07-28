@@ -10,6 +10,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -34,6 +35,8 @@ public class RecordSearchFragment extends Fragment {
 	private static final String 		FACEBOOK_ID  					= "FACEBOOK_ID";
 	private static final String 		BASE_URL 						= "http://www.op.gg/summoner/userName=";
 	private final static String 		USER_FIND_ONE					= "http://192.168.219.6:8080/user/findOne";
+	
+	private ProgressBar					prograssBar;
 	
 	private User 						user;
 	private RecordSearchService 		recordSearchService;
@@ -65,6 +68,8 @@ public class RecordSearchFragment extends Fragment {
 	
 	public void getUser(){
 		
+		prograssBar.setVisibility(View.VISIBLE);
+		
 		String sub_url = "?faceBookId="+ sharedpreferencesUtil.getValue(FACEBOOK_ID, "");
 		
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
@@ -73,6 +78,7 @@ public class RecordSearchFragment extends Fragment {
 			public void onResponse(String response) {  
 				user = recordSearchService.getUser(response);
 				webViewInit();  
+				prograssBar.setVisibility(View.INVISIBLE);
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  
@@ -91,7 +97,12 @@ public class RecordSearchFragment extends Fragment {
 		webView.setWebViewClient(new BasicWebViewClient());
 	}
 
+	/**
+	 * 레이아웃 초기화
+	 * @param rootView
+	 */
 	private void init(View rootView) {
+		prograssBar 		= (ProgressBar)rootView.findViewById(R.id.progressBar);       
 		mPullRefreshWebView = (PullToRefreshWebView)rootView.findViewById(R.id.pull_refresh_webview);
 	}
 	

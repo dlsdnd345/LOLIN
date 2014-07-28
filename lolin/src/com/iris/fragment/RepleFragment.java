@@ -15,6 +15,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,14 +49,15 @@ public class RepleFragment extends Fragment {
 	private int						boardId;
 	private String 						userName;
 	private RepleService				repleService;
-	private EditText					editReple;
 	private RepleAdapter 				repleAdapter;
-	private ListView 					repleListView;
-	private TextView					textNoRepleMessage;
-	private TextView					textAddReple;
 	private SettingService				settingService;
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
 
+	private ProgressBar					prograssBar;
+	private EditText					editReple;
+	private ListView 					repleListView;
+	private TextView					textNoRepleMessage;
+	private TextView					textAddReple;
 	
 	public Fragment newInstance(int boardId ,ArrayList<Reple> repleList,String userName) {
 		
@@ -95,12 +97,19 @@ public class RepleFragment extends Fragment {
 		return rootView;
 	}
 
+	/**
+	 * 데이터 초기화
+	 */
 	private void dataInit() {
 		repleService = new RepleService();
 		settingService = new SettingService();
 		sharedpreferencesUtil = new SharedpreferencesUtil(getActivity());
 	}
 
+	/**
+	 * 리플이 없을 시 메세지 문구
+	 * @param repleList
+	 */
 	private void visibleReple(ArrayList<Reple> repleList) {
 		if(repleList.size() == 0){
 			textNoRepleMessage.setVisibility(View.VISIBLE);
@@ -111,34 +120,36 @@ public class RepleFragment extends Fragment {
 		}
 	}
 
+	/**
+	 * 레이아웃 초기화
+	 * @param rootView
+	 */
 	private void init(ViewGroup rootView) {
 		
+		prograssBar 		= (ProgressBar)rootView.findViewById(R.id.progressBar);
 		editReple			= (EditText)rootView.findViewById(R.id.edit_reple);
 		textAddReple 		= (TextView)rootView.findViewById(R.id.text_add_reple);
 		textNoRepleMessage 	= (TextView)rootView.findViewById(R.id.text_no_reple_message);
 		repleListView 		= (ListView)rootView.findViewById(R.id.list_reple);
-		
 		textAddReple.setOnClickListener(mClickListener);
-		
 	}
-	
 	
 	/**
 	 * 댓글 추가 Api
 	 */
 	public void saveReple(){
 		
+		prograssBar.setVisibility(View.VISIBLE);
+		
 		// 댓글 내용 없을시 쉐이크 애니메이션 및 토스트 진행
 		if(editReple.getText().toString().equals("")){
 			Toast.makeText(getActivity(), REPLE_WARNING_MWSSAGE, Toast.LENGTH_LONG).show();
-			
 		    Animation shake = AnimationUtils.loadAnimation(getActivity(), R.anim.horizontal_shake);
 		    editReple.startAnimation(shake);
 			return;
 		}
 		
 		String faceBookId = sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
-		
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
 		request.add(new StringRequest
 				(Request.Method.GET, Config.API.REPLE_SAVE+
@@ -151,8 +162,7 @@ public class RepleFragment extends Fragment {
 				if(resultOk.equals(Config.FLAG.TRUE)){
 					findReple();
 				}
-				System.out.println(response);
-				
+				prograssBar.setVisibility(View.INVISIBLE);
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  
@@ -160,13 +170,14 @@ public class RepleFragment extends Fragment {
 				VolleyLog.d(ERROR, error.getMessage());  
 			}  
 		}));
-
 	}
 	
 	/**
 	 * 댓글 갱신 Api
 	 */
 	public void findReple(){
+		
+		prograssBar.setVisibility(View.VISIBLE);
 		
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
 		request.add(new StringRequest
@@ -182,10 +193,8 @@ public class RepleFragment extends Fragment {
 					visibleReple(repleList);
 					repleAdapter = new RepleAdapter(getActivity(), R.layout.row_left_reple, repleList,userName);
 					repleListView.setAdapter(repleAdapter);
-					
 				}
-				System.out.println(response);
-				
+				prograssBar.setVisibility(View.INVISIBLE);
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  
@@ -201,6 +210,8 @@ public class RepleFragment extends Fragment {
 	 */
 	public void deleteReple(int position){
 		
+		prograssBar.setVisibility(View.VISIBLE);
+		
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
 		request.add(new StringRequest
 				(Request.Method.GET, Config.API.REPLE_DELETE+Config.API.SUB_URL_REPLE_ID+repleList.get(position).getId()
@@ -211,10 +222,8 @@ public class RepleFragment extends Fragment {
 				String resultOk = repleService.deleteReplePasing(response);
 				if(resultOk.equals(Config.FLAG.TRUE)){
 					findReple();
-					System.err.println("삭제삭제삭제삭제삭제삭제삭제삭제삭제삭제삭제삭제삭제삭제");
 				}
-				System.out.println(response);
-				
+				prograssBar.setVisibility(View.INVISIBLE);				
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  
@@ -226,14 +235,10 @@ public class RepleFragment extends Fragment {
 	}
 	
 	OnItemClickListener mOnItemClickListener = new OnItemClickListener(){
-
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
-			
-			System.out.println("@@@@@@@@@@@@@@@@@@@@@@");
 			deleteReple(position);
 		}
-		
 	};
 	
 	Button.OnClickListener mClickListener = new View.OnClickListener() {

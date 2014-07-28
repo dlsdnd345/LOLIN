@@ -24,6 +24,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 
 import com.android.volley.Request;
@@ -60,6 +61,8 @@ public class BoardFragment extends Fragment {
 	private static final String TIME_DATA_POSITION 		= "TimeDataPosition";
 
 	private LinearLayout				bottomBar;
+	
+	private ProgressBar					prograssBar;
 	
 	private BoardService 				boardService;
 	private ArrayList<Board> 			boardList;
@@ -104,11 +107,12 @@ public class BoardFragment extends Fragment {
 
 	private void init(View rootView) {
 		
-		bottomBar  =  (LinearLayout)rootView.findViewById(R.id.bottom_bar);
-		rankSpinner = (Spinner)rootView.findViewById(R.id.spinner_rank);
-		timeSpinner = (Spinner)rootView.findViewById(R.id.spinner_time);
-		positionSpinner = (Spinner)rootView.findViewById(R.id.spinner_position);
-		boardListView = (PullToRefreshListView)rootView.findViewById(R.id.list_board);
+		prograssBar 		=  (ProgressBar)rootView.findViewById(R.id.progressBar);
+		bottomBar  			=  (LinearLayout)rootView.findViewById(R.id.bottom_bar);
+		rankSpinner 		= (Spinner)rootView.findViewById(R.id.spinner_rank);
+		timeSpinner 		= (Spinner)rootView.findViewById(R.id.spinner_time);
+		positionSpinner		= (Spinner)rootView.findViewById(R.id.spinner_position);
+		boardListView 		= (PullToRefreshListView)rootView.findViewById(R.id.list_board);
 	}
 
 
@@ -117,12 +121,19 @@ public class BoardFragment extends Fragment {
 		settingService = new SettingService();
 		boardService = new BoardService(getActivity());
 		spinnerInit();
-		getBoardFindAll(); 
+		getBoardFindAll(true); 
 		getUser();
 
 	}
 
-	private void getBoardFindAll() {
+	/**
+	 * 게시판 조회
+	 */
+	private void getBoardFindAll(final boolean noAsync) {
+		
+		if(noAsync){
+			prograssBar.setVisibility(View.VISIBLE);
+		}
 
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
 
@@ -132,6 +143,10 @@ public class BoardFragment extends Fragment {
 			public void onResponse(String response) {  
 				boardList = boardService.getBoardFindAll(response);
 				listViewInit(boardList);
+				
+				if(noAsync){
+					prograssBar.setVisibility(View.INVISIBLE);
+				}
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  
@@ -146,6 +161,8 @@ public class BoardFragment extends Fragment {
 	 */
 	public void getUser(){
 
+		prograssBar.setVisibility(View.VISIBLE);
+		
 		String sub_url = "?faceBookId="+ sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
 
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
@@ -153,6 +170,8 @@ public class BoardFragment extends Fragment {
 			@Override  
 			public void onResponse(String response) {  
 				user = settingService.getUser(response);
+				prograssBar.setVisibility(View.INVISIBLE);
+				
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  
@@ -163,6 +182,9 @@ public class BoardFragment extends Fragment {
 
 	}
 
+	/**
+	 * 스피너 초기화
+	 */
 	private void spinnerInit() {
 
 		Context context = getActivity();
@@ -194,6 +216,10 @@ public class BoardFragment extends Fragment {
 		timeSpinner.setSelection(sharedpreferencesUtil.getValue(TIME_DATA_POSITION, 0));
 	}
 
+	/**
+	 * 게시판 리스트뷰 초기화
+	 * @param boardList
+	 */
 	private void listViewInit(ArrayList<Board> boardList) {
 		boardAdapter = new BoardAdapter(getActivity(), R.layout.row_board_list, boardList);
 		boardListView.setAdapter(boardAdapter);
@@ -204,36 +230,48 @@ public class BoardFragment extends Fragment {
 		registerForContextMenu(actualListView);
 	}
 
+	/**
+	 * 하단 랭크 스피너 선택시
+	 */
 	OnItemSelectedListener rankOnItemSelectedListener = new OnItemSelectedListener(){
 		@Override
 		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
 			sharedpreferencesUtil.put(RANK_DATA_POSITION, position);
-			getBoardFindAll();
+			getBoardFindAll(true);
 		}
 		@Override
 		public void onNothingSelected(AdapterView<?> parent) {}
 	};
 
+	/**
+	 * 하단 포지션 스피너 선택시
+	 */
 	OnItemSelectedListener positionOnItemSelectedListener = new OnItemSelectedListener(){
 		@Override
 		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
 			sharedpreferencesUtil.put(POSITION_DATA__POSITION, position);
-			getBoardFindAll();
+			getBoardFindAll(true);
 		}
 		@Override
 		public void onNothingSelected(AdapterView<?> parent) {}
 	};
 
+	/**
+	 * 하단 시간 스피너 선택시
+	 */
 	OnItemSelectedListener timeOnItemSelectedListener = new OnItemSelectedListener(){
 		@Override
 		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
 			sharedpreferencesUtil.put(TIME_DATA_POSITION, position);
-			getBoardFindAll();
+			getBoardFindAll(true);
 		}
 		@Override
 		public void onNothingSelected(AdapterView<?> parent) {}
 	};
 
+	/**
+	 * Pull To Refresh 당길시
+	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	OnRefreshListener<ListView> mOnRefreshListener = new OnRefreshListener(){
 
@@ -247,14 +285,13 @@ public class BoardFragment extends Fragment {
 
 	};
 
+	/**
+	 * 게시판 row 선택시
+	 */
 	OnItemClickListener mOnItemClickListener = new OnItemClickListener(){
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 
-			//자기 것만 수정 , 삭제 할 수 있게 아이콘을 보여주기 위함.
-			
-			System.err.println("#########   user.getId(  :  " + user.getId());
-			
 			Boolean editState = boardList.get(position-1).getUserId() == user.getId();
 
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
@@ -329,7 +366,7 @@ public class BoardFragment extends Fragment {
 		protected String[] doInBackground(Void... params) {
 			try {
 				Thread.sleep(3000);
-				getBoardFindAll();
+				getBoardFindAll(false);
 			} catch (InterruptedException e) {
 			}
 			return null;

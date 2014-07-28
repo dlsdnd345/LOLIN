@@ -19,6 +19,7 @@ public class IntroActivity extends Activity {
 	    
 	    dataInit();
 	    
+	    // 인트로 시간 지정
 	    new Thread(new Runnable() {
             @Override
             public void run() {

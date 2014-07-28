@@ -11,7 +11,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -45,6 +47,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private ViewPager 					mViewPager;
 	private PagerAdapter 				mPagerAdapter;
 	
+	private ProgressBar					prograssBar;
+	
 	private ImageView					imgRank;
 	
 	private TextView					textRank;
@@ -71,8 +75,12 @@ public class BoardDetailActivity extends ActionBarActivity {
 		
 	}
 
+	/**
+	 * 레이아웃 초기화
+	 */
 	private void init() {
 		
+		prograssBar 		= (ProgressBar)findViewById(R.id.progressBar);
 		imgRank				= (ImageView)findViewById(R.id.img_rank);
 		textRank			= (TextView)findViewById(R.id.text_rank);
 		textPlayTime        = (TextView)findViewById(R.id.text_play_time);
@@ -84,6 +92,9 @@ public class BoardDetailActivity extends ActionBarActivity {
 		
 	}
 	
+	/**
+	 * 데이터 초기화
+	 */
 	private void dataInit() {
 		
 		request = Volley.newRequestQueue(getApplicationContext());  
@@ -141,6 +152,9 @@ public class BoardDetailActivity extends ActionBarActivity {
 	 * @param request
 	 */
 	private void getFindOne(RequestQueue request) {
+		
+		prograssBar.setVisibility(View.VISIBLE);
+		
 		request.add(new StringRequest(Request.Method.GET, Config.BOARD.BOARD_FIND_ONE + Config.BOARD.SUB_URL+id ,new Response.Listener<String>() {  
 			
 			@Override  
@@ -160,6 +174,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 				imgRank.setBackgroundResource(resource);
 				
 				viewPagerInit();
+				
+				prograssBar.setVisibility(View.INVISIBLE);
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  
@@ -174,11 +190,17 @@ public class BoardDetailActivity extends ActionBarActivity {
 	 * @param request
 	 */
 	private void delete(RequestQueue request) {
+		
+		prograssBar.setVisibility(View.VISIBLE);
+		
 		request.add(new StringRequest(Request.Method.GET, Config.BOARD.BOARD_DELETE + Config.BOARD.SUB_URL+id ,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {
 				Intent intent = new Intent(BoardDetailActivity.this, MainActivity.class);
 				startActivity(intent);
+				
+				prograssBar.setVisibility(View.INVISIBLE);
+				
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  

@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,14 +51,17 @@ public class SettingFragment extends Fragment {
 
 	private final static String 		ERROR 							= "Error";
 
+
 	private User						user;
-	private TextView					txtVersion;
 	private RequestQueue 				request;
-	private	 Button						btnUpdate;
 	private StringRequest 				stringRequest;
-	private EditText					editSummonerName;
 	private SettingService				settingService;
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
+
+	private ProgressBar					prograssBar;
+	private	 Button						btnUpdate;
+	private TextView					txtVersion;
+	private EditText					editSummonerName;
 
 	public Fragment newInstance() {
 		SettingFragment fragment = new SettingFragment();
@@ -79,13 +83,21 @@ public class SettingFragment extends Fragment {
 		return rootView;
 	}
 
+	/**
+	 * 레이아웃 초기화
+	 * @param rootView
+	 */
 	private void init(View rootView) {
-		txtVersion = (TextView)rootView.findViewById(R.id.txt_version);
-		editSummonerName = (EditText)rootView.findViewById(R.id.setting_edit_summonerName);
-		btnUpdate = (Button)rootView.findViewById(R.id.btn_update);
+		prograssBar 		= (ProgressBar)rootView.findViewById(R.id.progressBar);
+		txtVersion 			= (TextView)rootView.findViewById(R.id.txt_version);
+		editSummonerName 	= (EditText)rootView.findViewById(R.id.setting_edit_summonerName);
+		btnUpdate 			= (Button)rootView.findViewById(R.id.btn_update);
 		btnUpdate.setOnClickListener(mClickListener);
 	}
 
+	/**
+	 * 데이터 초기화
+	 */
 	private void dataInit() {
 		settingService = new SettingService();
 		request = Volley.newRequestQueue(getActivity());  
@@ -94,6 +106,10 @@ public class SettingFragment extends Fragment {
 
 	}
 
+	/**
+	 * 버전 정보 조회
+	 * @return
+	 */
 	private String getVersion() {
 		PackageInfo packageInfo = null;
 		try {
@@ -104,7 +120,12 @@ public class SettingFragment extends Fragment {
 		return packageInfo.versionName;
 	}
 
+	/**
+	 *  유저정보 조회
+	 */
 	public void getUser(){
+
+		prograssBar.setVisibility(View.VISIBLE);
 
 		String sub_url = "?faceBookId="+ sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
 
@@ -114,6 +135,8 @@ public class SettingFragment extends Fragment {
 			public void onResponse(String response) {  
 				user = settingService.getUser(response);
 				editSummonerName.setText(user.getSummonerName());
+
+				prograssBar.setVisibility(View.INVISIBLE);
 
 			}  
 		}, new Response.ErrorListener() {  
@@ -125,27 +148,28 @@ public class SettingFragment extends Fragment {
 
 	}
 
+	/**
+	 * 소환사 이름 수정
+	 */
 	public void updateSummonerName(){
+
+		prograssBar.setVisibility(View.VISIBLE);
 
 		String encodeSummonerName = settingService.getEncodeSummonerName(editSummonerName.getText().toString());
 		String sub_url = "?faceBookId="+user.getFacebookId()+"&summonerName="+encodeSummonerName;
 		stringRequest =new StringRequest(Method.GET, Config.API.USER_SAVE+sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
-				JSONObject JsonObject;
-				String ok = null;
 
-				try {
-					JsonObject = new JSONObject(response);
+				String isOk =settingService.updateSummonerName(response);
 
-					ok = JsonObject.getString(OK);
-					if(ok.equals(TRUE)){
-						Toast.makeText(getActivity(), "소환사 명이  " +editSummonerName.getText().toString()+ "  으로 변경 되었습니다.",
-								Toast.LENGTH_SHORT).show();
-					}
-				} catch (JSONException e) {
-					e.printStackTrace();
+				if(isOk.equals(TRUE)){
+					Toast.makeText(getActivity(), "소환사 명이  " +editSummonerName.getText().toString()+ "  으로 변경 되었습니다.",
+							Toast.LENGTH_SHORT).show();
 				}
+
+				prograssBar.setVisibility(View.INVISIBLE);
+
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  

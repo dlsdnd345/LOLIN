@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,15 +46,15 @@ public class ComposerActivity extends ActionBarActivity {
 	private static final int 			RANK_UNRANK 				= 0; 
 	
 	private int boardId  =-1;
-	
-	private SharedpreferencesUtil 		sharedpreferencesUtil;
-	
-	private BoardDetailService 			boardDetailService;
-	
-	private ComposerService				composerService;
-	private Board						board;
-	private TextView					txtTea;
 	private String[] 					rankData,teaData,positionData,timeData;
+	
+	private Board						board;
+	private SharedpreferencesUtil 		sharedpreferencesUtil;
+	private BoardDetailService 			boardDetailService;
+	private ComposerService				composerService;
+	
+	private ProgressBar					prograssBar;
+	private TextView					txtTea;
 	private EditText					editTitle, editContent;
 	private Spinner 					rankSpinner,teaSpinner,positionSpinner,timeSpinner;		
 	private ArrayAdapter<String> 		rankSpinnerAdapter,teaSpinnerAdapter,positionSpinnerAdapter,timeSpinnerAdapter;
@@ -67,16 +68,23 @@ public class ComposerActivity extends ActionBarActivity {
 		DataInit();
 	}
 
+	/**
+	 * 레이아웃 초기화
+	 */
 	private void init() {
-		txtTea = (TextView)findViewById(R.id.txt_tea);
-		editTitle = (EditText)findViewById(R.id.edit_title);
-		editContent = (EditText)findViewById(R.id.edit_content);
-		rankSpinner = (Spinner)findViewById(R.id.composer_spinner_rank);
-		teaSpinner = (Spinner)findViewById(R.id.composer_spinner_tea);
-		timeSpinner = (Spinner)findViewById(R.id.composer_spinner_time);
+		prograssBar 	= (ProgressBar)findViewById(R.id.progressBar);
+		txtTea 			= (TextView)findViewById(R.id.txt_tea);
+		editTitle 		= (EditText)findViewById(R.id.edit_title);
+		editContent 	= (EditText)findViewById(R.id.edit_content);
+		rankSpinner 	= (Spinner)findViewById(R.id.composer_spinner_rank);
+		teaSpinner 		= (Spinner)findViewById(R.id.composer_spinner_tea);
+		timeSpinner 	= (Spinner)findViewById(R.id.composer_spinner_time);
 		positionSpinner = (Spinner)findViewById(R.id.composer_spinner_position);
 	}
 
+	/**
+	 * 데이터 초기화
+	 */
 	private void DataInit() {
 		
 		Intent intent = getIntent();
@@ -98,6 +106,9 @@ public class ComposerActivity extends ActionBarActivity {
 		board.setTea(teaData[0]);
 	}
 
+	/**
+	 * 스피너 초기화
+	 */
 	private void spinnerInit() {
 		//spinner init
 		rankData = getResources().getStringArray(R.array.composer_rank_array_list);
@@ -129,12 +140,18 @@ public class ComposerActivity extends ActionBarActivity {
 		timeSpinner.setOnItemSelectedListener(timeOnItemSelectedListener);
 	}
 
+	/**
+	 * 액션바 초기화 
+	 */
 	private void actionbarInit() {
 		//ActionBar Init
 		getActionBar().setDisplayShowHomeEnabled(false);
 		getActionBar().setTitle(R.string.composer_activity_title);
 	}
 	
+	/**
+	 * 액션바 버튼 초기화
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
@@ -149,6 +166,9 @@ public class ComposerActivity extends ActionBarActivity {
 	 * @param request
 	 */
 	private void getFindOne(RequestQueue request) {
+		
+		prograssBar.setVisibility(View.VISIBLE);
+		
 		request.add(new StringRequest(Request.Method.GET
 				, Config.BOARD.BOARD_FIND_ONE + Config.BOARD.SUB_URL+boardId ,new Response.Listener<String>() {  
 			
@@ -163,6 +183,36 @@ public class ComposerActivity extends ActionBarActivity {
 				timeSpinner.setSelection(board.converterTime(board.getPlayTime()));
 				teaSpinner.setSelection(board.converterTea(board.getTea()));
 				
+				prograssBar.setVisibility(View.INVISIBLE);
+			}  
+		}, new Response.ErrorListener() {  
+			@Override  
+			public void onErrorResponse(VolleyError error) {  
+				VolleyLog.d(ERROR, error.getMessage());  
+			}  
+		}));
+	}
+	
+	/**
+	 * 게시판 내용 저장 및 생성
+	 * @param request
+	 */
+	private void saveBoard(RequestQueue request) {
+
+		prograssBar.setVisibility(View.VISIBLE);
+		
+		// 서버로 데이터 전송
+		String facebookId = sharedpreferencesUtil.getValue(FACEBOOK_ID, "");
+		String subUrl = composerService.getSubUrl(boardId ,facebookId, board.getTitle(), board.getContent(),
+				board.transformRank(board.getRank()), board.getPosition(), board.getPlayTime(),board.getTea());
+		
+		request.add(new StringRequest(Request.Method.GET, BOARD_SAVE+subUrl,new Response.Listener<String>() {  
+			@Override  
+			public void onResponse(String response) {
+				Intent intent = new Intent(ComposerActivity.this , MainActivity.class);
+				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(intent);
+				prograssBar.setVisibility(View.INVISIBLE);
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  
@@ -197,25 +247,8 @@ public class ComposerActivity extends ActionBarActivity {
 			if(!editTitle.getText().toString().equals("")
 			 &&!editContent.getText().toString().equals("")){
 				
-				// 서버로 데이터 전송
-				String facebookId = sharedpreferencesUtil.getValue(FACEBOOK_ID, "");
 				RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
-				String subUrl = composerService.getSubUrl(boardId ,facebookId, board.getTitle(), board.getContent(),
-						board.transformRank(board.getRank()), board.getPosition(), board.getPlayTime(),board.getTea());
-				
-				request.add(new StringRequest(Request.Method.GET, BOARD_SAVE+subUrl,new Response.Listener<String>() {  
-					@Override  
-					public void onResponse(String response) {
-						Intent intent = new Intent(ComposerActivity.this , MainActivity.class);
-						intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-						startActivity(intent);
-					}  
-				}, new Response.ErrorListener() {  
-					@Override  
-					public void onErrorResponse(VolleyError error) {  
-						VolleyLog.d(ERROR, error.getMessage());  
-					}  
-				}));
+				saveBoard(request);
 				
 			}
 			
@@ -225,6 +258,9 @@ public class ComposerActivity extends ActionBarActivity {
 		}
 	}
 	
+	/**
+	 * 랭크 스피너 선택시
+	 */
 	OnItemSelectedListener rankOnItemSelectedListener = new OnItemSelectedListener(){
 		@Override
 		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
@@ -244,19 +280,24 @@ public class ComposerActivity extends ActionBarActivity {
 		public void onNothingSelected(AdapterView<?> parent) {}
 	};
 	
+	/**
+	 * 티어 스피너 선택시
+	 */
 	OnItemSelectedListener teaOnItemSelectedListener = new OnItemSelectedListener(){
 		@Override
 		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
 			if(!board.getRank().equals(UNRANK)){
 				//board.setRank(board.getRank());
 				board.setTea(teaData[position]);
-				System.err.println("@@@@@@@@@  티어 선택시   :  " + teaData[position]);
 			}
 		}
 		@Override
 		public void onNothingSelected(AdapterView<?> parent) {}
 	};
 	
+	/**
+	 * 포지션 스피너 선택시
+	 */
 	OnItemSelectedListener positionOnItemSelectedListener = new OnItemSelectedListener(){
 		@Override
 		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
@@ -266,6 +307,9 @@ public class ComposerActivity extends ActionBarActivity {
 		public void onNothingSelected(AdapterView<?> parent) {}
 	};
 	
+	/**
+	 * 시간 스피너 선택시
+	 */
 	OnItemSelectedListener timeOnItemSelectedListener = new OnItemSelectedListener(){
 		@Override
 		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {

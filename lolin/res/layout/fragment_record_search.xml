@@ -1,16 +1,23 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.iris.lolin.MainActivity$PlaceholderFragment"
     android:orientation="vertical"
-     >
+    tools:context="com.iris.lolin.MainActivity$PlaceholderFragment" >
 
     <com.handmark.pulltorefresh.library.PullToRefreshWebView
         xmlns:ptr="http://schemas.android.com/apk/res-auto"
         android:id="@+id/pull_refresh_webview"
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         ptr:ptrMode="both" />
-    
-</FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>
