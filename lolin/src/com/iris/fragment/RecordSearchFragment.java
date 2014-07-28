@@ -1,6 +1,7 @@
 package com.iris.fragment;
 
 import android.annotation.SuppressLint;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -37,6 +39,7 @@ public class RecordSearchFragment extends Fragment {
 	private final static String 		USER_FIND_ONE					= "http://192.168.219.6:8080/user/findOne";
 	
 	private ProgressBar					prograssBar;
+	private TextView					txtSearching;
 	
 	private User 						user;
 	private RecordSearchService 		recordSearchService;
@@ -102,6 +105,8 @@ public class RecordSearchFragment extends Fragment {
 	 * @param rootView
 	 */
 	private void init(View rootView) {
+		
+		txtSearching		= (TextView)rootView.findViewById(R.id.txt_searching);
 		prograssBar 		= (ProgressBar)rootView.findViewById(R.id.progressBar);       
 		mPullRefreshWebView = (PullToRefreshWebView)rootView.findViewById(R.id.pull_refresh_webview);
 	}
@@ -109,10 +114,24 @@ public class RecordSearchFragment extends Fragment {
 	private class BasicWebViewClient extends WebViewClient {
 		
 		@Override
+		public void onPageStarted(WebView view, String url, Bitmap favicon) {
+			super.onPageStarted(view, url, favicon);
+			txtSearching.setVisibility(View.VISIBLE);
+		}
+
+		@Override
 		public boolean shouldOverrideUrlLoading(WebView view, String url) {
 			view.loadUrl(url);
 			return true;
 		}
+
+		@Override
+		public void onPageFinished(WebView view, String url) {
+			super.onPageFinished(view, url);
+			txtSearching.setVisibility(View.INVISIBLE);
+		}
+		
+		
 	}
 	
 }

@@ -20,4 +20,11 @@
         android:layout_centerVertical="true"
         android:visibility="invisible" />
 
+    <TextView
+        android:id="@+id/txt_searching"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="전적 검색 중 입니다..." />
+
 </RelativeLayout>
