@@ -3,12 +3,14 @@ package com.iris.lolin;
 import java.util.ArrayList;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -22,9 +24,11 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.astuetz.PagerSlidingTabStrip;
+import com.google.android.gcm.GCMRegistrar;
 import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.entities.Board;
 import com.iris.service.BoardService;
+import com.iris.service.MainService;
 import com.iris.util.SharedpreferencesUtil;
 
 @SuppressLint("NewApi")
@@ -34,12 +38,14 @@ public class MainActivity extends ActionBarActivity  {
 	private final static int RECORD_SEARCH 	= 2;
 	private final static int SETTING 			= 3;
 
+	private static final String 		PROJECT_ID  					= "450303710235";
 	private static final String 		IS_LOGIN  						= "isLogin";
 	
 	private float 						firstGetY , preGetY= 0;
 	private int 						viewPagerPosition;
 	private boolean 					isLogin;
 	
+	private MainService					mainService;
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
 	
 	private ViewPager 					mViewPager;
@@ -55,7 +61,7 @@ public class MainActivity extends ActionBarActivity  {
 		init();
 		dataInit();
 	}
-
+	
 	/**
 	 * 액션바 아이콘 생성
 	 */
@@ -84,6 +90,9 @@ public class MainActivity extends ActionBarActivity  {
 	private void dataInit() {
 		actionvarInit();
 		viewPagerConfig();
+		
+		mainService = new MainService(getApplicationContext());
+		mainService.registerDevice();
 		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 	}
 

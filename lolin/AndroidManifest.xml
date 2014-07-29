@@ -11,6 +11,12 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <permission android:name="com.iris.lolin.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.iris.lolin.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -20,9 +26,7 @@
             android:name="com.iris.lolin.MainActivity"
             android:label="@string/app_name" >
         </activity>
-        <activity
-            android:name="ComposerActivity"
-             >
+        <activity android:name="ComposerActivity" >
         </activity>
         <activity
             android:name="BoardDetailActivity"
@@ -51,6 +55,24 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/app_id" />
+
+        <!-- GCM 리시버 -->
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.iris.lolin" />
+ 			<!-- 젤리빈 부터는 category 빼도 된다 -->
+            </intent-filter>
+        </receiver>
+
+        <!-- GCM 리시버에서 돌리는 서비스 -->
+        <service android:name="com.iris.lolin.GCMIntentService" />
+		 <!-- 서비스명 변경하면 안됨 -->
+
     </application>
 
 </manifest>

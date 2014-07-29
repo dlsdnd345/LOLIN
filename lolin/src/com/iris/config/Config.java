@@ -77,6 +77,10 @@ public class Config {
 		public final static  String	  EDIT_STATE = "editState";
 	}
 
+	public static class GCM {
+		
+	    public static final String PROJECT_ID = "450303710235";
+	}
 	
 	
 }
