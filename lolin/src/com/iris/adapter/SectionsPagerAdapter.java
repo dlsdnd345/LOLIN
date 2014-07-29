@@ -14,6 +14,7 @@ import com.iris.fragment.ComposerFragment;
 import com.iris.fragment.RecordSearchFragment;
 import com.iris.fragment.SettingFragment;
 import com.iris.lolin.R;
+import com.iris.util.SharedpreferencesUtil;
 
 /**
  * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
@@ -22,8 +23,10 @@ import com.iris.lolin.R;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
 	private static final int BOARD_FRAGMENT = 0;
-	private static final int RECORD_SEARCH_FRAGMENT = 2;
 	private static final int WRITE_TEXT_FRAGMENT = 1;
+	private static final int RECORD_SEARCH_FRAGMENT = 2;
+	
+	private static final String 		IS_LOGIN  						= "isLogin";
 	
 	private Context 				context;
 	private ArrayList<Board> 		boardList;
@@ -31,6 +34,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 	private SettingFragment 		settingFragment;
 	private ComposerFragment 		writeTextFragment;
 	private RecordSearchFragment 	recordSearchFragment;
+	private SharedpreferencesUtil 		sharedpreferencesUtil;
 	
 	public SectionsPagerAdapter(FragmentManager fm ,Context context) {
 		super(fm);
@@ -39,6 +43,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		settingFragment = new SettingFragment();
 		writeTextFragment = new ComposerFragment();
 		recordSearchFragment = new RecordSearchFragment();
+		sharedpreferencesUtil = new SharedpreferencesUtil(context);
 	}
 
 	@Override
@@ -56,7 +61,14 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
 	@Override
 	public int getCount() {
-		return 4;
+		
+		boolean isLogin = sharedpreferencesUtil.getValue(IS_LOGIN, false);
+		if(isLogin){
+			return 4;
+		}else{
+			return 1;
+		}
+		
 	}
 
 	@Override

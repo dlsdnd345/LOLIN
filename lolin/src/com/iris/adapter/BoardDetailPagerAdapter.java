@@ -14,17 +14,22 @@ import com.iris.fragment.ContentFragment;
 import com.iris.fragment.DetailRecordSearchFragment;
 import com.iris.fragment.RepleFragment;
 import com.iris.lolin.R;
+import com.iris.util.SharedpreferencesUtil;
 
 
 public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 
-	private static final int CONTENT_FRAGMENT = 0;
-	private static final int RECORD_SEARCH_FRAGMENT = 1;
+	private static final int CONTENT_FRAGMENT			 = 0;
+	private static final int REPLE_FRAGMENT 			= 1;
+	private static final int RECORD_SEARCH_FRAGMENT 	= 2;
+	
+	private static final String 		IS_LOGIN  						= "isLogin";
 	
 	private Board							board;
 	private Context 						context;
 	private RepleFragment 					repleFragment;
 	private ContentFragment 				contentFragment;
+	private SharedpreferencesUtil 			sharedpreferencesUtil;
 	private DetailRecordSearchFragment 		detailRecordSearchFragment;
 	
 	
@@ -35,6 +40,7 @@ public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 		this.context = context;
 		repleFragment = new RepleFragment();
 		contentFragment = new ContentFragment();
+		sharedpreferencesUtil = new SharedpreferencesUtil(context);
 		detailRecordSearchFragment = new DetailRecordSearchFragment();
 	}
 
@@ -43,10 +49,10 @@ public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 		
 		if(position == CONTENT_FRAGMENT){
 			return contentFragment.newInstance(board.getContent());
-		}else if(position == RECORD_SEARCH_FRAGMENT){
-			return detailRecordSearchFragment.newInstance(board.getSummonerName());
-		}else{
+		}else if(position == REPLE_FRAGMENT){
 			return repleFragment.newInstance(board.getId(),(ArrayList<Reple>) board.getRepleList(),board.getSummonerName());
+		}else{
+			return detailRecordSearchFragment.newInstance(board.getSummonerName());
 		}
 	}
 	
@@ -59,16 +65,21 @@ public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 		case 0:
 			return context.getString(R.string.detail_title_section1).toUpperCase(l);
 		case 1:
-			return context.getString(R.string.detail_title_section2).toUpperCase(l);
-		case 2:
 			return context.getString(R.string.detail_title_section3).toUpperCase(l);
+		case 2:
+			return context.getString(R.string.detail_title_section2).toUpperCase(l);
 		}
 		return null;
 	}
 	
 	@Override
 	public int getCount() {
-		return 3;
+		boolean isLogin = sharedpreferencesUtil.getValue(IS_LOGIN, false);
+		if(isLogin){
+			return 3;
+		}else{
+			return 2;
+		}
 	}
 
 }

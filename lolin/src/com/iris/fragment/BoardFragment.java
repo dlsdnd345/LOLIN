@@ -26,6 +26,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -60,22 +61,22 @@ public class BoardFragment extends Fragment {
 	private static final String POSITION_DATA__POSITION 	= "PositionDataPosition";
 	private static final String TIME_DATA_POSITION 		= "TimeDataPosition";
 
-	private LinearLayout				bottomBar;
-	
-	private ProgressBar					prograssBar;
 	
 	private BoardService 				boardService;
 	private ArrayList<Board> 			boardList;
-	private BoardAdapter 				boardAdapter;
-	private PullToRefreshListView 		boardListView;
 	private SharedpreferencesUtil		sharedpreferencesUtil;
-	private String[] 					rankData,positionData,timeData;
-	private Spinner 					rankSpinner,positionSpinner,timeSpinner;	
 	private ArrayAdapter<String> 		rankSpinnerAdapter,positionSpinnerAdapter,timeSpinnerAdapter;
 
 	private User 						user;
-
 	private SettingService				settingService;
+	private String[] 					rankData,positionData,timeData;
+
+	private TextView					txtNoListMessage;
+	private LinearLayout				bottomBar;
+	private ProgressBar					prograssBar;
+	private BoardAdapter 				boardAdapter;
+	private PullToRefreshListView 		boardListView;
+	private Spinner 					rankSpinner,positionSpinner,timeSpinner;	
 
 	public Fragment newInstance(Context context) {
 
@@ -107,6 +108,7 @@ public class BoardFragment extends Fragment {
 
 	private void init(View rootView) {
 		
+		txtNoListMessage	=  (TextView)rootView.findViewById(R.id.txt_no_list_message);
 		prograssBar 		=  (ProgressBar)rootView.findViewById(R.id.progressBar);
 		bottomBar  			=  (LinearLayout)rootView.findViewById(R.id.bottom_bar);
 		rankSpinner 		= (Spinner)rootView.findViewById(R.id.spinner_rank);
@@ -142,10 +144,20 @@ public class BoardFragment extends Fragment {
 			@Override  
 			public void onResponse(String response) {  
 				boardList = boardService.getBoardFindAll(response);
+				
+				visibleEmptyMessage();
 				listViewInit(boardList);
 				
 				if(noAsync){
 					prograssBar.setVisibility(View.INVISIBLE);
+				}
+			}
+
+			private void visibleEmptyMessage() {
+				if(boardList.size() == 0){
+					txtNoListMessage.setVisibility(View.VISIBLE);
+				}else{
+					txtNoListMessage.setVisibility(View.INVISIBLE);
 				}
 			}  
 		}, new Response.ErrorListener() {  
@@ -292,7 +304,10 @@ public class BoardFragment extends Fragment {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 
-			Boolean editState = boardList.get(position-1).getUserId() == user.getId();
+			Boolean editState = null;
+			if(user != null){
+				editState = boardList.get(position-1).getUserId() == user.getId();
+			}
 
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
 			intent.putExtra("id", boardList.get(position-1).getId());

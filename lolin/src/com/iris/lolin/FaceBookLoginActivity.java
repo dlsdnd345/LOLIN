@@ -1,11 +1,6 @@
 package com.iris.lolin;
 
 
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,21 +25,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-
-
-
-
-
-
-
-
 import com.android.volley.Request.Method;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.facebook.LoggingBehavior;
@@ -53,8 +38,6 @@ import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.Settings;
 import com.facebook.model.GraphUser;
-import com.google.gson.reflect.TypeToken;
-import com.iris.entities.Board;
 import com.iris.entities.FaceBookUser;
 import com.iris.util.SharedpreferencesUtil;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
@@ -72,16 +55,19 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	private static final String OK = "ok";
 	private static final String TRUE = "true";
 	private static final String DATA = "data";
-	
+
 	private final static String USER_SAVE = "http://192.168.219.6:8080/user/save";
 
 	private final static String 		ERROR 							= "Error";
 	private static final String 		EMPRY_SUMMERNER_MESSAGE  		= "소환사 명 을 입력해 주세요.";
+	private static final String 		IS_LOGIN  						= "isLogin";
 	private static final String 		ACCESS_TOKEN  					= "ACCESS_TOKEN";
 	private static final String 		FACEBOOK_ID  					= "FACEBOOK_ID";
 	private static final String 		HELLO_MESSAGE  					= "HELLO ";
 	private static final String 		FACEBOOK_BASE_URL  				= "http://graph.facebook.com/";
 	private static final String 		PICTURE_TYPE					= "/picture?type=large";
+
+	private boolean					isActionBar;
 
 	private StringRequest 				stringRequest;
 	private RequestQueue 				request;
@@ -99,7 +85,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	private ProgressBar 				progressBar;
 	private ImageView 					imgProfile;
 	private ImageButton 				btnFacebookLogin , btnNotFacebookLogin;
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -115,8 +101,10 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.facebook_next_menu, menu);
+		if(isActionBar){
+			MenuInflater inflater = getMenuInflater();
+			inflater.inflate(R.menu.facebook_next_menu, menu);
+		}
 		return super.onCreateOptionsMenu(menu);
 	}
 
@@ -128,7 +116,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		// Handle presses on the action bar items
 		switch (item.getItemId()) {
 		case R.id.ic_action_next:
-			
+
 			saveLoginInfo();
 			checkEmptyEditSummerner();
 			return true;
@@ -148,7 +136,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 			Animation shake = AnimationUtils.loadAnimation(this, R.anim.horizontal_shake);
 			editSummerner.startAnimation(shake);
 			Toast.makeText(getApplicationContext(), EMPRY_SUMMERNER_MESSAGE, Toast.LENGTH_LONG).show();
-			
+
 			progressBar.setVisibility(View.INVISIBLE);
 		}
 	}
@@ -158,29 +146,30 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	 * facebookId , 소환사명 저장
 	 */
 	public void saveLoginInfo(){
-		
+
 		progressBar.setVisibility(View.VISIBLE);
-		
+
 		String sub_url = "?faceBookId="+faceBookUser.getUserId()+"&summonerName="+editSummerner.getText().toString();
 		stringRequest =new StringRequest(Method.GET, USER_SAVE+sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
 				JSONObject JsonObject;
 				String ok = null;
-				
+
 				try {
 					JsonObject = new JSONObject(response);
 					ok = JsonObject.getString(OK);
 					if(ok.equals(TRUE)){
+						sharedpreferencesUtil.put(IS_LOGIN, true);
 						sharedpreferencesUtil.put(ACCESS_TOKEN, sessionTemp.getAccessToken());
 						sharedpreferencesUtil.put(FACEBOOK_ID, faceBookUser.getUserId());
 						Intent intent = new Intent(FaceBookLoginActivity.this, MainActivity.class);
 						startActivity(intent);
 						finish();
 					}
-					
+
 					progressBar.setVisibility(View.INVISIBLE);
-					
+
 				} catch (JSONException e) {
 					e.printStackTrace();
 				}
@@ -192,7 +181,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 			}  
 		});
 	}
-	
+
 	/**
 	 * 레이아웃 초기화
 	 */
@@ -217,7 +206,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 
 		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 		request = Volley.newRequestQueue(getApplicationContext());  
-		
+
 		imageLoderInit();
 		faceBookInit();
 		actionBarInit();
@@ -263,7 +252,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		// FaceBook Init
 		faceBookUser = new FaceBookUser();
 	}
-	
+
 	private void facebookInit(Bundle savedInstanceState) {
 
 		Settings.addLoggingBehavior(LoggingBehavior.INCLUDE_ACCESS_TOKENS);
@@ -319,6 +308,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	/**
 	 * 로그인 시
 	 */
+	@SuppressLint("NewApi")
 	private void onClickLogin() {
 		Session session = Session.getActiveSession();
 		if (!session.isOpened() && !session.isClosed()) {
@@ -392,6 +382,8 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	 */
 	public void notFacebookLogin(View view){
 
+		sharedpreferencesUtil.put(IS_LOGIN, false);
+
 		Intent inetnt = new Intent(FaceBookLoginActivity.this , MainActivity.class);
 		startActivity(inetnt);
 	}
@@ -402,10 +394,14 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		public void onAnimationStart(Animation animation) {}
 		@Override
 		public void onAnimationRepeat(Animation animation) {}
+		@SuppressLint("NewApi")
 		@Override
 		public void onAnimationEnd(Animation animation) {
 			verticalShake.setRepeatCount(Animation.INFINITE);
 			imgProfile.startAnimation(verticalShake);
+
+			isActionBar = true;
+			invalidateOptionsMenu();
 		}
 	};
 

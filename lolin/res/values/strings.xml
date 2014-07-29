@@ -21,6 +21,9 @@
 
     <!-- Composor Fragment -->
     <string name="composor_fragment_text_no_list_message">내가 쓴글이 없습니다.</string>
+    
+        <!-- Composor Fragment -->
+    <string name="board_fragment_text_no_list_message">게시글이 없습니다.</string>
 
     <!-- Actionbar title Value -->
 

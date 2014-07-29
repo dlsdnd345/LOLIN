@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -39,6 +40,7 @@ public class RepleFragment extends Fragment {
 
 	private static final String REPLE_WARNING_MWSSAGE					= "댓글을 입력 하세요.";
 	
+	private static final String 		IS_LOGIN  						= "isLogin";
 	private static final String USER_NAME 							= "userName";
 	private static final String BOARD_ID 								= "boardId";	
 	private static final String REPLE 								= "reple";	
@@ -53,6 +55,7 @@ public class RepleFragment extends Fragment {
 	private SettingService				settingService;
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
 
+	private LinearLayout				bottomRepleBar;
 	private ProgressBar					prograssBar;
 	private EditText					editReple;
 	private ListView 					repleListView;
@@ -90,6 +93,13 @@ public class RepleFragment extends Fragment {
 		dataInit();
 		visibleReple(repleList);
 		
+		boolean isLogin = sharedpreferencesUtil.getValue(IS_LOGIN, false);
+		if(isLogin){
+			bottomRepleBar.setVisibility(View.VISIBLE);
+		}else{
+			bottomRepleBar.setVisibility(View.GONE);
+		}
+		
 		repleAdapter = new RepleAdapter(getActivity(), R.layout.row_left_reple, repleList,userName);
 		repleListView.setOnItemClickListener(mOnItemClickListener);
 		repleListView.setAdapter(repleAdapter);
@@ -126,6 +136,7 @@ public class RepleFragment extends Fragment {
 	 */
 	private void init(ViewGroup rootView) {
 		
+		bottomRepleBar		= (LinearLayout)rootView.findViewById(R.id.bottom_reple_bar);
 		prograssBar 		= (ProgressBar)rootView.findViewById(R.id.progressBar);
 		editReple			= (EditText)rootView.findViewById(R.id.edit_reple);
 		textAddReple 		= (TextView)rootView.findViewById(R.id.text_add_reple);

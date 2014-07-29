@@ -25,6 +25,7 @@ import com.astuetz.PagerSlidingTabStrip;
 import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.entities.Board;
 import com.iris.service.BoardService;
+import com.iris.util.SharedpreferencesUtil;
 
 @SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity  {
@@ -33,9 +34,14 @@ public class MainActivity extends ActionBarActivity  {
 	private final static int RECORD_SEARCH 	= 2;
 	private final static int SETTING 			= 3;
 
+	private static final String 		IS_LOGIN  						= "isLogin";
+	
 	private float 						firstGetY , preGetY= 0;
 	private int 						viewPagerPosition;
-
+	private boolean 					isLogin;
+	
+	private SharedpreferencesUtil 		sharedpreferencesUtil;
+	
 	private ViewPager 					mViewPager;
 	private PagerSlidingTabStrip 		tabs;
 	private SectionsPagerAdapter 		mSectionsPagerAdapter;
@@ -55,8 +61,12 @@ public class MainActivity extends ActionBarActivity  {
 	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.write_text_menu, menu);
+
+		boolean isLogin = sharedpreferencesUtil.getValue(IS_LOGIN, false);
+		if(isLogin){
+			MenuInflater inflater = getMenuInflater();
+			inflater.inflate(R.menu.write_text_menu, menu);
+		}
 		return super.onCreateOptionsMenu(menu);
 	}
 
@@ -74,6 +84,7 @@ public class MainActivity extends ActionBarActivity  {
 	private void dataInit() {
 		actionvarInit();
 		viewPagerConfig();
+		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 	}
 
 	private void actionvarInit() {
