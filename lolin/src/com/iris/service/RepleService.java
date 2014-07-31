@@ -47,6 +47,24 @@ public class RepleService {
 		return subUrl = "?boardId="+id+"&userName="+encodeUserName+"&content="+encodeContent+"&facebookId="+encodeFacebookId;
 	}
 	
+	public String getSendPushSubUrl(String os , String boardId , String reple){
+		
+		String subUrl = null;
+		String encodeOs = null;
+		String encodeBoardId = null;
+		String encodeReple = null;
+		
+		try {
+			encodeOs = URLEncoder.encode(os,"UTF-8");
+			encodeBoardId = URLEncoder.encode(boardId,"UTF-8");
+			encodeReple = URLEncoder.encode(reple,"UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
+		return subUrl = "?os="+encodeOs+"&boardId="+encodeBoardId+"&reple="+encodeReple;
+	}
+	
 	public String saveReplePasing(String jsonData){
 		
 		JSONObject JsonObject;

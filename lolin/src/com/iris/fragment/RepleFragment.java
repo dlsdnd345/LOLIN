@@ -167,11 +167,13 @@ public class RepleFragment extends Fragment {
 						repleService.getSubUrl(boardId, userName, editReple.getText().toString(),faceBookId)
 				,new Response.Listener<String>() {  
 			@Override  
-			public void onResponse(String response) {  
+			public void onResponse(String response) { 
 
 				String resultOk = repleService.saveReplePasing(response);
 				if(resultOk.equals(Config.FLAG.TRUE)){
+					
 					findReple();
+					sendPush(editReple.getText().toString());
 				}
 				prograssBar.setVisibility(View.INVISIBLE);
 			}  
@@ -226,6 +228,36 @@ public class RepleFragment extends Fragment {
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
 		request.add(new StringRequest
 				(Request.Method.GET, Config.API.REPLE_DELETE+Config.API.SUB_URL_REPLE_ID+repleList.get(position).getId()
+				,new Response.Listener<String>() {  
+			@Override  
+			public void onResponse(String response) {  
+
+				String resultOk = repleService.deleteReplePasing(response);
+				if(resultOk.equals(Config.FLAG.TRUE)){
+					findReple();
+				}
+				prograssBar.setVisibility(View.INVISIBLE);				
+			}  
+		}, new Response.ErrorListener() {  
+			@Override  
+			public void onErrorResponse(VolleyError error) {  
+				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
+			}  
+		}));
+
+	}
+	
+	/**
+	 * 푸시 전송 Api
+	 */
+	public void sendPush(String reple){
+		
+		prograssBar.setVisibility(View.VISIBLE);
+		
+		RequestQueue request = Volley.newRequestQueue(getActivity());  
+		
+		request.add(new StringRequest
+				(Request.Method.GET, Config.API.GCM_SEND_REPLE+repleService.getSendPushSubUrl("android", String.valueOf(boardId), reple)
 				,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  

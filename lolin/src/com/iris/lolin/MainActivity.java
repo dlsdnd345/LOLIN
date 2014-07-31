@@ -38,14 +38,12 @@ public class MainActivity extends ActionBarActivity  {
 	private final static int RECORD_SEARCH 	= 2;
 	private final static int SETTING 			= 3;
 
-	private static final String 		PROJECT_ID  					= "450303710235";
 	private static final String 		IS_LOGIN  						= "isLogin";
 	
 	private float 						firstGetY , preGetY= 0;
 	private int 						viewPagerPosition;
 	private boolean 					isLogin;
 	
-	private MainService					mainService;
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
 	
 	private ViewPager 					mViewPager;
@@ -60,6 +58,22 @@ public class MainActivity extends ActionBarActivity  {
 
 		init();
 		dataInit();
+	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		
+		//화면이 켜져 있을때 푸시화면을 보여주기 않기 위함.
+		sharedpreferencesUtil.put("notiblock", "true");
+	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		
+		//화면이 꺼져 있을때 푸시화면을 보여주기 위함.
+		sharedpreferencesUtil.put("notiblock", "false");
 	}
 	
 	/**
@@ -91,8 +105,6 @@ public class MainActivity extends ActionBarActivity  {
 		actionvarInit();
 		viewPagerConfig();
 		
-		mainService = new MainService(getApplicationContext());
-		mainService.registerDevice();
 		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 	}
 

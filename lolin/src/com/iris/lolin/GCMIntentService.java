@@ -1,90 +1,85 @@
 package com.iris.lolin;
 
 
+import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.google.android.gcm.GCMBaseIntentService;
 import com.iris.config.Config;
+import com.iris.util.SharedpreferencesUtil;
 
 public class GCMIntentService extends GCMBaseIntentService {
-	
+
+	private static final String TAG = "GCMIntentService";
 	public static final String TOAST_MESSAGE_ACTION = "org.androidtown.gcm.push.TOAST_MESSAGE";
-    private static final String tag = "GCMIntentService";
-	
+	private static final String TITLE = "롤인 앱으로 부터 메세지가 도착했습니다.";
+
 	private String msg;
-	
+	private SharedpreferencesUtil sharedpreferencesUtil;
+
+
 	public GCMIntentService() { // 생성자
 		super(Config.GCM.PROJECT_ID);
-		Log.d(tag, "GCMIntentService() called.");
+		Log.d(TAG, "GCMIntentService() called.");
 	}
 	public void onRegistered(Context context, String registrationId) { // 등록시 실행되는 메서드
-		Log.d(tag, "onRegistered called : " + registrationId);
+		Log.d(TAG, "onRegistered called : " + registrationId);
 		sendToastMessage(context, "등록되었습니다");
 	}
 	public void onUnregistered(Context context, String registrationId) { // 등록되지않았을때 실행되는 메서드
-		Log.d(tag, "onUnregistered called.");
+		Log.d(TAG, "onUnregistered called.");
 		sendToastMessage(context, "등록 되지 않았습니다");
 	}
 	public void onError(Context context, String errorId) { // 에러시 실행되는 메서드
-		Log.d(tag, "onError called.");
+		Log.d(TAG, "onError called.");
 		sendToastMessage(context, "에러: " + errorId);
 	}
 	protected void onDeletedMessages(Context context, int total) { // 삭제시 실행되는 메서드
-		Log.d(tag, "onDeletedMessages called.");
+		Log.d(TAG, "onDeletedMessages called.");
 		super.onDeletedMessages(context, total);
 	}
 	protected boolean onRecoverableError(Context context, String errorId) {
-		Log.d(tag, "onRecoverableError called.");
+		Log.d(TAG, "onRecoverableError called.");
 		return super.onRecoverableError(context, errorId);
 	}
-	@SuppressWarnings("static-access")
+	
 	public void onMessage(Context context, Intent intent) { // 메세지가 오면 실행되는 메서드
-		Log.d(tag, "onMessage called.");
-		
-		//sharedPreferencesUtil = new SharedPreferencesUtil(context);
-		//MPConstants.NETWORK_CHECK = true;
-		
+		Log.d(TAG, "onMessage called.");
+
 		Bundle extras = intent.getExtras(); // 서버로 부터 데이터 받는 부분
-		
+
 		if (extras != null) {
 			msg = (String) extras.get("message"); // 데이터 변수에 담는 부분
-			// shopId 푸시화면 선택시 해당 아이템이 있는 곳으로 이동시키기 위해 받아놓는다.
-			//title = MPMessage.TITLE_NOTI_MESSAGE; // 노티 제목
-			Log.d(tag, "@@@@@@@@@@@@@@@@@@@msg :" + msg);
-			/*
-			 * sharedPreferences 에 해당 shopId 저장
-			 * 저장한 이유는 푸시화면에서 콜한 가게를 내번호표쪽가서 보여주기위해 필요
-			 * selectBlock 또한 
-			 */
-			//sharedPreferencesUtil.setSharedPreferencesString("myTiketView", "shopId",shopId);
-			//sharedPreferencesUtil.setSharedPreferencesString("myTiketView", "selectBlock","true");
-			/*
-			 * noti Click 시 대기현황 페이지 유도
-			 * sharedPreferences : comeBack : tabMenu 는 메인뷰의 탭페이지를 의미
-			 * PendingIntent 는 GCM 노티가 왔을시에 노티 선택시 화면전환이 이루어지는데
-			 * 페이지 전환을 컨트롤을 의미한다.
-			 */
-//			NotificationManager notificationManager = (NotificationManager)context.getSystemService(Activity.NOTIFICATION_SERVICE);
-//			SharedPreferences sharedPreferences = context.getSharedPreferences("comeBack", Context.MODE_PRIVATE);
-//			//sharedPreferencesUtil.setSharedPreferencesInt("comeBack", "tabMenu",0);
-//			PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, new Intent(context, MainView.class)
-//			.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP)
-//			.putExtra("message", msg).putExtra("tabMenu",sharedPreferences.getInt("tabMenu",0)), 0); // 노티 선택시 화면전환
-//
-//			// notification 설정
-//			Notification notification = new Notification(); 
-//			notification.icon = R.drawable.top_icon; // 노티 이미지 
-//			notification.tickerText = msg; // 노티 메인 제목
-//			notification.when = System.currentTimeMillis();
-//			notification.vibrate = new long[] { 1000, 3000, 1000, 3000}; // 진동 홀수인자(슬립시간)/짝수인자(진동시간)
-//			notification.defaults = notification.DEFAULT_SOUND;// 노티 사운드
-//			notification.flags |= Notification.FLAG_AUTO_CANCEL; // 1:(사용자가 상태정보란 확장시까지 출력) 2:(사용자가 노티 선택시 출력 취소)
-//			notification.setLatestEventInfo(context, title, msg, pendingIntent); // 노티 선택시 실행되는 메서드
-//			//노티 아이디 부여 (노티 아이디는 노티 알림을 다른 페이지에서도 접근할수 있도록 도와준다.)
-//			notificationManager.notify(0, notification);
+			
+			NotificationManager notificationManager = (NotificationManager)context.getSystemService(Activity.NOTIFICATION_SERVICE);
+			
+			//노티 선택시 화면 이동 설정
+			PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, new Intent(context, MainActivity.class)
+			.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP)
+			.putExtra("message", msg), 0); // 노티 선택시 화면전환
+
+			NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
+
+			mBuilder.setContentTitle(TITLE); // 제목
+			mBuilder.setContentText(msg); //내용
+			mBuilder.setSmallIcon(R.drawable.ic_launcher); // 아이콘
+			mBuilder.setTicker(TITLE); // 상태바 제목
+			mBuilder.setAutoCancel(true);
+			mBuilder.setWhen(System.currentTimeMillis()); // 진동시간
+			mBuilder.setVibrate(new long[] { 1000, 3000, 1000, 3000}); // 진동패턴
+			mBuilder.setDefaults(Notification.DEFAULT_SOUND); //기본 사운드
+			mBuilder.setContentIntent(pendingIntent);
+			//노티 아이디 부여 (노티 아이디는 노티 알림을 다른 페이지에서도 접근할수 있도록 도와준다.)
+			notificationManager.notify(0, mBuilder.build());
+
 			/*
 			 * 어플이 실행되고 있을시, GCM 화면 막기위해 사용
 			 *  SharedPreferences : PUSH : notiblock 은 노티가 올때 두가지 경우가 존재한다.
@@ -97,13 +92,13 @@ public class GCMIntentService extends GCMBaseIntentService {
 			 *  어플이 실행되있는 경우가 있지만 화면이 꺼져 있는경우가 있기 때문에
 			 *  스크린이 꺼져있는지 안꺼져있는지 확인이 필요하다.
 			 */
-//			SharedPreferences sharedPrefer = getSharedPreferences("push",Context.MODE_PRIVATE);			
-//			if(sharedPrefer.getString("notiblock","").equals("false")){
-//				Intent newIntent = new Intent(context, NotificationView.class);  
-//				newIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//				newIntent.putExtra("message", msg);
-//				context.startActivity(newIntent);
-//			}
+			sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
+			if(sharedpreferencesUtil.getValue("notiblock", "").equals("false")){
+				Intent newIntent = new Intent(context, PushActivity.class);  
+				newIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				newIntent.putExtra("message", msg);
+				context.startActivity(newIntent);
+			}
 		}
 	}
 	static void sendToastMessage(Context context, String message) {

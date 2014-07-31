@@ -39,6 +39,7 @@ import com.facebook.SessionState;
 import com.facebook.Settings;
 import com.facebook.model.GraphUser;
 import com.iris.entities.FaceBookUser;
+import com.iris.service.MainService;
 import com.iris.util.SharedpreferencesUtil;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -68,7 +69,9 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	private static final String 		PICTURE_TYPE					= "/picture?type=large";
 
 	private boolean					isActionBar;
-
+	private String 						regId;
+	
+	private MainService					mainService;
 	private StringRequest 				stringRequest;
 	private RequestQueue 				request;
 	private DisplayImageOptions 		options;
@@ -149,7 +152,11 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 
 		progressBar.setVisibility(View.VISIBLE);
 
-		String sub_url = "?faceBookId="+faceBookUser.getUserId()+"&summonerName="+editSummerner.getText().toString();
+		String sub_url = "?faceBookId="+faceBookUser.getUserId()+"&summonerName="+editSummerner.getText().toString()
+				+"&pushId="+regId;
+		
+		System.out.println("@@@@@@@@@@@   sub_url   :  " + sub_url);
+		
 		stringRequest =new StringRequest(Method.GET, USER_SAVE+sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
@@ -204,6 +211,9 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	@SuppressLint("NewApi")
 	private void dataInit() {
 
+		mainService = new MainService(getApplicationContext());
+		// 푸시 등록
+		regId = mainService.registerDevice();
 		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 		request = Volley.newRequestQueue(getApplicationContext());  
 
