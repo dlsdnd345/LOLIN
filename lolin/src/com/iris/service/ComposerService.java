@@ -5,7 +5,7 @@ import java.net.URLEncoder;
 
 public class ComposerService {
 
-	public String getSubUrl(int boardId ,String facebookId , String title , String content, String rank,
+	public String getSubUrl(String boardId ,String facebookId , String title , String content, String rank,
 			 				  String position , String playTime , String tea){
 		
 		String encodeBoardId 	= null;
@@ -16,7 +16,12 @@ public class ComposerService {
 		String encodePlayTime 	= null;
 		String encodeTea 		= null;
 		try {
-			encodeBoardId   = URLEncoder.encode(String.valueOf(boardId),"UTF-8");
+			
+			if(boardId == null){
+				boardId ="";
+			}
+			
+			encodeBoardId   = URLEncoder.encode(boardId,"UTF-8");
 			encodeTea  		= URLEncoder.encode(tea,"UTF-8");
 			encodeTitle 	= URLEncoder.encode(title,"UTF-8");
 			encodeContent 	= URLEncoder.encode(content,"UTF-8");

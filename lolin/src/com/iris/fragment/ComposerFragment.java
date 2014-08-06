@@ -144,7 +144,7 @@ public class ComposerFragment extends Fragment {
 		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
 			
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
-			intent.putExtra("id", boardList.get(position).getId());
+			sharedpreferencesUtil.put(Config.BOARD.BOARD_ID, String.valueOf(boardList.get(position).getId()));
 			intent.putExtra("editState", true);
 			startActivity(intent);
 		}

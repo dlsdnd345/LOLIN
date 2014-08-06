@@ -22,7 +22,7 @@ public class GCMIntentService extends GCMBaseIntentService {
 	public static final String TOAST_MESSAGE_ACTION = "org.androidtown.gcm.push.TOAST_MESSAGE";
 	private static final String TITLE = "롤인 앱으로 부터 메세지가 도착했습니다.";
 
-	private String msg;
+	private String msg , boardId , summernerName , facebookId;
 	private SharedpreferencesUtil sharedpreferencesUtil;
 
 
@@ -55,18 +55,25 @@ public class GCMIntentService extends GCMBaseIntentService {
 		Log.d(TAG, "onMessage called.");
 
 		Bundle extras = intent.getExtras(); // 서버로 부터 데이터 받는 부분
-
+		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
+		
 		if (extras != null) {
 			msg = (String) extras.get("message"); // 데이터 변수에 담는 부분
+			boardId = (String) extras.get("boardId"); 
+			summernerName = (String) extras.get("summernerName");
+			facebookId = (String) extras.get("facebookId");
+			
+			System.out.println("99999999999999999995555555555555555555555   :   " + boardId);
 			
 			NotificationManager notificationManager = (NotificationManager)context.getSystemService(Activity.NOTIFICATION_SERVICE);
 			
 			//노티 선택시 화면 이동 설정
-			PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, new Intent(context, MainActivity.class)
-			.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP)
-			.putExtra("message", msg), 0); // 노티 선택시 화면전환
-
+			PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, new Intent(context, BoardDetailActivity.class)
+			.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+			.putExtra(Config.FLAG.MESSAGE, msg), 0); // 노티 선택시 화면전환
 			NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
+			
+			sharedpreferencesUtil.put(Config.BOARD.BOARD_ID, boardId);
 
 			mBuilder.setContentTitle(TITLE); // 제목
 			mBuilder.setContentText(msg); //내용
@@ -92,12 +99,14 @@ public class GCMIntentService extends GCMBaseIntentService {
 			 *  어플이 실행되있는 경우가 있지만 화면이 꺼져 있는경우가 있기 때문에
 			 *  스크린이 꺼져있는지 안꺼져있는지 확인이 필요하다.
 			 */
-			sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 			if(sharedpreferencesUtil.getValue("notiblock", "").equals("false")){
 				Intent newIntent = new Intent(context, PushActivity.class);  
 				newIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				newIntent.putExtra("message", msg);
-				context.startActivity(newIntent);
+				newIntent.putExtra(Config.FLAG.MESSAGE, msg);
+				newIntent.putExtra(Config.BOARD.BOARD_ID, boardId);
+				newIntent.putExtra(Config.FLAG.FACEBOOK_ID, facebookId);
+				newIntent.putExtra(Config.FLAG.SUMMERNER_NAME, summernerName);
+				context.startActivity(newIntent);				
 			}
 		}
 	}

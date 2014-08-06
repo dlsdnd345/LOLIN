@@ -36,7 +36,6 @@ public class BoardDetailActivity extends ActionBarActivity {
 
 	
 	private final static String ERROR = "Error";
-	private final static String ID = "id";
 	
 	private static final int CONTENT_FRAGMENT = 0;
 	private static final int RECORD_SEARCH_FRAGMENT = 1;
@@ -62,8 +61,10 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private Board						board;
 	
 	private boolean					editState;
-	private int						id;
+	private String						boardId;
 	private int 						viewPagerPosition;
+	
+	private SharedpreferencesUtil 		sharedpreferencesUtil;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -75,6 +76,22 @@ public class BoardDetailActivity extends ActionBarActivity {
 		
 	}
 
+	@Override
+	protected void onResume() {
+		super.onResume();
+		
+		//화면이 켜져 있을때 푸시화면을 보여주기 않기 위함.
+		sharedpreferencesUtil.put("notiblock", "true");
+	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		
+		//화면이 켜져 있을때 푸시화면을 보여주기 않기 위함.
+		sharedpreferencesUtil.put("notiblock", "false");
+	}
+	
 	/**
 	 * 레이아웃 초기화
 	 */
@@ -97,11 +114,16 @@ public class BoardDetailActivity extends ActionBarActivity {
 	 */
 	private void dataInit() {
 		
+		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
+		
 		request = Volley.newRequestQueue(getApplicationContext());  
 		boardDetailService = new BoardDetailService(getApplicationContext());
 		
 		Intent intent = getIntent();
-		id = intent.getIntExtra(ID, 0);
+		boardId = sharedpreferencesUtil.getValue(Config.BOARD.BOARD_ID, "");
+		
+		System.out.println("9999999999999999997777777777777777777777777777777  boardId" + boardId);
+		
 		editState = intent.getBooleanExtra(Config.FLAG.EDIT_STATE , false);
 		
 		getFindOne(request);
@@ -135,7 +157,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 		case R.id.ic_action_edit:
 			
 			Intent intent = new Intent(BoardDetailActivity.this,ComposerActivity.class);
-			intent.putExtra(Config.BOARD.BOARD_ID, id);
+			intent.putExtra(Config.BOARD.BOARD_ID, boardId);
 			startActivity(intent);
 			return true;
 		case R.id.ic_action_remove:
@@ -155,19 +177,23 @@ public class BoardDetailActivity extends ActionBarActivity {
 		
 		prograssBar.setVisibility(View.VISIBLE);
 		
-		request.add(new StringRequest(Request.Method.GET, Config.BOARD.BOARD_FIND_ONE + Config.BOARD.SUB_URL+id ,new Response.Listener<String>() {  
+		request.add(new StringRequest(Request.Method.GET, Config.BOARD.BOARD_FIND_ONE + Config.BOARD.SUB_URL+boardId ,new Response.Listener<String>() {  
 			
 			@Override  
 			public void onResponse(String response) {  
 				
+				System.out.println("99999999999999999966666666666666666666   :  board  " + boardId );
+				
 				board = boardDetailService.getBoardFindOne(response);
 				
+				if(board != null){
+					
 				textDetailTitle.setText(board.getTitle());
 				textSummernerName.setText(board.getSummonerName());
 				textPosition.setText(board.getPosition());
 				textPlayTime.setText(board.getPlayTime());
 				textRank.setText(board.reverseTransformRank(board.getRank())+ " " + board.getTea());
-				
+				}
 				// 이름별 랭크 이미지 삽입
 				int resource = getResources().getIdentifier
 				( "img_rank_"+board.getRank(), "drawable", getApplicationContext().getPackageName());
@@ -193,7 +219,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 		
 		prograssBar.setVisibility(View.VISIBLE);
 		
-		request.add(new StringRequest(Request.Method.GET, Config.BOARD.BOARD_DELETE + Config.BOARD.SUB_URL+id ,new Response.Listener<String>() {  
+		request.add(new StringRequest(Request.Method.GET, Config.BOARD.BOARD_DELETE + Config.BOARD.SUB_URL+boardId ,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {
 				Intent intent = new Intent(BoardDetailActivity.this, MainActivity.class);
@@ -218,6 +244,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 	}
 
 	private void viewPagerInit() {
+		
+		System.err.println("99999999999998888888888888888888   :  board"  + board.getId());
 		
 		mPagerAdapter = new BoardDetailPagerAdapter(getApplicationContext(),getSupportFragmentManager(),board);
 		mViewPager.setAdapter(mPagerAdapter);

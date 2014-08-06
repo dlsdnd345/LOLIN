@@ -310,7 +310,7 @@ public class BoardFragment extends Fragment {
 			}
 
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
-			intent.putExtra("id", boardList.get(position-1).getId());
+			sharedpreferencesUtil.put(Config.BOARD.BOARD_ID, String.valueOf(boardList.get(position-1).getId()));
 			intent.putExtra("editState", editState);
 
 			startActivity(intent);

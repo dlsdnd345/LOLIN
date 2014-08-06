@@ -45,7 +45,7 @@ public class ComposerActivity extends ActionBarActivity {
 	private static final String 		UNRANK 						= "언랭크"; 
 	private static final int 			RANK_UNRANK 				= 0; 
 	
-	private int boardId  =-1;
+	private String boardId ;
 	private String[] 					rankData,teaData,positionData,timeData;
 	
 	private Board						board;
@@ -89,10 +89,12 @@ public class ComposerActivity extends ActionBarActivity {
 		
 		Intent intent = getIntent();
 		
-		boardId = intent.getIntExtra(Config.BOARD.BOARD_ID, -1);
+		boardId = intent.getStringExtra(Config.BOARD.BOARD_ID);
 		RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
 		
-		if(boardId != -1){
+		System.err.println("@@@@@@@@@@  boardId  :  " + boardId);
+		
+		if(boardId != null){
 			// 게시판 정보 api 요청
 			getFindOne(request);
 		}

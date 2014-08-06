@@ -79,7 +79,10 @@ public class Config {
 		public final static String 	  ERROR 	 = "Error";
 		public static final String 	  TRUE 		 = "true";
 		public static final String 	  DATA 		 = "data";
+		public final static  String	  MESSAGE 	 = "message";
 		public final static  String	  EDIT_STATE = "editState";
+		public final static  String	  FACEBOOK_ID = "facebookId";
+		public final static  String	  SUMMERNER_NAME = "summernerName";
 	}
 
 	public static class GCM {

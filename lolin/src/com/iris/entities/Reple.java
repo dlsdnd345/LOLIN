@@ -3,6 +3,7 @@ package com.iris.entities;
 public class Reple {
 
 	private int 	id;
+	private int 	boardId;
 	private String repleContent;
 	private String writeTime;
 	private String userName;
@@ -14,6 +15,12 @@ public class Reple {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public int getBoardId() {
+		return boardId;
+	}
+	public void setBoardId(int boardId) {
+		this.boardId = boardId;
 	}
 	public String getRepleContent() {
 		return repleContent;

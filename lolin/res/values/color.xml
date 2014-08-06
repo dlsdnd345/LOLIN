@@ -2,6 +2,7 @@
 <resources>
 
     <!--  background  -->
+        <color name="background_black">#000000</color>
     <color name="background_sky_blue">#B6DAF2</color>
     <color name="background_blue">#A0CFEE</color>
     <color name="background_sky_red">#EBC6C3</color>

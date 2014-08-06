@@ -48,8 +48,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="FaceBookLoginActivity">
+        <activity android:name="FaceBookLoginActivity" >
         </activity>
         <activity
             android:name="com.facebook.LoginActivity"
@@ -76,8 +75,10 @@
         <!-- GCM 리시버에서 돌리는 서비스 -->
         <service android:name="com.iris.lolin.GCMIntentService" />
         <!-- 서비스명 변경하면 안됨 -->
-        <activity android:name="PushActivity"></activity>
-
+        <activity
+            android:name="PushActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
     </application>
 
 </manifest>

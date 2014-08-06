@@ -14,6 +14,10 @@
     <string name="detail_title_section1">상세내용</string>
     <string name="detail_title_section2">전적 검색</string>
     <string name="detail_title_section3">댓글</string>
+    
+    <!-- push Activity -->
+    <string name="push_activity_clear_btn">확인</string>
+    <string name="push_activity_cancel_btn">취소</string>
 
     <!-- Reple Fragment -->
     <string name="reple_fragment_text_no_reple_message">댓글이 없습니다.</string>
@@ -22,7 +26,7 @@
     <!-- Composor Fragment -->
     <string name="composor_fragment_text_no_list_message">내가 쓴글이 없습니다.</string>
     
-        <!-- Composor Fragment -->
+    <!-- Composor Fragment -->
     <string name="board_fragment_text_no_list_message">게시글이 없습니다.</string>
 
     <!-- Actionbar title Value -->
@@ -37,7 +41,7 @@
     <string name="board_detail_activity_title">상세 내용</string>
     <string name="intro_activity_title">인트로</string>
     <string name="facebook_login_activity_title">로그인</string>
-    <string name="app_id">809681309065256</string>
+    <string name="app_id">275243632673494</string>
     <string name="title_facebook_login">login</string>
 
 </resources>

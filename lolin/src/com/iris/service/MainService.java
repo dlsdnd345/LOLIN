@@ -22,8 +22,8 @@ public class MainService {
 		GCMRegistrar.checkDevice(context);
 		GCMRegistrar.checkManifest(context);
 		final String regId = GCMRegistrar.getRegistrationId(context); // red ID 값 얻어옴		
+		GCMRegistrar.unregister(context);
 		if (regId.equals("")) {
-			//GCMRegistrar.unregister(this);
 			// red 값은 해지 시켜주지 않으면 어플을 지워도 같기 때문에 해지 시켜줘야함
 			GCMRegistrar.register(context, Config.GCM.PROJECT_ID); // 재등록
 			System.out.println("등록했습니다");

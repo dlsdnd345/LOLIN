@@ -64,6 +64,8 @@ public class RepleFragment extends Fragment {
 	
 	public Fragment newInstance(int boardId ,ArrayList<Reple> repleList,String userName) {
 		
+		System.out.println("999999999999999999999993333333333333333333333333333333333333333 :  boardId  " + boardId);
+		
 		RepleFragment fragment = new RepleFragment();
 		
 		Bundle args = new Bundle();
@@ -192,7 +194,10 @@ public class RepleFragment extends Fragment {
 		
 		prograssBar.setVisibility(View.VISIBLE);
 		
-		RequestQueue request = Volley.newRequestQueue(getActivity());  
+		RequestQueue request = null;
+		if(Volley.newRequestQueue(getActivity()) != null){
+			request = Volley.newRequestQueue(getActivity());  
+		}
 		request.add(new StringRequest
 				(Request.Method.GET, Config.API.REPLE_FIND_ONE+Config.API.SUB_URL_BOARD_ID+boardId,new Response.Listener<String>() {  
 			@Override  
@@ -255,9 +260,12 @@ public class RepleFragment extends Fragment {
 		prograssBar.setVisibility(View.VISIBLE);
 		
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
+		String faceBookId = sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
+		
+		System.out.println("99999999999999999999999944444444444444444444444444444444 :  boardId  " + boardId);
 		
 		request.add(new StringRequest
-				(Request.Method.GET, Config.API.GCM_SEND_REPLE+repleService.getSendPushSubUrl("android", String.valueOf(boardId), reple)
+				(Request.Method.GET, Config.API.GCM_SEND_REPLE+repleService.getSendPushSubUrl("android", String.valueOf(boardId) ,userName,reple,faceBookId)
 				,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
