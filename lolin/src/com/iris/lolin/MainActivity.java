@@ -1,34 +1,19 @@
 package com.iris.lolin;
 
-import java.util.ArrayList;
-
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.HorizontalScrollView;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.astuetz.PagerSlidingTabStrip;
-import com.google.android.gcm.GCMRegistrar;
 import com.iris.adapter.SectionsPagerAdapter;
-import com.iris.entities.Board;
-import com.iris.service.BoardService;
-import com.iris.service.MainService;
 import com.iris.util.SharedpreferencesUtil;
 
 @SuppressLint("NewApi")

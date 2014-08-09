@@ -1877,6 +1877,7 @@ containing a value of this type.
          showAsAction="ifRoom" items can fit. "always" items can override this. 
          */
         public static final int abc_max_action_buttons=0x7f0c0000;
+        public static final int google_play_services_version=0x7f0c0001;
     }
     public static final class layout {
         public static final int abc_action_bar_decor=0x7f030000;

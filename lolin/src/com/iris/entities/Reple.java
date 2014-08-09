@@ -1,7 +1,12 @@
 package com.iris.entities;
 
-public class Reple {
+import java.io.Serializable;
 
+public class Reple implements Serializable{
+
+	private static final long serialVersionUID = 7928329363203940132L;
+	
+	
 	private int 	id;
 	private int 	boardId;
 	private String repleContent;

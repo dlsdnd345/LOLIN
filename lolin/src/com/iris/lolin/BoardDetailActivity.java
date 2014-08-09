@@ -71,15 +71,14 @@ public class BoardDetailActivity extends ActionBarActivity {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.acticity_board_detail);
 	    
-	    init();
-		dataInit();
-		
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
 		
+	    init();
+		dataInit();
 		//화면이 켜져 있을때 푸시화면을 보여주기 않기 위함.
 		sharedpreferencesUtil.put("notiblock", "true");
 	}

@@ -10,35 +10,39 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.iris.lolin.permission.C2D_MESSAGE" />
 
     <permission
         android:name="com.iris.lolin.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-
-    <uses-permission android:name="com.iris.lolin.permission.C2D_MESSAGE" />
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.Actionbarstyle" >
+        
         <activity
             android:name="com.iris.lolin.MainActivity"
             android:label="@string/app_name" >
         </activity>
+        
         <activity android:name="ComposerActivity" >
         </activity>
+        
         <activity
             android:name="BoardDetailActivity"
             android:windowSoftInputMode="adjustPan" >
         </activity>
+        
         <activity
             android:name="CategoryActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
         </activity>
+        
         <activity
             android:name="IntroActivity"
             android:theme="@android:style/Theme.NoTitleBar" >
@@ -48,37 +52,46 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="FaceBookLoginActivity" >
+        
+        <activity android:name="com.iris.lolin.FaceBookLoginActivity" >
         </activity>
+        
         <activity
             android:name="com.facebook.LoginActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
         </activity>
 
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/app_id" />
-
-        <!-- GCM 리시버 -->
-        <receiver
-            android:name="com.google.android.gcm.GCMBroadcastReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND" >
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-
-                <category android:name="com.iris.lolin" />
-                <!-- 젤리빈 부터는 category 빼도 된다 -->
-            </intent-filter>
-        </receiver>
-
-        <!-- GCM 리시버에서 돌리는 서비스 -->
-        <service android:name="com.iris.lolin.GCMIntentService" />
-        <!-- 서비스명 변경하면 안됨 -->
         <activity
             android:name="PushActivity"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
+        
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+        
+        <receiver
+            android:name="com.iris.lolin.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.iris.lolin" />
+            </intent-filter>
+        </receiver>
+
+        <!-- GCM 리시버에서 돌리는 서비스 -->
+        <service android:name="com.iris.lolin.GcmIntentService" />
+        <!-- 서비스명 변경하면 안됨 -->
+
     </application>
 
 </manifest>
