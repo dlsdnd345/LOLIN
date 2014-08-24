@@ -7,6 +7,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.DialogInterface.OnClickListener;
@@ -31,6 +32,7 @@ import com.android.volley.VolleyLog;
 import com.android.volley.Request.Method;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.facebook.Session;
 import com.iris.config.Config;
 import com.iris.entities.User;
 import com.iris.lolin.FaceBookLoginActivity;
@@ -60,6 +62,7 @@ public class SettingFragment extends Fragment {
 
 	private ProgressBar					prograssBar;
 	private	 Button						btnUpdate;
+	private Button						btnFacebookLogout;
 	private TextView					txtVersion;
 	private EditText					editSummonerName;
 
@@ -92,7 +95,9 @@ public class SettingFragment extends Fragment {
 		txtVersion 			= (TextView)rootView.findViewById(R.id.txt_version);
 		editSummonerName 	= (EditText)rootView.findViewById(R.id.setting_edit_summonerName);
 		btnUpdate 			= (Button)rootView.findViewById(R.id.btn_update);
+		btnFacebookLogout	= (Button)rootView.findViewById(R.id.btn_facebook_logout);
 		btnUpdate.setOnClickListener(mClickListener);
+		btnFacebookLogout.setOnClickListener(mClickListener);
 	}
 
 	/**
@@ -143,6 +148,8 @@ public class SettingFragment extends Fragment {
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
 				VolleyLog.d(ERROR, error.getMessage());  
+				prograssBar.setVisibility(View.INVISIBLE);
+				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
 		}));
 
@@ -175,18 +182,50 @@ public class SettingFragment extends Fragment {
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
 				VolleyLog.d(ERROR, error.getMessage());  
+				prograssBar.setVisibility(View.INVISIBLE);
+				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
 		});
 		request.add(stringRequest);
 
 	}
 
+	/**
+	 * Logout From Facebook 
+	 */
+	public static void callFacebookLogout(Context context) {
+	    Session session = Session.getActiveSession();
+	    
+	    if (session != null) {
+
+	        if (!session.isClosed()) {
+	            session.closeAndClearTokenInformation();
+	        }
+	    } else {
+
+	        session = new Session(context);
+	        Session.setActiveSession(session);
+
+	        session.closeAndClearTokenInformation();
+	            //clear your preferences if saved
+
+	    }
+
+	    Intent intent = new Intent(context,FaceBookLoginActivity.class);
+	    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+	    context.startActivity(intent);
+	}
+	
 	Button.OnClickListener mClickListener = new View.OnClickListener() {
 		public void onClick(View v) {
 			switch (v.getId()) {
 			case R.id.btn_update:
 				updateSummonerName();
 				break;
+			case R.id.btn_facebook_logout:
+				callFacebookLogout(getActivity().getApplicationContext());
+				break;
+				
 			}
 		}
 	};

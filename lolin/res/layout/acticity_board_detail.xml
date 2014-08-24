@@ -123,6 +123,16 @@
                     android:layout_alignBottom="@+id/TextView02"
                     android:layout_alignLeft="@+id/text_play_time"
                     android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn_facebook_sharing"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:textSize="13sp"
+                    android:text="공유" />
+
             </RelativeLayout>
         </LinearLayout>
 

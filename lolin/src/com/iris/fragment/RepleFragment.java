@@ -181,6 +181,8 @@ public class RepleFragment extends Fragment {
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
 				VolleyLog.d(ERROR, error.getMessage());  
+				prograssBar.setVisibility(View.INVISIBLE);
+				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
 		}));
 	}
@@ -216,6 +218,8 @@ public class RepleFragment extends Fragment {
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
 				VolleyLog.d(ERROR, error.getMessage());  
+				prograssBar.setVisibility(View.INVISIBLE);
+				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
 		}));
 
@@ -245,6 +249,8 @@ public class RepleFragment extends Fragment {
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
 				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
+				prograssBar.setVisibility(View.INVISIBLE);
+				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
 		}));
 
@@ -279,6 +285,8 @@ public class RepleFragment extends Fragment {
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
 				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
+				prograssBar.setVisibility(View.INVISIBLE);
+				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
 		}));
 

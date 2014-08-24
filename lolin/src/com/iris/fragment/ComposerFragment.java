@@ -12,7 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
@@ -48,6 +50,7 @@ public class ComposerFragment extends Fragment {
 	private ArrayList<Board> 			boardList;
 	private ComposerAdapter 			composerAdapter;
 	
+	private ProgressBar					prograssBar;
 	private TextView					txtEmptyMessage;
 	private ListView 					writeTextListView;
 	
@@ -102,6 +105,8 @@ public class ComposerFragment extends Fragment {
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
 				VolleyLog.d(ERROR, error.getMessage());  
+				prograssBar.setVisibility(View.INVISIBLE);
+				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
 		}));
 	}
@@ -132,6 +137,7 @@ public class ComposerFragment extends Fragment {
 	 * @param rootView
 	 */
 	private void init(View rootView) {
+		prograssBar 	  = (ProgressBar)rootView.findViewById(R.id.progressBar);  
 		txtEmptyMessage   = (TextView)rootView.findViewById(R.id.txt_empty_message);
 		writeTextListView = (ListView)rootView.findViewById(R.id.list_write_text);
 	}

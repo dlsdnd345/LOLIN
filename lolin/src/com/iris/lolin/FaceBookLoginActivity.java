@@ -50,6 +50,7 @@ import com.facebook.model.GraphUser;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
+import com.iris.config.Config;
 import com.iris.entities.FaceBookUser;
 import com.iris.util.SharedpreferencesUtil;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
@@ -207,8 +208,6 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		String sub_url = "?faceBookId="+faceBookUser.getUserId()+"&summonerName="+editSummerner.getText().toString()
 				+"&pushId="+regId;
 		
-		System.out.println("@@@@@@@@@@@   sub_url   :  " + sub_url);
-		
 		stringRequest =new StringRequest(Method.GET, USER_SAVE+sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
@@ -237,6 +236,8 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
 				VolleyLog.d(ERROR, error.getMessage());  
+				progressBar.setVisibility(View.INVISIBLE);
+				Toast.makeText(getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
 		});
 	}

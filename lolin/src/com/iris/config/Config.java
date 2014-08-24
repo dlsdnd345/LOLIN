@@ -83,6 +83,9 @@ public class Config {
 		public final static  String	  EDIT_STATE = "editState";
 		public final static  String	  FACEBOOK_ID = "facebookId";
 		public final static  String	  SUMMERNER_NAME = "summernerName";
+		
+		public final static  String	  NETWORK_CLEAR = "네트워크 상태를 확인해 주세요.";
+		
 	}
 
 	public static class GCM {

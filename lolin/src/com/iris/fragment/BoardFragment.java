@@ -27,6 +27,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -164,6 +165,8 @@ public class BoardFragment extends Fragment {
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
 				VolleyLog.d(ERROR, error.getMessage());  
+				prograssBar.setVisibility(View.INVISIBLE);
+				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
 		}));
 	}

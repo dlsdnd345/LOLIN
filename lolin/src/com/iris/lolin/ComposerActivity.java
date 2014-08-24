@@ -191,6 +191,8 @@ public class ComposerActivity extends ActionBarActivity {
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
 				VolleyLog.d(ERROR, error.getMessage());  
+				prograssBar.setVisibility(View.INVISIBLE);
+				Toast.makeText(getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
 		}));
 	}
@@ -220,6 +222,8 @@ public class ComposerActivity extends ActionBarActivity {
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
 				VolleyLog.d(ERROR, error.getMessage());  
+				prograssBar.setVisibility(View.INVISIBLE);
+				Toast.makeText(getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
 		}));
 	}
