@@ -22,19 +22,18 @@ import com.iris.util.SharedpreferencesUtil;
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-	private static final int BOARD_FRAGMENT = 0;
-	private static final int WRITE_TEXT_FRAGMENT = 1;
-	private static final int RECORD_SEARCH_FRAGMENT = 2;
+	private static final int BOARD_FRAGMENT 			= 0;
+	private static final int WRITE_TEXT_FRAGMENT 		= 1;
+	private static final int RECORD_SEARCH_FRAGMENT 	= 2;
 	
-	private static final String 		IS_LOGIN  						= "isLogin";
+	private static final String 		IS_LOGIN  	= "isLogin";
 	
 	private Context 				context;
-	private ArrayList<Board> 		boardList;
 	private BoardFragment 			boardFragment;
 	private SettingFragment 		settingFragment;
 	private ComposerFragment 		writeTextFragment;
 	private RecordSearchFragment 	recordSearchFragment;
-	private SharedpreferencesUtil 		sharedpreferencesUtil;
+	private SharedpreferencesUtil 	sharedpreferencesUtil;
 	
 	public SectionsPagerAdapter(FragmentManager fm ,Context context) {
 		super(fm);

@@ -4,6 +4,8 @@
     <string name="app_name">lolin</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Common -->
+    
     <!-- ActionBar sevtion & Actionbar title -->
     <string name="title_section1">게시판</string>
     <string name="title_section2">내가 쓴글</string>
@@ -15,6 +17,11 @@
     <string name="detail_title_section2">전적 검색</string>
     <string name="detail_title_section3">댓글</string>
     
+    <string name="facebook_publish_story_name">lolin</string>
+    <string name="facebook_publish_story_message">롤인 \n 앱을 통해서 팀 매칭 친구를 구하세요. \n http://www.naver.com</string>
+    <string name="facebook_publish_story_link">https://www.facebook.com/photo.php?fbid=</string>
+    <string name="facebook_publish_story_complete_message">업로드가 완료 되었습니다.</string>
+    
     <!-- push Activity -->
     <string name="push_activity_clear_btn">확인</string>
     <string name="push_activity_cancel_btn">취소</string>
@@ -23,14 +30,20 @@
     <string name="reple_fragment_text_no_reple_message">댓글이 없습니다.</string>
     <string name="reple_fragment_text_reple_hint">댓글을 입력해 주세요.</string>
 
-    <!-- Composor Fragment -->
-    <string name="composor_fragment_text_no_list_message">내가 쓴글이 없습니다.</string>
+    <!-- Composor Activity -->
+    <string name="composor_activity_edit_content_empty_message">내용을 입력해 주세요.</string>
+    <string name="composor_activity_edit_title_empty_message">제목을 입력해 주세요.</string>
+    <string name="composor_activity_edit_summernername_empty_message">소환사 명을 입력해 주세요.</string>
+    
+    <!-- FacebookLogin Activity -->
+    <string name="facebooklogint_activity_edit_summernername_empty_message">소환사 명을 입력해 주세요.</string>
+    <string name="facebooklogint_activity_text_hello_message">HELLO</string>
     
     <!-- Composor Fragment -->
+    <string name="composor_fragment_text_no_list_message">내가 쓴글이 없습니다.</string>
     <string name="board_fragment_text_no_list_message">게시글이 없습니다.</string>
 
     <!-- Actionbar title Value -->
-
     <string name="ic_action_new">추가</string>
     <string name="ic_action_remove">삭제</string>
     <string name="ic_action_next">다음</string>
@@ -44,4 +57,8 @@
     <string name="app_id">275243632673494</string>
     <string name="title_facebook_login">login</string>
 
+    <!-- GcmIntentService -->
+    <string name="gcm_service_noti_title">롤인 앱으로 부터 메세지가 도착했습니다.</string>
+    
+    
 </resources>

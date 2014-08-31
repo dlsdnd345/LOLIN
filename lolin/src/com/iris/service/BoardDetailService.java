@@ -11,29 +11,26 @@ import android.content.Context;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.iris.config.Config;
 import com.iris.entities.Board;
 
 public class BoardDetailService {
 
-	
-	private static final String OK = "ok";
-	private static final String TRUE = "true";
-	private static final String DATA = "data";
-	private static final String REPLE_DATA = "repleList";
-	
-	private Gson 						gson;
-	private Context						context;
-	private Board 						boardOneFromGson;
-	
+	private Gson 		gson;
+	private Context		context;
+	private Board 		boardOneFromGson;
 	
 	public BoardDetailService(Context context){
 		this.context =context;
 		gson = new Gson();
 	}
 	
+	/**
+	 * 게시판 한개 의 상세정보 파싱
+	 * @param jsonData
+	 * @return
+	 */
 	public Board getBoardFindOne(String jsonData){
-		
-		System.out.println("###########   :   " + jsonData);
 		
 		JSONObject JsonObject;
 		String ok = null;
@@ -41,9 +38,9 @@ public class BoardDetailService {
 		
 		try {
 			JsonObject = new JSONObject(jsonData);
-			ok = JsonObject.getString(OK);
-			if(ok.equals(TRUE)){
-				data = JsonObject.getString(DATA);
+			ok = JsonObject.getString(Config.FLAG.OK);
+			if(ok.equals(Config.FLAG.TRUE)){
+				data = JsonObject.getString(Config.FLAG.DATA);
 				Type type = new TypeToken<Board>(){}.getType();
 				boardOneFromGson = gson.fromJson(data, type);
 			}

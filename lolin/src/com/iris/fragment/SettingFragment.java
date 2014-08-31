@@ -1,16 +1,8 @@
 package com.iris.fragment;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.DialogInterface.OnClickListener;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
@@ -25,18 +17,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
+import com.android.volley.Request.Method;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
-import com.android.volley.Request.Method;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.facebook.Session;
 import com.iris.config.Config;
 import com.iris.entities.User;
 import com.iris.lolin.FaceBookLoginActivity;
-import com.iris.lolin.MainActivity;
 import com.iris.lolin.R;
 import com.iris.service.SettingService;
 import com.iris.util.SharedpreferencesUtil;
@@ -46,13 +37,6 @@ import com.iris.util.SharedpreferencesUtil;
  */
 @SuppressLint("NewApi")
 public class SettingFragment extends Fragment {
-
-	private static final String OK = "ok";
-	private static final String TRUE = "true";
-	private static final String DATA = "data";
-
-	private final static String 		ERROR 							= "Error";
-
 
 	private User						user;
 	private RequestQueue 				request;
@@ -71,9 +55,6 @@ public class SettingFragment extends Fragment {
 		return fragment;
 	}
 
-	public SettingFragment() {
-	}
-
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -82,7 +63,6 @@ public class SettingFragment extends Fragment {
 		init(rootView);
 		dataInit();
 		getUser();
-
 		return rootView;
 	}
 
@@ -135,7 +115,7 @@ public class SettingFragment extends Fragment {
 		String sub_url = "?faceBookId="+ sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
 
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
-		request.add(new StringRequest(Request.Method.GET, Config.API.USER_FIND_ONE+sub_url,new Response.Listener<String>() {  
+		request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.USER_FIND_ONE+sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
 				user = settingService.getUser(response);
@@ -147,7 +127,7 @@ public class SettingFragment extends Fragment {
 		}, new Response.ErrorListener() {  
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(ERROR, error.getMessage());  
+				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
 				prograssBar.setVisibility(View.INVISIBLE);
 				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
@@ -164,13 +144,13 @@ public class SettingFragment extends Fragment {
 
 		String encodeSummonerName = settingService.getEncodeSummonerName(editSummonerName.getText().toString());
 		String sub_url = "?faceBookId="+user.getFacebookId()+"&summonerName="+encodeSummonerName;
-		stringRequest =new StringRequest(Method.GET, Config.API.USER_SAVE+sub_url,new Response.Listener<String>() {  
+		stringRequest =new StringRequest(Method.GET, Config.API.DEFAULT_URL + Config.API.USER_SAVE_DEFAULT+sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
 
 				String isOk =settingService.updateSummonerName(response);
 
-				if(isOk.equals(TRUE)){
+				if(isOk.equals(Config.FLAG.TRUE)){
 					Toast.makeText(getActivity(), "소환사 명이  " +editSummonerName.getText().toString()+ "  으로 변경 되었습니다.",
 							Toast.LENGTH_SHORT).show();
 				}
@@ -181,7 +161,7 @@ public class SettingFragment extends Fragment {
 		}, new Response.ErrorListener() {  
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(ERROR, error.getMessage());  
+				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
 				prograssBar.setVisibility(View.INVISIBLE);
 				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
@@ -216,6 +196,9 @@ public class SettingFragment extends Fragment {
 	    context.startActivity(intent);
 	}
 	
+	/**
+	 * 버튼 리스너
+	 */
 	Button.OnClickListener mClickListener = new View.OnClickListener() {
 		public void onClick(View v) {
 			switch (v.getId()) {

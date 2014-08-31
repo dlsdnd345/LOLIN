@@ -1,10 +1,6 @@
 package com.iris.fragment;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.ArrayList;
-
-import org.apache.http.protocol.HTTP;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,9 +10,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -55,22 +49,20 @@ import com.iris.util.SharedpreferencesUtil;
 @SuppressLint("NewApi")
 public class BoardFragment extends Fragment {
 
-	private final static String BOARD_FINDALL = "http://192.168.219.6:8080/board/findAll";
-	private final static String ERROR = "Error";
-
 	private static final String RANK_DATA_POSITION 		= "RankDataPosition";
 	private static final String POSITION_DATA__POSITION 	= "PositionDataPosition";
 	private static final String TIME_DATA_POSITION 		= "TimeDataPosition";
 
 	
 	private BoardService 				boardService;
-	private ArrayList<Board> 			boardList;
 	private SharedpreferencesUtil		sharedpreferencesUtil;
+	
+	private User 						user;
+	private ArrayList<Board> 			boardList;
+	private String[] 					rankData,positionData,timeData;
 	private ArrayAdapter<String> 		rankSpinnerAdapter,positionSpinnerAdapter,timeSpinnerAdapter;
 
-	private User 						user;
 	private SettingService				settingService;
-	private String[] 					rankData,positionData,timeData;
 
 	private TextView					txtNoListMessage;
 	private LinearLayout				bottomBar;
@@ -93,7 +85,6 @@ public class BoardFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_board, container,false);
-
 		init(rootView);
 
 		return rootView;
@@ -107,6 +98,10 @@ public class BoardFragment extends Fragment {
 		dataInit();
 	}
 
+	/**
+	 * 레이아웃 초기화
+	 * @param rootView
+	 */
 	private void init(View rootView) {
 		
 		txtNoListMessage	=  (TextView)rootView.findViewById(R.id.txt_no_list_message);
@@ -118,7 +113,9 @@ public class BoardFragment extends Fragment {
 		boardListView 		= (PullToRefreshListView)rootView.findViewById(R.id.list_board);
 	}
 
-
+	/**
+	 * 데이터 초기화
+	 */
 	private void dataInit(){
 
 		settingService = new SettingService();
@@ -126,7 +123,6 @@ public class BoardFragment extends Fragment {
 		spinnerInit();
 		getBoardFindAll(true); 
 		getUser();
-
 	}
 
 	/**
@@ -139,16 +135,14 @@ public class BoardFragment extends Fragment {
 		}
 
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
-
-		request.add(new StringRequest(Request.Method.GET, BOARD_FINDALL+boardService.getSubUrl(),new Response.Listener<String>() {  
+		request.add(new StringRequest
+				(Request.Method.GET, Config.API.DEFAULT_URL +Config.API.BOARD_FINDALL+boardService.getSubUrl(),new Response.Listener<String>() {  
 
 			@Override  
 			public void onResponse(String response) {  
 				boardList = boardService.getBoardFindAll(response);
-				
 				visibleEmptyMessage();
 				listViewInit(boardList);
-				
 				if(noAsync){
 					prograssBar.setVisibility(View.INVISIBLE);
 				}
@@ -164,7 +158,7 @@ public class BoardFragment extends Fragment {
 		}, new Response.ErrorListener() {  
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(ERROR, error.getMessage());  
+				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
 				prograssBar.setVisibility(View.INVISIBLE);
 				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
@@ -178,23 +172,21 @@ public class BoardFragment extends Fragment {
 
 		prograssBar.setVisibility(View.VISIBLE);
 		
-		String sub_url = "?faceBookId="+ sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
+		String sub_url = boardService.getUserSubUrl();;
 
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
-		request.add(new StringRequest(Request.Method.GET, Config.API.USER_FIND_ONE+sub_url,new Response.Listener<String>() {  
+		request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.USER_FIND_ONE+sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
 				user = settingService.getUser(response);
 				prograssBar.setVisibility(View.INVISIBLE);
-				
 			}  
 		}, new Response.ErrorListener() {  
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(ERROR, error.getMessage());  
+				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
 			}  
 		}));
-
 	}
 
 	/**
@@ -206,14 +198,14 @@ public class BoardFragment extends Fragment {
 		sharedpreferencesUtil = new SharedpreferencesUtil(context);
 		//spinner init
 		rankData = context.getResources().getStringArray(R.array.main_rank_array_list);
-
+		//랭크
 		rankSpinnerAdapter= new ArrayAdapter<>
 		(context, R.layout.white_spinner_item,rankData);
 		rankSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
 		rankSpinner.setAdapter(rankSpinnerAdapter); 
 		rankSpinner.setOnItemSelectedListener(rankOnItemSelectedListener);
 		rankSpinner.setSelection(sharedpreferencesUtil.getValue(RANK_DATA_POSITION, 0));
-
+		//포지션
 		positionData = context.getResources().getStringArray(R.array.main_position_array_list);
 		positionSpinnerAdapter= new ArrayAdapter<>
 		(context, R.layout.white_spinner_item,positionData);
@@ -221,7 +213,7 @@ public class BoardFragment extends Fragment {
 		positionSpinner.setAdapter(positionSpinnerAdapter); 
 		positionSpinner.setOnItemSelectedListener(positionOnItemSelectedListener);
 		positionSpinner.setSelection(sharedpreferencesUtil.getValue(POSITION_DATA__POSITION, 0));
-
+		//시간
 		timeData = context.getResources().getStringArray(R.array.main_time_array_list);
 		timeSpinnerAdapter= new ArrayAdapter<>
 		(context, R.layout.white_spinner_item,timeData);
@@ -241,7 +233,6 @@ public class BoardFragment extends Fragment {
 		boardListView.setOnRefreshListener(mOnRefreshListener);
 		boardListView.setOnItemClickListener(mOnItemClickListener);
 		ListView actualListView = boardListView.getRefreshableView();
-		//actualListView.setOnTouchListener(mOnTouchListener);
 		registerForContextMenu(actualListView);
 	}
 

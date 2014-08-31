@@ -17,18 +17,21 @@ import com.iris.entities.Reple;
 
 public class RepleService {
 
-	
-	private static final String OK = "ok";
-	
-	private Gson 						gson;
-	private ArrayList<Reple> 			repleListFromGson;
+	private Gson 	gson;
+	private ArrayList<Reple> repleListFromGson;
 	
 	public RepleService(){
-		
 		gson = new Gson();
-		
 	}
 	
+	/**
+	 * url 만드는 작업
+	 * @param id
+	 * @param userName
+	 * @param content
+	 * @param facebookId
+	 * @return
+	 */
 	public String getSubUrl(int id , String userName , String content , String facebookId){
 		
 		String subUrl = null;
@@ -43,10 +46,18 @@ public class RepleService {
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-		
 		return subUrl = "?boardId="+id+"&userName="+encodeUserName+"&content="+encodeContent+"&facebookId="+encodeFacebookId;
 	}
 	
+	/**
+	 * 푸시 subUrl 만드는 작업
+	 * @param os
+	 * @param boardId
+	 * @param summernerName
+	 * @param reple
+	 * @param facebookId
+	 * @return
+	 */
 	public String getSendPushSubUrl(String os , String boardId , String summernerName ,String reple, String facebookId){
 		
 		String subUrl = null;
@@ -69,6 +80,11 @@ public class RepleService {
 		return subUrl = "?os="+encodeOs+"&boardId="+encodeBoardId+"&summernerName="+encodeSummernerName+"&reple="+encodeReple+"&facebookId="+encodeFacebookId;
 	}
 	
+	/**
+	 * 리플 저장후 피드백 온 데이터 파싱
+	 * @param jsonData
+	 * @return
+	 */
 	public String saveReplePasing(String jsonData){
 		
 		JSONObject JsonObject;
@@ -76,13 +92,18 @@ public class RepleService {
 		
 		try {
 			JsonObject = new JSONObject(jsonData);
-			ok = JsonObject.getString(OK);
+			ok = JsonObject.getString(Config.FLAG.OK);
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
 		return ok;
 	}
 	
+	/**
+	 * 리플 삭제후 돌아오는 데이터 파싱
+	 * @param jsonData
+	 * @return
+	 */
 	public String deleteReplePasing(String jsonData){
 		
 		JSONObject JsonObject;
@@ -90,7 +111,7 @@ public class RepleService {
 		
 		try {
 			JsonObject = new JSONObject(jsonData);
-			ok = JsonObject.getString(OK);
+			ok = JsonObject.getString(Config.FLAG.OK);
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
@@ -104,15 +125,13 @@ public class RepleService {
 	 */
 	public ArrayList<Reple> getRepleFindOne(String jsonData){
 		
-		System.out.println("#########   :  " + jsonData);
-		
 		JSONObject JsonObject;
 		String ok 	= null;
 		String data = null;
 		
 		try {
 			JsonObject = new JSONObject(jsonData);
-			ok = JsonObject.getString(OK);
+			ok = JsonObject.getString(Config.FLAG.OK);
 			if(ok.equals(Config.FLAG.TRUE)){
 				data = JsonObject.getString(Config.FLAG.DATA);
 				Type type = new TypeToken<List<Reple>>(){}.getType();

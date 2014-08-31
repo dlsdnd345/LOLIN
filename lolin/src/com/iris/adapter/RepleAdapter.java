@@ -43,12 +43,10 @@ import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 public class RepleAdapter extends BaseAdapter{
 
-	private static final String 		FACEBOOK_BASE_URL  				= "http://graph.facebook.com/";
-	private static final String 		PICTURE_TYPE					= "/picture?type=small";
-	
+	private static final String 		FACEBOOK_BASE_URL  	= "http://graph.facebook.com/";
+	private static final String 		PICTURE_TYPE		= "/picture?type=small";
 	
 	private int 								layout;
-	
 	private String								userName;
 	private Context 							context; 
 	private LayoutInflater 						inflater;
@@ -103,7 +101,6 @@ public class RepleAdapter extends BaseAdapter{
 		return position;
 	}
 
-	@SuppressLint("ResourceAsColor")
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -117,19 +114,17 @@ public class RepleAdapter extends BaseAdapter{
 			convertView = inflater.inflate(layout, parent, false);
 			}
 		
-		View layoutLeftHeadReple 		= ViewHolder.get(convertView ,R.id.layout_left_head_reple);
-		View layoutLeftContentReple 	= ViewHolder.get(convertView ,R.id.layout_left_content_reple);
-		ImageView imgPeple 				= ViewHolder.get(convertView ,R.id.img_reple_image);		
-		TextView textUserName 			= ViewHolder.get(convertView ,R.id.text_reple_user_name);
-		TextView textWriteTime 			= ViewHolder.get(convertView ,R.id.text_reple_write_time);
-		TextView textContent 			= ViewHolder.get(convertView ,R.id.text_reple_content);
-		ImageView imgRepleCancel 		= ViewHolder.get(convertView ,R.id.img_reple_cancel);
+		View 		layoutLeftHeadReple 	= ViewHolder.get(convertView ,R.id.layout_left_head_reple);
+		View 		layoutLeftContentReple 	= ViewHolder.get(convertView ,R.id.layout_left_content_reple);
+		ImageView 	imgPeple 				= ViewHolder.get(convertView ,R.id.img_reple_image);		
+		TextView 	textUserName 			= ViewHolder.get(convertView ,R.id.text_reple_user_name);
+		TextView 	textWriteTime 			= ViewHolder.get(convertView ,R.id.text_reple_write_time);
+		TextView 	textContent 			= ViewHolder.get(convertView ,R.id.text_reple_content);
+		ImageView 	imgRepleCancel 			= ViewHolder.get(convertView ,R.id.img_reple_cancel);
 		
 		visibleCancelReple(position, imgRepleCancel);
 		
 		String url = FACEBOOK_BASE_URL+ repleList.get(position).getFacebookId()+PICTURE_TYPE;
-		
-		System.err.println("###########   url   :  "  + url);
 		
 		imageLoader.displayImage(url, imgPeple, options);
 		
@@ -137,6 +132,19 @@ public class RepleAdapter extends BaseAdapter{
 		textWriteTime.setText(repleList.get(position).getWriteTime());
 		textContent.setText(repleList.get(position).getRepleContent());
 
+		visibleMyReple(position, layoutLeftHeadReple, layoutLeftContentReple);
+		
+		return convertView;
+	}
+
+	/**
+	 * 자신의 리플은 파란색으로 표시 , 상대방 리플 빨간색
+	 * @param position
+	 * @param layoutLeftHeadReple
+	 * @param layoutLeftContentReple
+	 */
+	private void visibleMyReple(int position, View layoutLeftHeadReple,
+			View layoutLeftContentReple) {
 		if(userName.equals(repleList.get(position).getUserName())){
 			layoutLeftHeadReple.setBackgroundResource(R.color.background_blue);
 			layoutLeftContentReple.setBackgroundResource(R.color.background_sky_blue);
@@ -144,8 +152,6 @@ public class RepleAdapter extends BaseAdapter{
 			layoutLeftHeadReple.setBackgroundResource(R.color.background_red);
 			layoutLeftContentReple.setBackgroundResource(R.color.background_sky_red);
 		}
-		
-		return convertView;
 	}
 
 	/**

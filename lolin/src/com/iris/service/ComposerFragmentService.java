@@ -7,23 +7,30 @@ import java.util.List;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.content.Context;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.iris.config.Config;
 import com.iris.entities.Board;
+import com.iris.util.SharedpreferencesUtil;
 
 public class ComposerFragmentService {
 
-	private static final String OK = "ok";
-	private static final String TRUE = "true";
-	private static final String DATA = "data";
-	
 	private Gson 						gson;
 	private ArrayList<Board> 			boardListFromGson;
+	private SharedpreferencesUtil		sharedpreferencesUtil;
 	
-	public ComposerFragmentService(){
+	public ComposerFragmentService(Context context){
 		gson = new Gson();
+		sharedpreferencesUtil = new SharedpreferencesUtil(context);
 	}
 	
+	/**
+	 * 전체 게시판 얻기
+	 * @param jsonData
+	 * @return
+	 */
 	public ArrayList<Board> getBoardFindAll(String jsonData){
 		
 		JSONObject JsonObject;
@@ -32,18 +39,20 @@ public class ComposerFragmentService {
 		
 		try {
 			JsonObject = new JSONObject(jsonData);
-			ok = JsonObject.getString(OK);
-			if(ok.equals(TRUE)){
-				data = JsonObject.getString(DATA);
+			ok = JsonObject.getString(Config.FLAG.OK);
+			if(ok.equals(Config.FLAG.TRUE)){
+				data = JsonObject.getString(Config.FLAG.DATA);
 				Type type = new TypeToken<List<Board>>(){}.getType();
 				boardListFromGson = gson.fromJson(data, type);
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-		
-		
 		return boardListFromGson;
+	}
+	
+	public String getSubUrlBoardFindMyAll(){
+		return "?faceBookId="+ sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
 	}
 	
 }

@@ -52,6 +52,7 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.iris.config.Config;
 import com.iris.entities.FaceBookUser;
+import com.iris.service.FacebookLoginService;
 import com.iris.util.SharedpreferencesUtil;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -65,34 +66,12 @@ import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 public class FaceBookLoginActivity extends ActionBarActivity {
 
-	private static final String OK = "ok";
-	private static final String TRUE = "true";
-	private static final String DATA = "data";
-
-	private final static String TAG = "GCM";
-	
-	private final static String USER_SAVE = "http://192.168.219.6:8080/user/save";
-
-	private final static String 		ERROR 							= "Error";
-	private static final String 		EMPRY_SUMMERNER_MESSAGE  		= "소환사 명 을 입력해 주세요.";
-	private static final String 		IS_LOGIN  						= "isLogin";
-	private static final String 		ACCESS_TOKEN  					= "ACCESS_TOKEN";
-	private static final String 		FACEBOOK_ID  					= "FACEBOOK_ID";
-	private static final String 		HELLO_MESSAGE  					= "HELLO ";
-	private static final String 		FACEBOOK_BASE_URL  				= "http://graph.facebook.com/";
-	private static final String 		PICTURE_TYPE					= "/picture?type=large";
-
-    public static final String EXTRA_MESSAGE = "message";
-    public static final String PROPERTY_REG_ID = "registration_id";
-    private static final String PROPERTY_APP_VERSION = "appVersion";
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
-    private String SENDER_ID 			= "376992068498";
     
-    GoogleCloudMessaging gcm;
-    AtomicInteger msgId = new AtomicInteger();
-    Context context;
-
-    String regid;
+    private String regid;
+    private GoogleCloudMessaging gcm;
+    private AtomicInteger msgId = new AtomicInteger();
+    private Context context;
     
 	private boolean					isActionBar;
 	private String 						regId;
@@ -106,7 +85,8 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	private FaceBookUser 				faceBookUser;
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
 	private Session.StatusCallback 		statusCallback = new SessionStatusCallback();
-
+	private FacebookLoginService		facebookLoginService;
+	
 	private EditText 					editSummerner;
 	private TextView 					txtHello , txtWarnningMessage;
 	private View 						layoutLogin , layoutBtnLogin;
@@ -140,7 +120,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
                 registerInBackground();
             }
         } else {
-            Log.i(TAG, "No valid Google Play Services APK found.");
+            Log.i(Config.GCM.TAG, "No valid Google Play Services APK found.");
         }
 	}
 
@@ -190,7 +170,8 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 			// 비어있을시 쉐이크 애니메이션 및 토스트
 			Animation shake = AnimationUtils.loadAnimation(this, R.anim.horizontal_shake);
 			editSummerner.startAnimation(shake);
-			Toast.makeText(getApplicationContext(), EMPRY_SUMMERNER_MESSAGE, Toast.LENGTH_LONG).show();
+			Toast.makeText
+			(getApplicationContext(), getString(R.string.facebooklogint_activity_edit_summernername_empty_message), Toast.LENGTH_LONG).show();
 
 			progressBar.setVisibility(View.INVISIBLE);
 		}
@@ -205,10 +186,9 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		progressBar.setVisibility(View.VISIBLE);
 		String regId = getRegistrationId(context);
 		
-		String sub_url = "?faceBookId="+faceBookUser.getUserId()+"&summonerName="+editSummerner.getText().toString()
-				+"&pushId="+regId;
+		String sub_url = facebookLoginService.getSaveLoginInfoSubUrl(faceBookUser.getUserId(), editSummerner.getText().toString(), regId);
 		
-		stringRequest =new StringRequest(Method.GET, USER_SAVE+sub_url,new Response.Listener<String>() {  
+		stringRequest =new StringRequest(Method.GET, Config.API.DEFAULT_URL + Config.API.USER_SAVE+sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
 				JSONObject JsonObject;
@@ -216,11 +196,11 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 
 				try {
 					JsonObject = new JSONObject(response);
-					ok = JsonObject.getString(OK);
-					if(ok.equals(TRUE)){
-						sharedpreferencesUtil.put(IS_LOGIN, true);
-						sharedpreferencesUtil.put(ACCESS_TOKEN, sessionTemp.getAccessToken());
-						sharedpreferencesUtil.put(FACEBOOK_ID, faceBookUser.getUserId());
+					ok = JsonObject.getString(Config.FLAG.OK);
+					if(ok.equals(Config.FLAG.TRUE)){
+						sharedpreferencesUtil.put(Config.FLAG.IS_LOGIN, true);
+						sharedpreferencesUtil.put(Config.FLAG.ACCESS_TOKEN, sessionTemp.getAccessToken());
+						sharedpreferencesUtil.put(Config.FACEBOOK.FACEBOOK_ID, faceBookUser.getUserId());
 						Intent intent = new Intent(FaceBookLoginActivity.this, MainActivity.class);
 						startActivity(intent);
 						finish();
@@ -235,7 +215,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		}, new Response.ErrorListener() {  
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(ERROR, error.getMessage());  
+				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
 				progressBar.setVisibility(View.INVISIBLE);
 				Toast.makeText(getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
@@ -267,7 +247,8 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		context = getApplicationContext();
 		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 		request = Volley.newRequestQueue(getApplicationContext());  
-
+		facebookLoginService = new FacebookLoginService();
+		
 		imageLoderInit();
 		faceBookInit();
 		actionBarInit();
@@ -413,8 +394,8 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 				@Override
 				public void onCompleted(GraphUser user,com.facebook.Response response) {
 					response.getError();
-					txtHello.setText(HELLO_MESSAGE+ user.getName());
-					String url = FACEBOOK_BASE_URL+ user.getId()+PICTURE_TYPE;
+					txtHello.setText(getString(R.string.facebooklogint_activity_text_hello_message)+ user.getName());
+					String url = Config.FACEBOOK.FACEBOOK_BASE_URL+ user.getId()+Config.FACEBOOK.PICTURE_TYPE_LARGE;
 					imageLoader.displayImage(url, imgProfile, options, mImageLoadingListener);
 					faceBookUser.setUserId( user.getId());
 				}
@@ -443,7 +424,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	 */
 	public void notFacebookLogin(View view){
 
-		sharedpreferencesUtil.put(IS_LOGIN, false);
+		sharedpreferencesUtil.put(Config.FLAG.IS_LOGIN, false);
 
 		Intent inetnt = new Intent(FaceBookLoginActivity.this , MainActivity.class);
 		startActivity(inetnt);
@@ -459,7 +440,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
                 GooglePlayServicesUtil.getErrorDialog(resultCode, this,
                         PLAY_SERVICES_RESOLUTION_REQUEST).show();
             } else {
-                Log.i(TAG, "This device is not supported.");
+                Log.i(Config.GCM.TAG, "This device is not supported.");
                 finish();
             }
             return false;
@@ -477,10 +458,10 @@ public class FaceBookLoginActivity extends ActionBarActivity {
     private void storeRegistrationId(Context context, String regId) {
         final SharedPreferences prefs = getGcmPreferences(context);
         int appVersion = getAppVersion(context);
-        Log.i(TAG, "Saving regId on app version " + appVersion);
+        Log.i(Config.GCM.TAG, "Saving regId on app version " + appVersion);
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putString(PROPERTY_REG_ID, regId);
-        editor.putInt(PROPERTY_APP_VERSION, appVersion);
+        editor.putString(Config.FLAG.PROPERTY_REG_ID, regId);
+        editor.putInt(Config.FLAG.PROPERTY_APP_VERSION, appVersion);
         editor.commit();
     }
     
@@ -495,18 +476,18 @@ public class FaceBookLoginActivity extends ActionBarActivity {
     @SuppressLint("NewApi")
 	private String getRegistrationId(Context context) {
         final SharedPreferences prefs = getGcmPreferences(context);
-        String registrationId = prefs.getString(PROPERTY_REG_ID, "");
+        String registrationId = prefs.getString(Config.FLAG.PROPERTY_REG_ID, "");
         if (registrationId.isEmpty()) {
-            Log.i(TAG, "Registration not found.");
+            Log.i(Config.GCM.TAG, "Registration not found.");
             return "";
         }
         // Check if app was updated; if so, it must clear the registration ID
         // since the existing regID is not guaranteed to work with the new
         // app version.
-        int registeredVersion = prefs.getInt(PROPERTY_APP_VERSION, Integer.MIN_VALUE);
+        int registeredVersion = prefs.getInt(Config.FLAG.PROPERTY_APP_VERSION, Integer.MIN_VALUE);
         int currentVersion = getAppVersion(context);
         if (registeredVersion != currentVersion) {
-            Log.i(TAG, "App version changed.");
+            Log.i(Config.GCM.TAG, "App version changed.");
             return "";
         }
         return registrationId;
@@ -527,14 +508,9 @@ public class FaceBookLoginActivity extends ActionBarActivity {
                     if (gcm == null) {
                         gcm = GoogleCloudMessaging.getInstance(context);
                     }
-                    regid = gcm.register(SENDER_ID);
-                    msg = "Device registered, registration ID=" + regid;
-
+                    regid = gcm.register(Config.GCM.SENDER_ID);
                     // You should send the registration ID to your server over HTTP, so it
                     // can use GCM/HTTP or CCS to send messages to your app.
-                    
-                    System.out.println("###############    regid  :  " + regid);
-                    
                     sendRegistrationIdToBackend();
 
                     // For this demo: we don't need to send it because the device will send

@@ -13,6 +13,7 @@ import android.content.Context;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.iris.config.Config;
 import com.iris.entities.Board;
 import com.iris.lolin.R;
 import com.iris.util.SharedpreferencesUtil;
@@ -23,9 +24,8 @@ public class BoardService {
 	private static final String POSITION_DATA__POSITION 	= "PositionDataPosition";
 	private static final String TIME_DATA_POSITION 		= "TimeDataPosition";
 	
-	private static final String OK = "ok";
-	private static final String TRUE = "true";
-	private static final String DATA = "data";
+	private static final String POSITION 		= "포지션[전체]";
+	private static final String TIME 			= "시간[전체]";
 	
 	private Context						context;
 	private Gson 						gson;
@@ -42,9 +42,12 @@ public class BoardService {
 		sharedpreferencesUtil = new SharedpreferencesUtil(context);
 	}
 	
+	/**
+	 * 게시판 전체 얻기
+	 * @param jsonData
+	 * @return
+	 */
 	public ArrayList<Board> getBoardFindAll(String jsonData){
-		
-		System.out.println("############   :  " + jsonData);
 		
 		JSONObject JsonObject;
 		String ok = null;
@@ -52,9 +55,9 @@ public class BoardService {
 		
 		try {
 			JsonObject = new JSONObject(jsonData);
-			ok = JsonObject.getString(OK);
-			if(ok.equals(TRUE)){
-				data = JsonObject.getString(DATA);
+			ok = JsonObject.getString(Config.FLAG.OK);
+			if(ok.equals(Config.FLAG.TRUE)){
+				data = JsonObject.getString(Config.FLAG.DATA);
 				Type type = new TypeToken<List<Board>>(){}.getType();
 				boardListFromGson = gson.fromJson(data, type);
 			}
@@ -64,6 +67,10 @@ public class BoardService {
 		return boardListFromGson;
 	}
 	
+	/**
+	 * 게시판 subUrl Make
+	 * @return
+	 */
 	public String getSubUrl(){
 		
 		rankData = context.getResources().getStringArray(R.array.main_rank_array_list);
@@ -95,22 +102,41 @@ public class BoardService {
 		
 	}
 	
+	public String getUserSubUrl(){
+		return "?faceBookId="+ sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
+	}
+	
+	/**
+	 * 포지션 데이터 변환
+	 * @param position
+	 * @return
+	 */
 	public String transformPosition(String position){
-		if(position.equals("포지션[전체]")){
+		if(position.equals(POSITION)){
 			return "";
 		}else{
 			return position;
 		}
 	}
 	
+	/**
+	 * time 데이터 변환
+	 * @param time
+	 * @return
+	 */
 	public String transformTime(String time){
-		if(time.equals("시간[전체]")){
+		if(time.equals(TIME)){
 			return "";
 		}else{
 			return time;
 		}
 	}
 	
+	/**
+	 * 리플 포맷 변경
+	 * @param repleCount
+	 * @return
+	 */
 	public String transformRepleCount(String repleCount){
 		return "[" +repleCount+"]";
 	}

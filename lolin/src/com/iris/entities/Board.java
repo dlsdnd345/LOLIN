@@ -100,6 +100,7 @@ public class Board implements Serializable {
 	public void setRepleList(List<Reple> repleList) {
 		this.repleList = repleList;
 	}
+	
 	/**
 	 * 랭크를 스피너에서 사용할 수 있도록 position 으로 변경
 	 * @param rankPosition
@@ -129,7 +130,6 @@ public class Board implements Serializable {
 			return 6;
 		}
 		return -1;
-		
 	}
 	
 	/**
@@ -246,7 +246,5 @@ public class Board implements Serializable {
 			return "";
 		}
 	}
-	
-	
 	
 }

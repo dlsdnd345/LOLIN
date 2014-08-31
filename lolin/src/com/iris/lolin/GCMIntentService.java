@@ -41,20 +41,15 @@ import android.util.Log;
  */
 public class GcmIntentService extends IntentService {
 	
+	public static final String TAG = GcmIntentService.class.getName();
 	public static final String TOAST_MESSAGE_ACTION = "org.androidtown.gcm.push.TOAST_MESSAGE";
-	private static final String TITLE = "롤인 앱으로 부터 메세지가 도착했습니다.";
 
 	private String msg , boardId , summernerName , facebookId;
 	private SharedpreferencesUtil sharedpreferencesUtil;
 	
-    public static final int NOTIFICATION_ID = 1;
-    private NotificationManager mNotificationManager;
-    NotificationCompat.Builder builder;
-
     public GcmIntentService() {
         super("GcmIntentService");
     }
-    public static final String TAG = "GCM Demo";
 
     @Override
     protected void onHandleIntent(Intent intent) {
@@ -110,10 +105,10 @@ public class GcmIntentService extends IntentService {
     	
 		sharedpreferencesUtil.put(Config.BOARD.BOARD_ID, boardId);
 
-		mBuilder.setContentTitle(TITLE); // 제목
+		mBuilder.setContentTitle(getString(R.string.gcm_service_noti_title)); // 제목
 		mBuilder.setContentText(msg); //내용
 		mBuilder.setSmallIcon(R.drawable.ic_launcher); // 아이콘
-		mBuilder.setTicker(TITLE); // 상태바 제목
+		mBuilder.setTicker(getString(R.string.gcm_service_noti_title)); // 상태바 제목
 		mBuilder.setAutoCancel(true);
 		mBuilder.setWhen(System.currentTimeMillis()); // 진동시간
 		mBuilder.setVibrate(new long[] { 1000, 3000, 1000, 3000}); // 진동패턴

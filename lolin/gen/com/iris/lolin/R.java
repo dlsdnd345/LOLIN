@@ -1993,12 +1993,10 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f09002b;
         public static final int action_settings=0x7f09002e;
-        public static final int app_id=0x7f090044;
+        public static final int app_id=0x7f09004d;
         public static final int app_name=0x7f09002d;
-        public static final int board_detail_activity_title=0x7f090041;
-        /**  Composor Fragment 
-         */
-        public static final int board_fragment_text_no_list_message=0x7f09003b;
+        public static final int board_detail_activity_title=0x7f09004a;
+        public static final int board_fragment_text_no_list_message=0x7f090044;
         public static final int com_facebook_choose_friends=0x7f09000f;
         public static final int com_facebook_dialogloginactivity_ok_button=0x7f090000;
         public static final int com_facebook_internet_permission_error_message=0x7f090013;
@@ -2027,23 +2025,39 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_not_logged_in=0x7f09000a;
         /**  Actionbar title Value 
          */
-        public static final int composer_activity_title=0x7f090040;
+        public static final int composer_activity_title=0x7f090049;
+        /**  Composor Activity 
+         */
+        public static final int composor_activity_edit_content_empty_message=0x7f09003e;
+        public static final int composor_activity_edit_summernername_empty_message=0x7f090040;
+        public static final int composor_activity_edit_title_empty_message=0x7f09003f;
         /**  Composor Fragment 
          */
-        public static final int composor_fragment_text_no_list_message=0x7f09003a;
+        public static final int composor_fragment_text_no_list_message=0x7f090043;
         /**  Board detail Activity 
          */
         public static final int detail_title_section1=0x7f090033;
         public static final int detail_title_section2=0x7f090034;
         public static final int detail_title_section3=0x7f090035;
-        public static final int facebook_login_activity_title=0x7f090043;
+        public static final int facebook_login_activity_title=0x7f09004c;
+        public static final int facebook_publish_story_complete_message=0x7f090039;
+        public static final int facebook_publish_story_link=0x7f090038;
+        public static final int facebook_publish_story_message=0x7f090037;
+        public static final int facebook_publish_story_name=0x7f090036;
+        /**  FacebookLogin Activity 
+         */
+        public static final int facebooklogint_activity_edit_summernername_empty_message=0x7f090041;
+        public static final int facebooklogint_activity_text_hello_message=0x7f090042;
+        /**  GcmIntentService 
+         */
+        public static final int gcm_service_noti_title=0x7f09004f;
         /**  Actionbar title Value 
          */
-        public static final int ic_action_new=0x7f09003c;
-        public static final int ic_action_next=0x7f09003e;
-        public static final int ic_action_remove=0x7f09003d;
-        public static final int ic_action_sort_by_size=0x7f09003f;
-        public static final int intro_activity_title=0x7f090042;
+        public static final int ic_action_new=0x7f090045;
+        public static final int ic_action_next=0x7f090047;
+        public static final int ic_action_remove=0x7f090046;
+        public static final int ic_action_sort_by_size=0x7f090048;
+        public static final int intro_activity_title=0x7f09004b;
         /**  Just use standard Pull Down String when pulling up. These can be set for languages which require it 
  Just use standard Pull Down String when pulling up. These can be set for languages which require it 
          */
@@ -2053,16 +2067,17 @@ containing a value of this type.
         public static final int pull_to_refresh_pull_label=0x7f09001a;
         public static final int pull_to_refresh_refreshing_label=0x7f09001c;
         public static final int pull_to_refresh_release_label=0x7f09001b;
-        public static final int push_activity_cancel_btn=0x7f090037;
+        public static final int push_activity_cancel_btn=0x7f09003b;
         /**  push Activity 
          */
-        public static final int push_activity_clear_btn=0x7f090036;
+        public static final int push_activity_clear_btn=0x7f09003a;
         /**  Reple Fragment 
          */
-        public static final int reple_fragment_text_no_reple_message=0x7f090038;
-        public static final int reple_fragment_text_reple_hint=0x7f090039;
-        public static final int title_facebook_login=0x7f090045;
-        /**  ActionBar sevtion & Actionbar title 
+        public static final int reple_fragment_text_no_reple_message=0x7f09003c;
+        public static final int reple_fragment_text_reple_hint=0x7f09003d;
+        public static final int title_facebook_login=0x7f09004e;
+        /**  Common 
+ ActionBar sevtion & Actionbar title 
          */
         public static final int title_section1=0x7f09002f;
         public static final int title_section2=0x7f090030;

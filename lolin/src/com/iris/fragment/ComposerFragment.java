@@ -41,13 +41,9 @@ import com.iris.util.SharedpreferencesUtil;
 @SuppressLint("NewApi")
 public class ComposerFragment extends Fragment {
 
-	private static final String 		FACEBOOK_ID  					= "FACEBOOK_ID";
-	private final static String 		BOARD_FIND_MY_ALL 				= "http://192.168.219.6:8080/board/findMyAll";
-	private final static String 		ERROR 							= "Error";
-	
+	private ArrayList<Board> 			boardList;
 	private SharedpreferencesUtil  		sharedpreferencesUtil;
 	private ComposerFragmentService 	composerService;
-	private ArrayList<Board> 			boardList;
 	private ComposerAdapter 			composerAdapter;
 	
 	private ProgressBar					prograssBar;
@@ -77,10 +73,8 @@ public class ComposerFragment extends Fragment {
 	 * 데이터 초기화
 	 */
 	private void dataInit() {
-		
-		composerService = new ComposerFragmentService();
+		composerService = new ComposerFragmentService(getActivity());
 		sharedpreferencesUtil = new SharedpreferencesUtil(getActivity());
-		
 		getBoardFindMyAll();
 	}
 
@@ -89,22 +83,22 @@ public class ComposerFragment extends Fragment {
 	 */
 	private void getBoardFindMyAll() {
 		
-		String sub_url = "?faceBookId="+ sharedpreferencesUtil.getValue(FACEBOOK_ID, "");
+		String sub_url = composerService.getSubUrlBoardFindMyAll();
 	
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
-		request.add(new StringRequest(Request.Method.GET, BOARD_FIND_MY_ALL+sub_url,new Response.Listener<String>() {  
+		request.add(new StringRequest
+				(Request.Method.GET, Config.API.DEFAULT_URL+ Config.API.BOARD_FIND_MY_ALL+sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
 				boardList = composerService.getBoardFindAll(response);
 				listViewInit();
 				visibleComposorEmptyMessage();
-				
 			}
 
 		}, new Response.ErrorListener() {  
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(ERROR, error.getMessage());  
+				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
 				prograssBar.setVisibility(View.INVISIBLE);
 				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  

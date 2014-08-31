@@ -12,6 +12,11 @@ public class SharedpreferencesUtil {
     	this.context = context;
     }
  
+    /**
+     * String 저장
+     * @param key
+     * @param value
+     */
     public void put(String key, String value) {
         SharedPreferences pref = context.getSharedPreferences(context.getPackageName(),Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
@@ -19,6 +24,11 @@ public class SharedpreferencesUtil {
         editor.commit();
     }
  
+    /**
+     * boolean 저장
+     * @param key
+     * @param value
+     */
     public void put(String key, boolean value) {
         SharedPreferences pref = context.getSharedPreferences(context.getPackageName(),Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
@@ -26,6 +36,11 @@ public class SharedpreferencesUtil {
         editor.commit();
     }
  
+    /**
+     * int 저장
+     * @param key
+     * @param value
+     */
     public void put(String key, int value) {
         SharedPreferences pref = context.getSharedPreferences(context.getPackageName(),Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
@@ -34,6 +49,12 @@ public class SharedpreferencesUtil {
         editor.commit();
     }
  
+    /**
+     * String 값 추출
+     * @param key
+     * @param dftValue
+     * @return
+     */
     public String getValue(String key, String dftValue) {
         SharedPreferences pref = context.getSharedPreferences(context.getPackageName(),Activity.MODE_PRIVATE);
         try {
@@ -44,6 +65,12 @@ public class SharedpreferencesUtil {
  
     }
  
+    /**
+     * int 값 추출
+     * @param key
+     * @param dftValue
+     * @return
+     */
     public int getValue(String key, int dftValue) {
         SharedPreferences pref = context.getSharedPreferences(context.getPackageName(),Activity.MODE_PRIVATE);
         try {
@@ -54,6 +81,12 @@ public class SharedpreferencesUtil {
  
     }
  
+    /**
+     * boolean 값 추출
+     * @param key
+     * @param dftValue
+     * @return
+     */
     public boolean getValue(String key, boolean dftValue) {
         SharedPreferences pref = context.getSharedPreferences(context.getPackageName(),Activity.MODE_PRIVATE);
         try {

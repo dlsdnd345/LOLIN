@@ -3,8 +3,25 @@ package com.iris.service;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
-public class ComposerService {
+import android.content.Context;
 
+import com.iris.config.Config;
+import com.iris.util.SharedpreferencesUtil;
+
+public class ComposerService {
+	
+	/**
+	 * ComposerService subUrl 반환
+	 * @param boardId
+	 * @param facebookId
+	 * @param title
+	 * @param content
+	 * @param rank
+	 * @param position
+	 * @param playTime
+	 * @param tea
+	 * @return
+	 */
 	public String getSubUrl(String boardId ,String facebookId , String title , String content, String rank,
 			 				  String position , String playTime , String tea){
 		

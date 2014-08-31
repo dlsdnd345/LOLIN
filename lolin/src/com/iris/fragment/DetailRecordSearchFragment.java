@@ -10,6 +10,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.handmark.pulltorefresh.library.PullToRefreshWebView;
+import com.iris.config.Config;
 import com.iris.lolin.R;
 
 /**
@@ -18,7 +19,6 @@ import com.iris.lolin.R;
 @SuppressLint("NewApi")
 public class DetailRecordSearchFragment extends Fragment {
 
-	private static final String SUMMERNER_NAME = "summernerName";
 	private static final String BASE_URL = "http://www.op.gg/summoner/userName=";
 	
 	private String summernerName ;
@@ -27,7 +27,7 @@ public class DetailRecordSearchFragment extends Fragment {
 	public Fragment newInstance(String smmonerName) {
 		RecordSearchFragment fragment = new RecordSearchFragment();
 		Bundle args = new Bundle();
-		args.putString(SUMMERNER_NAME, smmonerName);
+		args.putString(Config.FLAG.SUMMERNER_NAME, smmonerName);
 		fragment.setArguments(args);
 		return fragment;
 	}
@@ -48,7 +48,7 @@ public class DetailRecordSearchFragment extends Fragment {
 
 	private void dataInit() {
 		// DetailActivity 로 부터 넘겨 받은 summernerName
-		summernerName = getArguments().getString(SUMMERNER_NAME);
+		summernerName = getArguments().getString(Config.FLAG.SUMMERNER_NAME);
 	}
 
 	private void init(View rootView) {

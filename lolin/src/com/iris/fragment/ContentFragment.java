@@ -7,20 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.iris.config.Config;
 import com.iris.entities.Board;
 import com.iris.lolin.R;
 
 public class ContentFragment extends Fragment {
 
 
-	private static final String BOARD_CONTENT = "boardContent"; 
-	
 	private String boardContent;
 	
 	public Fragment newInstance(String boardContent) {
 		ContentFragment fragment = new ContentFragment();
 		Bundle args = new Bundle();
-		args.putString(BOARD_CONTENT, boardContent);
+		args.putString(Config.FLAG.BOARD_CONTENT, boardContent);
 		fragment.setArguments(args);
 		return fragment;
 	}
@@ -38,11 +37,13 @@ public class ContentFragment extends Fragment {
 		dataInit();
 		TextView textContent = (TextView)rootView.findViewById(R.id.text_content);
 		textContent.setText(boardContent);
-		
 		return rootView;
 	}
 
+	/**
+	 * 데이터 초기화
+	 */
 	private void dataInit() {
-		boardContent = getArguments().getString(BOARD_CONTENT);
+		boardContent = getArguments().getString(Config.FLAG.BOARD_CONTENT);
 	}
 }

@@ -35,19 +35,12 @@ import com.iris.util.SharedpreferencesUtil;
 @SuppressLint("NewApi")
 public class ComposerActivity extends ActionBarActivity {
 
-	private final static String BOARD_SAVE = "http://192.168.219.6:8080/board/save";
-	private final static String ERROR = "Error";
 	
-	private static final String 		FACEBOOK_ID  				= "FACEBOOK_ID";
-	private static final String 		EMPRY_CONTENT_MESSAGE  		= "내용을 입력해 주세요.";
-	private static final String 		EMPRY_TITLE_MESSAGE  		= "제목을 입력해 주세요.";
-	private static final String 		EMPRY_SUMMONERNAME_MESSAGE  = "소환사 명을 입력해 주세요."; 
 	private static final String 		UNRANK 						= "언랭크"; 
 	private static final int 			RANK_UNRANK 				= 0; 
 	
-	private String boardId ;
+	private String 						boardId ;
 	private String[] 					rankData,teaData,positionData,timeData;
-	
 	private Board						board;
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
 	private BoardDetailService 			boardDetailService;
@@ -91,8 +84,6 @@ public class ComposerActivity extends ActionBarActivity {
 		
 		boardId = intent.getStringExtra(Config.BOARD.BOARD_ID);
 		RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
-		
-		System.err.println("@@@@@@@@@@  boardId  :  " + boardId);
 		
 		if(boardId != null){
 			// 게시판 정보 api 요청
@@ -172,7 +163,7 @@ public class ComposerActivity extends ActionBarActivity {
 		prograssBar.setVisibility(View.VISIBLE);
 		
 		request.add(new StringRequest(Request.Method.GET
-				, Config.BOARD.BOARD_FIND_ONE + Config.BOARD.SUB_URL+boardId ,new Response.Listener<String>() {  
+				, Config.API.DEFAULT_URL + Config.API.BOARD_FIND_ONE + Config.BOARD.SUB_URL+boardId ,new Response.Listener<String>() {  
 			
 			@Override  
 			public void onResponse(String response) {  
@@ -190,7 +181,7 @@ public class ComposerActivity extends ActionBarActivity {
 		}, new Response.ErrorListener() {  
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(ERROR, error.getMessage());  
+				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
 				prograssBar.setVisibility(View.INVISIBLE);
 				Toast.makeText(getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
@@ -206,11 +197,14 @@ public class ComposerActivity extends ActionBarActivity {
 		prograssBar.setVisibility(View.VISIBLE);
 		
 		// 서버로 데이터 전송
-		String facebookId = sharedpreferencesUtil.getValue(FACEBOOK_ID, "");
+		String facebookId = sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
+		
+		System.out.println("facebookId   :  " + facebookId);
+		
 		String subUrl = composerService.getSubUrl(boardId ,facebookId, board.getTitle(), board.getContent(),
 				board.transformRank(board.getRank()), board.getPosition(), board.getPlayTime(),board.getTea());
 		
-		request.add(new StringRequest(Request.Method.GET, BOARD_SAVE+subUrl,new Response.Listener<String>() {  
+		request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.BOARD_SAVE+subUrl,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {
 				Intent intent = new Intent(ComposerActivity.this , MainActivity.class);
@@ -221,12 +215,50 @@ public class ComposerActivity extends ActionBarActivity {
 		}, new Response.ErrorListener() {  
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(ERROR, error.getMessage());  
+				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
 				prograssBar.setVisibility(View.INVISIBLE);
 				Toast.makeText(getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
 		}));
 	}
+	
+	/**
+	 * 서버 저장 내용 전송
+	 */
+	private void requestSaveBoard() {
+		if(!editTitle.getText().toString().equals("")
+		 &&!editContent.getText().toString().equals("")){
+			RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
+			saveBoard(request);
+		}
+	}
+
+	/**
+	 * 내용 입력 예외 처리
+	 */
+	private void emptyCheckContent() {
+		if(!editContent.getText().toString().equals("")){
+			board.setContent(editContent.getText().toString());
+		}else{
+		    Animation shake = AnimationUtils.loadAnimation(this, R.anim.horizontal_shake);
+		    editContent.startAnimation(shake);
+			Toast.makeText(getApplicationContext(), getString(R.string.composor_activity_edit_content_empty_message), Toast.LENGTH_LONG).show();
+		}
+	}
+
+	/**
+	 * Title 입력 예외처리
+	 */
+	private void emptyCheckTitle() {
+		if(!editTitle.getText().toString().equals("")){
+			board.setTitle(editTitle.getText().toString());
+		}else{
+		    Animation shake = AnimationUtils.loadAnimation(this, R.anim.horizontal_shake);
+		    editTitle.startAnimation(shake);
+			Toast.makeText(getApplicationContext(), getString(R.string.composor_activity_edit_title_empty_message), Toast.LENGTH_LONG).show();
+		}
+	}
+	
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -234,36 +266,16 @@ public class ComposerActivity extends ActionBarActivity {
 		switch (item.getItemId()) {
 		case R.id.ic_action_new:
 			
-			if(!editTitle.getText().toString().equals("")){
-				board.setTitle(editTitle.getText().toString());
-			}else{
-			    Animation shake = AnimationUtils.loadAnimation(this, R.anim.horizontal_shake);
-			    editTitle.startAnimation(shake);
-				Toast.makeText(getApplicationContext(), EMPRY_TITLE_MESSAGE, Toast.LENGTH_LONG).show();
-			}
-
-			if(!editContent.getText().toString().equals("")){
-				board.setContent(editContent.getText().toString());
-			}else{
-			    Animation shake = AnimationUtils.loadAnimation(this, R.anim.horizontal_shake);
-			    editContent.startAnimation(shake);
-				Toast.makeText(getApplicationContext(), EMPRY_CONTENT_MESSAGE, Toast.LENGTH_LONG).show();
-			}
-			
-			if(!editTitle.getText().toString().equals("")
-			 &&!editContent.getText().toString().equals("")){
-				
-				RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
-				saveBoard(request);
-				
-			}
+			emptyCheckTitle();
+			emptyCheckContent();
+			requestSaveBoard();
 			
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
-	
+
 	/**
 	 * 랭크 스피너 선택시
 	 */
@@ -293,7 +305,6 @@ public class ComposerActivity extends ActionBarActivity {
 		@Override
 		public void onItemSelected(AdapterView<?> parent, View view,int position, long id) {
 			if(!board.getRank().equals(UNRANK)){
-				//board.setRank(board.getRank());
 				board.setTea(teaData[position]);
 			}
 		}

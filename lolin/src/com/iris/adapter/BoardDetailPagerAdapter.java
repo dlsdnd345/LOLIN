@@ -19,11 +19,11 @@ import com.iris.util.SharedpreferencesUtil;
 
 public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 
-	private static final int CONTENT_FRAGMENT			 = 0;
+	private static final int CONTENT_FRAGMENT			= 0;
 	private static final int REPLE_FRAGMENT 			= 1;
 	private static final int RECORD_SEARCH_FRAGMENT 	= 2;
 	
-	private static final String 		IS_LOGIN  						= "isLogin";
+	private static final String 		IS_LOGIN  		= "isLogin";
 	
 	private Board							board;
 	private Context 						context;

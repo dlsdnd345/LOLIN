@@ -4,8 +4,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -46,41 +48,32 @@ import com.iris.util.SharedpreferencesUtil;
 
 public class BoardDetailActivity extends ActionBarActivity {
 
-	private final static String ERROR = "Error";
-
 	private static final int CONTENT_FRAGMENT = 0;
 	private static final int RECORD_SEARCH_FRAGMENT = 1;
 
 	private Session.StatusCallback 		statusCallback = new SessionStatusCallback();
 	private Session 					sessionTemp;
 	
+	private boolean					editState;
+	private int 						viewPagerPosition;
+	private String						boardId;
+	private RequestQueue 				request;
+	private Board						board;
+	private BoardDetailService 			boardDetailService;
+	private ScreenshotUtil				screenshotUtil;
+	private SharedpreferencesUtil 		sharedpreferencesUtil;
+	
 	private PagerSlidingTabStrip 		tabs;
 	private ViewPager 					mViewPager;
 	private PagerAdapter 				mPagerAdapter;
-
 	private ProgressBar					prograssBar;
-
 	private ImageView					imgRank;
-
 	private TextView					textRank;
 	private	 TextView					textPosition;
 	private TextView					textPlayTime;
 	private TextView					textDetailTitle;
 	private TextView					textSummernerName;
-
 	private Button 						btnFacebookSharing;
-
-	private RequestQueue 				request;
-
-	private Board						board;
-	private String						boardId;
-	private BoardDetailService 			boardDetailService;
-	private ScreenshotUtil				screenshotUtil;
-	
-	private boolean					editState;
-	private int 						viewPagerPosition;
-
-	private SharedpreferencesUtil 		sharedpreferencesUtil;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -96,15 +89,14 @@ public class BoardDetailActivity extends ActionBarActivity {
 		init();
 		dataInit();
 		//화면이 켜져 있을때 푸시화면을 보여주기 않기 위함.
-		sharedpreferencesUtil.put("notiblock", "true");
+		sharedpreferencesUtil.put(Config.FLAG.NOTIBLOCK, Config.FLAG.TRUE);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-
 		//화면이 켜져 있을때 푸시화면을 보여주기 않기 위함.
-		sharedpreferencesUtil.put("notiblock", "false");
+		sharedpreferencesUtil.put(Config.FLAG.NOTIBLOCK, Config.FLAG.FALSE);
 	}
 
 	/**
@@ -131,23 +123,31 @@ public class BoardDetailActivity extends ActionBarActivity {
 	 */
 	private void dataInit() {
 		
+		request = Volley.newRequestQueue(getApplicationContext());  
 		screenshotUtil = new ScreenshotUtil(BoardDetailActivity.this);
+		boardDetailService = new BoardDetailService(getApplicationContext());
 		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 
-		request = Volley.newRequestQueue(getApplicationContext());  
-		boardDetailService = new BoardDetailService(getApplicationContext());
-
-		Intent intent = getIntent();
+		//게시판 번호 받기 위함
 		boardId = sharedpreferencesUtil.getValue(Config.BOARD.BOARD_ID, "");
-
-		editState = intent.getBooleanExtra(Config.FLAG.EDIT_STATE , false);
-
+		
+		//자신의 게시판일 경우 수정 가능 여부
+		visibleUpdate();
+		//공유기능 여부
 		visibleSharing();
+		//게시판 정보 얻기 위함.
 		getFindOne(request);
-
 		//Pager Init
 		actionBarInit();
 
+	}
+
+	/**
+	 * 자신의 게시판일 경우 수정 항목 보여주기 위함.
+	 */
+	private void visibleUpdate() {
+		Intent intent = getIntent();
+		editState = intent.getBooleanExtra(Config.FLAG.EDIT_STATE , false);
 	}
 
 	/**
@@ -204,7 +204,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 
 		prograssBar.setVisibility(View.VISIBLE);
 
-		request.add(new StringRequest(Request.Method.GET, Config.BOARD.BOARD_FIND_ONE + Config.BOARD.SUB_URL+boardId ,new Response.Listener<String>() {  
+		request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL +Config.API.BOARD_FIND_ONE + Config.BOARD.SUB_URL
+				+boardId ,new Response.Listener<String>() {  
 
 			@Override  
 			public void onResponse(String response) {  
@@ -212,7 +213,6 @@ public class BoardDetailActivity extends ActionBarActivity {
 				board = boardDetailService.getBoardFindOne(response);
 
 				if(board != null){
-
 					textDetailTitle.setText(board.getTitle());
 					textSummernerName.setText(board.getSummonerName());
 					textPosition.setText(board.getPosition());
@@ -231,7 +231,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 		}, new Response.ErrorListener() {  
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(ERROR, error.getMessage());  
+				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
 				prograssBar.setVisibility(View.INVISIBLE);
 				Toast.makeText(getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
@@ -246,7 +246,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 
 		prograssBar.setVisibility(View.VISIBLE);
 
-		request.add(new StringRequest(Request.Method.GET, Config.BOARD.BOARD_DELETE + Config.BOARD.SUB_URL+boardId ,new Response.Listener<String>() {  
+		request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.BOARD_DELETE + Config.BOARD.SUB_URL
+				+boardId ,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {
 				Intent intent = new Intent(BoardDetailActivity.this, MainActivity.class);
@@ -258,7 +259,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 		}, new Response.ErrorListener() {  
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(ERROR, error.getMessage());  
+				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
 				prograssBar.setVisibility(View.INVISIBLE);
 				Toast.makeText(getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
@@ -300,7 +301,9 @@ public class BoardDetailActivity extends ActionBarActivity {
 		}
 	}
     
-	// facebook 앨범에 이미지 올리기
+	/**
+	 *  facebook 앨범에 이미지 올리기
+	 */
 	public void publishPhoto() {
 		
 		Session session = Session.getActiveSession();
@@ -313,7 +316,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 			prograssBar.setVisibility(View.VISIBLE);
 			
 			Bundle postParams = new Bundle();
-			postParams.putByteArray("picture",data);
+			postParams.putByteArray(Config.FLAG.PICTURE,data);
 
 			com.facebook.Request.Callback callback = new com.facebook.Request.Callback() 
 			{
@@ -327,7 +330,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 							String pictureId;
 							GraphObject graphobject = response.getGraphObject();
 							JSONObject  jSONObject =graphobject.getInnerJSONObject();
-							pictureId = jSONObject.getString("id");
+							pictureId = jSONObject.getString(Config.FLAG.ID);
 							publishStory(pictureId);
 						} catch (JSONException e) {
 							e.printStackTrace();
@@ -337,7 +340,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 					prograssBar.setVisibility(View.INVISIBLE);
 				}
 			};
-			com.facebook.Request request = new com.facebook.Request(session, "me/photos", postParams, HttpMethod.POST, callback);
+			com.facebook.Request request = new com.facebook.Request(session, Config.API.FACEBOOK_ALBUM, postParams, HttpMethod.POST, callback);
 			RequestAsyncTask task = new RequestAsyncTask(request);
 			task.execute();
 		}
@@ -352,9 +355,9 @@ public class BoardDetailActivity extends ActionBarActivity {
 		if (session != null) {
 
 			Bundle postParams = new Bundle();
-			postParams.putString("name", "lolin");
-			postParams.putString("message", "롤인 \n 앱을 통해서 팀 매칭 친구를 구하세요. \n http://www.naver.com");
-			postParams.putString("link", "https://www.facebook.com/photo.php?fbid="+pictureId);
+			postParams.putString(Config.FLAG.NAME, getString(R.string.facebook_publish_story_name));
+			postParams.putString(Config.FLAG.MESSAGE, getString(R.string.facebook_publish_story_message));
+			postParams.putString(Config.FLAG.LINK, getString(R.string.facebook_publish_story_link)+pictureId);
 
 			com.facebook.Request.Callback callback = new com.facebook.Request.Callback() 
 			{
@@ -364,7 +367,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 					if (error != null){ 
 						Toast.makeText(getApplicationContext() , Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_SHORT).show();
 					}else{ 
-						Toast.makeText(getApplicationContext() , "업로드가 완료 되었습니다.", Toast.LENGTH_SHORT).show();
+						Toast.makeText(getApplicationContext() , getString(R.string.facebook_publish_story_complete_message), Toast.LENGTH_SHORT).show();
 					}
 					prograssBar.setVisibility(View.INVISIBLE);
 				}
@@ -402,7 +405,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 	 * 뷰페이저 리스너
 	 */
 	OnPageChangeListener mOnPageChangeListener = new OnPageChangeListener(){
-		@SuppressLint("NewApi")
+		@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 		@Override
 		public void onPageSelected(int position) {
 

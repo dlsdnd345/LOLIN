@@ -26,6 +26,7 @@ import com.handmark.pulltorefresh.library.PullToRefreshWebView;
 import com.iris.config.Config;
 import com.iris.entities.User;
 import com.iris.lolin.R;
+import com.iris.service.RecordSearchFragmentService;
 import com.iris.service.RecordSearchService;
 import com.iris.util.SharedpreferencesUtil;
 
@@ -35,10 +36,7 @@ import com.iris.util.SharedpreferencesUtil;
 @SuppressLint("NewApi")
 public class RecordSearchFragment extends Fragment {
 
-	private final static String 		ERROR 							= "Error";
-	private static final String 		FACEBOOK_ID  					= "FACEBOOK_ID";
 	private static final String 		BASE_URL 						= "http://www.op.gg/summoner/userName=";
-	private final static String 		USER_FIND_ONE					= "http://192.168.219.6:8080/user/findOne";
 	
 	private ProgressBar					prograssBar;
 	private TextView					txtSearching;
@@ -47,6 +45,7 @@ public class RecordSearchFragment extends Fragment {
 	private RecordSearchService 		recordSearchService;
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
 	private PullToRefreshWebView 		mPullRefreshWebView;
+	private RecordSearchFragmentService		recordSearchFragmentService;
 	
 	public Fragment newInstance() {
 		RecordSearchFragment fragment = new RecordSearchFragment();
@@ -65,20 +64,27 @@ public class RecordSearchFragment extends Fragment {
 		return rootView;
 	}
 
+	/**
+	 * 데이터 초기화
+	 */
 	private void dataInit() {
 		sharedpreferencesUtil = new SharedpreferencesUtil(getActivity());
 		recordSearchService = new RecordSearchService();
+		recordSearchFragmentService = new RecordSearchFragmentService(getActivity());
 		getUser();
 	}
 	
+	/**
+	 * 유저 정보 조회
+	 */
 	public void getUser(){
 		
 		prograssBar.setVisibility(View.VISIBLE);
 		
-		String sub_url = "?faceBookId="+ sharedpreferencesUtil.getValue(FACEBOOK_ID, "");
+		String sub_url = recordSearchFragmentService.getUserSubUrl();
 		
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
-		request.add(new StringRequest(Request.Method.GET, USER_FIND_ONE+sub_url,new Response.Listener<String>() {  
+		request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.USER_FIND_ONE +sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
 				user = recordSearchService.getUser(response);
@@ -88,7 +94,7 @@ public class RecordSearchFragment extends Fragment {
 		}, new Response.ErrorListener() {  
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(ERROR, error.getMessage());  
+				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
 				prograssBar.setVisibility(View.INVISIBLE);
 				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
 			}  
@@ -96,6 +102,9 @@ public class RecordSearchFragment extends Fragment {
 		
 	}
 
+	/**
+	 * 웹뷰 초기화
+	 */
 	@SuppressLint("SetJavaScriptEnabled")
 	private void webViewInit() {
 		WebView webView = mPullRefreshWebView.getRefreshableView();
@@ -134,7 +143,6 @@ public class RecordSearchFragment extends Fragment {
 			super.onPageFinished(view, url);
 			txtSearching.setVisibility(View.INVISIBLE);
 		}
-		
 		
 	}
 	

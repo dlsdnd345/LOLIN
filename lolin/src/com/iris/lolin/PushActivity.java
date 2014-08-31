@@ -1,16 +1,5 @@
 package com.iris.lolin;
 
-import com.facebook.Request;
-import com.facebook.Session;
-import com.facebook.model.GraphUser;
-import com.iris.config.Config;
-import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
-import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -20,10 +9,16 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.iris.config.Config;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
+
 public class PushActivity extends Activity {
 
-	private static final String 		FACEBOOK_BASE_URL  				= "http://graph.facebook.com/";
-	private static final String 		PICTURE_TYPE					= "/picture?type=normal";
 	
 	private String boardId , message , summernerName , facebookId;
 	
@@ -40,29 +35,34 @@ public class PushActivity extends Activity {
 	
 	    init();
 	    dataInit();
-	    
 	}
 
+	@Override
+	protected void onResume() {
+		super.onResume();
+		//Wake Up 폰 화면 꺼져있을시에 푸시가 도착하면 화면을 깨워주기 위함.
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED   
+				| WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
+				| WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+	}
+	
+	/**
+	 * 레이아웃 초기화
+	 */
+	private void init() {
+		
+		imgProfile = (ImageView)findViewById(R.id.img_profile);
+		txtMessage = (TextView)findViewById(R.id.txt_message);
+		txtSummernerName = (TextView)findViewById(R.id.txt_summerner_name);
+	}
+	
 	/**
 	 * 데이터초기화
 	 */
 	private void dataInit() {
 		
 		imageLoderInit();
-		
-		Intent intent = getIntent();
-		if(intent != null){
-			boardId = intent.getStringExtra(Config.BOARD.BOARD_ID);
-			message = intent.getStringExtra(Config.FLAG.MESSAGE);
-			summernerName = intent.getStringExtra(Config.FLAG.SUMMERNER_NAME);
-			facebookId = intent.getStringExtra(Config.FLAG.FACEBOOK_ID);
-		}
-		
-		txtMessage.setText(message);
-		txtSummernerName.setText(summernerName);
-		
-		String url = FACEBOOK_BASE_URL+ facebookId+PICTURE_TYPE;
-		imageLoader.displayImage(url, imgProfile, options);
+		setPushData();
 	}
 
 	/**
@@ -89,26 +89,28 @@ public class PushActivity extends Activity {
 	}
 	
 	/**
-	 * 레이아웃 초기화
+	 * 데이터 삽입
 	 */
-	private void init() {
+	private void setPushData() {
+		Intent intent = getIntent();
+		if(intent != null){
+			boardId = intent.getStringExtra(Config.BOARD.BOARD_ID);
+			message = intent.getStringExtra(Config.FLAG.MESSAGE);
+			summernerName = intent.getStringExtra(Config.FLAG.SUMMERNER_NAME);
+			facebookId = intent.getStringExtra(Config.FLAG.FACEBOOK_ID);
+		}
+		txtMessage.setText(message);
+		txtSummernerName.setText(summernerName);
 		
-		imgProfile = (ImageView)findViewById(R.id.img_profile);
-		txtMessage = (TextView)findViewById(R.id.txt_message);
-		txtSummernerName = (TextView)findViewById(R.id.txt_summerner_name);
-	}
-
-	@Override
-	protected void onResume() {
-		super.onResume();
-		//Wake Up 폰 화면 꺼져있을시에 푸시가 도착하면 화면을 깨워주기 위함.
-		getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED   
-				| WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
-				| WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+		String url = Config.FACEBOOK.FACEBOOK_BASE_URL+ facebookId+Config.FACEBOOK.PICTURE_TYPE_NOMAL;
+		imageLoader.displayImage(url, imgProfile, options);
 	}
 	
+	/**
+	 * 확인 선택시
+	 * @param view
+	 */
 	public void selectClear(View view){
-		
 		Intent intent = new Intent(PushActivity.this,BoardDetailActivity.class);
 		intent.putExtra(Config.BOARD.BOARD_ID, boardId);
 		intent.putExtra(Config.FLAG.MESSAGE, message);
@@ -116,6 +118,10 @@ public class PushActivity extends Activity {
 		finish();
 	}
 	
+	/**
+	 * 취소선택시
+	 * @param view
+	 */
 	public void selectCancel(View view){
 		finish();
 	}

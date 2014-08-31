@@ -13,10 +13,14 @@ public class NetworkUtil {
 	private static final String MESSAGE = "네트워크를 활성화 시켜 주세요.";
 	private static final String CLEAR = "확인";
 	
-	boolean isWifiConn,isMobileConn;
-	ConnectivityManager connectivityManager;
-	Activity activity;
-	Boolean isOk ;
+	private boolean isOk ;
+	private boolean isWifiConn,isMobileConn;
+	
+	private ConnectivityManager connectivityManager;
+	
+	private Activity activity;
+	
+	
 	public NetworkUtil(Activity activity){
 		this.activity = activity;
 	}

@@ -14,6 +14,7 @@ import android.widget.HorizontalScrollView;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.iris.adapter.SectionsPagerAdapter;
+import com.iris.config.Config;
 import com.iris.util.SharedpreferencesUtil;
 
 @SuppressLint("NewApi")
@@ -23,11 +24,7 @@ public class MainActivity extends ActionBarActivity  {
 	private final static int RECORD_SEARCH 	= 2;
 	private final static int SETTING 			= 3;
 
-	private static final String 		IS_LOGIN  						= "isLogin";
-	
-	private float 						firstGetY , preGetY= 0;
 	private int 						viewPagerPosition;
-	private boolean 					isLogin;
 	
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
 	
@@ -48,17 +45,15 @@ public class MainActivity extends ActionBarActivity  {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		
 		//화면이 켜져 있을때 푸시화면을 보여주기 않기 위함.
-		sharedpreferencesUtil.put("notiblock", "true");
+		sharedpreferencesUtil.put(Config.FLAG.NOTIBLOCK, Config.FLAG.TRUE);
 	}
 	
 	@Override
 	protected void onPause() {
 		super.onPause();
-		
 		//화면이 꺼져 있을때 푸시화면을 보여주기 위함.
-		sharedpreferencesUtil.put("notiblock", "false");
+		sharedpreferencesUtil.put(Config.FLAG.NOTIBLOCK, Config.FLAG.FALSE);
 	}
 	
 	/**
@@ -67,7 +62,7 @@ public class MainActivity extends ActionBarActivity  {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
-		boolean isLogin = sharedpreferencesUtil.getValue(IS_LOGIN, false);
+		boolean isLogin = sharedpreferencesUtil.getValue(Config.FLAG.IS_LOGIN, false);
 		if(isLogin){
 			MenuInflater inflater = getMenuInflater();
 			inflater.inflate(R.menu.write_text_menu, menu);
@@ -89,7 +84,6 @@ public class MainActivity extends ActionBarActivity  {
 	private void dataInit() {
 		actionvarInit();
 		viewPagerConfig();
-		
 		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 	}
 
