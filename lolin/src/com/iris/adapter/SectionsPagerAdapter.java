@@ -22,9 +22,9 @@ import com.iris.util.SharedpreferencesUtil;
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-	private static final int BOARD_FRAGMENT 			= 0;
-	private static final int WRITE_TEXT_FRAGMENT 		= 1;
-	private static final int RECORD_SEARCH_FRAGMENT 	= 2;
+	public static final int BOARD_FRAGMENT 			= 0;
+	public static final int WRITE_TEXT_FRAGMENT 		= 1;
+	public static final int RECORD_SEARCH_FRAGMENT 	= 2;
 	
 	private static final String 		IS_LOGIN  	= "isLogin";
 	

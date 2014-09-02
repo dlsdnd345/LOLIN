@@ -1,6 +1,7 @@
 package com.iris.fragment;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -25,9 +26,11 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.facebook.Session;
+import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.config.Config;
 import com.iris.entities.User;
 import com.iris.lolin.FaceBookLoginActivity;
+import com.iris.lolin.MainActivity;
 import com.iris.lolin.R;
 import com.iris.service.SettingService;
 import com.iris.util.SharedpreferencesUtil;
@@ -38,6 +41,8 @@ import com.iris.util.SharedpreferencesUtil;
 @SuppressLint("NewApi")
 public class SettingFragment extends Fragment {
 
+	private MainActivity				activity;
+	
 	private User						user;
 	private RequestQueue 				request;
 	private StringRequest 				stringRequest;
@@ -56,10 +61,10 @@ public class SettingFragment extends Fragment {
 	}
 
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_setting, container,false);
-
+		activity = ((MainActivity)getActivity());
+		
 		init(rootView);
 		dataInit();
 		getUser();
@@ -153,6 +158,7 @@ public class SettingFragment extends Fragment {
 				if(isOk.equals(Config.FLAG.TRUE)){
 					Toast.makeText(getActivity(), "소환사 명이  " +editSummonerName.getText().toString()+ "  으로 변경 되었습니다.",
 							Toast.LENGTH_SHORT).show();
+					activity.changePage(SectionsPagerAdapter.BOARD_FRAGMENT);
 				}
 
 				prograssBar.setVisibility(View.INVISIBLE);

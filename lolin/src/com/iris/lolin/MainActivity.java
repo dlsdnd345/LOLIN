@@ -119,6 +119,14 @@ public class MainActivity extends ActionBarActivity  {
 		tabs.setViewPager(mViewPager);
 	}
 
+	/**
+	 * 페이지 이동
+	 * @param page
+	 */
+	public void changePage(int page){
+		mViewPager.setCurrentItem(page,true);
+	}
+	
 	OnPageChangeListener mOnPageChangeListener = new OnPageChangeListener(){
 		@Override
 		public void onPageSelected(int position) {
