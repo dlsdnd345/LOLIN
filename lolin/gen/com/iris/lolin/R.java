@@ -1995,6 +1995,7 @@ containing a value of this type.
         public static final int action_settings=0x7f09002e;
         public static final int app_id=0x7f09004d;
         public static final int app_name=0x7f09002d;
+        public static final int baord_detail_delete_dialog_content=0x7f090053;
         public static final int board_detail_activity_title=0x7f09004a;
         public static final int board_fragment_text_no_list_message=0x7f090044;
         public static final int com_facebook_choose_friends=0x7f09000f;
@@ -2039,6 +2040,11 @@ containing a value of this type.
         public static final int detail_title_section1=0x7f090033;
         public static final int detail_title_section2=0x7f090034;
         public static final int detail_title_section3=0x7f090035;
+        /**  Dialog 
+         */
+        public static final int dialog_cancel=0x7f090050;
+        public static final int dialog_clear=0x7f090051;
+        public static final int dialog_title=0x7f090052;
         public static final int facebook_login_activity_title=0x7f09004c;
         public static final int facebook_publish_story_complete_message=0x7f090039;
         public static final int facebook_publish_story_link=0x7f090038;
@@ -2071,10 +2077,12 @@ containing a value of this type.
         /**  push Activity 
          */
         public static final int push_activity_clear_btn=0x7f09003a;
+        public static final int reple_delete_dialog_content=0x7f090055;
         /**  Reple Fragment 
          */
         public static final int reple_fragment_text_no_reple_message=0x7f09003c;
         public static final int reple_fragment_text_reple_hint=0x7f09003d;
+        public static final int setting_dialog_logout=0x7f090054;
         public static final int title_facebook_login=0x7f09004e;
         /**  Common 
  ActionBar sevtion & Actionbar title 

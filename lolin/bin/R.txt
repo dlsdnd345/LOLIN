@@ -722,6 +722,7 @@ int string abc_shareactionprovider_share_with_application 0x7f09002b
 int string action_settings 0x7f09002e
 int string app_id 0x7f09004d
 int string app_name 0x7f09002d
+int string baord_detail_delete_dialog_content 0x7f090053
 int string board_detail_activity_title 0x7f09004a
 int string board_fragment_text_no_list_message 0x7f090044
 int string com_facebook_choose_friends 0x7f09000f
@@ -758,6 +759,9 @@ int string composor_fragment_text_no_list_message 0x7f090043
 int string detail_title_section1 0x7f090033
 int string detail_title_section2 0x7f090034
 int string detail_title_section3 0x7f090035
+int string dialog_cancel 0x7f090050
+int string dialog_clear 0x7f090051
+int string dialog_title 0x7f090052
 int string facebook_login_activity_title 0x7f09004c
 int string facebook_publish_story_complete_message 0x7f090039
 int string facebook_publish_story_link 0x7f090038
@@ -779,8 +783,10 @@ int string pull_to_refresh_refreshing_label 0x7f09001c
 int string pull_to_refresh_release_label 0x7f09001b
 int string push_activity_cancel_btn 0x7f09003b
 int string push_activity_clear_btn 0x7f09003a
+int string reple_delete_dialog_content 0x7f090055
 int string reple_fragment_text_no_reple_message 0x7f09003c
 int string reple_fragment_text_reple_hint 0x7f09003d
+int string setting_dialog_logout 0x7f090054
 int string title_facebook_login 0x7f09004e
 int string title_section1 0x7f09002f
 int string title_section2 0x7f090030

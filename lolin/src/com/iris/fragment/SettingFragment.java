@@ -2,7 +2,9 @@ package com.iris.fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -203,6 +205,27 @@ public class SettingFragment extends Fragment {
 	}
 	
 	/**
+	 * 로그아웃시 다이얼로그
+	 */
+	private void logoutDialog(){
+		AlertDialog.Builder alt_bld = new AlertDialog.Builder(getActivity());
+		alt_bld.setTitle(getString(R.string.dialog_title));
+		alt_bld.setMessage(getString(R.string.setting_dialog_logout))
+		.setCancelable(false).setPositiveButton(getString(R.string.dialog_clear),
+				new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int id) {
+				callFacebookLogout(getActivity().getApplicationContext());
+			}
+		}).setNegativeButton(getString(R.string.dialog_cancel),
+				new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int id) {
+				dialog.cancel();
+			}
+		});
+		alt_bld.show();
+	}
+	
+	/**
 	 * 버튼 리스너
 	 */
 	Button.OnClickListener mClickListener = new View.OnClickListener() {
@@ -212,7 +235,7 @@ public class SettingFragment extends Fragment {
 				updateSummonerName();
 				break;
 			case R.id.btn_facebook_logout:
-				callFacebookLogout(getActivity().getApplicationContext());
+				logoutDialog();
 				break;
 				
 			}

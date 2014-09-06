@@ -116,6 +116,8 @@ public class GcmIntentService extends IntentService {
 		mBuilder.setContentIntent(pendingIntent);
 		//노티 아이디 부여 (노티 아이디는 노티 알림을 다른 페이지에서도 접근할수 있도록 도와준다.)
 		notificationManager.notify(0, mBuilder.build());
+
+		sharedpreferencesUtil.put(Config.FLAG.EDIT_STATE, true);
 		
 		/*
 		 * 어플이 실행되고 있을시, GCM 화면 막기위해 사용

@@ -3,6 +3,8 @@ package com.iris.fragment;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -282,12 +284,33 @@ public class RepleFragment extends Fragment {
 	}
 	
 	/**
+	 * 삭제시 다이얼로그
+	 */
+	private void deleteDialog(final int position){
+		AlertDialog.Builder alt_bld = new AlertDialog.Builder(getActivity());
+		alt_bld.setTitle(getString(R.string.dialog_title));
+		alt_bld.setMessage(getString(R.string.reple_delete_dialog_content))
+		.setCancelable(false).setPositiveButton(getString(R.string.dialog_clear),
+				new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int id) {
+				deleteReple(position);
+			}
+		}).setNegativeButton(getString(R.string.dialog_cancel),
+				new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int id) {
+				dialog.cancel();
+			}
+		});
+		alt_bld.show();
+	}
+	
+	/**
 	 * 리플 아이템 선택시
 	 */
 	OnItemClickListener mOnItemClickListener = new OnItemClickListener(){
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
-			deleteReple(position);
+			deleteDialog(position);
 		}
 	};
 	

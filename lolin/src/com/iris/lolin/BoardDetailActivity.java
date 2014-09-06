@@ -5,6 +5,8 @@ import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -53,7 +55,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 
 	private Session.StatusCallback 		statusCallback = new SessionStatusCallback();
 	private Session 					sessionTemp;
-	
+
 	private boolean					editState;
 	private int 						viewPagerPosition;
 	private String						boardId;
@@ -62,7 +64,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private BoardDetailService 			boardDetailService;
 	private ScreenshotUtil				screenshotUtil;
 	private SharedpreferencesUtil 		sharedpreferencesUtil;
-	
+
 	private PagerSlidingTabStrip 		tabs;
 	private ViewPager 					mViewPager;
 	private PagerAdapter 				mPagerAdapter;
@@ -122,7 +124,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 	 * 데이터 초기화
 	 */
 	private void dataInit() {
-		
+
 		request = Volley.newRequestQueue(getApplicationContext());  
 		screenshotUtil = new ScreenshotUtil(BoardDetailActivity.this);
 		boardDetailService = new BoardDetailService(getApplicationContext());
@@ -130,7 +132,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 
 		//게시판 번호 받기 위함
 		boardId = sharedpreferencesUtil.getValue(Config.BOARD.BOARD_ID, "");
-		
+
 		//자신의 게시판일 경우 수정 가능 여부
 		visibleUpdate();
 		//공유기능 여부
@@ -147,7 +149,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 	 */
 	private void visibleUpdate() {
 		Intent intent = getIntent();
-		editState = intent.getBooleanExtra(Config.FLAG.EDIT_STATE , false);
+		//editState = intent.getBooleanExtra(Config.FLAG.EDIT_STATE , false);
+		editState = sharedpreferencesUtil.getValue(Config.FLAG.EDIT_STATE, false);
 	}
 
 	/**
@@ -189,13 +192,33 @@ public class BoardDetailActivity extends ActionBarActivity {
 			return true;
 		case R.id.ic_action_remove:
 			// 게시물 삭제
-			delete(request);
+			deleteDialog();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
 
+	/**
+	 * 삭제시 다이얼로그
+	 */
+	private void deleteDialog(){
+		AlertDialog.Builder alt_bld = new AlertDialog.Builder(this);
+		alt_bld.setTitle(getString(R.string.dialog_title));
+		alt_bld.setMessage(getString(R.string.baord_detail_delete_dialog_content))
+		.setCancelable(false).setPositiveButton(getString(R.string.dialog_clear),
+				new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int id) {
+				delete(request);
+			}
+		}).setNegativeButton(getString(R.string.dialog_cancel),
+				new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int id) {
+				dialog.cancel();
+			}
+		});
+		alt_bld.show();
+	}
 	/**
 	 * 아이디를 통해서 게시판 한개의 데이터를 얻음.
 	 * @param request
@@ -265,7 +288,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 			}  
 		}));
 	}
-	
+
 	/**
 	 * 페이스북 초기화
 	 * @param savedInstanceState
@@ -288,7 +311,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 			}
 		}
 	}
-	
+
 	/**
 	 * 페이스북 세션 
 	 * @author 박인웅
@@ -300,21 +323,21 @@ public class BoardDetailActivity extends ActionBarActivity {
 			sessionTemp = session;
 		}
 	}
-    
+
 	/**
 	 *  facebook 앨범에 이미지 올리기
 	 */
 	public void publishPhoto() {
-		
+
 		Session session = Session.getActiveSession();
 		byte[] data = null;
-		
+
 		if (session != null) {
 
 			data = screenshotUtil.takeScreenShot();
 
 			prograssBar.setVisibility(View.VISIBLE);
-			
+
 			Bundle postParams = new Bundle();
 			postParams.putByteArray(Config.FLAG.PICTURE,data);
 
@@ -336,7 +359,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 							e.printStackTrace();
 						}
 					}
-					
+
 					prograssBar.setVisibility(View.INVISIBLE);
 				}
 			};
@@ -348,7 +371,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 
 	// facebook에 포스팅
 	private void publishStory(String pictureId) {
-		
+
 		prograssBar.setVisibility(View.VISIBLE);
 		Session session = Session.getActiveSession();
 
@@ -378,10 +401,10 @@ public class BoardDetailActivity extends ActionBarActivity {
 			task.execute();
 		}
 	}
-	
-    /**
-     * 액션바 초기화
-     */
+
+	/**
+	 * 액션바 초기화
+	 */
 	@SuppressLint("NewApi")
 	private void actionBarInit() {
 		//ActionBar Init

@@ -9,9 +9,15 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.format.DateUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver.OnScrollChangedListener;
+import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -71,6 +77,8 @@ public class BoardFragment extends Fragment {
 	private PullToRefreshListView 		boardListView;
 	private Spinner 					rankSpinner,positionSpinner,timeSpinner;	
 
+	boolean lastitemVisibleFlag = false; 
+	
 	public Fragment newInstance(Context context) {
 
 		BoardFragment fragment = new BoardFragment();
@@ -111,6 +119,7 @@ public class BoardFragment extends Fragment {
 		timeSpinner 		= (Spinner)rootView.findViewById(R.id.spinner_time);
 		positionSpinner		= (Spinner)rootView.findViewById(R.id.spinner_position);
 		boardListView 		= (PullToRefreshListView)rootView.findViewById(R.id.list_board);
+
 	}
 
 	/**
@@ -305,13 +314,15 @@ public class BoardFragment extends Fragment {
 
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
 			sharedpreferencesUtil.put(Config.BOARD.BOARD_ID, String.valueOf(boardList.get(position-1).getId()));
-			intent.putExtra("editState", editState);
+			sharedpreferencesUtil.put(Config.FLAG.EDIT_STATE, editState);
 
 			startActivity(intent);
 		}
 
 	};
+	
 
+	
 //	OnTouchListener mOnTouchListener = new View.OnTouchListener(){
 //
 //		float startPosition ;

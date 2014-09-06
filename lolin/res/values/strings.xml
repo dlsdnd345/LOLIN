@@ -60,5 +60,12 @@
     <!-- GcmIntentService -->
     <string name="gcm_service_noti_title">롤인 앱으로 부터 메세지가 도착했습니다.</string>
     
+    <!-- Dialog -->
+    <string name="dialog_cancel">취소</string>
+    <string name="dialog_clear">확인</string>
+    <string name="dialog_title">알림</string>
+    <string name="baord_detail_delete_dialog_content">게시판을 정말 삭제 하시겠습니까?</string>
+    <string name="setting_dialog_logout">로그아웃 하시겠습니까?</string>
+    <string name="reple_delete_dialog_content">댓글 을 정말 삭제 하시겠습니까?</string>
     
 </resources>
