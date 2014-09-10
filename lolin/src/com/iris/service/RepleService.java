@@ -14,6 +14,8 @@ import com.google.gson.reflect.TypeToken;
 import com.iris.config.Config;
 import com.iris.entities.Board;
 import com.iris.entities.Reple;
+import com.iris.libs.TrippleDes;
+import com.iris.util.SignatureUtil;
 
 public class RepleService {
 
@@ -26,27 +28,41 @@ public class RepleService {
 	
 	/**
 	 * url 만드는 작업
-	 * @param id
+	 * @param boardId
 	 * @param userName
 	 * @param content
 	 * @param facebookId
 	 * @return
 	 */
-	public String getSubUrl(int id , String userName , String content , String facebookId){
+	public String getSubUrl(int boardId , String userName , String content , String facebookId){
 		
+		String hash = null;
 		String subUrl = null;
+		String encodeHash = null;
 		String encodeUserName = null;
 		String encodeContent = null;
 		String encodeFacebookId = null;
 		
 		try {
+			
+			TrippleDes trippleDes = new TrippleDes();
+			facebookId = trippleDes.encrypt(facebookId);
+			
+			String signatureData = boardId + userName + content + facebookId + Config.KEY.SECRET;
+			hash = SignatureUtil.getHash(signatureData);
+			
+			encodeHash = URLEncoder.encode(hash,"UTF-8");
 			encodeUserName = URLEncoder.encode(userName,"UTF-8");
 			encodeContent = URLEncoder.encode(content,"UTF-8");
 			encodeFacebookId = URLEncoder.encode(facebookId,"UTF-8");
+			
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		return subUrl = "?boardId="+id+"&userName="+encodeUserName+"&content="+encodeContent+"&facebookId="+encodeFacebookId;
+		return subUrl = "?boardId="+boardId+"&userName="+encodeUserName+"&content="+encodeContent+"&facebookId="+encodeFacebookId +
+				"&hash="+encodeHash;
 	}
 	
 	/**
@@ -60,7 +76,9 @@ public class RepleService {
 	 */
 	public String getSendPushSubUrl(String os , String boardId , String summernerName ,String reple, String facebookId){
 		
+		String hash = null;
 		String subUrl = null;
+		String encodeHash = null;
 		String encodeOs = null;
 		String encodeBoardId = null;
 		String encodeSummernerName = null;
@@ -68,6 +86,14 @@ public class RepleService {
 		String encodeFacebookId = null;
 		
 		try {
+			
+			TrippleDes trippleDes = new TrippleDes();
+			facebookId = trippleDes.encrypt(facebookId);
+			
+			String signatureData = os + boardId + summernerName + facebookId + reple + Config.KEY.SECRET;
+			hash = SignatureUtil.getHash(signatureData);
+			
+			encodeHash = URLEncoder.encode(hash,"UTF-8");
 			encodeOs = URLEncoder.encode(os,"UTF-8");
 			encodeBoardId = URLEncoder.encode(boardId,"UTF-8");
 			encodeSummernerName = URLEncoder.encode(summernerName,"UTF-8");
@@ -75,9 +101,64 @@ public class RepleService {
 			encodeFacebookId = URLEncoder.encode(facebookId,"UTF-8");
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		
-		return subUrl = "?os="+encodeOs+"&boardId="+encodeBoardId+"&summernerName="+encodeSummernerName+"&reple="+encodeReple+"&facebookId="+encodeFacebookId;
+		return subUrl = "?os="+encodeOs+"&boardId="+encodeBoardId+"&summernerName="+encodeSummernerName
+				+"&reple="+encodeReple+"&facebookId="+encodeFacebookId+"&hash="+encodeHash;
+	}
+	
+	/**
+	 * 리플 갱신 url
+	 * @param boardId
+	 * @return
+	 */
+	public String getFindRepleSubUrl(int boardId){
+		
+		String hash;
+		String encodeBoardId 	= null;
+		String encodeHash 		= null;
+		
+		try {
+			
+			String signatureData = boardId + Config.KEY.SECRET;
+			hash = SignatureUtil.getHash(signatureData);
+			
+			encodeBoardId   = URLEncoder.encode(String.valueOf(boardId),"UTF-8");
+			encodeHash   	= URLEncoder.encode(hash,"UTF-8");
+			
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
+		return "?boardId=" + encodeBoardId+"&hash="+encodeHash;
+	}
+	
+	/**
+	 * 리플 삭제 url
+	 * @param boardId
+	 * @return
+	 */
+	public String getDeleteRepleSubUrl(int repleId){
+		
+		String hash;
+		String encodeRepleId 	= null;
+		String encodeHash 		= null;
+		
+		try {
+			
+			String signatureData = repleId + Config.KEY.SECRET;
+			hash = SignatureUtil.getHash(signatureData);
+			
+			encodeRepleId   = URLEncoder.encode(String.valueOf(repleId),"UTF-8");
+			encodeHash   	= URLEncoder.encode(hash,"UTF-8");
+			
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
+		return "?repleId=" + encodeRepleId+"&hash="+encodeHash;
 	}
 	
 	/**

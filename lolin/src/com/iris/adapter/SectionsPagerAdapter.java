@@ -1,6 +1,5 @@
 package com.iris.adapter;
 
-import java.util.ArrayList;
 import java.util.Locale;
 
 import android.content.Context;
@@ -8,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.iris.entities.Board;
 import com.iris.fragment.BoardFragment;
 import com.iris.fragment.ComposerFragment;
 import com.iris.fragment.RecordSearchFragment;
@@ -25,16 +23,16 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 	public static final int BOARD_FRAGMENT 			= 0;
 	public static final int WRITE_TEXT_FRAGMENT 		= 1;
 	public static final int RECORD_SEARCH_FRAGMENT 	= 2;
-	
+
 	private static final String 		IS_LOGIN  	= "isLogin";
-	
+
 	private Context 				context;
 	private BoardFragment 			boardFragment;
 	private SettingFragment 		settingFragment;
 	private ComposerFragment 		writeTextFragment;
 	private RecordSearchFragment 	recordSearchFragment;
 	private SharedpreferencesUtil 	sharedpreferencesUtil;
-	
+
 	public SectionsPagerAdapter(FragmentManager fm ,Context context) {
 		super(fm);
 		this.context = context;
@@ -47,32 +45,41 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
 	@Override
 	public Fragment getItem(int position) {
+
 		if(position == BOARD_FRAGMENT){
 			return boardFragment.newInstance(context);
 		}else if(position == WRITE_TEXT_FRAGMENT){
 			return writeTextFragment.newInstance();
-		}else if(position == RECORD_SEARCH_FRAGMENT){
-			return recordSearchFragment.newInstance();
 		}else{
-			return settingFragment.newInstance();
+			return recordSearchFragment.newInstance();
 		}
+
+		//		if(position == BOARD_FRAGMENT){
+		//			return boardFragment.newInstance(context);
+		//		}else if(position == WRITE_TEXT_FRAGMENT){
+		//			return writeTextFragment.newInstance();
+		//		}else if(position == RECORD_SEARCH_FRAGMENT){
+		//			return recordSearchFragment.newInstance();
+		//		}else{
+		//			return settingFragment.newInstance();
+		//		}
 	}
 
 	@Override
 	public int getCount() {
-		
+
 		boolean isLogin = sharedpreferencesUtil.getValue(IS_LOGIN, false);
 		if(isLogin){
-			return 4;
+			return 3;
 		}else{
 			return 1;
 		}
-		
+
 	}
 
 	@Override
 	public CharSequence getPageTitle(int position) {
-		
+
 		//탭바 Title 이름 지정
 		Locale l = Locale.getDefault();
 		switch (position) {
@@ -82,11 +89,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 			return context.getString(R.string.title_section2).toUpperCase(l);
 		case 2:
 			return context.getString(R.string.title_section3).toUpperCase(l);
-		case 3:
-			return context.getString(R.string.title_section4).toUpperCase(l);
+//		case 3:
+//			return context.getString(R.string.title_section4).toUpperCase(l);
 		}
 		return null;
 	}
-	
+
 }
 

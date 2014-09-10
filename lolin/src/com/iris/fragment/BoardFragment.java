@@ -181,7 +181,7 @@ public class BoardFragment extends Fragment {
 
 		prograssBar.setVisibility(View.VISIBLE);
 		
-		String sub_url = boardService.getUserSubUrl();;
+		String sub_url = boardService.getUserSubUrl();
 
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
 		request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.USER_FIND_ONE+sub_url,new Response.Listener<String>() {  

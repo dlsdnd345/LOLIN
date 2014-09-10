@@ -1,6 +1,8 @@
 package com.iris.service;
 
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +15,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.iris.config.Config;
 import com.iris.entities.Board;
+import com.iris.util.SignatureUtil;
 
 public class BoardDetailService {
 
@@ -48,6 +51,48 @@ public class BoardDetailService {
 			e.printStackTrace();
 		}
 		return boardOneFromGson;
+	}
+	
+	public String getFindOneSubUrl(String boardId){
+		
+		String hash;
+		String encodeBoardId 	= null;
+		String encodeHash 		= null;
+		
+		try {
+			
+			String signatureData = boardId + Config.KEY.SECRET;
+			hash = SignatureUtil.getHash(signatureData);
+			
+			encodeBoardId   = URLEncoder.encode(boardId,"UTF-8");
+			encodeHash   	= URLEncoder.encode(hash,"UTF-8");
+			
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
+		return "?boardId=" + encodeBoardId+"&hash="+encodeHash;
+	}
+	
+	public String getDeleteSubUrl(String boardId){
+		
+		String hash;
+		String encodeBoardId 	= null;
+		String encodeHash 		= null;
+		
+		try {
+			
+			String signatureData = boardId + Config.KEY.SECRET;
+			hash = SignatureUtil.getHash(signatureData);
+			
+			encodeBoardId   = URLEncoder.encode(boardId,"UTF-8");
+			encodeHash   	= URLEncoder.encode(hash,"UTF-8");
+			
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
+		return "?boardId=" + encodeBoardId+"&hash="+encodeHash;
 	}
 	
 }

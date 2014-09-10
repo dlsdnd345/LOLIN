@@ -394,6 +394,8 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 				@Override
 				public void onCompleted(GraphUser user,com.facebook.Response response) {
 					response.getError();
+					
+					sharedpreferencesUtil.put(Config.FLAG.FACEBOOK_NAME, user.getName());
 					txtHello.setText(getString(R.string.facebooklogint_activity_text_hello_message)+ user.getName());
 					String url = Config.FACEBOOK.FACEBOOK_BASE_URL+ user.getId()+Config.FACEBOOK.PICTURE_TYPE_LARGE;
 					imageLoader.displayImage(url, imgProfile, options, mImageLoadingListener);
@@ -425,7 +427,6 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	public void notFacebookLogin(View view){
 
 		sharedpreferencesUtil.put(Config.FLAG.IS_LOGIN, false);
-
 		Intent inetnt = new Intent(FaceBookLoginActivity.this , MainActivity.class);
 		startActivity(inetnt);
 	}

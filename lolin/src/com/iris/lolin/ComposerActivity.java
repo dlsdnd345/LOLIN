@@ -85,11 +85,6 @@ public class ComposerActivity extends ActionBarActivity {
 		boardId = intent.getStringExtra(Config.BOARD.BOARD_ID);
 		RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
 		
-		if(boardId != null){
-			// 게시판 정보 api 요청
-			getFindOne(request);
-		}
-		
 		board = new Board();
 		composerService = new ComposerService();
 		boardDetailService = new BoardDetailService(getApplicationContext());
@@ -97,6 +92,12 @@ public class ComposerActivity extends ActionBarActivity {
 		actionbarInit();
 		spinnerInit();
 		board.setTea(teaData[0]);
+		
+		if(boardId != null){
+			// 게시판 정보 api 요청
+			getFindOne(request);
+		}
+		
 	}
 
 	/**
@@ -162,8 +163,10 @@ public class ComposerActivity extends ActionBarActivity {
 		
 		prograssBar.setVisibility(View.VISIBLE);
 		
+		String subUrl = composerService.getFindOneSubUrl(boardId);
+		
 		request.add(new StringRequest(Request.Method.GET
-				, Config.API.DEFAULT_URL + Config.API.BOARD_FIND_ONE + Config.BOARD.SUB_URL+boardId ,new Response.Listener<String>() {  
+				, Config.API.DEFAULT_URL + Config.API.BOARD_FIND_ONE+subUrl ,new Response.Listener<String>() {  
 			
 			@Override  
 			public void onResponse(String response) {  
@@ -198,8 +201,6 @@ public class ComposerActivity extends ActionBarActivity {
 		
 		// 서버로 데이터 전송
 		String facebookId = sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
-		
-		System.out.println("facebookId   :  " + facebookId);
 		
 		String subUrl = composerService.getSubUrl(boardId ,facebookId, board.getTitle(), board.getContent(),
 				board.transformRank(board.getRank()), board.getPosition(), board.getPlayTime(),board.getTea());

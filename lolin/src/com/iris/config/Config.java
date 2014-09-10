@@ -53,10 +53,11 @@ public class Config {
 	public static class FACEBOOK {
 
 		public static final String FACEBOOK_ID  		= "FACEBOOK_ID";
-		
+
 		public static final String FACEBOOK_BASE_URL  	= "http://graph.facebook.com/";
 		public static final String PICTURE_TYPE_LARGE	= "/picture?type=large";
 		public static final String PICTURE_TYPE_NOMAL	= "/picture?type=normal";
+		public static final String PICTURE_SMALL		= "/picture?type=small";
 	}
 
 	public static class API {
@@ -98,6 +99,8 @@ public class Config {
 		public static final  	String MESSAGE 	 		= "message";
 		public static final  	String EDIT_STATE 		= "editState";
 		public static final  	String FACEBOOK_ID 		= "facebookId";
+		public static final  	String FACEBOOK_NAME 	= "facebookName";
+
 		public static final  	String SUMMERNER_NAME 	= "summernerName";
 		public static final 	String BOARD_ID 		= "boardId";
 		public static final 	String REPLE 			= "reple";	
@@ -123,5 +126,9 @@ public class Config {
 		public static final 	String PROJECT_ID 	= "450303710235";
 	}
 
+	public static class KEY {
+
+		public static final 	String SECRET 		= "5396ad83bfe531ded76139723c747f7b33790b7b";
+	}
 
 }

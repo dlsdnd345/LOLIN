@@ -15,8 +15,10 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.iris.config.Config;
 import com.iris.entities.Board;
+import com.iris.libs.TrippleDes;
 import com.iris.lolin.R;
 import com.iris.util.SharedpreferencesUtil;
+import com.iris.util.SignatureUtil;
 
 public class BoardService {
 
@@ -78,22 +80,30 @@ public class BoardService {
 		timeData = context.getResources().getStringArray(R.array.main_time_array_list);
 		
 		String subUrl = null;
+		String hash = null;
 		int rankCount = sharedpreferencesUtil.getValue(RANK_DATA_POSITION, 0);
 		int positionCount = sharedpreferencesUtil.getValue(POSITION_DATA__POSITION, 0);
 		int timeCount = sharedpreferencesUtil.getValue(TIME_DATA_POSITION, 0);
 		
+		String encodeRank = null;
 		String encodePosition = null;
 		String encodeTime = null;
+		String encodeHash = null;
 		
 		String transformRank = board.transformRank(rankData[rankCount]);
 		String transformPosition = transformPosition(positionData[positionCount]);
 		String transformTime = transformTime(timeData[timeCount]);
 		
+		String signatureData = transformRank + transformPosition + transformTime + Config.KEY.SECRET;
+		hash = SignatureUtil.getHash(signatureData);
+		
 		try {
+			encodeRank = URLEncoder.encode(transformRank,"UTF-8");
 			encodePosition = URLEncoder.encode(transformPosition,"UTF-8");
 			encodeTime = URLEncoder.encode(transformTime,"UTF-8");
+			encodeHash = URLEncoder.encode(hash,"UTF-8");
 			
-			subUrl = "?rank="+transformRank+"&position="+encodePosition+"&playTime="+encodeTime;
+			subUrl = "?rank="+encodeRank+"&position="+encodePosition+"&playTime="+encodeTime+"&hash="+encodeHash;
 			
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
@@ -103,7 +113,30 @@ public class BoardService {
 	}
 	
 	public String getUserSubUrl(){
-		return "?faceBookId="+ sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
+		
+		String hash = null;
+		String encodeHash = null;
+		String encodeFacebookId = null;
+		
+		String facebookId = sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
+		
+		try {
+			TrippleDes trippleDes = new TrippleDes();
+			facebookId = trippleDes.encrypt(facebookId);
+
+			String signatureData = facebookId + Config.KEY.SECRET;
+			hash = SignatureUtil.getHash(signatureData);
+			
+			encodeFacebookId = URLEncoder.encode(facebookId,"UTF-8");
+			encodeHash = URLEncoder.encode(hash,"UTF-8");
+			
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return "?faceBookId="+ encodeFacebookId + "&hash=" + encodeHash;
 	}
 	
 	/**

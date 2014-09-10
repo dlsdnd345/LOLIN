@@ -227,8 +227,10 @@ public class BoardDetailActivity extends ActionBarActivity {
 
 		prograssBar.setVisibility(View.VISIBLE);
 
-		request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL +Config.API.BOARD_FIND_ONE + Config.BOARD.SUB_URL
-				+boardId ,new Response.Listener<String>() {  
+		String subUrl = boardDetailService.getFindOneSubUrl(boardId);
+		
+		request.add(new StringRequest
+				(Request.Method.GET, Config.API.DEFAULT_URL +Config.API.BOARD_FIND_ONE+subUrl ,new Response.Listener<String>() {  
 
 			@Override  
 			public void onResponse(String response) {  
@@ -269,8 +271,10 @@ public class BoardDetailActivity extends ActionBarActivity {
 
 		prograssBar.setVisibility(View.VISIBLE);
 
-		request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.BOARD_DELETE + Config.BOARD.SUB_URL
-				+boardId ,new Response.Listener<String>() {  
+		String subUrl = boardDetailService.getDeleteSubUrl(boardId);
+		
+		request.add(new StringRequest
+				(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.BOARD_DELETE +subUrl ,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {
 				Intent intent = new Intent(BoardDetailActivity.this, MainActivity.class);

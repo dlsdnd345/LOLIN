@@ -194,7 +194,7 @@ public class RepleFragment extends Fragment {
 			request = Volley.newRequestQueue(getActivity());  
 		}
 		request.add(new StringRequest
-				(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.REPLE_FIND_ONE+Config.API.SUB_URL_BOARD_ID+boardId,new Response.Listener<String>() {  
+				(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.REPLE_FIND_ONE + repleService.getFindRepleSubUrl(boardId) ,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
 
@@ -229,8 +229,8 @@ public class RepleFragment extends Fragment {
 		
 		RequestQueue request = Volley.newRequestQueue(getActivity());  
 		request.add(new StringRequest
-				(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.REPLE_DELETE+Config.API.SUB_URL_REPLE_ID
-				+repleList.get(position).getId(),new Response.Listener<String>() {  
+				(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.REPLE_DELETE+ 
+						repleService.getDeleteRepleSubUrl(repleList.get(position).getId()),new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
 
