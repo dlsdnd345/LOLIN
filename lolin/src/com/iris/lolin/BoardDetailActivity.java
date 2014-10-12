@@ -142,6 +142,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 		//Pager Init
 		actionBarInit();
 
+		//UserInfo();
 	}
 
 	/**
@@ -404,6 +405,25 @@ public class BoardDetailActivity extends ActionBarActivity {
 			RequestAsyncTask task = new RequestAsyncTask(request);
 			task.execute();
 		}
+	}
+	
+	private void UserInfo(){
+		
+		Session session = Session.getActiveSession();
+		
+		com.facebook.Request.Callback callback = new com.facebook.Request.Callback() 
+		{
+			@Override
+			public void onCompleted(com.facebook.Response response) {
+				
+				System.out.println("@@@@@@@@@@@@   :  " + response);
+			}
+		};
+		
+		com.facebook.Request request = new com.facebook.Request(session, "/me", null, HttpMethod.GET,callback);
+		RequestAsyncTask task = new RequestAsyncTask(request);
+		task.execute();
+		
 	}
 
 	/**
