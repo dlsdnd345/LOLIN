@@ -6,10 +6,14 @@
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
 
-    <!-- Common -->
+    <!-- FaceBookLoginActivity -->
+    <string name="facebook_login_actionbar_title">로그인</string>
+    <string name="facebook_login_text_info_message">소환사 명을 정확히 입력해 주세요.</string>
+    <string name="facebook_login_text_sub_info_message">사용자의 소환사명을 정확히 입력하지 않으면,\n파티매칭이 이루어 질 수 없습니다.</string>
+    <string name="facebook_login_edit_info_message">소환사 명을 입력해 주세요.</string>
 
-	<!-- Mainactivity -->
-	<string name="main_text_login_massege">로그인 하세요.</string>
+    <!-- Mainactivity -->
+    <string name="main_text_login_massege">로그인 하세요.</string>
 
     <!-- ActionBar sevtion & Actionbar title -->
     <string name="title_section1">게시판</string>

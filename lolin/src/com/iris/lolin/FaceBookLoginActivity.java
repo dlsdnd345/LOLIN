@@ -8,6 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -27,6 +28,7 @@ import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -64,13 +66,12 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 
-public class FaceBookLoginActivity extends ActionBarActivity {
+public class FaceBookLoginActivity extends Activity {
 
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
     
     private String regid;
     private GoogleCloudMessaging gcm;
-    private AtomicInteger msgId = new AtomicInteger();
     private Context context;
     
 	private boolean					isActionBar;
@@ -88,11 +89,17 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	private FacebookLoginService		facebookLoginService;
 	
 	private EditText 					editSummerner;
-	private TextView 					txtHello , txtWarnningMessage;
-	private View 						layoutLogin , layoutBtnLogin;
+	
+	private TextView					textName;
+	private TextView					txtHello;
+	private TextView 					txtWarnningMessage;
+	
+	private Button 						btnStart;
+	
+	private View 						layoutSummoner , layoutLogin;
 	private ProgressBar 				progressBar;
 	private ImageView 					imgProfile;
-	private ImageButton 				btnFacebookLogin , btnNotFacebookLogin;
+	private Button 						btnFacebookLogin , btnNotFacebookLogin;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -141,23 +148,6 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 			inflater.inflate(R.menu.facebook_next_menu, menu);
 		}
 		return super.onCreateOptionsMenu(menu);
-	}
-
-	/**
-	 * 액션바 이벤트 발생
-	 */
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle presses on the action bar items
-		switch (item.getItemId()) {
-		case R.id.ic_action_next:
-
-			saveLoginInfo();
-			checkEmptyEditSummerner();
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}
 	}
 
 	/**
@@ -227,15 +217,15 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	 */
 	private void init() {
 
-		layoutBtnLogin = (View)findViewById(R.id.layout_btn_login);
-		layoutLogin = (View)findViewById(R.id.layout_login);
-		progressBar = (ProgressBar)findViewById(R.id.progressBar);
-		imgProfile = (ImageView)findViewById(R.id.img_profile);
-		txtHello= (TextView)findViewById(R.id.txt_hello);
-		txtWarnningMessage = (TextView)findViewById(R.id.txt_warnning_message);
-		editSummerner = (EditText)findViewById(R.id.edit_summerner);
-		btnNotFacebookLogin = (ImageButton)findViewById(R.id.btn_not_facebook_login);
-		btnFacebookLogin = (ImageButton)findViewById(R.id.btn_facebook_login);
+		btnStart	 		= (Button)findViewById(R.id.btn_start);
+		textName	 		= (TextView)findViewById(R.id.text_name);
+		layoutLogin 		= (View)findViewById(R.id.layout_login);
+		layoutSummoner 		= (View)findViewById(R.id.layout_summoner);
+		progressBar 		= (ProgressBar)findViewById(R.id.progressBar);
+		imgProfile 			= (ImageView)findViewById(R.id.img_profile);
+		editSummerner 		= (EditText)findViewById(R.id.edit_summerner);
+		btnNotFacebookLogin = (Button)findViewById(R.id.btn_not_facebook_login);
+		btnFacebookLogin 	= (Button)findViewById(R.id.btn_facebook_login);
 	}
 
 	/**
@@ -249,19 +239,12 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		request = Volley.newRequestQueue(getApplicationContext());  
 		facebookLoginService = new FacebookLoginService();
 		
+		final Animation alphaFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_fade_in);
+		btnFacebookLogin.startAnimation(alphaFadeIn);
+		btnNotFacebookLogin.startAnimation(alphaFadeIn);
+		
 		imageLoderInit();
 		faceBookInit();
-		actionBarInit();
-	}
-
-	/**
-	 * 액션바 초기화
-	 */
-	@SuppressLint("NewApi")
-	private void actionBarInit() {
-		//ActionBar Init
-		getActionBar().setDisplayShowHomeEnabled(false);
-		getActionBar().setTitle(R.string.facebook_login_activity_title);
 	}
 
 	/**
@@ -312,7 +295,6 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 				session.openForRead(new Session.OpenRequest(this).setCallback(statusCallback));
 			}
 		}
-		updateView();
 	}
 
 	@Override
@@ -340,13 +322,6 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		Session.saveSession(session, outState);
 	}
 
-	private void updateView() {
-		//Session session = Session.getActiveSession();
-		btnFacebookLogin.setOnClickListener(new OnClickListener() {
-			public void onClick(View view) { onClickLogin(); }
-		});
-	}
-
 	/**
 	 * 로그인 시
 	 */
@@ -371,14 +346,6 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 
 			sessionTemp = session;
 			getFaceBookMe(session);
-
-			if (session.isOpened()) {
-				final Animation alphaFadeOut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_fade_out);
-				layoutBtnLogin.setVisibility(View.GONE);
-				layoutBtnLogin.startAnimation(alphaFadeOut);
-				alphaFadeOut.setAnimationListener(alphaFadeOutAnimationListener);
-			}
-			updateView();    
 		}
 	}
 
@@ -396,7 +363,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 					response.getError();
 					
 					sharedpreferencesUtil.put(Config.FLAG.FACEBOOK_NAME, user.getName());
-					txtHello.setText(getString(R.string.facebooklogint_activity_text_hello_message)+ user.getName());
+					textName.setText(user.getName());
 					String url = Config.FACEBOOK.FACEBOOK_BASE_URL+ user.getId()+Config.FACEBOOK.PICTURE_TYPE_LARGE;
 					imageLoader.displayImage(url, imgProfile, options, mImageLoadingListener);
 					faceBookUser.setUserId( user.getId());
@@ -421,6 +388,21 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 	};
 
 	/**
+	 * 로그인 시
+	 * @param view
+	 */
+	public void facebookLogin(View view){
+		
+			final Animation alphaFadeOut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_fade_out);
+			btnFacebookLogin.setVisibility(View.GONE);
+			btnFacebookLogin.startAnimation(alphaFadeOut);
+			btnNotFacebookLogin.setVisibility(View.GONE);
+			btnNotFacebookLogin.startAnimation(alphaFadeOut);
+			alphaFadeOut.setAnimationListener(alphaFadeOutAnimationListener);
+			onClickLogin();
+	}
+	
+	/**
 	 * 비로그인 시
 	 * @param view
 	 */
@@ -430,7 +412,17 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		Intent inetnt = new Intent(FaceBookLoginActivity.this , MainActivity.class);
 		startActivity(inetnt);
 	}
+	
+	/**
+	 * 롤인 시작하기 선택시
+	 */
 
+	public void startLolin(View view){
+		
+		saveLoginInfo();
+		checkEmptyEditSummerner();
+	}
+	
     /**
      * 
      */
@@ -567,23 +559,7 @@ public class FaceBookLoginActivity extends ActionBarActivity {
       // Your implementation here.
     	
     }
-    
-	AnimationListener alphaFadeInAnimationListener = new AnimationListener(){
 
-		@Override
-		public void onAnimationStart(Animation animation) {}
-		@Override
-		public void onAnimationRepeat(Animation animation) {}
-		@SuppressLint("NewApi")
-		@Override
-		public void onAnimationEnd(Animation animation) {
-			verticalShake.setRepeatCount(Animation.INFINITE);
-			imgProfile.startAnimation(verticalShake);
-
-			isActionBar = true;
-			invalidateOptionsMenu();
-		}
-	};
 
 	AnimationListener alphaFadeOutAnimationListener = new AnimationListener(){
 
@@ -594,17 +570,12 @@ public class FaceBookLoginActivity extends ActionBarActivity {
 		@Override
 		public void onAnimationEnd(Animation animation) {
 			verticalShake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.vertical_shake);
-			Animation alphaFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_fade_in);
 			verticalShake.setRepeatCount(Animation.INFINITE);
-			imgProfile.setVisibility(View.VISIBLE);
-			txtHello.setVisibility(View.VISIBLE);
-			editSummerner.setVisibility(View.VISIBLE);
-			txtWarnningMessage.setVisibility(View.VISIBLE);
-			imgProfile.startAnimation(alphaFadeIn);
-			txtHello.startAnimation(alphaFadeIn);
-			editSummerner.startAnimation(alphaFadeIn);
-			txtWarnningMessage.startAnimation(alphaFadeIn);
-			alphaFadeIn.setAnimationListener(alphaFadeInAnimationListener);
+			
+			layoutSummoner.setVisibility(View.VISIBLE);
+			final Animation alphaFadeOut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha_fade_out);
+			layoutLogin.setVisibility(View.GONE);
+			layoutLogin.startAnimation(alphaFadeOut);
 		}
 
 	};
