@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <com.astuetz.PagerSlidingTabStrip
+    <com.iris.pagerslidingtab.PagerSlidingTabStrip
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="48dip"
@@ -23,7 +23,6 @@
             tools:context=".MainActivity" />
 
         <include layout="@layout/layout_left_menudrawer" />
-        
     </android.support.v4.widget.DrawerLayout>
 
 </LinearLayout>
