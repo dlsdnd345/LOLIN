@@ -50,6 +50,7 @@ public class IntroActivity extends Activity {
                 if(sharedpreferencesUtil.getValue("ACCESS_TOKEN", "").equals("")){
                 	Intent i = new Intent(IntroActivity.this, FaceBookLoginActivity.class);
                 	startActivity(i);
+                	overridePendingTransition(0, 0);
                 }else{
                 	Intent i = new Intent(IntroActivity.this, MainActivity.class);
                 	startActivity(i);
