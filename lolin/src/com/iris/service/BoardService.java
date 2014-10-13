@@ -26,8 +26,8 @@ public class BoardService {
 	private static final String POSITION_DATA__POSITION 	= "PositionDataPosition";
 	private static final String TIME_DATA_POSITION 		= "TimeDataPosition";
 	
-	private static final String POSITION 		= "포지션[전체]";
-	private static final String TIME 			= "시간[전체]";
+	private static final String POSITION 		= "포지션 전체";
+	private static final String TIME 			= "시간 전체";
 	
 	private Context						context;
 	private Gson 						gson;

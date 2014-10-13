@@ -5,15 +5,19 @@
     <color name="background_black">#000000</color>
     <color name="background_sky_blue">#B6DAF2</color>
     <color name="background_blue">#A0CFEE</color>
+    <color name="background_blue_3370CD">#3370CD</color>
     <color name="background_sky_red">#EBC6C3</color>
     <color name="background_red">#E4B4B0</color>
     <color name="background_gray">#EAEAEA</color>
     <color name="background_white">#ffffff</color>
 
+    
     <!-- text -->
     <color name="text_black">#000000</color>
     <color name="text_white">#ffffff</color>
     <color name="text_gray_E1D9CD">#E1D9CD</color>
     <color name="background_tab_pressed">#6633B5E5</color>
 
+    
+    
 </resources>

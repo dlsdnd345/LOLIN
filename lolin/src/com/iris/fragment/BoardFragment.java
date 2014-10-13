@@ -55,9 +55,9 @@ import com.iris.util.SharedpreferencesUtil;
 @SuppressLint("NewApi")
 public class BoardFragment extends Fragment {
 
-	private static final String RANK_DATA_POSITION 		= "RankDataPosition";
+	private static final String RANK_DATA_POSITION 			= "RankDataPosition";
 	private static final String POSITION_DATA__POSITION 	= "PositionDataPosition";
-	private static final String TIME_DATA_POSITION 		= "TimeDataPosition";
+	private static final String TIME_DATA_POSITION 			= "TimeDataPosition";
 
 	
 	private BoardService 				boardService;
@@ -320,64 +320,7 @@ public class BoardFragment extends Fragment {
 		}
 
 	};
-	
 
-	
-//	OnTouchListener mOnTouchListener = new View.OnTouchListener(){
-//
-//		float startPosition ;
-//		boolean blockMove = true;
-//		float getY ;
-//		
-//		@Override
-//		public boolean onTouch(View v, MotionEvent event) {
-//			switch (event.getAction()) {
-//			case MotionEvent.ACTION_MOVE:       //터치를 한 후 움직일때
-//
-//				if(blockMove){
-//					startPosition = event.getY();
-//					blockMove = false;
-//					System.out.println("##############111111111111111111    startPosition :  " + startPosition);
-//				}else{
-//					blockMove = true;
-//				}
-//
-//				System.out.println("##############2222222222222222    event :  " + event.getY());
-//				if(blockMove){
-//
-//					if(startPosition > event.getY()){
-//						
-//						System.out.println("##########아래아래아래아래아래아래아래아래아래아래");
-//						System.out.println("#########3333333333333333333   bottomBar.getY()  :  " + bottomBar.getY());
-//						
-//						if(bottomBar.getY() >= 1040){
-//							blockMove = false;
-//						}else{
-//							bottomBar.setY(bottomBar.getY() + getY);
-//							getY = getY + 0.1f;
-//						}
-//						
-//					}
-//					
-//					if(startPosition < event.getY()){
-//						System.out.println("############위위위위위위위위");
-//						if(bottomBar.getY() <= 959){
-//							blockMove = false;
-//						}else{
-//							bottomBar.setY(bottomBar.getY() - getY);
-//							getY = getY - 0.1f;
-//						}
-//						
-//					}
-//				}
-//
-//
-//				break;
-//			}
-//			return false;
-//		}
-//
-//	};
 
 	// Pull To Refresh 시 실행되는 Task
 	private class GetDataTask extends AsyncTask<Void, Void, String[]> {

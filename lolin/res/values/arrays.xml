@@ -4,7 +4,7 @@
     <!-- mainActivity -->
 
     <string-array name="main_rank_array_list">
-        <item>계급[전체]</item>
+        <item>계급 전체</item>
         <item>언랭크</item>
         <item>브론즈</item>
         <item>실버</item>
@@ -15,7 +15,7 @@
     </string-array>
     
     <string-array name="main_position_array_list">
-        <item>포지션[전체]</item>
+        <item>포지션 전체</item>
         <item>서폿</item>
         <item>원딜</item>
         <item>탑</item>
@@ -24,7 +24,7 @@
     </string-array>
     
     <string-array name="main_time_array_list">
-        <item>시간[전체]</item>
+        <item>시간 전체</item>
         <item>오전</item>
         <item>오후</item>
         <item>저녁</item>
