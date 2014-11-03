@@ -171,7 +171,7 @@ public class BoardService {
 	 * @return
 	 */
 	public String transformRepleCount(String repleCount){
-		return "[" +repleCount+"]";
+		return repleCount;
 	}
 	
 }

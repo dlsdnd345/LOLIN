@@ -65,14 +65,14 @@ public class ComposerAdapter extends BaseAdapter{
 			convertView = inflater.inflate(layout, parent, false);
 			}
 		
-		ImageView 	rankImage 			= ViewHolder.get(convertView ,R.id.img_rank);		
-		TextView 	txtTitle 			= ViewHolder.get(convertView ,R.id.txt_title);
-		TextView 	txtPosition 		= ViewHolder.get(convertView ,R.id.txt_position);
-		TextView 	txtSummonerName 	= ViewHolder.get(convertView ,R.id.txt_summonerName);
-		TextView 	txtContent 			= ViewHolder.get(convertView ,R.id.txt_content);
-		TextView 	textPlayTime 		= ViewHolder.get(convertView ,R.id.text_playTime);
-		TextView 	textWriteTime 		= ViewHolder.get(convertView ,R.id.text_write_time);
-		TextView 	textRepleCount 		= ViewHolder.get(convertView ,R.id.text_reple_count);
+		ImageView	rankImage 			= ViewHolder.get(convertView ,R.id.imgRank);		
+		TextView 	txtTitle 			= ViewHolder.get(convertView ,R.id.txtTitle);
+		TextView 	txtPosition 		= ViewHolder.get(convertView ,R.id.txtPosition);
+		TextView 	txtSummonerName 	= ViewHolder.get(convertView ,R.id.textSummonerName);
+		TextView 	txtContent 			= ViewHolder.get(convertView ,R.id.txtContent);
+		TextView 	textPlayTime 		= ViewHolder.get(convertView ,R.id.textPlayTime);
+		TextView 	textWriteTime 		= ViewHolder.get(convertView ,R.id.textWriteTime);
+		TextView 	textRepleCount 		= ViewHolder.get(convertView ,R.id.textRepleCount);
 		
 		// 이름별 랭크 이미지 삽입
 		int resource = convertView.getResources().getIdentifier
@@ -100,6 +100,7 @@ public class ComposerAdapter extends BaseAdapter{
 			textRepleCount.setText(boardService.transformRepleCount(boardList.get(position).getRepleCount()));
 		}else{
 			textRepleCount.setText("");
+			textRepleCount.setVisibility(View.GONE);
 		}
 	}
 }

@@ -42,7 +42,7 @@ public class MainActivity extends ActionBarActivity  {
 
 	private final static int WRITE_TEXT 		= 1;
 	private final static int RECORD_SEARCH 	= 2;
-	private final static int SETTING 			= 3;
+	private final static int SETTING 		= 3;
 
 	private int 						viewPagerPosition;
 	
@@ -62,7 +62,6 @@ public class MainActivity extends ActionBarActivity  {
 	private ViewPager 					mViewPager;
 	private PagerSlidingTabStrip 		tabs;
 	private SectionsPagerAdapter 		mSectionsPagerAdapter;
-	public 	 HorizontalScrollView 		scrollViewRank, scrollViewPosition, scrollViewTime;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -298,6 +297,7 @@ public class MainActivity extends ActionBarActivity  {
 		tabs.setIndicatorColor(Color.parseColor("#0099cc"));
 		tabs.setOnPageChangeListener(mOnPageChangeListener);
 		tabs.setViewPager(mViewPager);
+		
 	}
 
 	/**

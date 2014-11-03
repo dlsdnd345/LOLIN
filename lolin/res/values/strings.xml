@@ -15,6 +15,12 @@
     <!-- Mainactivity -->
     <string name="main_text_login_massege">로그인 하세요.</string>
 
+    <!-- Main List -->
+    <string name="main_list_row_txt_summoner">소환사</string>
+    <string name="main_list_row_txt_position">포지션</string>
+    <string name="main_list_row_txt_time">시간</string>
+    
+    
     <!-- ActionBar sevtion & Actionbar title -->
     <string name="title_section1">게시판</string>
     <string name="title_section2">내가 쓴글</string>

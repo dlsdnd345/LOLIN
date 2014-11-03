@@ -209,7 +209,7 @@ public class BoardFragment extends Fragment {
 		rankData = context.getResources().getStringArray(R.array.main_rank_array_list);
 		//랭크
 		rankSpinnerAdapter= new ArrayAdapter<>
-		(context, R.layout.white_spinner_item,rankData);
+		(context, R.layout.item_spinner_black,rankData);
 		rankSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
 		rankSpinner.setAdapter(rankSpinnerAdapter); 
 		rankSpinner.setOnItemSelectedListener(rankOnItemSelectedListener);
@@ -217,7 +217,7 @@ public class BoardFragment extends Fragment {
 		//포지션
 		positionData = context.getResources().getStringArray(R.array.main_position_array_list);
 		positionSpinnerAdapter= new ArrayAdapter<>
-		(context, R.layout.white_spinner_item,positionData);
+		(context, R.layout.item_spinner_black,positionData);
 		positionSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
 		positionSpinner.setAdapter(positionSpinnerAdapter); 
 		positionSpinner.setOnItemSelectedListener(positionOnItemSelectedListener);
@@ -225,7 +225,7 @@ public class BoardFragment extends Fragment {
 		//시간
 		timeData = context.getResources().getStringArray(R.array.main_time_array_list);
 		timeSpinnerAdapter= new ArrayAdapter<>
-		(context, R.layout.white_spinner_item,timeData);
+		(context, R.layout.item_spinner_black,timeData);
 		timeSpinnerAdapter.setDropDownViewResource(R.layout.spinner_item);
 		timeSpinner.setAdapter(timeSpinnerAdapter); 
 		timeSpinner.setOnItemSelectedListener(timeOnItemSelectedListener);
