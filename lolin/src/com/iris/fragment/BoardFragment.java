@@ -59,10 +59,10 @@ public class BoardFragment extends Fragment {
 	private static final String POSITION_DATA__POSITION 	= "PositionDataPosition";
 	private static final String TIME_DATA_POSITION 			= "TimeDataPosition";
 
-	
+
 	private BoardService 				boardService;
 	private SharedpreferencesUtil		sharedpreferencesUtil;
-	
+
 	private User 						user;
 	private ArrayList<Board> 			boardList;
 	private String[] 					rankData,positionData,timeData;
@@ -78,7 +78,7 @@ public class BoardFragment extends Fragment {
 	private Spinner 					rankSpinner,positionSpinner,timeSpinner;	
 
 	boolean lastitemVisibleFlag = false; 
-	
+
 	public Fragment newInstance(Context context) {
 
 		BoardFragment fragment = new BoardFragment();
@@ -111,7 +111,7 @@ public class BoardFragment extends Fragment {
 	 * @param rootView
 	 */
 	private void init(View rootView) {
-		
+
 		txtNoListMessage	=  (TextView)rootView.findViewById(R.id.txt_no_list_message);
 		prograssBar 		=  (ProgressBar)rootView.findViewById(R.id.progressBar);
 		bottomBar  			=  (LinearLayout)rootView.findViewById(R.id.bottom_bar);
@@ -138,7 +138,7 @@ public class BoardFragment extends Fragment {
 	 * 게시판 조회
 	 */
 	private void getBoardFindAll(final boolean noAsync) {
-		
+
 		if(noAsync){
 			prograssBar.setVisibility(View.VISIBLE);
 		}
@@ -147,31 +147,33 @@ public class BoardFragment extends Fragment {
 		request.add(new StringRequest
 				(Request.Method.GET, Config.API.DEFAULT_URL +Config.API.BOARD_FINDALL+boardService.getSubUrl(),new Response.Listener<String>() {  
 
-			@Override  
-			public void onResponse(String response) {  
-				boardList = boardService.getBoardFindAll(response);
-				visibleEmptyMessage();
-				listViewInit(boardList);
-				if(noAsync){
-					prograssBar.setVisibility(View.INVISIBLE);
-				}
-			}
+					@Override  
+					public void onResponse(String response) {  
+						boardList = boardService.getBoardFindAll(response);
+						visibleEmptyMessage();
+						listViewInit(boardList);
+						if(noAsync){
+							prograssBar.setVisibility(View.INVISIBLE);
+						}
+					}
 
-			private void visibleEmptyMessage() {
-				if(boardList.size() == 0){
-					txtNoListMessage.setVisibility(View.VISIBLE);
-				}else{
-					txtNoListMessage.setVisibility(View.INVISIBLE);
-				}
-			}  
-		}, new Response.ErrorListener() {  
-			@Override  
-			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
-				prograssBar.setVisibility(View.INVISIBLE);
-				Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
-			}  
-		}));
+					private void visibleEmptyMessage() {
+						if(boardList != null){
+							if(boardList.size() == 0){
+								txtNoListMessage.setVisibility(View.VISIBLE);
+							}else{
+								txtNoListMessage.setVisibility(View.INVISIBLE);
+							}
+						}
+					}  
+				}, new Response.ErrorListener() {  
+					@Override  
+					public void onErrorResponse(VolleyError error) {  
+						VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
+						prograssBar.setVisibility(View.INVISIBLE);
+						Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
+					}  
+				}));
 	}
 
 	/**
@@ -180,7 +182,7 @@ public class BoardFragment extends Fragment {
 	public void getUser(){
 
 		prograssBar.setVisibility(View.VISIBLE);
-		
+
 		String sub_url = boardService.getUserSubUrl();
 
 		RequestQueue request = Volley.newRequestQueue(getActivity());  

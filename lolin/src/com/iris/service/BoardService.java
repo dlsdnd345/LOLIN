@@ -103,7 +103,7 @@ public class BoardService {
 			encodeTime = URLEncoder.encode(transformTime,"UTF-8");
 			encodeHash = URLEncoder.encode(hash,"UTF-8");
 			
-			subUrl = "?rank="+encodeRank+"&position="+encodePosition+"&playTime="+encodeTime+"&hash="+encodeHash;
+			subUrl = "?rank="+encodeRank+"&position="+encodePosition+"&playTime="+encodeTime+"&hash="+encodeHash+"&page="+1+"&pageSize="+3;
 			
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
