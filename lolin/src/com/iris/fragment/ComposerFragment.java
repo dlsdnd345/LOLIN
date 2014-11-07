@@ -1,6 +1,7 @@
 package com.iris.fragment;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.w3c.dom.Text;
 
@@ -34,6 +35,7 @@ import com.iris.lolin.R;
 import com.iris.service.ComposerFragmentService;
 import com.iris.service.SettingService;
 import com.iris.util.SharedpreferencesUtil;
+import com.iris.vo.BoardResponseVO;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -41,7 +43,8 @@ import com.iris.util.SharedpreferencesUtil;
 @SuppressLint("NewApi")
 public class ComposerFragment extends Fragment {
 
-	private ArrayList<Board> 			boardList;
+	private BoardResponseVO 			boardResponseVO;
+	private List<Board> 				boardList;
 	private SharedpreferencesUtil  		sharedpreferencesUtil;
 	private ComposerFragmentService 	composerService;
 	private ComposerAdapter 			composerAdapter;
@@ -90,7 +93,10 @@ public class ComposerFragment extends Fragment {
 				(Request.Method.GET, Config.API.DEFAULT_URL+ Config.API.BOARD_FIND_MY_ALL+sub_url,new Response.Listener<String>() {  
 			@Override  
 			public void onResponse(String response) {  
-				boardList = composerService.getBoardFindAll(response);
+				
+				boardResponseVO = composerService.getBoardFindAll(response);
+				boardList = boardResponseVO.getBoardList();
+				
 				listViewInit();
 				visibleComposorEmptyMessage();
 			}

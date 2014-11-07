@@ -2,6 +2,7 @@ package com.iris.adapter;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.List;
 
 import android.content.Context;
 import android.util.SparseArray;
@@ -25,10 +26,10 @@ public class BoardAdapter extends BaseAdapter{
 	private int 								layout; 
 	private Context 							context; 
 	private LayoutInflater 						inflater;
-	private ArrayList<Board> 					boardList; 
+	private List<Board> 						boardList; 
 	private SparseArray<WeakReference<View>> 	viewArray;
 	
-	public BoardAdapter(Context context , int layout , ArrayList<Board> boardList){
+	public BoardAdapter(Context context , int layout , List<Board> boardList){
 
 		this.context=context;
 		this.layout = layout;

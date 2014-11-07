@@ -665,11 +665,11 @@ int id title 0x7f060038
 int id top_action_bar 0x7f06002d
 int id tv_spitem 0x7f06009c
 int id txtContent 0x7f0600b0
+int id txtNoListMessage 0x7f06008a
 int id txtPosition 0x7f0600b2
 int id txtTitle 0x7f0600ad
 int id txt_empty_message 0x7f06008c
 int id txt_message 0x7f06006a
-int id txt_no_list_message 0x7f06008a
 int id txt_searching 0x7f060090
 int id txt_summerner_name 0x7f060069
 int id txt_tea 0x7f06005b

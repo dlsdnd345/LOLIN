@@ -18,12 +18,15 @@ import com.iris.entities.Board;
 import com.iris.libs.TrippleDes;
 import com.iris.util.SharedpreferencesUtil;
 import com.iris.util.SignatureUtil;
+import com.iris.vo.BoardResponseVO;
 
 public class ComposerFragmentService {
 
 	private Gson 						gson;
 	private ArrayList<Board> 			boardListFromGson;
 	private SharedpreferencesUtil		sharedpreferencesUtil;
+
+	private BoardResponseVO 			boardResponseVO;
 	
 	public ComposerFragmentService(Context context){
 		gson = new Gson();
@@ -35,7 +38,7 @@ public class ComposerFragmentService {
 	 * @param jsonData
 	 * @return
 	 */
-	public ArrayList<Board> getBoardFindAll(String jsonData){
+	public BoardResponseVO getBoardFindAll(String jsonData){
 		
 		JSONObject JsonObject;
 		String ok = null;
@@ -46,13 +49,13 @@ public class ComposerFragmentService {
 			ok = JsonObject.getString(Config.FLAG.OK);
 			if(ok.equals(Config.FLAG.TRUE)){
 				data = JsonObject.getString(Config.FLAG.DATA);
-				Type type = new TypeToken<List<Board>>(){}.getType();
-				boardListFromGson = gson.fromJson(data, type);
+				Type type = new TypeToken<BoardResponseVO>(){}.getType();
+				boardResponseVO = gson.fromJson(data, type);
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-		return boardListFromGson;
+		return boardResponseVO;
 	}
 	
 	public String getSubUrlBoardFindMyAll(){

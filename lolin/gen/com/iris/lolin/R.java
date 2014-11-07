@@ -1881,11 +1881,11 @@ containing a value of this type.
         public static final int top_action_bar=0x7f06002d;
         public static final int tv_spitem=0x7f06009c;
         public static final int txtContent=0x7f0600b0;
+        public static final int txtNoListMessage=0x7f06008a;
         public static final int txtPosition=0x7f0600b2;
         public static final int txtTitle=0x7f0600ad;
         public static final int txt_empty_message=0x7f06008c;
         public static final int txt_message=0x7f06006a;
-        public static final int txt_no_list_message=0x7f06008a;
         public static final int txt_searching=0x7f060090;
         public static final int txt_summerner_name=0x7f060069;
         public static final int txt_tea=0x7f06005b;

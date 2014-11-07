@@ -19,6 +19,7 @@ import com.iris.libs.TrippleDes;
 import com.iris.lolin.R;
 import com.iris.util.SharedpreferencesUtil;
 import com.iris.util.SignatureUtil;
+import com.iris.vo.BoardResponseVO;
 
 public class BoardService {
 
@@ -49,8 +50,9 @@ public class BoardService {
 	 * @param jsonData
 	 * @return
 	 */
-	public ArrayList<Board> getBoardFindAll(String jsonData){
+	public BoardResponseVO getBoardFindAll(String jsonData){
 		
+		BoardResponseVO boardResponseVO= null;
 		JSONObject JsonObject;
 		String ok = null;
 		String data = null;
@@ -60,20 +62,20 @@ public class BoardService {
 			ok = JsonObject.getString(Config.FLAG.OK);
 			if(ok.equals(Config.FLAG.TRUE)){
 				data = JsonObject.getString(Config.FLAG.DATA);
-				Type type = new TypeToken<List<Board>>(){}.getType();
-				boardListFromGson = gson.fromJson(data, type);
+				Type type = new TypeToken<BoardResponseVO>(){}.getType();
+				boardResponseVO = gson.fromJson(data, type);
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-		return boardListFromGson;
+		return boardResponseVO;
 	}
 	
 	/**
 	 * 게시판 subUrl Make
 	 * @return
 	 */
-	public String getSubUrl(){
+	public String getSubUrl(int page , int pageSize){
 		
 		rankData = context.getResources().getStringArray(R.array.main_rank_array_list);
 		positionData = context.getResources().getStringArray(R.array.main_position_array_list);
@@ -103,7 +105,7 @@ public class BoardService {
 			encodeTime = URLEncoder.encode(transformTime,"UTF-8");
 			encodeHash = URLEncoder.encode(hash,"UTF-8");
 			
-			subUrl = "?rank="+encodeRank+"&position="+encodePosition+"&playTime="+encodeTime+"&hash="+encodeHash+"&page="+1+"&pageSize="+3;
+			subUrl = "?rank="+encodeRank+"&position="+encodePosition+"&playTime="+encodeTime+"&hash="+encodeHash+"&page="+page+"&pageSize="+pageSize;
 			
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
