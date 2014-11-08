@@ -54,15 +54,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 			return recordSearchFragment.newInstance();
 		}
 
-		//		if(position == BOARD_FRAGMENT){
-		//			return boardFragment.newInstance(context);
-		//		}else if(position == WRITE_TEXT_FRAGMENT){
-		//			return writeTextFragment.newInstance();
-		//		}else if(position == RECORD_SEARCH_FRAGMENT){
-		//			return recordSearchFragment.newInstance();
-		//		}else{
-		//			return settingFragment.newInstance();
-		//		}
 	}
 
 	@Override
@@ -89,8 +80,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 			return context.getString(R.string.title_section2).toUpperCase(l);
 		case 2:
 			return context.getString(R.string.title_section3).toUpperCase(l);
-//		case 3:
-//			return context.getString(R.string.title_section4).toUpperCase(l);
 		}
 		return null;
 	}
