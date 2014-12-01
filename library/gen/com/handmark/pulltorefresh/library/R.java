@@ -295,11 +295,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int ptrViewRefeshableViewProgressBarOnCenterWhileRefreshingEnabled=0x7f01001c;
     }
     public static final class dimen {
-        public static int header_footer_left_right_padding=0x7f070003;
-        public static int header_footer_top_bottom_padding=0x7f070004;
-        public static int indicator_corner_radius=0x7f070001;
-        public static int indicator_internal_padding=0x7f070002;
-        public static int indicator_right_padding=0x7f070000;
+        public static int header_footer_left_right_padding=0x7f060003;
+        public static int header_footer_top_bottom_padding=0x7f060004;
+        public static int indicator_corner_radius=0x7f060001;
+        public static int indicator_internal_padding=0x7f060002;
+        public static int indicator_right_padding=0x7f060000;
     }
     public static final class drawable {
         public static int default_ptr_flip=0x7f020000;
@@ -323,27 +323,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int progressbar_indeterminate_holo8=0x7f020012;
     }
     public static final class id {
-        public static int both=0x7f060003;
-        public static int disabled=0x7f060000;
-        public static int fl_inner=0x7f06000e;
-        public static int fl_inner_for_google_style=0x7f06000b;
-        public static int google=0x7f060005;
-        public static int gridview=0x7f060008;
-        public static int manualOnly=0x7f060004;
-        public static int pullDownFromTop=0x7f060006;
-        public static int pullFromEnd=0x7f060002;
-        public static int pullFromStart=0x7f060001;
-        public static int pullUpFromBottom=0x7f060007;
-        public static int pull_to_refresh_image=0x7f06000f;
-        public static int pull_to_refresh_progress=0x7f060010;
-        public static int pull_to_refresh_sub_text=0x7f06000d;
-        public static int pull_to_refresh_text=0x7f06000c;
-        public static int pulling_left_progressbar=0x7f060013;
-        public static int pulling_progress=0x7f060011;
-        public static int pulling_right_progressbar=0x7f060014;
-        public static int refreshing_progress=0x7f060012;
-        public static int scrollview=0x7f06000a;
-        public static int webview=0x7f060009;
+        public static int both=0x7f070003;
+        public static int disabled=0x7f070004;
+        public static int fl_inner=0x7f07000e;
+        public static int fl_inner_for_google_style=0x7f07000b;
+        public static int google=0x7f070005;
+        public static int gridview=0x7f070000;
+        public static int manualOnly=0x7f070006;
+        public static int pullDownFromTop=0x7f070007;
+        public static int pullFromEnd=0x7f070008;
+        public static int pullFromStart=0x7f070009;
+        public static int pullUpFromBottom=0x7f07000a;
+        public static int pull_to_refresh_image=0x7f07000f;
+        public static int pull_to_refresh_progress=0x7f070010;
+        public static int pull_to_refresh_sub_text=0x7f07000d;
+        public static int pull_to_refresh_text=0x7f07000c;
+        public static int pulling_left_progressbar=0x7f070013;
+        public static int pulling_progress=0x7f070011;
+        public static int pulling_right_progressbar=0x7f070014;
+        public static int refreshing_progress=0x7f070012;
+        public static int scrollview=0x7f070002;
+        public static int webview=0x7f070001;
     }
     public static final class layout {
         public static int pull_to_refresh_header_google_style=0x7f030000;
@@ -478,7 +478,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrAdapterViewBackground
         */
-        public static final int PullToRefresh_ptrAdapterViewBackground = 34;
+        public static int PullToRefresh_ptrAdapterViewBackground = 34;
         /**
           <p>
           @attr description
@@ -494,7 +494,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrAnimationStyle
         */
-        public static final int PullToRefresh_ptrAnimationStyle = 12;
+        public static int PullToRefresh_ptrAnimationStyle = 12;
         /**
           <p>
           @attr description
@@ -506,7 +506,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrDrawable
         */
-        public static final int PullToRefresh_ptrDrawable = 6;
+        public static int PullToRefresh_ptrDrawable = 6;
         /**
           <p>This symbol is the offset where the {@link com.handmark.pulltorefresh.library.R.attr#ptrDrawableBottom}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -516,7 +516,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.handmark.pulltorefresh.library:ptrDrawableBottom
         */
-        public static final int PullToRefresh_ptrDrawableBottom = 36;
+        public static int PullToRefresh_ptrDrawableBottom = 36;
         /**
           <p>
           @attr description
@@ -528,7 +528,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrDrawableEnd
         */
-        public static final int PullToRefresh_ptrDrawableEnd = 8;
+        public static int PullToRefresh_ptrDrawableEnd = 8;
         /**
           <p>
           @attr description
@@ -540,7 +540,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrDrawableStart
         */
-        public static final int PullToRefresh_ptrDrawableStart = 7;
+        public static int PullToRefresh_ptrDrawableStart = 7;
         /**
           <p>This symbol is the offset where the {@link com.handmark.pulltorefresh.library.R.attr#ptrDrawableTop}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -550,7 +550,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.handmark.pulltorefresh.library:ptrDrawableTop
         */
-        public static final int PullToRefresh_ptrDrawableTop = 35;
+        public static int PullToRefresh_ptrDrawableTop = 35;
         /**
           <p>This symbol is the offset where the {@link com.handmark.pulltorefresh.library.R.attr#ptrFriction}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -564,7 +564,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.handmark.pulltorefresh.library:ptrFriction
         */
-        public static final int PullToRefresh_ptrFriction = 19;
+        public static int PullToRefresh_ptrFriction = 19;
         /**
           <p>
           @attr description
@@ -580,7 +580,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrGoogleProgressStyle
         */
-        public static final int PullToRefresh_ptrGoogleProgressStyle = 15;
+        public static int PullToRefresh_ptrGoogleProgressStyle = 15;
         /**
           <p>
           @attr description
@@ -596,7 +596,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrGoogleViewStyle
         */
-        public static final int PullToRefresh_ptrGoogleViewStyle = 14;
+        public static int PullToRefresh_ptrGoogleViewStyle = 14;
         /**
           <p>
           @attr description
@@ -610,7 +610,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrHeaderBackground
         */
-        public static final int PullToRefresh_ptrHeaderBackground = 1;
+        public static int PullToRefresh_ptrHeaderBackground = 1;
         /**
           <p>
           @attr description
@@ -624,7 +624,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrHeaderSubTextColor
         */
-        public static final int PullToRefresh_ptrHeaderSubTextColor = 3;
+        public static int PullToRefresh_ptrHeaderSubTextColor = 3;
         /**
           <p>
           @attr description
@@ -636,7 +636,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrHeaderTextAppearance
         */
-        public static final int PullToRefresh_ptrHeaderTextAppearance = 10;
+        public static int PullToRefresh_ptrHeaderTextAppearance = 10;
         /**
           <p>
           @attr description
@@ -650,7 +650,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrHeaderTextColor
         */
-        public static final int PullToRefresh_ptrHeaderTextColor = 2;
+        public static int PullToRefresh_ptrHeaderTextColor = 2;
         /**
           <p>
           @attr description
@@ -666,7 +666,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrHideRefeshableViewWhileRefreshingDuration
         */
-        public static final int PullToRefresh_ptrHideRefeshableViewWhileRefreshingDuration = 30;
+        public static int PullToRefresh_ptrHideRefeshableViewWhileRefreshingDuration = 30;
         /**
           <p>
           @attr description
@@ -679,7 +679,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrHideRefeshableViewWhileRefreshingEnabled
         */
-        public static final int PullToRefresh_ptrHideRefeshableViewWhileRefreshingEnabled = 27;
+        public static int PullToRefresh_ptrHideRefeshableViewWhileRefreshingEnabled = 27;
         /**
           <p>
           @attr description
@@ -695,7 +695,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrIndicatorStyle
         */
-        public static final int PullToRefresh_ptrIndicatorStyle = 13;
+        public static int PullToRefresh_ptrIndicatorStyle = 13;
         /**
           <p>
           @attr description
@@ -712,7 +712,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrListViewExtrasEnabled
         */
-        public static final int PullToRefresh_ptrListViewExtrasEnabled = 23;
+        public static int PullToRefresh_ptrListViewExtrasEnabled = 23;
         /**
           <p>
           @attr description
@@ -737,7 +737,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrMode
         */
-        public static final int PullToRefresh_ptrMode = 4;
+        public static int PullToRefresh_ptrMode = 4;
         /**
           <p>
           @attr description
@@ -750,7 +750,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrOverScroll
         */
-        public static final int PullToRefresh_ptrOverScroll = 9;
+        public static int PullToRefresh_ptrOverScroll = 9;
         /**
           <p>
           @attr description
@@ -766,7 +766,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrPullLabel
         */
-        public static final int PullToRefresh_ptrPullLabel = 16;
+        public static int PullToRefresh_ptrPullLabel = 16;
         /**
           <p>This symbol is the offset where the {@link com.handmark.pulltorefresh.library.R.attr#ptrRefeshableViewProgressBarOnCenterHeight}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -780,7 +780,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.handmark.pulltorefresh.library:ptrRefeshableViewProgressBarOnCenterHeight
         */
-        public static final int PullToRefresh_ptrRefeshableViewProgressBarOnCenterHeight = 33;
+        public static int PullToRefresh_ptrRefeshableViewProgressBarOnCenterHeight = 33;
         /**
           <p>
           @attr description
@@ -796,7 +796,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrRefeshableViewProgressBarOnCenterWidth
         */
-        public static final int PullToRefresh_ptrRefeshableViewProgressBarOnCenterWidth = 32;
+        public static int PullToRefresh_ptrRefeshableViewProgressBarOnCenterWidth = 32;
         /**
           <p>This symbol is the offset where the {@link com.handmark.pulltorefresh.library.R.attr#ptrRefreshLabel}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -810,7 +810,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.handmark.pulltorefresh.library:ptrRefreshLabel
         */
-        public static final int PullToRefresh_ptrRefreshLabel = 17;
+        public static int PullToRefresh_ptrRefreshLabel = 17;
         /**
           <p>
           @attr description
@@ -824,7 +824,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrRefreshableViewBackground
         */
-        public static final int PullToRefresh_ptrRefreshableViewBackground = 0;
+        public static int PullToRefresh_ptrRefreshableViewBackground = 0;
         /**
           <p>This symbol is the offset where the {@link com.handmark.pulltorefresh.library.R.attr#ptrReleaseLabel}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -838,7 +838,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.handmark.pulltorefresh.library:ptrReleaseLabel
         */
-        public static final int PullToRefresh_ptrReleaseLabel = 18;
+        public static int PullToRefresh_ptrReleaseLabel = 18;
         /**
           <p>
           @attr description
@@ -854,7 +854,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrRotateDrawableWhilePulling
         */
-        public static final int PullToRefresh_ptrRotateDrawableWhilePulling = 24;
+        public static int PullToRefresh_ptrRotateDrawableWhilePulling = 24;
         /**
           <p>
           @attr description
@@ -867,7 +867,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrScrollingWhileRefreshingEnabled
         */
-        public static final int PullToRefresh_ptrScrollingWhileRefreshingEnabled = 22;
+        public static int PullToRefresh_ptrScrollingWhileRefreshingEnabled = 22;
         /**
           <p>
           @attr description
@@ -881,7 +881,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrSetGoogleViewLayoutSizeToActionbarHeight
         */
-        public static final int PullToRefresh_ptrSetGoogleViewLayoutSizeToActionbarHeight = 25;
+        public static int PullToRefresh_ptrSetGoogleViewLayoutSizeToActionbarHeight = 25;
         /**
           <p>
           @attr description
@@ -897,7 +897,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrShowGoogleStyleViewAnimationDuration
         */
-        public static final int PullToRefresh_ptrShowGoogleStyleViewAnimationDuration = 29;
+        public static int PullToRefresh_ptrShowGoogleStyleViewAnimationDuration = 29;
         /**
           <p>
           @attr description
@@ -911,7 +911,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrShowGoogleStyleViewAnimationEnabled
         */
-        public static final int PullToRefresh_ptrShowGoogleStyleViewAnimationEnabled = 26;
+        public static int PullToRefresh_ptrShowGoogleStyleViewAnimationEnabled = 26;
         /**
           <p>
           @attr description
@@ -924,7 +924,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrShowIndicator
         */
-        public static final int PullToRefresh_ptrShowIndicator = 5;
+        public static int PullToRefresh_ptrShowIndicator = 5;
         /**
           <p>This symbol is the offset where the {@link com.handmark.pulltorefresh.library.R.attr#ptrSmoothScrollDuration}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -938,7 +938,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.handmark.pulltorefresh.library:ptrSmoothScrollDuration
         */
-        public static final int PullToRefresh_ptrSmoothScrollDuration = 20;
+        public static int PullToRefresh_ptrSmoothScrollDuration = 20;
         /**
           <p>This symbol is the offset where the {@link com.handmark.pulltorefresh.library.R.attr#ptrSmoothScrollLongDuration}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -952,7 +952,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.handmark.pulltorefresh.library:ptrSmoothScrollLongDuration
         */
-        public static final int PullToRefresh_ptrSmoothScrollLongDuration = 21;
+        public static int PullToRefresh_ptrSmoothScrollLongDuration = 21;
         /**
           <p>
           @attr description
@@ -964,7 +964,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrSubHeaderTextAppearance
         */
-        public static final int PullToRefresh_ptrSubHeaderTextAppearance = 11;
+        public static int PullToRefresh_ptrSubHeaderTextAppearance = 11;
         /**
           <p>
           @attr description
@@ -980,7 +980,7 @@ containing a value of this type.
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrViewRefeshableViewProgressBarOnCenterWhileRefreshingDuration
         */
-        public static final int PullToRefresh_ptrViewRefeshableViewProgressBarOnCenterWhileRefreshingDuration = 31;
+        public static int PullToRefresh_ptrViewRefeshableViewProgressBarOnCenterWhileRefreshingDuration = 31;
         /**
           <p>
           @attr description
@@ -993,6 +993,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.handmark.pulltorefresh.library:ptrViewRefeshableViewProgressBarOnCenterWhileRefreshingEnabled
         */
-        public static final int PullToRefresh_ptrViewRefeshableViewProgressBarOnCenterWhileRefreshingEnabled = 28;
+        public static int PullToRefresh_ptrViewRefeshableViewProgressBarOnCenterWhileRefreshingEnabled = 28;
     };
 }

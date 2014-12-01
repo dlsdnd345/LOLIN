@@ -45,9 +45,16 @@
     <string name="reple_fragment_text_reple_hint">댓글을 입력해 주세요.</string>
 
     <!-- Composor Activity -->
+    
+    <string name="composor_activity_text_rank">계급</string>
+    <string name="composor_activity_text_tea">티어</string>
+    <string name="composor_activity_text_position">포지션</string>
+    <string name="composor_activity_text_time">시간</string>
     <string name="composor_activity_edit_content_empty_message">내용을 입력해 주세요.</string>
-    <string name="composor_activity_edit_title_empty_message">제목을 입력해 주세요.</string>
+    <string name="composor_activity_edit_title_empty_message">게시판의 제목을 입력해 주세요.</string>
     <string name="composor_activity_edit_summernername_empty_message">소환사 명을 입력해 주세요.</string>
+    <string name="composor_activity_edit_title_message">에 게임 하실 분 모십니다.</string>
+    <string name="composor_activity_edit_title_liner"> 라이너가 </string>
 
     <!-- FacebookLogin Activity -->
     <string name="facebooklogint_activity_edit_summernername_empty_message">소환사 명을 입력해 주세요.</string>
@@ -58,7 +65,7 @@
     <string name="board_fragment_text_no_list_message">게시글이 없습니다.</string>
 
     <!-- Actionbar title Value -->
-    <string name="ic_action_new">추가</string>
+    <string name="ic_action_new">올리기</string>
     <string name="ic_action_remove">삭제</string>
     <string name="ic_action_next">다음</string>
     <string name="ic_action_sort_by_size">카테고리</string>
