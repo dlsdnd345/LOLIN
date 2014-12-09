@@ -51,9 +51,9 @@ public class PushActivity extends Activity {
 	 */
 	private void init() {
 		
-		imgProfile = (ImageView)findViewById(R.id.img_profile);
-		txtMessage = (TextView)findViewById(R.id.txt_message);
-		txtSummernerName = (TextView)findViewById(R.id.txt_summerner_name);
+		imgProfile = (ImageView)findViewById(R.id.imgProfile);
+		txtMessage = (TextView)findViewById(R.id.txtMessage);
+		txtSummernerName = (TextView)findViewById(R.id.txtSummernerName);
 	}
 	
 	/**

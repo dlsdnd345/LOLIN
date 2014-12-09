@@ -123,6 +123,8 @@ public class FaceBookLoginActivity extends Activity {
             gcm = GoogleCloudMessaging.getInstance(this);
             regid = getRegistrationId(context);
 
+            Log.i(Config.GCM.TAG, "###################" + regid);
+            
             if (regid.isEmpty()) {
                 registerInBackground();
             }

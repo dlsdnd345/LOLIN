@@ -9,6 +9,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -22,6 +23,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -69,13 +71,18 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private ViewPager 					mViewPager;
 	private PagerAdapter 				mPagerAdapter;
 	private ProgressBar					prograssBar;
+
+	private ImageView					imgShare;
 	private ImageView					imgRank;
-	private TextView					textRank;
+
 	private	 TextView					textPosition;
 	private TextView					textPlayTime;
 	private TextView					textDetailTitle;
 	private TextView					textSummernerName;
-	private Button 						btnFacebookSharing;
+
+	private RelativeLayout 				layoutDelete;
+	private RelativeLayout 				layoutUpdate;
+	private RelativeLayout 				layoutFacebookSharing;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -106,18 +113,25 @@ public class BoardDetailActivity extends ActionBarActivity {
 	 */
 	private void init() {
 
-		btnFacebookSharing	= (Button)findViewById(R.id.btn_facebook_sharing);
-		prograssBar 		= (ProgressBar)findViewById(R.id.progressBar);
-		imgRank				= (ImageView)findViewById(R.id.img_rank);
-		textRank			= (TextView)findViewById(R.id.text_rank);
-		textPlayTime        = (TextView)findViewById(R.id.text_play_time);
-		textPosition 		= (TextView)findViewById(R.id.text_position);
-		textSummernerName 	= (TextView)findViewById(R.id.text_summernerName);
-		textDetailTitle 	= (TextView)findViewById(R.id.text_detail_title);
-		mViewPager 			= (ViewPager) findViewById(R.id.pager);
-		tabs 				= (PagerSlidingTabStrip) findViewById(R.id.tabs);
+		prograssBar 			= (ProgressBar)findViewById(R.id.progressBar);
 
-		btnFacebookSharing.setOnClickListener(mClickListener);
+		imgRank					= (ImageView)findViewById(R.id.imgRank);
+		imgShare				= (ImageView)findViewById(R.id.imgShare);
+
+		textPlayTime        	= (TextView)findViewById(R.id.textPlayTime);
+		textPosition 			= (TextView)findViewById(R.id.txtPosition);
+		textSummernerName 		= (TextView)findViewById(R.id.textSummonerName);
+		textDetailTitle 		= (TextView)findViewById(R.id.textDetailTitle);
+		mViewPager 				= (ViewPager) findViewById(R.id.pager);
+		tabs 					= (PagerSlidingTabStrip) findViewById(R.id.tabs);
+
+		layoutDelete	= (RelativeLayout)findViewById(R.id.layoutDelete);
+		layoutUpdate	= (RelativeLayout)findViewById(R.id.layoutUpdate);
+		layoutFacebookSharing	= (RelativeLayout)findViewById(R.id.layoutFacebookSharing);
+
+		layoutDelete.setOnClickListener(mClickListener);
+		layoutUpdate.setOnClickListener(mClickListener);
+		layoutFacebookSharing.setOnClickListener(mClickListener);
 	}
 
 	/**
@@ -159,44 +173,11 @@ public class BoardDetailActivity extends ActionBarActivity {
 	 */
 	private void visibleSharing() {
 		if(editState){
-			btnFacebookSharing.setVisibility(View.VISIBLE);
+			imgShare.setVisibility(View.VISIBLE);
+			layoutFacebookSharing.setVisibility(View.VISIBLE);
 		}else{
-			btnFacebookSharing.setVisibility(View.GONE);
-		}
-	}
-
-	/**
-	 * 액션바 생성
-	 */
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-
-		if(editState){
-			MenuInflater inflater = getMenuInflater();
-			inflater.inflate(R.menu.board_detail_menu, menu);
-		}
-		return super.onCreateOptionsMenu(menu);
-	}
-
-	/**
-	 * 액션바 클릭 리스터
-	 */
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle presses on the action bar items
-		switch (item.getItemId()) {
-		case R.id.ic_action_edit:
-
-			Intent intent = new Intent(BoardDetailActivity.this,ComposerActivity.class);
-			intent.putExtra(Config.BOARD.BOARD_ID, boardId);
-			startActivity(intent);
-			return true;
-		case R.id.ic_action_remove:
-			// 게시물 삭제
-			deleteDialog();
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
+			imgShare.setVisibility(View.GONE);
+			layoutFacebookSharing.setVisibility(View.GONE);
 		}
 	}
 
@@ -229,39 +210,38 @@ public class BoardDetailActivity extends ActionBarActivity {
 		prograssBar.setVisibility(View.VISIBLE);
 
 		String subUrl = boardDetailService.getFindOneSubUrl(boardId);
-		
+
 		request.add(new StringRequest
 				(Request.Method.GET, Config.API.DEFAULT_URL +Config.API.BOARD_FIND_ONE+subUrl ,new Response.Listener<String>() {  
 
-			@Override  
-			public void onResponse(String response) {  
+					@Override  
+					public void onResponse(String response) {  
 
-				board = boardDetailService.getBoardFindOne(response);
+						board = boardDetailService.getBoardFindOne(response);
 
-				if(board != null){
-					textDetailTitle.setText(board.getTitle());
-					textSummernerName.setText(board.getSummonerName());
-					textPosition.setText(board.getPosition());
-					textPlayTime.setText(board.getPlayTime());
-					textRank.setText(board.reverseTransformRank(board.getRank())+ " " + board.getTea());
-				}
-				// 이름별 랭크 이미지 삽입
-				int resource = getResources().getIdentifier
-						( "img_rank_"+board.getRank(), "drawable", getApplicationContext().getPackageName());
-				imgRank.setBackgroundResource(resource);
+						if(board != null){
+							textDetailTitle.setText(board.getTitle());
+							textSummernerName.setText(board.getSummonerName());
+							textPosition.setText(board.getPosition());
+							textPlayTime.setText(board.getPlayTime());
+						}
+						// 이름별 랭크 이미지 삽입
+						int resource = getResources().getIdentifier
+								( "img_rank_"+board.getRank(), "drawable", getApplicationContext().getPackageName());
+						imgRank.setBackgroundResource(resource);
 
-				viewPagerInit();
+						viewPagerInit();
 
-				prograssBar.setVisibility(View.INVISIBLE);
-			}  
-		}, new Response.ErrorListener() {  
-			@Override  
-			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
-				prograssBar.setVisibility(View.INVISIBLE);
-				Toast.makeText(getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
-			}  
-		}));
+						prograssBar.setVisibility(View.INVISIBLE);
+					}  
+				}, new Response.ErrorListener() {  
+					@Override  
+					public void onErrorResponse(VolleyError error) {  
+						VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
+						prograssBar.setVisibility(View.INVISIBLE);
+						Toast.makeText(getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
+					}  
+				}));
 	}
 
 	/**
@@ -273,25 +253,25 @@ public class BoardDetailActivity extends ActionBarActivity {
 		prograssBar.setVisibility(View.VISIBLE);
 
 		String subUrl = boardDetailService.getDeleteSubUrl(boardId);
-		
+
 		request.add(new StringRequest
 				(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.BOARD_DELETE +subUrl ,new Response.Listener<String>() {  
-			@Override  
-			public void onResponse(String response) {
-				Intent intent = new Intent(BoardDetailActivity.this, MainActivity.class);
-				startActivity(intent);
+					@Override  
+					public void onResponse(String response) {
+						Intent intent = new Intent(BoardDetailActivity.this, MainActivity.class);
+						startActivity(intent);
 
-				prograssBar.setVisibility(View.INVISIBLE);
+						prograssBar.setVisibility(View.INVISIBLE);
 
-			}  
-		}, new Response.ErrorListener() {  
-			@Override  
-			public void onErrorResponse(VolleyError error) {  
-				VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
-				prograssBar.setVisibility(View.INVISIBLE);
-				Toast.makeText(getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
-			}  
-		}));
+					}  
+				}, new Response.ErrorListener() {  
+					@Override  
+					public void onErrorResponse(VolleyError error) {  
+						VolleyLog.d(Config.FLAG.ERROR, error.getMessage());  
+						prograssBar.setVisibility(View.INVISIBLE);
+						Toast.makeText(getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
+					}  
+				}));
 	}
 
 	/**
@@ -406,25 +386,6 @@ public class BoardDetailActivity extends ActionBarActivity {
 			task.execute();
 		}
 	}
-	
-	private void UserInfo(){
-		
-		Session session = Session.getActiveSession();
-		
-		com.facebook.Request.Callback callback = new com.facebook.Request.Callback() 
-		{
-			@Override
-			public void onCompleted(com.facebook.Response response) {
-				
-				System.out.println("@@@@@@@@@@@@   :  " + response);
-			}
-		};
-		
-		com.facebook.Request request = new com.facebook.Request(session, "/me", null, HttpMethod.GET,callback);
-		RequestAsyncTask task = new RequestAsyncTask(request);
-		task.execute();
-		
-	}
 
 	/**
 	 * 액션바 초기화
@@ -432,6 +393,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 	@SuppressLint("NewApi")
 	private void actionBarInit() {
 		//ActionBar Init
+		Drawable drawable = getResources().getDrawable(R.drawable.title_bg);
+		getActionBar().setBackgroundDrawable(drawable);
 		getActionBar().setDisplayShowHomeEnabled(false);
 		getActionBar().setTitle(R.string.board_detail_activity_title);
 	}
@@ -472,16 +435,35 @@ public class BoardDetailActivity extends ActionBarActivity {
 	};
 
 	/**
+	 * 수정 버튼 선택시
+	 */
+	private void selectLayoutUpdate() {
+		Intent intent = new Intent(BoardDetailActivity.this,ComposerActivity.class);
+		intent.putExtra(Config.BOARD.BOARD_ID, boardId);
+		startActivity(intent);
+	}
+	
+	/**
 	 * 버튼 리스너
 	 */
 	Button.OnClickListener mClickListener = new View.OnClickListener() {
 		public void onClick(View v) {
 			switch (v.getId()) {
-			case R.id.btn_facebook_sharing:
+			//공유하기 버튼
+			case R.id.layoutFacebookSharing:
 				publishPhoto();
+				break;
+				//수정버튼
+			case R.id.layoutUpdate:
+				selectLayoutUpdate();
+				break;
+				//삭제버튼
+			case R.id.layoutDelete:
+				deleteDialog();
 				break;
 			}
 		}
+
 	};
 
 }

@@ -13,7 +13,6 @@
     <color name="background_white">#ffffff</color>
 
     <!-- text -->
-
     <color name="text_gray_5A5A5A">#5a5a5a</color>
     <color name="text_gray_353535">#353535</color>
     <color name="text_gray_B5B5B5">#b5b5b5</color>
@@ -21,6 +20,7 @@
     <color name="text_blue_5A5A5A">#2a54a2</color>
     <color name="text_black">#000000</color>
     <color name="text_white">#ffffff</color>
+    <color name="text_white_749EED">#749EED</color>
     <color name="background_tab_pressed">#6633B5E5</color>
 
 </resources>
