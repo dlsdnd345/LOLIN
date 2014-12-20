@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10">
+
+            <ImageView
+                android:id="@+id/img_reple_image"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                 />
+
+            <TextView
+                android:id="@+id/text_reple_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_white"
+                android:layout_toRightOf="@+id/img_reple_image"
+                android:text="dlsdnd345"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/text_reple_content"
+                android:layout_width="wrap_content"
+                android:maxWidth="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_reple_user_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="8dp"
+                android:background="@color/background_white"
+                android:textColor="@color/text_black"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/img_reple_image"
+                android:text="dlsdnd345dlsdnd345\ndlsdnd345dlsdnd345\ndlsdnd345dlsdnd345\n"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/text_reple_write_time"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_white"
+                android:layout_below="@+id/text_reple_content"
+                android:layout_marginLeft="10dp"
+                android:layout_alignRight="@+id/text_reple_content"
+                android:text="07:34"
+                android:layout_marginBottom="20dp"
+                android:textSize="11sp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout><!-- From: file:/Users/woong/LOLIN/lolin/res/layout/row_left_reple.xml -->
