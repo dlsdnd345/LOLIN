@@ -13,6 +13,7 @@
     <color name="background_white">#ffffff</color>
 
     <!-- text -->
+    <color name="text_gray_2A2A2A">#2a2a2a</color>
     <color name="text_gray_5A5A5A">#5a5a5a</color>
     <color name="text_gray_353535">#353535</color>
     <color name="text_gray_B5B5B5">#b5b5b5</color>

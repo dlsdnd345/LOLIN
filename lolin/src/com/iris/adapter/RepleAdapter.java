@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -44,8 +45,8 @@ import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 public class RepleAdapter extends BaseAdapter{
 
 	private static final String 		FACEBOOK_BASE_URL  	= "http://graph.facebook.com/";
-	private static final String 		PICTURE_TYPE		= "/picture?type=small";
-	
+	private static final String 		PICTURE_TYPE		= "/picture?type=normal";
+
 	private int 								layout;
 	private String								userName;
 	private Context 							context; 
@@ -56,11 +57,10 @@ public class RepleAdapter extends BaseAdapter{
 	private ImageLoader 						imageLoader;
 	private SharedpreferencesUtil 				sharedpreferencesUtil;
 	
-	public RepleAdapter(Context context , int layout , ArrayList<Reple> repleList, String userName){
+	public RepleAdapter(Context context , ArrayList<Reple> repleList, String userName){
 
 		this.userName = userName;
 		this.context=context;
-		this.layout = layout;
 		this.repleList =repleList;
 		
 		sharedpreferencesUtil = new SharedpreferencesUtil(context);
@@ -109,64 +109,59 @@ public class RepleAdapter extends BaseAdapter{
 			if (convertView != null)
 				return convertView;
 		}
-		
-		if (convertView == null) {
-			convertView = inflater.inflate(layout, parent, false);
-			}
-		
-		View 		layoutLeftHeadReple 	= ViewHolder.get(convertView ,R.id.layout_left_head_reple);
-		View 		layoutLeftContentReple 	= ViewHolder.get(convertView ,R.id.layout_left_content_reple);
-		ImageView 	imgPeple 				= ViewHolder.get(convertView ,R.id.img_reple_image);		
+
+        if(userName.equals(repleList.get(position).getUserName())){
+            convertView = inflater.inflate(R.layout.row_left_reple, parent, false);
+        }else{
+			convertView = inflater.inflate(R.layout.row_right_reple, parent, false);
+        }
+
+        ImageView   imgPeple 	            = ViewHolder.get(convertView ,R.id.img_reple_image);
 		TextView 	textUserName 			= ViewHolder.get(convertView ,R.id.text_reple_user_name);
 		TextView 	textWriteTime 			= ViewHolder.get(convertView ,R.id.text_reple_write_time);
 		TextView 	textContent 			= ViewHolder.get(convertView ,R.id.text_reple_content);
-		ImageView 	imgRepleCancel 			= ViewHolder.get(convertView ,R.id.img_reple_cancel);
-		
-		visibleCancelReple(position, imgRepleCancel);
+
+//		visibleCancelReple(position, imgRepleCancel);
 		
 		String url = FACEBOOK_BASE_URL+ repleList.get(position).getFacebookId()+PICTURE_TYPE;
 		
 		imageLoader.displayImage(url, imgPeple, options);
-		
+
+        Log.i("userName : " ,repleList.get(position).getUserName());
+
 		textUserName.setText(repleList.get(position).getUserName());
 		textWriteTime.setText(repleList.get(position).getWriteTime());
 		textContent.setText(repleList.get(position).getRepleContent());
 
-		visibleMyReple(position, layoutLeftHeadReple, layoutLeftContentReple);
-		
+
 		return convertView;
 	}
 
-	/**
-	 * 자신의 리플은 파란색으로 표시 , 상대방 리플 빨간색
-	 * @param position
-	 * @param layoutLeftHeadReple
-	 * @param layoutLeftContentReple
-	 */
-	private void visibleMyReple(int position, View layoutLeftHeadReple,
-			View layoutLeftContentReple) {
-		if(userName.equals(repleList.get(position).getUserName())){
-			layoutLeftHeadReple.setBackgroundResource(R.color.background_blue);
-			layoutLeftContentReple.setBackgroundResource(R.color.background_sky_blue);
-		}else{
-			layoutLeftHeadReple.setBackgroundResource(R.color.background_red);
-			layoutLeftContentReple.setBackgroundResource(R.color.background_sky_red);
-		}
-	}
+//	/**
+//	 * 자신의 리플은 파란색으로 표시 , 상대방 리플 빨간색
+//	 * @param position
+//	 */
+//	private void visibleMyReple(int position) {
+//		if(userName.equals(repleList.get(position).getUserName())){
+//
+//		}else{
+//
+//		}
+//	}
 
-	/**
-	 * 댓글 삭제 보임 여부 체크
-	 * @param position
-	 * @param imgRepleCancel
-	 */
-	private void visibleCancelReple(int position, ImageView imgRepleCancel) {
-		String faceBookId = sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
-		
-		if(repleList.get(position).getFacebookId().equals(faceBookId)){
-			imgRepleCancel.setVisibility(View.VISIBLE);
-		}else{
-			imgRepleCancel.setVisibility(View.GONE);
-		}
-	}
+//	/**
+//	 * 댓글 삭제 보임 여부 체크
+//	 * @param position
+//	 * @param imgRepleCancel
+//	 */
+//	private void visibleCancelReple(int position, ImageView imgRepleCancel) {
+//		String faceBookId = sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
+//
+//		if(repleList.get(position).getFacebookId().equals(faceBookId)){
+//			imgRepleCancel.setVisibility(View.VISIBLE);
+//		}else{
+//			imgRepleCancel.setVisibility(View.GONE);
+//		}
+//	}
 	
 }

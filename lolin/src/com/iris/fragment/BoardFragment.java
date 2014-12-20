@@ -378,11 +378,11 @@ public class BoardFragment extends Fragment {
 
 			Boolean editState = null;
 			if(user != null){
-				editState = boardList.get(position-1).getUserId() == user.getId();
+				editState = totalBoardList.get(position-1).getUserId() == user.getId();
 			}
 
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
-			sharedpreferencesUtil.put(Config.BOARD.BOARD_ID, String.valueOf(boardList.get(position-1).getId()));
+			sharedpreferencesUtil.put(Config.BOARD.BOARD_ID, String.valueOf(totalBoardList.get(position-1).getId()));
 			sharedpreferencesUtil.put(Config.FLAG.EDIT_STATE, editState);
 
 			startActivity(intent);

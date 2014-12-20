@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -97,11 +98,16 @@ public class BoardAdapter extends BaseAdapter{
 	 * @param textRepleCount
 	 */
 	private void visibleRepleCount(int position, TextView textRepleCount) {
-		if(boardList.get(position).getRepleCount() != null 
+
+
+
+		if(boardList.get(position).getRepleCount() != null
 		   && !boardList.get(position).getRepleCount().equals(Config.NUMBER.ZERO)){
+
+            textRepleCount.setVisibility(View.VISIBLE);
 			textRepleCount.setText(boardService.transformRepleCount(boardList.get(position).getRepleCount()));
-		}else{
-			textRepleCount.setText("");
+		}
+        else{
 			textRepleCount.setVisibility(View.GONE);
 		}
 	}

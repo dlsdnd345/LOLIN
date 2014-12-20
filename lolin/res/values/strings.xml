@@ -93,4 +93,8 @@
     <string name="setting_dialog_logout">로그아웃 하시겠습니까?</string>
     <string name="reple_delete_dialog_content">댓글 을 정말 삭제 하시겠습니까?</string>
 
+    <!--Reple Fragment -->
+    <string name="reple_fragment_text_not_delete">자신의 댓글만 삭제가 가능합니다.</string>
+
+
 </resources>

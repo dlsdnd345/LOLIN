@@ -68,7 +68,7 @@ public class Config {
 
 	public static class API {
 
-		public final static String			DEFAULT_URL 					= "http://192.168.123.200:8080/";
+		public final static String			DEFAULT_URL 					= "http://182.229.77.152:8080/";
 
 		public final static String			SUB_URL 						= "?id=";
 		public final static String 		SUB_URL_BOARD_ID 	 			= "?boardId=";

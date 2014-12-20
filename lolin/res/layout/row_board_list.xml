@@ -59,7 +59,8 @@
 
                         <TextView
                             android:id="@+id/txtTitle"
-                            android:layout_width="200dp"
+                            android:layout_width="wrap_content"
+                            android:maxWidth="200dp"
                             android:layout_height="wrap_content"
                             android:ellipsize="end"
                             android:maxLines="1"
@@ -74,7 +75,7 @@
                             android:paddingRight="3dp"
                             android:paddingBottom="3dp"
                             android:gravity="center"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginLeft="5dp"
                             android:background="@drawable/icon_comment"
                             android:text="53"
                             android:textSize="12sp"
