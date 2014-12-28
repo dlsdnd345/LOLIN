@@ -87,7 +87,15 @@ public class RepleAdapter extends BaseAdapter{
 		
 	}
 
-	public int getCount() {
+    public ArrayList<Reple> getRepleList() {
+        return repleList;
+    }
+
+    public void setRepleList(ArrayList<Reple> repleList) {
+        this.repleList = repleList;
+    }
+
+    public int getCount() {
 		return repleList.size();
 	}
 
@@ -110,6 +118,8 @@ public class RepleAdapter extends BaseAdapter{
 				return convertView;
 		}
 
+
+
         if(userName.equals(repleList.get(position).getUserName())){
             convertView = inflater.inflate(R.layout.row_left_reple, parent, false);
         }else{
@@ -122,9 +132,12 @@ public class RepleAdapter extends BaseAdapter{
 		TextView 	textContent 			= ViewHolder.get(convertView ,R.id.text_reple_content);
 
 //		visibleCancelReple(position, imgRepleCancel);
-		
+
+
 		String url = FACEBOOK_BASE_URL+ repleList.get(position).getFacebookId()+PICTURE_TYPE;
-		
+
+        Log.i("#######   "  , url);
+
 		imageLoader.displayImage(url, imgPeple, options);
 
         Log.i("userName : " ,repleList.get(position).getUserName());

@@ -99,8 +99,6 @@ public class BoardAdapter extends BaseAdapter{
 	 */
 	private void visibleRepleCount(int position, TextView textRepleCount) {
 
-
-
 		if(boardList.get(position).getRepleCount() != null
 		   && !boardList.get(position).getRepleCount().equals(Config.NUMBER.ZERO)){
 

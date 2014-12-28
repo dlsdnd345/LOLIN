@@ -7,6 +7,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
 
 import com.iris.entities.Board;
 import com.iris.entities.Reple;
@@ -46,13 +47,15 @@ public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 
 	@Override
 	public Fragment getItem(int position) {
-		
+
+        Log.i("@@@@@@@   ", board.getSummonerName());
+
 		if(position == CONTENT_FRAGMENT){
 			return contentFragment.newInstance(board.getContent());
 		}else if(position == REPLE_FRAGMENT){
 			return repleFragment.newInstance(board.getId(),(ArrayList<Reple>) board.getRepleList(),board.getSummonerName());
 		}else{
-			return detailRecordSearchFragment.newInstance(board.getSummonerName());
+			return detailRecordSearchFragment.newInstance();
 		}
 	}
 	

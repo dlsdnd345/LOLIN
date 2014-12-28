@@ -90,18 +90,21 @@ public class ComposerAdapter extends BaseAdapter{
 		return convertView;
 	}
 
-	/**
-	 * 댓글이 존재 하는 경우만 리플 숫자를 표시
-	 * @param position
-	 * @param textRepleCount
-	 */
-	private void visibleRepleCount(int position, TextView textRepleCount) {
-		if(boardList.get(position).getRepleCount() != null 
-		   && !boardList.get(position).getRepleCount().equals(Config.NUMBER.ZERO)){
-			textRepleCount.setText(boardService.transformRepleCount(boardList.get(position).getRepleCount()));
-		}else{
-			textRepleCount.setText("");
-			textRepleCount.setVisibility(View.GONE);
-		}
-	}
+    /**
+     * 댓글이 존재 하는 경우만 리플 숫자를 표시
+     * @param position
+     * @param textRepleCount
+     */
+    private void visibleRepleCount(int position, TextView textRepleCount) {
+
+        if(boardList.get(position).getRepleCount() != null
+                && !boardList.get(position).getRepleCount().equals(Config.NUMBER.ZERO)){
+
+            textRepleCount.setVisibility(View.VISIBLE);
+            textRepleCount.setText(boardService.transformRepleCount(boardList.get(position).getRepleCount()));
+        }
+        else{
+            textRepleCount.setVisibility(View.GONE);
+        }
+    }
 }

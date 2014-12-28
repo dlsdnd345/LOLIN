@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,9 +34,12 @@ import com.iris.adapter.RepleAdapter;
 import com.iris.config.Config;
 import com.iris.entities.Reple;
 import com.iris.entities.User;
+import com.iris.listener.MessageListener;
+import com.iris.lolin.BoardDetailActivity;
 import com.iris.lolin.R;
 import com.iris.service.RepleService;
 import com.iris.service.SettingService;
+import com.iris.service.UserService;
 import com.iris.util.SharedpreferencesUtil;
 
 public class RepleFragment extends Fragment {
@@ -44,6 +48,11 @@ public class RepleFragment extends Fragment {
 
     private int boardId;
     private String userName;
+    private User user;
+
+    private BoardDetailActivity boardDetailActivity;
+
+    private UserService userService;
     private RepleService repleService;
     private RepleAdapter repleAdapter;
     private SettingService settingService;
@@ -78,15 +87,22 @@ public class RepleFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_reple, container, false);
 
         init(rootView);
+
+
+        return rootView;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        boardDetailActivity = (BoardDetailActivity)getActivity();
+
         dataInit();
         visibleReple(repleList);
         visibleLogin();
 
-        repleAdapter = new RepleAdapter(getActivity(), repleList, userName);
-        repleListView.setOnItemClickListener(mOnItemClickListener);
-        repleListView.setAdapter(repleAdapter);
 
-        return rootView;
     }
 
     /**
@@ -102,7 +118,9 @@ public class RepleFragment extends Fragment {
         textAddReple = (TextView) rootView.findViewById(R.id.text_add_reple);
         textNoRepleMessage = (TextView) rootView.findViewById(R.id.text_no_reple_message);
         repleListView = (ListView) rootView.findViewById(R.id.list_reple);
+
         textAddReple.setOnClickListener(mClickListener);
+
     }
 
     /**
@@ -110,12 +128,24 @@ public class RepleFragment extends Fragment {
      */
     @SuppressWarnings("unchecked")
     private void dataInit() {
+
+        userService = new UserService(getActivity().getApplicationContext());
         repleService = new RepleService();
         settingService = new SettingService();
+
         sharedpreferencesUtil = new SharedpreferencesUtil(getActivity());
         repleList = (ArrayList<Reple>) getArguments().get(Config.FLAG.REPLE);
         userName = getArguments().getString(Config.FLAG.USER_NAME);
         boardId = getArguments().getInt(Config.FLAG.BOARD_ID);
+
+        getUser();
+
+        repleAdapter = new RepleAdapter(getActivity(), repleList, userName);
+        repleListView.setOnItemClickListener(mOnItemClickListener);
+        repleListView.setAdapter(repleAdapter);
+
+        boardDetailActivity.setMessageListener(mMessageListener);
+
     }
 
     /**
@@ -160,17 +190,23 @@ public class RepleFragment extends Fragment {
             return;
         }
 
-        String faceBookId = sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
+        final String faceBookId = sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
         RequestQueue request = Volley.newRequestQueue(getActivity());
+
+
+
         request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.REPLE_SAVE +
-                repleService.getSubUrl(boardId, userName, editReple.getText().toString(), faceBookId), new Response.Listener<String>() {
+                repleService.getSubUrl(boardId, user.getSummonerName(), editReple.getText().toString(), faceBookId), new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
                 String resultOk = repleService.saveReplePasing(response);
                 if (resultOk.equals(Config.FLAG.TRUE)) {
+
                     findReple();
-                    sendPush(editReple.getText().toString());
+                    if(!userName.equals(user.getSummonerName())){
+                        sendPush(editReple.getText().toString() , faceBookId);
+                    }
                 }
                 prograssBar.setVisibility(View.INVISIBLE);
             }
@@ -206,8 +242,9 @@ public class RepleFragment extends Fragment {
                             editReple.setText("");
                             repleList = repleService.getRepleFindOne(response);
                             visibleReple(repleList);
-                            repleAdapter = new RepleAdapter(getActivity(), repleList, userName);
-                            repleListView.setAdapter(repleAdapter);
+                            repleAdapter.setRepleList(repleList);
+                            repleAdapter.notifyDataSetChanged();
+                            repleListView.setSelection(repleList.size());
                         }
                         prograssBar.setVisibility(View.INVISIBLE);
                     }
@@ -254,18 +291,44 @@ public class RepleFragment extends Fragment {
     }
 
     /**
+     * 유저 정보 조회
+     */
+    public void getUser(){
+
+        prograssBar.setVisibility(View.VISIBLE);
+
+        String sub_url = userService.getUserSubUrl();
+
+        RequestQueue request = Volley.newRequestQueue(getActivity());
+        request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.USER_FIND_ONE +sub_url,new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                user = userService.getUser(response);
+                prograssBar.setVisibility(View.INVISIBLE);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d(Config.FLAG.ERROR, error.getMessage());
+                prograssBar.setVisibility(View.INVISIBLE);
+                Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
+            }
+        }));
+
+    }
+
+    /**
      * 푸시 전송 Api
      */
-    public void sendPush(String reple) {
+    public void sendPush(String reple, String faceBookId) {
 
         prograssBar.setVisibility(View.VISIBLE);
 
         RequestQueue request = Volley.newRequestQueue(getActivity());
-        String faceBookId = sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
 
         request.add(new StringRequest
                 (Request.Method.GET, Config.API.DEFAULT_URL + Config.API.GCM_SEND_REPLE + repleService.getSendPushSubUrl
-                        ("android", String.valueOf(boardId), userName, reple, faceBookId), new Response.Listener<String>() {
+                        ("android", String.valueOf(boardId), user.getSummonerName(), reple, faceBookId), new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
@@ -319,6 +382,30 @@ public class RepleFragment extends Fragment {
             } else {
                 Toast.makeText(getActivity(), getString(R.string.reple_fragment_text_not_delete) , Toast.LENGTH_SHORT).show();
             }
+        }
+    };
+
+    MessageListener mMessageListener = new MessageListener(){
+
+        @Override
+        public void sendMessage(String boardId, String message, String summernerName,
+                                String facebookId, String repleId , String writeTime) {
+
+            Reple reple = new Reple();
+
+            Log.i("66666  facebookId   :"   , facebookId);
+
+            reple.setBoardId(Integer.parseInt(boardId));
+            reple.setFacebookId(facebookId);
+            reple.setUserName(summernerName);
+            reple.setRepleContent(message);
+            reple.setId(Integer.parseInt(repleId));
+            reple.setWriteTime(writeTime);
+
+            repleAdapter.getRepleList().add(reple);
+            repleAdapter.notifyDataSetChanged();
+            repleListView.setSelection(repleList.size());
+
         }
     };
 

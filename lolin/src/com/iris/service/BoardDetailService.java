@@ -22,7 +22,7 @@ public class BoardDetailService {
 	private Gson 		gson;
 	private Context		context;
 	private Board 		boardOneFromGson;
-	
+
 	public BoardDetailService(Context context){
 		this.context =context;
 		gson = new Gson();
@@ -73,26 +73,26 @@ public class BoardDetailService {
 		
 		return "?boardId=" + encodeBoardId+"&hash="+encodeHash;
 	}
-	
+
 	public String getDeleteSubUrl(String boardId){
-		
+
 		String hash;
 		String encodeBoardId 	= null;
 		String encodeHash 		= null;
-		
+
 		try {
-			
+
 			String signatureData = boardId + Config.KEY.SECRET;
 			hash = SignatureUtil.getHash(signatureData);
-			
+
 			encodeBoardId   = URLEncoder.encode(boardId,"UTF-8");
 			encodeHash   	= URLEncoder.encode(hash,"UTF-8");
-			
+
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-		
+
 		return "?boardId=" + encodeBoardId+"&hash="+encodeHash;
 	}
-	
+
 }

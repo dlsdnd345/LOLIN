@@ -6,8 +6,11 @@ import org.json.JSONObject;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -16,6 +19,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -45,6 +49,7 @@ import com.facebook.model.GraphObject;
 import com.iris.adapter.BoardDetailPagerAdapter;
 import com.iris.config.Config;
 import com.iris.entities.Board;
+import com.iris.listener.MessageListener;
 import com.iris.pagerslidingtab.PagerSlidingTabStrip;
 import com.iris.service.BoardDetailService;
 import com.iris.util.ScreenshotUtil;
@@ -58,7 +63,9 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private Session.StatusCallback 		statusCallback = new SessionStatusCallback();
 	private Session 					sessionTemp;
 
-	private boolean					editState;
+    private BroadcastReceiver           broadcastReceiver;
+
+	private boolean 					editState;
 	private int 						viewPagerPosition;
 	private String						boardId;
 	private RequestQueue 				request;
@@ -75,7 +82,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private ImageView					imgShare;
 	private ImageView					imgRank;
 
-	private	 TextView					textPosition;
+	private	TextView					textPosition;
 	private TextView					textPlayTime;
 	private TextView					textDetailTitle;
 	private TextView					textSummernerName;
@@ -84,14 +91,21 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private RelativeLayout 				layoutUpdate;
 	private RelativeLayout 				layoutFacebookSharing;
 
-	@Override
+    private MessageListener             messageListener;
+
+
+    @Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.acticity_board_detail);
 		facebookInit(savedInstanceState);
 	}
 
-	@Override
+    public void setMessageListener(MessageListener messageListener) {
+        this.messageListener = messageListener;
+    }
+
+    @Override
 	protected void onResume() {
 		super.onResume();
 
@@ -106,6 +120,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 		super.onPause();
 		//화면이 켜져 있을때 푸시화면을 보여주기 않기 위함.
 		sharedpreferencesUtil.put(Config.FLAG.NOTIBLOCK, Config.FLAG.FALSE);
+
+        this.unregisterReceiver(broadcastReceiver);
 	}
 
 	/**
@@ -139,6 +155,11 @@ public class BoardDetailActivity extends ActionBarActivity {
 	 */
 	private void dataInit() {
 
+        /**
+         * 리시버 등록
+         */
+        reciveMessage();
+
 		request = Volley.newRequestQueue(getApplicationContext());  
 		screenshotUtil = new ScreenshotUtil(BoardDetailActivity.this);
 		boardDetailService = new BoardDetailService(getApplicationContext());
@@ -158,6 +179,29 @@ public class BoardDetailActivity extends ActionBarActivity {
 
 		//UserInfo();
 	}
+
+    /**
+     * GCM 전달 받을시 이벤트 발생
+     */
+    public void reciveMessage(){
+        broadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+
+                String boardId = intent.getStringExtra("boardId");
+                String message = intent.getStringExtra("message");
+                String summernerName = intent.getStringExtra("summernerName");
+                String facebookId = intent.getStringExtra("facebookId");
+                String repleId = intent.getStringExtra("repleId");
+                String writeTime = intent.getStringExtra("writeTime");
+
+                messageListener.sendMessage(boardId,message,summernerName,facebookId,repleId,writeTime);
+            }
+        };
+
+        IntentFilter filter = new IntentFilter("BoardDetailActivity");
+        this.registerReceiver(broadcastReceiver, filter);
+    }
 
 	/**
 	 * 자신의 게시판일 경우 수정 항목 보여주기 위함.

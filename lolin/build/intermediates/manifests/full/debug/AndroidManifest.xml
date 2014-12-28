@@ -36,10 +36,6 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.iris.lolin.CategoryActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-        </activity>
-        <activity
             android:name="com.iris.lolin.IntroActivity"
             android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
@@ -84,9 +80,8 @@
 
         <!-- GCM 리시버에서 돌리는 서비스 -->
         <service android:name="com.iris.lolin.GcmIntentService" />
+        <service android:name="com.iris.service.MessageService" />
         <!-- 서비스명 변경하면 안됨 -->
-        <activity android:name="com.iris.lolin.SummonerActivity" >
-        </activity>
     </application>
 
 </manifest>

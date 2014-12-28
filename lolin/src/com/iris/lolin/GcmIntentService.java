@@ -44,7 +44,7 @@ public class GcmIntentService extends IntentService {
 	public static final String TAG = GcmIntentService.class.getName();
 	public static final String TOAST_MESSAGE_ACTION = "org.androidtown.gcm.push.TOAST_MESSAGE";
 
-	private String msg , boardId , summernerName , facebookId;
+	private String msg , boardId , summernerName , facebookId , repleId , writeTime;
 	private SharedpreferencesUtil sharedpreferencesUtil;
 	
     public GcmIntentService() {
@@ -73,8 +73,15 @@ public class GcmIntentService extends IntentService {
             // If it's a regular GCM message, do some work.
             } else if (GoogleCloudMessaging.MESSAGE_TYPE_MESSAGE.equals(messageType)) {
                 // This loop represents the service doing some work.
-              
+
+                /**
+                 * 노티바 생성
+                 */
                 sendNotification(extras);
+                /**
+                 * 데이터 브로드 캐스트 진행
+                 */
+                sendMessageBroadCast(intent);
                 Log.i(TAG, "Received: " + extras.toString());
             }
         }
@@ -94,7 +101,11 @@ public class GcmIntentService extends IntentService {
 		boardId = (String) extras.get("boardId"); 
 		summernerName = (String) extras.get("summernerName");
 		facebookId = (String) extras.get("facebookId");
-		
+        repleId = (String) extras.get("repleId");
+        writeTime = (String) extras.get("writeTime");
+
+        Log.i("facebookId   :   " , facebookId);
+
 		NotificationManager notificationManager = (NotificationManager)context.getSystemService(Activity.NOTIFICATION_SERVICE);
 		
 		//노티 선택시 화면 이동 설정
@@ -140,5 +151,18 @@ public class GcmIntentService extends IntentService {
 			newIntent.putExtra(Config.FLAG.SUMMERNER_NAME, summernerName);
 			context.startActivity(newIntent);				
 		}
+
+    }
+
+    private void sendMessageBroadCast(Intent intent){
+
+        Intent i = new Intent("BoardDetailActivity");
+        i.putExtra("message", intent.getExtras().getString("message"));
+        i.putExtra("boardId", intent.getExtras().getString("boardId"));
+        i.putExtra("summernerName", intent.getExtras().getString("summernerName"));
+        i.putExtra("facebookId", intent.getExtras().getString("facebookId"));
+        i.putExtra("repleId", intent.getExtras().getString("repleId"));
+        i.putExtra("writeTime", intent.getExtras().getString("writeTime"));
+        sendBroadcast(i);
     }
 }

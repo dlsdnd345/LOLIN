@@ -124,7 +124,7 @@
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_centerVertical="true"
-                            android:background="@drawable/img_rank_challenger" />
+                             />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -149,7 +149,7 @@
                                     android:layout_height="wrap_content"
                                     android:ellipsize="end"
                                     android:maxLines="1"
-                                    android:text="챌린져가 새벽반 구합니다."
+
                                     android:textColor="@color/text_blue_5A5A5A" />
                             </LinearLayout>
 
@@ -158,7 +158,6 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="3dp"
-                                android:text="2014-01-03 14:42:13"
                                 android:textColor="@color/text_gray_B5B5B5"
                                 android:textSize="11sp" />
                         </LinearLayout>
@@ -180,7 +179,6 @@
                         android:layout_marginRight="15dp"
                         android:ellipsize="end"
                         android:maxLines="3"
-                        android:text="플래티넘 1티어와 같이 게임하실분 친구 추가 하시면 같이 게임 합니다."
                         android:textColor="@color/text_gray_5A5A5A"
                         android:textSize="11sp" />
                 </RelativeLayout>

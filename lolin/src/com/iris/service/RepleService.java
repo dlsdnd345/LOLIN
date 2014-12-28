@@ -137,7 +137,6 @@ public class RepleService {
 	
 	/**
 	 * 리플 삭제 url
-	 * @param boardId
 	 * @return
 	 */
 	public String getDeleteRepleSubUrl(int repleId){
