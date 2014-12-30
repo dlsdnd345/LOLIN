@@ -7,3 +7,5 @@ facebook/bin/R.txt
 library/bin/AndroidManifest.xml
 library/bin/library.jar
 library/bin/R.txt
+gradle.properties
+
