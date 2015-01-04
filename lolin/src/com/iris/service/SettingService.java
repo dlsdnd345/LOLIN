@@ -15,6 +15,9 @@ import com.iris.config.Config;
 import com.iris.entities.User;
 import com.iris.util.SharedpreferencesUtil;
 
+/**
+ * 셋팅 서비스
+ */
 public class SettingService {
 
 	private User 	user;

@@ -40,7 +40,7 @@ import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 @SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity  {
 
-	private final static int WRITE_TEXT 		= 1;
+	private final static int WRITE_TEXT 	= 1;
 	private final static int RECORD_SEARCH 	= 2;
 	private final static int SETTING 		= 3;
 
@@ -121,8 +121,8 @@ public class MainActivity extends ActionBarActivity  {
 	private void dataInit() {
 		
 		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
-		
-		actionvarInit();
+
+        actionBarInit();
 		viewPagerConfig();
         drawerLayoutInit();
 		imageLodearInit();
@@ -201,7 +201,10 @@ public class MainActivity extends ActionBarActivity  {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 	}
 
-	private void actionvarInit() {
+    /**
+     * 액션바 데이터 초기화
+     */
+	private void actionBarInit() {
 		//ActionBar Init
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setHomeButtonEnabled(true);
@@ -225,6 +228,7 @@ public class MainActivity extends ActionBarActivity  {
         }
 		
 		switch (item.getItemId()) {
+            //글쓰기 버튼
 		case R.id.ic_action_new:
 			Intent composerActivityintent = new Intent(MainActivity.this, ComposerActivity.class);
 			startActivity(composerActivityintent);
@@ -237,14 +241,12 @@ public class MainActivity extends ActionBarActivity  {
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        // Sync the toggle state after onRestoreInstanceState has occurred.
         mDrawerToggle.syncState();
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        // Pass any configuration change to the drawer toggls
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 	
@@ -332,16 +334,14 @@ public class MainActivity extends ActionBarActivity  {
 			viewPagerPosition = position;
 
 			if(position == WRITE_TEXT){
-				getActionBar().setTitle(R.string.title_section2);
+				getActionBar().setTitle(R.string.composer_my_activity_title);
 				invalidateOptionsMenu();
 			}else if(position == RECORD_SEARCH){
-				getActionBar().setTitle(R.string.title_section3);
+				getActionBar().setTitle(R.string.record_activity_title);
 				invalidateOptionsMenu();
-			}else if(position == SETTING){
-				getActionBar().setTitle(R.string.title_section4);
-				invalidateOptionsMenu();
-			}else{
-				getActionBar().setTitle(R.string.title_section1);
+			}
+			else{
+				getActionBar().setTitle(R.string.board_activity_title);
 				invalidateOptionsMenu();
 			}
 		}

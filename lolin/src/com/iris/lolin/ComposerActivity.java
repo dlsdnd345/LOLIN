@@ -108,6 +108,11 @@ public class ComposerActivity extends ActionBarActivity {
 		spinnerInit();
 		board.setTea(teaData[0]);
 
+        /**
+         * 메인화면 게시판 초기화 될수있도록 하기 위함.
+         */
+        sharedpreferencesUtil.put("isLoad",true);
+
 		if(boardId != null){
 			// 게시판 정보 api 요청
 			getFindOne(request);

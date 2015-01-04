@@ -7,16 +7,16 @@ import com.iris.config.Config;
 import com.iris.libs.TrippleDes;
 import com.iris.util.SignatureUtil;
 
+/**
+ * 페이스북 로그인 서비
+ */
 public class FacebookLoginService {
 
 	public FacebookLoginService(){
 	}
 	
 	/**
-	 * url 만드는 작업
-	 * @param id
-	 * @param userName
-	 * @param content
+	 * url 로그인 데이터 저장 url
 	 * @param facebookId
 	 * @return
 	 */

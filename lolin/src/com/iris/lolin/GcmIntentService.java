@@ -104,8 +104,6 @@ public class GcmIntentService extends IntentService {
         repleId = (String) extras.get("repleId");
         writeTime = (String) extras.get("writeTime");
 
-        Log.i("facebookId   :   " , facebookId);
-
 		NotificationManager notificationManager = (NotificationManager)context.getSystemService(Activity.NOTIFICATION_SERVICE);
 		
 		//노티 선택시 화면 이동 설정
@@ -154,6 +152,10 @@ public class GcmIntentService extends IntentService {
 
     }
 
+    /**
+     * 데이터 브로드캐스트로 전달
+     * @param intent
+     */
     private void sendMessageBroadCast(Intent intent){
 
         Intent i = new Intent("BoardDetailActivity");

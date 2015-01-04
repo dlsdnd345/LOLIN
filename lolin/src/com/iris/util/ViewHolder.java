@@ -3,6 +3,9 @@ package com.iris.util;
 import android.util.SparseArray;
 import android.view.View;
 
+/**
+ * 어댑터에서 사용하는 뷰홀더
+ */
 public class ViewHolder {
 
 	@SuppressWarnings("unchecked")

@@ -26,6 +26,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -82,6 +83,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private ImageView					imgShare;
 	private ImageView					imgRank;
 
+    private TextView                    textContent;
 	private	TextView					textPosition;
 	private TextView					textPlayTime;
 	private TextView					textDetailTitle;
@@ -90,6 +92,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private RelativeLayout 				layoutDelete;
 	private RelativeLayout 				layoutUpdate;
 	private RelativeLayout 				layoutFacebookSharing;
+
+    private LinearLayout                layoutTopEdit;
 
     private MessageListener             messageListener;
 
@@ -134,6 +138,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 		imgRank					= (ImageView)findViewById(R.id.imgRank);
 		imgShare				= (ImageView)findViewById(R.id.imgShare);
 
+        textContent        	    = (TextView)findViewById(R.id.textContent);
 		textPlayTime        	= (TextView)findViewById(R.id.textPlayTime);
 		textPosition 			= (TextView)findViewById(R.id.txtPosition);
 		textSummernerName 		= (TextView)findViewById(R.id.textSummonerName);
@@ -144,6 +149,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 		layoutDelete	= (RelativeLayout)findViewById(R.id.layoutDelete);
 		layoutUpdate	= (RelativeLayout)findViewById(R.id.layoutUpdate);
 		layoutFacebookSharing	= (RelativeLayout)findViewById(R.id.layoutFacebookSharing);
+
+        layoutTopEdit = (LinearLayout)findViewById(R.id.layoutTopEdit);
 
 		layoutDelete.setOnClickListener(mClickListener);
 		layoutUpdate.setOnClickListener(mClickListener);
@@ -221,7 +228,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 			layoutFacebookSharing.setVisibility(View.VISIBLE);
 		}else{
 			imgShare.setVisibility(View.GONE);
-			layoutFacebookSharing.setVisibility(View.GONE);
+            layoutTopEdit.setVisibility(View.GONE);
+
 		}
 	}
 
@@ -268,6 +276,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 							textSummernerName.setText(board.getSummonerName());
 							textPosition.setText(board.getPosition());
 							textPlayTime.setText(board.getPlayTime());
+                            textContent.setText(board.getContent());
 						}
 						// 이름별 랭크 이미지 삽입
 						int resource = getResources().getIdentifier

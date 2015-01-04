@@ -21,6 +21,9 @@ import com.iris.util.SharedpreferencesUtil;
 import com.iris.util.SignatureUtil;
 import com.iris.vo.BoardResponseVO;
 
+/**
+ * 메인 게시판 서비
+ */
 public class BoardService {
 
 	private static final String RANK_DATA_POSITION 		= "RankDataPosition";
@@ -33,7 +36,6 @@ public class BoardService {
 	private Context						context;
 	private Gson 						gson;
 	private Board 						board;
-	private ArrayList<Board> 			boardListFromGson;
 	private SharedpreferencesUtil		sharedpreferencesUtil;
 	private String[] 					rankData,positionData,timeData;
 	
@@ -113,7 +115,11 @@ public class BoardService {
 		return subUrl;
 		
 	}
-	
+
+    /**
+     * 유저 Url
+     * @return
+     */
 	public String getUserSubUrl(){
 		
 		String hash = null;

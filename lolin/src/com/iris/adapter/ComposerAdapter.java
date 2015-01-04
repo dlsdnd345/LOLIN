@@ -19,6 +19,10 @@ import com.iris.lolin.R;
 import com.iris.service.BoardService;
 import com.iris.util.ViewHolder;
 
+/**
+ * 내가 쓴글 게시판 어댑터
+ *
+ */
 public class ComposerAdapter extends BaseAdapter{
 
 	private BoardService						boardService;

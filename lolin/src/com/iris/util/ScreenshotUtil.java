@@ -23,7 +23,6 @@ public class ScreenshotUtil {
 	
 	/**
 	 * 화면 스크린샷 기능
-	 * @param activity
 	 * @return
 	 */
 	@SuppressLint("NewApi")

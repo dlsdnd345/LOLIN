@@ -31,7 +31,7 @@ import com.iris.service.UserService;
 import com.iris.util.SharedpreferencesUtil;
 
 /**
- * A placeholder fragment containing a simple view.
+ * 전적검색 프래그먼트
  */
 @SuppressLint("NewApi")
 public class RecordSearchFragment extends Fragment {

@@ -17,6 +17,9 @@ import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
 import java.net.URLEncoder;
 
+/**
+ * 유저 서비스
+ */
 public class UserService {
 
     private SharedpreferencesUtil sharedpreferencesUtil;
@@ -28,7 +31,12 @@ public class UserService {
 		gson = new Gson();
         sharedpreferencesUtil = new SharedpreferencesUtil(context);
 	}
-	
+
+    /**
+     * 유저 데이터 얻기
+    * @param jsonData
+     * @return
+     */
 	public User getUser(String jsonData){
 		
 		JSONObject JsonObject;
@@ -50,6 +58,10 @@ public class UserService {
 		return user;
 	}
 
+    /**
+     * 유저 정보 얻기 Url
+     * @return
+     */
     public String getUserSubUrl(){
 
         String hash = null;

@@ -7,22 +7,22 @@ import android.content.DialogInterface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import com.iris.lolin.R;
+
 public class NetworkUtil {
 
-	private static final String TITLE = "경고";
-	private static final String MESSAGE = "네트워크를 활성화 시켜 주세요.";
-	private static final String CLEAR = "확인";
-	
+
 	private boolean isOk ;
 	private boolean isWifiConn,isMobileConn;
 	
 	private ConnectivityManager connectivityManager;
 	
 	private Activity activity;
-	
+	private Context context;
 	
 	public NetworkUtil(Activity activity){
 		this.activity = activity;
+        this.context = activity.getApplicationContext();
 	}
 
 	/**
@@ -44,9 +44,10 @@ public class NetworkUtil {
 		{
 			isOk = false;
 			AlertDialog.Builder alertDialog = new AlertDialog.Builder(activity);
-			alertDialog.setTitle(TITLE);
-			alertDialog.setMessage(MESSAGE).setCancelable(false).
-			setPositiveButton(CLEAR,new DialogInterface.OnClickListener() {
+			alertDialog.setTitle(context.getString(R.string.dialog_network_warning_title));
+			alertDialog.setMessage(context.getString(R.string.dialog_network_warning_message)).setCancelable(false).
+			setPositiveButton(context.getString(R.string.dialog_clear),
+                    new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int id) {						
 					((Activity) activity).finish();
 				}

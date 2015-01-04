@@ -5,6 +5,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Formatter;
 
+/**
+ * 암호화 유틸
+ */
 public class SignatureUtil {
 
 	public static String getHash(String rawSignature){

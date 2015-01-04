@@ -114,7 +114,15 @@ public class BoardFragment extends Fragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		dataInit();
+
+        sharedpreferencesUtil = new SharedpreferencesUtil(getActivity().getApplicationContext());
+        boolean isLoad = sharedpreferencesUtil.getValue("isLoad",true);
+
+        if(isLoad) {
+            dataInit();
+        }
+
+        sharedpreferencesUtil.put("isLoad",true);
 	}
 
 	/**
@@ -225,7 +233,6 @@ public class BoardFragment extends Fragment {
 	private void spinnerInit() {
 
 		Context context = getActivity();
-		sharedpreferencesUtil = new SharedpreferencesUtil(context);
 		//spinner init
 		rankData = context.getResources().getStringArray(R.array.main_rank_array_list);
 		//랭크
@@ -384,8 +391,9 @@ public class BoardFragment extends Fragment {
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
 			sharedpreferencesUtil.put(Config.BOARD.BOARD_ID, String.valueOf(totalBoardList.get(position-1).getId()));
 			sharedpreferencesUtil.put(Config.FLAG.EDIT_STATE, editState);
-
 			startActivity(intent);
+
+            sharedpreferencesUtil.put("isLoad",false);
 		}
 
 	};

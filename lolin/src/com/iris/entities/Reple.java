@@ -2,6 +2,9 @@ package com.iris.entities;
 
 import java.io.Serializable;
 
+/**
+ * 댓글 데이터
+ */
 public class Reple implements Serializable{
 
 	private static final long serialVersionUID = 7928329363203940132L;

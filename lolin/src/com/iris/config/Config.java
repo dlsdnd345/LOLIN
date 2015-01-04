@@ -3,7 +3,10 @@ package com.iris.config;
 public class Config {
 
 	public static class COMMON {
-		
+
+        /**
+         * 게시판 페이징 갯수
+         */
 		public final static int PAGE_SIZE		= 5;
 		
 	}
@@ -32,7 +35,7 @@ public class Config {
 
 	public static class POSITION {
 
-		public final static String TOP 		= "탑";
+		public final static String TOP 		    = "탑";
 		public final static String MIDE 		= "미드";
 		public final static String SUPOT 		= "서폿";
 		public final static String JUGGLE 		= "정글";
@@ -41,7 +44,7 @@ public class Config {
 
 	public static class TIME {
 
-		public final static String MORNING 		= "오전";
+		public final static String MORNING 		    = "오전";
 		public final static String AFTERNOON 		= "오후";
 		public final static String DINNER 			= "저녁";
 		public final static String DAWN 			= "새벽";
@@ -49,8 +52,8 @@ public class Config {
 
 	public static class TEA {
 
-		public final static String ONE 	= "1티어";
-		public final static String TWO 	= "2티어";
+		public final static String ONE 	    = "1티어";
+		public final static String TWO 	    = "2티어";
 		public final static String THREE 	= "3티어";
 		public final static String FOUR 	= "4티어";
 		public final static String FIVE 	= "5티어";
@@ -68,9 +71,9 @@ public class Config {
 
 	public static class API {
 
-		public final static String			DEFAULT_URL 					= "http://182.229.77.152:8080/";
+		public final static String		DEFAULT_URL 				= "http://182.229.77.152:8080/";
 
-		public final static String			SUB_URL 						= "?id=";
+		public final static String		SUB_URL 					= "?id=";
 		public final static String 		SUB_URL_BOARD_ID 	 			= "?boardId=";
 		public final static String 		SUB_URL_REPLE_ID 	 			= "?repleId=";
 
@@ -128,7 +131,7 @@ public class Config {
 	public static class GCM {
 
 		public static final 	String TAG 			= "GCM";
-		public static final	String SENDER_ID 	= "376992068498";
+		public static final	String SENDER_ID 	    = "376992068498";
 		public static final 	String PROJECT_ID 	= "450303710235";
 	}
 

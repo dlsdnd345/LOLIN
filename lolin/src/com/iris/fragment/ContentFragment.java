@@ -11,6 +11,9 @@ import com.iris.config.Config;
 import com.iris.entities.Board;
 import com.iris.lolin.R;
 
+/**
+ * 내용 프래그먼트
+ */
 public class ContentFragment extends Fragment {
 
 

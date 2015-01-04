@@ -10,10 +10,13 @@ import com.iris.libs.TrippleDes;
 import com.iris.util.SharedpreferencesUtil;
 import com.iris.util.SignatureUtil;
 
+/**
+ * 글쓰기 화면 서비스
+ */
 public class ComposerService {
 	
 	/**
-	 * ComposerService subUrl 반환
+	 * 글쓰기 Url
 	 * @param boardId
 	 * @param facebookId
 	 * @param title
@@ -68,7 +71,12 @@ public class ComposerService {
 				"&position="+encodePosition+"&rank="+encodeRank+"&playTime="+ encodePlayTime +"&tea="+encodeTea + "&hash="+encodeHash;
 		return sub_url;
 	}
-	
+
+    /**
+     * 한개의 게시판  Url
+     * @param boardId
+     * @return
+     */
 	public String getFindOneSubUrl(String boardId){
 		
 		String hash;

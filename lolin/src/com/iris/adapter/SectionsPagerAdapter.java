@@ -15,8 +15,7 @@ import com.iris.lolin.R;
 import com.iris.util.SharedpreferencesUtil;
 
 /**
- * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
- * one of the sections/tabs/pages.
+ * 메인 화면 페이져 어댑터
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
@@ -71,15 +70,13 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 	@Override
 	public CharSequence getPageTitle(int position) {
 
-		//탭바 Title 이름 지정
-		Locale l = Locale.getDefault();
 		switch (position) {
 		case 0:
-			return context.getString(R.string.title_section1).toUpperCase(l);
+			return context.getString(R.string.board_activity_title);
 		case 1:
-			return context.getString(R.string.title_section2).toUpperCase(l);
+			return context.getString(R.string.composer_activity_title);
 		case 2:
-			return context.getString(R.string.title_section3).toUpperCase(l);
+			return context.getString(R.string.my_record_activity_title);
 		}
 		return null;
 	}

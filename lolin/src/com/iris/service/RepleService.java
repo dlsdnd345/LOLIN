@@ -17,6 +17,9 @@ import com.iris.entities.Reple;
 import com.iris.libs.TrippleDes;
 import com.iris.util.SignatureUtil;
 
+/**
+ * 댓글 서비스
+ */
 public class RepleService {
 
 	private Gson 	gson;
@@ -27,7 +30,7 @@ public class RepleService {
 	}
 	
 	/**
-	 * url 만드는 작업
+	 * 댓글  Url
 	 * @param boardId
 	 * @param userName
 	 * @param content
@@ -66,7 +69,7 @@ public class RepleService {
 	}
 	
 	/**
-	 * 푸시 subUrl 만드는 작업
+	 * 푸시 보내기 subUrl
 	 * @param os
 	 * @param boardId
 	 * @param summernerName

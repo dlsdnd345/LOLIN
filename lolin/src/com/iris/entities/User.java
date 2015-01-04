@@ -1,5 +1,8 @@
 package com.iris.entities;
 
+/**
+ * 유저 데이터
+ */
 public class User {
 
 	private int id;

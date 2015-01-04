@@ -20,6 +20,9 @@ import com.iris.lolin.R;
 import com.iris.service.BoardService;
 import com.iris.util.ViewHolder;
 
+/**
+ * 메인 게시판 어댑터
+ */
 public class BoardAdapter extends BaseAdapter{
 
 	private BoardService						boardService;
@@ -65,7 +68,7 @@ public class BoardAdapter extends BaseAdapter{
 		
 		if (convertView == null) {
 			convertView = inflater.inflate(layout, parent, false);
-			}
+		}
 		
 		ImageView	rankImage 			= ViewHolder.get(convertView ,R.id.imgRank);		
 		TextView 	txtTitle 			= ViewHolder.get(convertView ,R.id.txtTitle);

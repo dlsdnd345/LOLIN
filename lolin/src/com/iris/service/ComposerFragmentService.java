@@ -20,10 +20,12 @@ import com.iris.util.SharedpreferencesUtil;
 import com.iris.util.SignatureUtil;
 import com.iris.vo.BoardResponseVO;
 
+/**
+ * 내가 쓴글 서비스
+ */
 public class ComposerFragmentService {
 
 	private Gson 						gson;
-	private ArrayList<Board> 			boardListFromGson;
 	private SharedpreferencesUtil		sharedpreferencesUtil;
 
 	private BoardResponseVO 			boardResponseVO;
@@ -57,7 +59,11 @@ public class ComposerFragmentService {
 		}
 		return boardResponseVO;
 	}
-	
+
+    /**
+     * 내가 쓴글 게시판 얻기
+     * @return
+     */
 	public String getSubUrlBoardFindMyAll(){
 		
 		String hash = null;

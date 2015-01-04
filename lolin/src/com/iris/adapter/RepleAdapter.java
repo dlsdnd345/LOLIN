@@ -42,6 +42,9 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
+/**
+ * 댓글 어댑터
+ */
 public class RepleAdapter extends BaseAdapter{
 
 	private static final String 		FACEBOOK_BASE_URL  	= "http://graph.facebook.com/";
@@ -131,16 +134,10 @@ public class RepleAdapter extends BaseAdapter{
 		TextView 	textWriteTime 			= ViewHolder.get(convertView ,R.id.text_reple_write_time);
 		TextView 	textContent 			= ViewHolder.get(convertView ,R.id.text_reple_content);
 
-//		visibleCancelReple(position, imgRepleCancel);
-
 
 		String url = FACEBOOK_BASE_URL+ repleList.get(position).getFacebookId()+PICTURE_TYPE;
 
-        Log.i("#######   "  , url);
-
 		imageLoader.displayImage(url, imgPeple, options);
-
-        Log.i("userName : " ,repleList.get(position).getUserName());
 
 		textUserName.setText(repleList.get(position).getUserName());
 		textWriteTime.setText(repleList.get(position).getWriteTime());
@@ -149,32 +146,5 @@ public class RepleAdapter extends BaseAdapter{
 
 		return convertView;
 	}
-
-//	/**
-//	 * 자신의 리플은 파란색으로 표시 , 상대방 리플 빨간색
-//	 * @param position
-//	 */
-//	private void visibleMyReple(int position) {
-//		if(userName.equals(repleList.get(position).getUserName())){
-//
-//		}else{
-//
-//		}
-//	}
-
-//	/**
-//	 * 댓글 삭제 보임 여부 체크
-//	 * @param position
-//	 * @param imgRepleCancel
-//	 */
-//	private void visibleCancelReple(int position, ImageView imgRepleCancel) {
-//		String faceBookId = sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
-//
-//		if(repleList.get(position).getFacebookId().equals(faceBookId)){
-//			imgRepleCancel.setVisibility(View.VISIBLE);
-//		}else{
-//			imgRepleCancel.setVisibility(View.GONE);
-//		}
-//	}
 	
 }

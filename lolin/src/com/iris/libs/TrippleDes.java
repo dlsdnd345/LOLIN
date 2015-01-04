@@ -10,6 +10,9 @@ import javax.crypto.spec.IvParameterSpec;
 
 import android.util.Base64;
 
+/**
+ * 양방향 암호화
+ */
 public class TrippleDes {
 	private static final String UNICODE_FORMAT = "UTF8";
     public static final String DESEDE_ENCRYPTION_SCHEME = "DESede";

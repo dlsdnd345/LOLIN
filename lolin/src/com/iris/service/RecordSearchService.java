@@ -11,6 +11,9 @@ import com.iris.config.Config;
 import com.iris.entities.User;
 import com.iris.util.SharedpreferencesUtil;
 
+/**
+ * 전적 검색 화면 서비스
+ */
 public class RecordSearchService {
 
 	
@@ -20,7 +23,12 @@ public class RecordSearchService {
 	public RecordSearchService(){
 		gson = new Gson();
 	}
-	
+
+    /**
+     * 유저 정보 얻기
+     * @param jsonData
+     * @return
+     */
 	public User getUser(String jsonData){
 		
 		JSONObject JsonObject;

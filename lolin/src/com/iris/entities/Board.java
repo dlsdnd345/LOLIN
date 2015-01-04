@@ -7,6 +7,9 @@ import java.util.List;
 
 import com.iris.config.Config;
 
+/**
+ * 게시판 데이터
+ */
 public class Board implements Serializable {
 
 	private static final long serialVersionUID = 1L;

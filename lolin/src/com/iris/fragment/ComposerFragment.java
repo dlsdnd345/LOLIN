@@ -38,7 +38,7 @@ import com.iris.util.SharedpreferencesUtil;
 import com.iris.vo.BoardResponseVO;
 
 /**
- * A placeholder fragment containing a simple view.
+ * 내가쓴글 프래그먼트
  */
 @SuppressLint("NewApi")
 public class ComposerFragment extends Fragment {

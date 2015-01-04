@@ -26,7 +26,7 @@ import com.iris.lolin.R;
 import com.iris.service.UserService;
 
 /**
- * A placeholder fragment containing a simple view.
+ * 상세내용 전적 검색 프래그먼트
  */
 @SuppressLint("NewApi")
 public class DetailRecordSearchFragment extends Fragment {
@@ -76,8 +76,6 @@ public class DetailRecordSearchFragment extends Fragment {
 		WebView webView = mPullRefreshWebView.getRefreshableView();
 		webView.getSettings().setJavaScriptEnabled(true);
 
-        Log.i("@@@@@11111",user.getSummonerName());
-
 		webView.loadUrl(BASE_URL +user.getSummonerName());
 		webView.setWebViewClient(new BasicWebViewClient());
 	}
@@ -97,7 +95,6 @@ public class DetailRecordSearchFragment extends Fragment {
             public void onResponse(String response) {
                 user = userService.getUser(response);
                 webViewInit();
-                Log.i("@@@@@00000",user.getSummonerName());
                 progressBar.setVisibility(View.INVISIBLE);
             }
         }, new Response.ErrorListener() {

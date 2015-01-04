@@ -17,7 +17,9 @@ import com.iris.fragment.RepleFragment;
 import com.iris.lolin.R;
 import com.iris.util.SharedpreferencesUtil;
 
-
+/**
+ * 게시판 상세내용 화면 페이져 어댑터
+ */
 public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 
 	private static final int CONTENT_FRAGMENT			= 0;
@@ -48,8 +50,6 @@ public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 	@Override
 	public Fragment getItem(int position) {
 
-        Log.i("@@@@@@@   ", board.getSummonerName());
-
 		if(position == CONTENT_FRAGMENT){
 			return contentFragment.newInstance(board.getContent());
 		}else if(position == REPLE_FRAGMENT){
@@ -62,15 +62,13 @@ public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 	@Override
 	public CharSequence getPageTitle(int position) {
 		
-		//탭바 Title 이름 지정
-		Locale l = Locale.getDefault();
 		switch (position) {
 		case 0:
-			return context.getString(R.string.detail_title_section1).toUpperCase(l);
+			return context.getString(R.string.board_detail_activity_title);
 		case 1:
-			return context.getString(R.string.detail_title_section3).toUpperCase(l);
+			return context.getString(R.string.record_activity_title);
 		case 2:
-			return context.getString(R.string.detail_title_section2).toUpperCase(l);
+			return context.getString(R.string.reple_activity_title);
 		}
 		return null;
 	}

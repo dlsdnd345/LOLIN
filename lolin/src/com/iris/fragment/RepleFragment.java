@@ -42,6 +42,9 @@ import com.iris.service.SettingService;
 import com.iris.service.UserService;
 import com.iris.util.SharedpreferencesUtil;
 
+/**
+ * 상세내용 댓글 프래그먼트
+ */
 public class RepleFragment extends Fragment {
 
     private ArrayList<Reple> repleList;
@@ -392,8 +395,6 @@ public class RepleFragment extends Fragment {
                                 String facebookId, String repleId , String writeTime) {
 
             Reple reple = new Reple();
-
-            Log.i("66666  facebookId   :"   , facebookId);
 
             reple.setBoardId(Integer.parseInt(boardId));
             reple.setFacebookId(facebookId);

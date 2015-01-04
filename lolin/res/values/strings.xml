@@ -79,6 +79,11 @@
     <string name="board_detail_activity_title">상세 내용</string>
     <string name="intro_activity_title">인트로</string>
     <string name="facebook_login_activity_title">로그인</string>
+    <string name="reple_activity_title">댓글</string>
+    <string name="record_activity_title">전적 검색</string>
+    <string name="board_activity_title">게시판</string>
+    <string name="composer_my_activity_title">내가 쓴글</string>
+    <string name="my_record_activity_title">전적 검색</string>
     <string name="app_id">275243632673494</string>
     <string name="title_facebook_login">login</string>
 
@@ -95,6 +100,11 @@
 
     <!--Reple Fragment -->
     <string name="reple_fragment_text_not_delete">자신의 댓글만 삭제가 가능합니다.</string>
+
+    <!-- 네트워크 팝업 -->
+    <string name="dialog_network_warning_title">경고</string>
+    <string name="dialog_network_warning_message">네트워크를 활성화 시켜 주세요.</string>
+
 
 
 </resources>

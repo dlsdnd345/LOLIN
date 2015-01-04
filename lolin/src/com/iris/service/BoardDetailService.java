@@ -17,6 +17,9 @@ import com.iris.config.Config;
 import com.iris.entities.Board;
 import com.iris.util.SignatureUtil;
 
+/**
+ * 상세게시판 서비스
+ */
 public class BoardDetailService {
 
 	private Gson 		gson;
@@ -52,7 +55,12 @@ public class BoardDetailService {
 		}
 		return boardOneFromGson;
 	}
-	
+
+    /**
+     * 한개의 게시판 Url
+     * @param boardId
+     * @return
+     */
 	public String getFindOneSubUrl(String boardId){
 		
 		String hash;
@@ -74,6 +82,11 @@ public class BoardDetailService {
 		return "?boardId=" + encodeBoardId+"&hash="+encodeHash;
 	}
 
+    /**
+     * 게시판 삭제  Url
+     * @param boardId
+     * @return
+     */
 	public String getDeleteSubUrl(String boardId){
 
 		String hash;

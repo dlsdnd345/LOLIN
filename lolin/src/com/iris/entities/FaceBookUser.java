@@ -1,5 +1,8 @@
 package com.iris.entities;
 
+/**
+ * 페이스북 데이터
+ */
 public class FaceBookUser {
 
 	private String userId;
