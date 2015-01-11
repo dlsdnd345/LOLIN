@@ -66,9 +66,9 @@ public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 		case 0:
 			return context.getString(R.string.board_detail_activity_title);
 		case 1:
-			return context.getString(R.string.record_activity_title);
-		case 2:
 			return context.getString(R.string.reple_activity_title);
+		case 2:
+			return context.getString(R.string.record_activity_title);
 		}
 		return null;
 	}

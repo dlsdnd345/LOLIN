@@ -36,124 +36,124 @@ uses-permission#android.permission.WAKE_LOCK
 ADDED from AndroidManifest.xml:14:5
 	android:name
 		ADDED from AndroidManifest.xml:14:22
-uses-permission#com.google.android.c2dm.permission.RECEIVE
+uses-permission#android.permission.VIBRATE
 ADDED from AndroidManifest.xml:15:5
 	android:name
 		ADDED from AndroidManifest.xml:15:22
-uses-permission#com.iris.lolin.permission.C2D_MESSAGE
+uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from AndroidManifest.xml:16:5
 	android:name
 		ADDED from AndroidManifest.xml:16:22
-uses-permission#android.permission.ACCESS_NETWORK_STATE
+uses-permission#com.iris.lolin.permission.C2D_MESSAGE
 ADDED from AndroidManifest.xml:17:5
 	android:name
 		ADDED from AndroidManifest.xml:17:22
-permission#com.iris.lolin.permission.C2D_MESSAGE
-ADDED from AndroidManifest.xml:19:5
-	android:protectionLevel
-		ADDED from AndroidManifest.xml:21:9
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from AndroidManifest.xml:18:5
 	android:name
-		ADDED from AndroidManifest.xml:20:9
+		ADDED from AndroidManifest.xml:18:22
+permission#com.iris.lolin.permission.C2D_MESSAGE
+ADDED from AndroidManifest.xml:20:5
+	android:protectionLevel
+		ADDED from AndroidManifest.xml:22:9
+	android:name
+		ADDED from AndroidManifest.xml:21:9
 application
-ADDED from AndroidManifest.xml:23:5
+ADDED from AndroidManifest.xml:24:5
 MERGED from LOLIN:facebook:unspecified:22:5
 MERGED from LOLIN:appcompat_v7:unspecified:22:5
 MERGED from LOLIN:library:unspecified:9:5
 	android:label
-		ADDED from AndroidManifest.xml:26:9
-	android:allowBackup
-		ADDED from AndroidManifest.xml:24:9
-	android:icon
-		ADDED from AndroidManifest.xml:25:9
-	android:theme
 		ADDED from AndroidManifest.xml:27:9
+	android:allowBackup
+		ADDED from AndroidManifest.xml:25:9
+	android:icon
+		ADDED from AndroidManifest.xml:26:9
+	android:theme
+		ADDED from AndroidManifest.xml:28:9
 activity#com.iris.lolin.MainActivity
-ADDED from AndroidManifest.xml:28:9
+ADDED from AndroidManifest.xml:29:9
 	android:label
+		ADDED from AndroidManifest.xml:31:13
+	android:name
 		ADDED from AndroidManifest.xml:30:13
-	android:name
-		ADDED from AndroidManifest.xml:29:13
 activity#com.iris.lolin.ComposerActivity
-ADDED from AndroidManifest.xml:32:9
+ADDED from AndroidManifest.xml:33:9
 	android:name
-		ADDED from AndroidManifest.xml:32:19
+		ADDED from AndroidManifest.xml:33:19
 activity#com.iris.lolin.BoardDetailActivity
-ADDED from AndroidManifest.xml:34:9
+ADDED from AndroidManifest.xml:35:9
 	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:37:13
+	android:name
 		ADDED from AndroidManifest.xml:36:13
-	android:name
-		ADDED from AndroidManifest.xml:35:13
 activity#com.iris.lolin.IntroActivity
-ADDED from AndroidManifest.xml:38:9
+ADDED from AndroidManifest.xml:39:9
 	android:theme
+		ADDED from AndroidManifest.xml:41:13
+	android:name
 		ADDED from AndroidManifest.xml:40:13
-	android:name
-		ADDED from AndroidManifest.xml:39:13
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:41:13
+ADDED from AndroidManifest.xml:42:13
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:42:17
+ADDED from AndroidManifest.xml:43:17
 	android:name
-		ADDED from AndroidManifest.xml:42:25
+		ADDED from AndroidManifest.xml:43:25
 category#android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:44:17
+ADDED from AndroidManifest.xml:45:17
 	android:name
-		ADDED from AndroidManifest.xml:44:27
+		ADDED from AndroidManifest.xml:45:27
 activity#com.iris.lolin.FaceBookLoginActivity
-ADDED from AndroidManifest.xml:47:9
+ADDED from AndroidManifest.xml:48:9
 	android:theme
+		ADDED from AndroidManifest.xml:50:13
+	android:name
 		ADDED from AndroidManifest.xml:49:13
-	android:name
-		ADDED from AndroidManifest.xml:48:13
 activity#com.facebook.LoginActivity
-ADDED from AndroidManifest.xml:51:9
+ADDED from AndroidManifest.xml:52:9
 	android:theme
+		ADDED from AndroidManifest.xml:54:13
+	android:name
 		ADDED from AndroidManifest.xml:53:13
-	android:name
-		ADDED from AndroidManifest.xml:52:13
 activity#com.iris.lolin.PushActivity
-ADDED from AndroidManifest.xml:55:9
+ADDED from AndroidManifest.xml:56:9
 	android:theme
+		ADDED from AndroidManifest.xml:58:13
+	android:name
 		ADDED from AndroidManifest.xml:57:13
-	android:name
-		ADDED from AndroidManifest.xml:56:13
 meta-data#com.google.android.gms.version
-ADDED from AndroidManifest.xml:60:9
+ADDED from AndroidManifest.xml:61:9
 	android:value
+		ADDED from AndroidManifest.xml:63:13
+	android:name
 		ADDED from AndroidManifest.xml:62:13
-	android:name
-		ADDED from AndroidManifest.xml:61:13
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from AndroidManifest.xml:63:9
+ADDED from AndroidManifest.xml:64:9
 	android:value
+		ADDED from AndroidManifest.xml:66:13
+	android:name
 		ADDED from AndroidManifest.xml:65:13
-	android:name
-		ADDED from AndroidManifest.xml:64:13
 receiver#com.iris.lolin.GcmBroadcastReceiver
-ADDED from AndroidManifest.xml:67:9
+ADDED from AndroidManifest.xml:68:9
 	android:permission
+		ADDED from AndroidManifest.xml:70:13
+	android:name
 		ADDED from AndroidManifest.xml:69:13
-	android:name
-		ADDED from AndroidManifest.xml:68:13
 intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION+com.iris.lolin
-ADDED from AndroidManifest.xml:70:13
+ADDED from AndroidManifest.xml:71:13
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from AndroidManifest.xml:73:17
+ADDED from AndroidManifest.xml:74:17
 	android:name
-		ADDED from AndroidManifest.xml:73:25
+		ADDED from AndroidManifest.xml:74:25
 action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from AndroidManifest.xml:75:17
+ADDED from AndroidManifest.xml:76:17
 	android:name
-		ADDED from AndroidManifest.xml:75:25
+		ADDED from AndroidManifest.xml:76:25
 category#com.iris.lolin
-ADDED from AndroidManifest.xml:77:17
+ADDED from AndroidManifest.xml:78:17
 	android:name
-		ADDED from AndroidManifest.xml:77:27
+		ADDED from AndroidManifest.xml:78:27
 service#com.iris.lolin.GcmIntentService
-ADDED from AndroidManifest.xml:82:9
-	android:name
-		ADDED from AndroidManifest.xml:82:18
-service#com.iris.service.MessageService
 ADDED from AndroidManifest.xml:83:9
 	android:name
 		ADDED from AndroidManifest.xml:83:18

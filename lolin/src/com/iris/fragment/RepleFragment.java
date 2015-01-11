@@ -207,8 +207,14 @@ public class RepleFragment extends Fragment {
                 if (resultOk.equals(Config.FLAG.TRUE)) {
 
                     findReple();
+                    //본인이 아닌 사람이 댓글을 추가 시
                     if(!userName.equals(user.getSummonerName())){
                         sendPush(editReple.getText().toString() , faceBookId);
+                    }
+                    // 본이이 댓글 추가 시
+                    else{
+
+                        notOverrapSendPush(editReple.getText().toString() , faceBookId);
                     }
                 }
                 prograssBar.setVisibility(View.INVISIBLE);
@@ -331,7 +337,38 @@ public class RepleFragment extends Fragment {
 
         request.add(new StringRequest
                 (Request.Method.GET, Config.API.DEFAULT_URL + Config.API.GCM_SEND_REPLE + repleService.getSendPushSubUrl
-                        ("android", String.valueOf(boardId), user.getSummonerName(), reple, faceBookId), new Response.Listener<String>() {
+                        ( String.valueOf(boardId), user.getSummonerName(), reple, faceBookId), new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        String resultOk = repleService.deleteReplePasing(response);
+                        if (resultOk.equals(Config.FLAG.TRUE)) {
+                            findReple();
+                        }
+                        prograssBar.setVisibility(View.INVISIBLE);
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        VolleyLog.d(Config.FLAG.ERROR, error.getMessage());
+                        prograssBar.setVisibility(View.INVISIBLE);
+                        Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
+                    }
+                }));
+    }
+
+    /**
+     * 나을뺀 나머지 사용자에게 푸시 전송 Api
+     */
+    public void notOverrapSendPush(String reple, String faceBookId) {
+
+        prograssBar.setVisibility(View.VISIBLE);
+
+        RequestQueue request = Volley.newRequestQueue(getActivity());
+
+        request.add(new StringRequest
+                (Request.Method.GET, Config.API.DEFAULT_URL + Config.API.GCM_SEND_ME_REPLE + repleService.getSendPushSubUrl
+                        (String.valueOf(boardId), user.getSummonerName(), reple, faceBookId), new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
@@ -388,11 +425,15 @@ public class RepleFragment extends Fragment {
         }
     };
 
+    /**
+     * GCM 메세지가 올경우
+     */
     MessageListener mMessageListener = new MessageListener(){
 
         @Override
         public void sendMessage(String boardId, String message, String summernerName,
                                 String facebookId, String repleId , String writeTime) {
+
 
             Reple reple = new Reple();
 
@@ -404,6 +445,8 @@ public class RepleFragment extends Fragment {
             reple.setWriteTime(writeTime);
 
             repleAdapter.getRepleList().add(reple);
+            repleAdapter.setRepleList(repleAdapter.getRepleList());
+            Log.i("@@@@@@@@@@@@@@@","@@@@@@@@@@@@@@@@   : "  + repleAdapter.getRepleList().size());
             repleAdapter.notifyDataSetChanged();
             repleListView.setSelection(repleList.size());
 

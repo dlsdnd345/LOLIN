@@ -38,22 +38,26 @@ public class RepleService {
 	 * @return
 	 */
 	public String getSubUrl(int boardId , String userName , String content , String facebookId){
-		
+
+        String os = "android";
+
 		String hash = null;
 		String subUrl = null;
 		String encodeHash = null;
 		String encodeUserName = null;
 		String encodeContent = null;
 		String encodeFacebookId = null;
-		
+		String encodeOs = null;
+
 		try {
 			
 			TrippleDes trippleDes = new TrippleDes();
 			facebookId = trippleDes.encrypt(facebookId);
 			
-			String signatureData = boardId + userName + content + facebookId + Config.KEY.SECRET;
+			String signatureData = boardId + userName + content + facebookId + os + Config.KEY.SECRET;
 			hash = SignatureUtil.getHash(signatureData);
-			
+
+            encodeOs = URLEncoder.encode("android","UTF-8");
 			encodeHash = URLEncoder.encode(hash,"UTF-8");
 			encodeUserName = URLEncoder.encode(userName,"UTF-8");
 			encodeContent = URLEncoder.encode(content,"UTF-8");
@@ -65,24 +69,22 @@ public class RepleService {
 			e.printStackTrace();
 		}
 		return subUrl = "?boardId="+boardId+"&userName="+encodeUserName+"&content="+encodeContent+"&facebookId="+encodeFacebookId +
-				"&hash="+encodeHash;
+				"&os="+encodeOs+"&hash="+encodeHash;
 	}
 	
 	/**
 	 * 푸시 보내기 subUrl
-	 * @param os
 	 * @param boardId
 	 * @param summernerName
 	 * @param reple
 	 * @param facebookId
 	 * @return
 	 */
-	public String getSendPushSubUrl(String os , String boardId , String summernerName ,String reple, String facebookId){
+	public String getSendPushSubUrl( String boardId , String summernerName ,String reple, String facebookId){
 		
 		String hash = null;
 		String subUrl = null;
 		String encodeHash = null;
-		String encodeOs = null;
 		String encodeBoardId = null;
 		String encodeSummernerName = null;
 		String encodeReple = null;
@@ -93,11 +95,10 @@ public class RepleService {
 			TrippleDes trippleDes = new TrippleDes();
 			facebookId = trippleDes.encrypt(facebookId);
 			
-			String signatureData = os + boardId + summernerName + facebookId + reple + Config.KEY.SECRET;
+			String signatureData =  boardId + summernerName + facebookId + reple + Config.KEY.SECRET;
 			hash = SignatureUtil.getHash(signatureData);
 			
 			encodeHash = URLEncoder.encode(hash,"UTF-8");
-			encodeOs = URLEncoder.encode(os,"UTF-8");
 			encodeBoardId = URLEncoder.encode(boardId,"UTF-8");
 			encodeSummernerName = URLEncoder.encode(summernerName,"UTF-8");
 			encodeReple = URLEncoder.encode(reple,"UTF-8");
@@ -108,7 +109,7 @@ public class RepleService {
 			e.printStackTrace();
 		}
 		
-		return subUrl = "?os="+encodeOs+"&boardId="+encodeBoardId+"&summernerName="+encodeSummernerName
+		return subUrl = "?boardId="+encodeBoardId+"&summernerName="+encodeSummernerName
 				+"&reple="+encodeReple+"&facebookId="+encodeFacebookId+"&hash="+encodeHash;
 	}
 	

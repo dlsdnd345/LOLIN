@@ -74,6 +74,8 @@ public class GcmIntentService extends IntentService {
             } else if (GoogleCloudMessaging.MESSAGE_TYPE_MESSAGE.equals(messageType)) {
                 // This loop represents the service doing some work.
 
+                Log.i("데이터 도착 ","들어와라 " );
+
                 /**
                  * 노티바 생성
                  */
@@ -116,7 +118,7 @@ public class GcmIntentService extends IntentService {
 
 		mBuilder.setContentTitle(getString(R.string.gcm_service_noti_title)); // 제목
 		mBuilder.setContentText(msg); //내용
-		mBuilder.setSmallIcon(R.drawable.ic_launcher); // 아이콘
+		mBuilder.setSmallIcon(R.drawable.icon); // 아이콘
 		mBuilder.setTicker(getString(R.string.gcm_service_noti_title)); // 상태바 제목
 		mBuilder.setAutoCancel(true);
 		mBuilder.setWhen(System.currentTimeMillis()); // 진동시간

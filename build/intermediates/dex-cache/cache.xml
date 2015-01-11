@@ -26,7 +26,7 @@
         jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="2031ddc3eaa30cc3803d0048034efd26a1702c98">
+        sha1="f5c9b8ab94bdbbdc69b8c24c9741feebbcc93dae">
         <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/classes-ea6d33023176d0881da59b745d02592dff19b9ee.jar" />
     </item>
     <item
@@ -47,7 +47,7 @@
         jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="e0eae585a96ebf9e0d1b19fcd26887562e62fdc9">
+        sha1="7b84f5f270c30ab5f0e203bb9971007a59f0cf57">
         <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/classes-39b63f3cd5ec46fcf3f04b2359845b79cae19cf0.jar" />
     </item>
     <item
@@ -61,7 +61,7 @@
         jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="13da5ffcb0954c50aba4f44b99ec22b348dcfb51">
+        sha1="8f9d153eef6ee2fa993a47759007b3a96743ee9f">
         <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/classes-829e2b0b729c398c776c269103b4e56d3276efdc.jar" />
     </item>
     <item

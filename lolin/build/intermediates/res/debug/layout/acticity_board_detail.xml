@@ -21,6 +21,7 @@
             android:orientation="vertical" >
 
             <LinearLayout
+                android:id="@+id/layoutTopEdit"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal" >
@@ -169,10 +170,11 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="11" >
+                    android:layout_weight="11"
+                    >
 
                     <TextView
-                        android:id="@+id/txtContent"
+                        android:id="@+id/textContent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"

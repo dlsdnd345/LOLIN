@@ -93,6 +93,7 @@ public class Config {
 		public final static String 		REPLE_DELETE					= "reple/delete";
 
 		public final static String 		GCM_SEND_REPLE					= "gcm/sendReple";
+        public final static String 		GCM_SEND_ME_REPLE				= "gcm/sendMeReple";
 
 		public final static String 		FACEBOOK_ALBUM					= "me/photos";
 

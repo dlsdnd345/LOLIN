@@ -277,6 +277,7 @@
     <string name="app_id">275243632673494</string>
     <string name="app_name">lolin</string>
     <string name="baord_detail_delete_dialog_content">게시판을 정말 삭제 하시겠습니까?</string>
+    <string name="board_activity_title">게시판</string>
     <string name="board_detail_activity_title">상세 내용</string>
     <string name="board_fragment_text_no_list_message">게시글이 없습니다.</string>
     <!-- From: file:/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values/values.xml -->
@@ -310,6 +311,7 @@
     <!-- From: file:/Users/woong/LOLIN/lolin/res/values/strings.xml -->
     <eat-comment/>
     <string name="composer_activity_title">글쓰기</string>
+    <string name="composer_my_activity_title">내가 쓴글</string>
     <string name="composor_activity_edit_content_empty_message">내용을 입력해 주세요.</string>
     <string name="composor_activity_edit_summernername_empty_message">소환사 명을 입력해 주세요.</string>
     <string name="composor_activity_edit_title_empty_message">게시판의 제목을 입력해 주세요.</string>
@@ -328,6 +330,8 @@
     <string name="detail_title_section3">댓글</string>
     <string name="dialog_cancel">취소</string>
     <string name="dialog_clear">확인</string>
+    <string name="dialog_network_warning_message">네트워크를 활성화 시켜 주세요.</string>
+    <string name="dialog_network_warning_title">경고</string>
     <string name="dialog_title">알림</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="drawer_open">Open navigation drawer</string>
@@ -352,6 +356,7 @@
     <string name="main_list_row_txt_summoner">소환사</string>
     <string name="main_list_row_txt_time">시간</string>
     <string name="main_text_login_massege">로그인 하세요.</string>
+    <string name="my_record_activity_title">전적 검색</string>
     <!-- From: file:/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values/values.xml -->
     <eat-comment/>
     <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
@@ -365,6 +370,8 @@
     <string name="push_activity_cancel_btn">취소</string>
     <string name="push_activity_clear_btn">확인</string>
     <string name="push_activity_title">LOL MESSAGE</string>
+    <string name="record_activity_title">전적 검색</string>
+    <string name="reple_activity_title">댓글</string>
     <string name="reple_delete_dialog_content">댓글 을 정말 삭제 하시겠습니까?</string>
     <string name="reple_fragment_text_no_reple_message">댓글이 없습니다.</string>
     <string name="reple_fragment_text_not_delete">자신의 댓글만 삭제가 가능합니다.</string>

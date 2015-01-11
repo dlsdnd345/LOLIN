@@ -16,6 +16,7 @@ public class Reple implements Serializable{
 	private String writeTime;
 	private String userName;
 	private String facebookId;
+    private String os;
 	
 	
 	public int getId() {
@@ -54,5 +55,10 @@ public class Reple implements Serializable{
 	public void setFacebookId(String facebookId) {
 		this.facebookId = facebookId;
 	}
-	
+    public String getOs() {
+        return os;
+    }
+    public void setOs(String os) {
+        this.os = os;
+    }
 }

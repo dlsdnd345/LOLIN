@@ -16,6 +16,7 @@ public class Board implements Serializable {
 	
 	private int id;
 	private int userId;
+    private String os;
 	private String title;
 	private String content;
 	private String tea;
@@ -40,8 +41,14 @@ public class Board implements Serializable {
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	
-	public String getTitle() {
+
+    public String getOs() {
+        return os;
+    }
+    public void setOs(String os) {
+        this.os = os;
+    }
+    public String getTitle() {
 		return title;
 	}
 	public void setTitle(String title) {

@@ -43,10 +43,10 @@ android {
     signingConfigs{
 
         releaseWithProps{
-            storeFile file(keystore)
-            storePassword keystore_pass
-            keyAlias key_alias
-            keyPassword key_pass
+            storeFile file(keystore) // 파일경로 Root app
+            storePassword keystore_pass // 1차 비밀번호
+            keyAlias key_alias // 키 이름
+            keyPassword key_pass // 키 비밀번호
         }
 
     }
