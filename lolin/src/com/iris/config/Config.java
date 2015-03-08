@@ -71,7 +71,7 @@ public class Config {
 
 	public static class API {
 
-		public final static String		DEFAULT_URL 				= "http://182.229.77.152:8080/";
+		public final static String		DEFAULT_URL 				= "http://192.168.123.153:8080/";
 
 		public final static String		SUB_URL 					= "?id=";
 		public final static String 		SUB_URL_BOARD_ID 	 			= "?boardId=";
@@ -96,6 +96,8 @@ public class Config {
         public final static String 		GCM_SEND_ME_REPLE				= "gcm/sendMeReple";
 
 		public final static String 		FACEBOOK_ALBUM					= "me/photos";
+
+        public final static String 		UPDATA_APP_CHACK				= "updateBorad/findOne";
 
 	}
 

@@ -104,6 +104,9 @@ public class BoardFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_board, container,false);
+
+        sharedpreferencesUtil = new SharedpreferencesUtil(getActivity().getApplicationContext());
+        sharedpreferencesUtil.put("isLoad",true);
 		init(rootView);
 
 		return rootView;
@@ -115,7 +118,6 @@ public class BoardFragment extends Fragment {
 	public void onResume() {
 		super.onResume();
 
-        sharedpreferencesUtil = new SharedpreferencesUtil(getActivity().getApplicationContext());
         boolean isLoad = sharedpreferencesUtil.getValue("isLoad",true);
 
         if(isLoad) {
@@ -125,7 +127,14 @@ public class BoardFragment extends Fragment {
         sharedpreferencesUtil.put("isLoad",true);
 	}
 
-	/**
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        sharedpreferencesUtil.put("isLoad",false);
+    }
+
+    /**
 	 * 레이아웃 초기화
 	 * @param rootView
 	 */
