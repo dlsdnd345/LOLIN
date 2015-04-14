@@ -251,7 +251,7 @@ public class ComposerActivity extends ActionBarActivity {
 		String facebookId = sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
 
 		String subUrl = composerService.getSubUrl(boardId ,facebookId, board.getTitle(), board.getContent(),
-				board.transformRank(board.getRank()), board.getPosition(), board.getPlayTime(),board.getTea());
+				board.transformRank(rankData[rankPosition]), board.getPosition(), board.getPlayTime(),board.getTea());
 
 		request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.BOARD_SAVE+subUrl,new Response.Listener<String>() {
 			@Override  

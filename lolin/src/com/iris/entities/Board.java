@@ -1,11 +1,9 @@
 package com.iris.entities;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 import com.iris.config.Config;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 게시판 데이터

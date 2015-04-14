@@ -18,73 +18,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8be538fb-d273-4635-a2cd-3b26fa1aa9c3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lolin/res/drawable-xhdpi/img_rank_master.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lolin/src/com/iris/analytics/GoogleAnalyticsApp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lolin/src/com/iris/analytics/GoogleTracker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lolin/res/xml/ecommerce_tracker.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lolin/res/xml/global_tracker.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/buildConfig/release/com/iris/lolin/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/release/android/support/v7/appcompat/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/release/com/facebook/android/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/release/com/handmark/pulltorefresh/library/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/release/com/iris/lolin/Manifest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/release/com/iris/lolin/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/jarlist.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/gen/android/support/v7/appcompat/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/gen/android/support/v7/appcompat/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/project.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/tmp/dex/release/inputList.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/classes.jar" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/classes.jar" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/classes.jar" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/libs/google-play-services.jar" afterPath="$PROJECT_DIR$/lolin/libs/google-play-services.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/model_data.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/entities/Board.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/entities/Board.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/fragment/BoardFragment.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/fragment/BoardFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/service/ComposerService.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/service/ComposerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/config/Config.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/config/Config.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/IntroActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/IntroActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LOLIN.iml" afterPath="$PROJECT_DIR$/LOLIN.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/MainActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/com/handmark/pulltorefresh/library/PullToRefreshListView.java" afterPath="$PROJECT_DIR$/library/src/com/handmark/pulltorefresh/library/PullToRefreshListView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/PushActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/PushActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/facebook/android/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/handmark/pulltorefresh/library/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/handmark/pulltorefresh/library/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/iris/lolin/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/iris/lolin/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/fragment/RepleFragment.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/fragment/RepleFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/adapter/SectionsPagerAdapter.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/adapter/SectionsPagerAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/res/layout/acticity_board_detail.xml" afterPath="$PROJECT_DIR$/lolin/res/layout/acticity_board_detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appcompat_v7/appcompat_v7.iml" afterPath="$PROJECT_DIR$/appcompat_v7/appcompat_v7.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/res/values/arrays.xml" afterPath="$PROJECT_DIR$/lolin/res/values/arrays.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build.gradle" afterPath="$PROJECT_DIR$/lolin/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/facebook.iml" afterPath="$PROJECT_DIR$/facebook/facebook.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/res/layout/fragment_reple.xml" afterPath="$PROJECT_DIR$/lolin/res/layout/fragment_reple.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/library.iml" afterPath="$PROJECT_DIR$/library/library.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/lolin.iml" afterPath="$PROJECT_DIR$/lolin/lolin.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/res/values/strings.xml" afterPath="$PROJECT_DIR$/lolin/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LOLIN.iws" />
@@ -2768,7 +2703,6 @@
         <option value="$PROJECT_DIR$/lolin/src/com/iris/service/IntroService.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/adapter/SectionsPagerAdapter.java" />
         <option value="$PROJECT_DIR$/lolin/res/values/arrays.xml" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/entities/Board.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/fragment/RepleFragment.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/service/ComposerService.java" />
         <option value="$PROJECT_DIR$/lolin/res/layout/acticity_board_detail.xml" />
@@ -2781,7 +2715,6 @@
         <option value="$PROJECT_DIR$/lolin/src/com/iris/analytics/GoogleTracker.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/MainActivity.java" />
         <option value="$PROJECT_DIR$/lolin/build.gradle" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/IntroActivity.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/PushActivity.java" />
         <option value="$PROJECT_DIR$/lolin/res/layout/fragment_reple.xml" />
@@ -2790,6 +2723,8 @@
         <option value="$PROJECT_DIR$/lolin/res/xml/global_tracker.xml" />
         <option value="$PROJECT_DIR$/lolin/res/xml/ecommerce_tracker.xml" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/analytics/GoogleAnalyticsApp.java" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/entities/Board.java" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java" />
       </list>
     </option>
   </component>
@@ -2988,6 +2923,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOLIN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOLIN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lolin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3525,20 +3482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/res/values/arrays.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34013605" vertical-offset="0" max-vertical-offset="1140">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/entities/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6122449" vertical-offset="0" max-vertical-offset="3210">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/adapter/BoardAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="1470">
@@ -3623,13 +3566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="5850">
           <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/config/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="2295">
-          <caret line="83" column="87" selection-start-line="83" selection-start-column="87" selection-end-line="83" selection-end-column="87" />
           <folding />
         </state>
       </provider>
@@ -3666,24 +3602,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="1125">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.063391" vertical-offset="419" max-vertical-offset="5715">
-          <caret line="329" column="0" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
-          <folding>
-            <element signature="e#4211#4265#0" expanded="false" />
-            <element signature="e#4292#4348#0" expanded="false" />
-            <element signature="e#6243#6275#0" expanded="false" />
-            <element signature="e#9550#9614#0" expanded="false" />
-            <element signature="e#9984#10046#0" expanded="false" />
-            <element signature="e#10618#10672#0" expanded="false" />
-            <element signature="e#10710#10766#0" expanded="false" />
-            <element signature="e#10892#10946#0" expanded="false" />
-            <element signature="e#10984#11040#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3743,28 +3661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5912863" vertical-offset="0" max-vertical-offset="1515">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5304" max-vertical-offset="7170">
-          <caret line="439" column="82" selection-start-line="439" selection-start-column="82" selection-end-line="439" selection-end-column="82" />
-          <folding>
-            <element signature="e#7948#8075#0" expanded="true" />
-            <element signature="e#8070#8071#0" expanded="true" />
-            <element signature="e#8095#8128#0" expanded="true" />
-            <element signature="e#8134#8260#0" expanded="true" />
-            <element signature="e#8255#8256#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.24" vertical-offset="399" max-vertical-offset="1725">
@@ -3793,6 +3689,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.18257262" vertical-offset="253" max-vertical-offset="735">
           <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/res/values/arrays.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2136929" vertical-offset="0" max-vertical-offset="1140">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46055436" vertical-offset="6264" max-vertical-offset="7035">
+          <caret line="516" column="30" selection-start-line="516" selection-start-column="30" selection-end-line="516" selection-end-column="30" />
+          <folding>
+            <element signature="e#13528#13578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/config/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33195022" vertical-offset="230" max-vertical-offset="2295">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/entities/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33195022" vertical-offset="2255" max-vertical-offset="3210">
+          <caret line="216" column="18" selection-start-line="216" selection-start-column="18" selection-end-line="216" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19638826" vertical-offset="3033" max-vertical-offset="5775">
+          <caret line="244" column="7" selection-start-line="244" selection-start-column="7" selection-end-line="244" selection-end-column="7" />
+          <folding>
+            <element signature="e#6841#7428#0" expanded="true" />
+            <element signature="e#7421#7422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12448133" vertical-offset="225" max-vertical-offset="1515">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -344,7 +344,7 @@
     <string name="facebook_login_text_sub_info_message">사용자의 소환사명을 정확히 입력하지 않으면,\n파티매칭이 이루어 질 수 없습니다.</string>
     <string name="facebook_publish_story_complete_message">업로드가 완료 되었습니다.</string>
     <string name="facebook_publish_story_link">https://www.facebook.com/photo.php?fbid=</string>
-    <string name="facebook_publish_story_message">롤인 \n 앱을 통해서 팀 매칭 친구를 구하세요. \n http://www.naver.com</string>
+    <string name="facebook_publish_story_message">롤인 \n 앱을 통해서 팀 매칭 친구를 구하세요. \n https://play.google.com/store/apps/details?id=com.iris.lolin</string>
     <string name="facebook_publish_story_name">lolin</string>
     <string name="facebooklogint_activity_edit_summernername_empty_message">소환사 명을 입력해 주세요.</string>
     <string name="facebooklogint_activity_text_hello_message">HELLO</string>
