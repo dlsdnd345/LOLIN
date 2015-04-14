@@ -1,8 +1,5 @@
 package com.iris.fragment;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -12,11 +9,8 @@ import android.support.v4.app.Fragment;
 import android.text.format.DateUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver.OnScrollChangedListener;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
@@ -50,6 +44,9 @@ import com.iris.service.BoardService;
 import com.iris.service.SettingService;
 import com.iris.util.SharedpreferencesUtil;
 import com.iris.vo.BoardResponseVO;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -119,6 +116,8 @@ public class BoardFragment extends Fragment {
 		super.onResume();
 
         boolean isLoad = sharedpreferencesUtil.getValue("isLoad",true);
+
+        Log.i("@@@@@@@@@@  ", "@@@@@@@@@@@@@@@  isLoad  :" + isLoad);
 
         if(isLoad) {
             dataInit();

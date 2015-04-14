@@ -130,11 +130,6 @@ public class ComposerActivity extends ActionBarActivity {
 		spinnerInit();
 		board.setTea(teaData[0]);
 
-        /**
-         * 메인화면 게시판 초기화 될수있도록 하기 위함.
-         */
-        sharedpreferencesUtil.put("isLoad",true);
-
 		if(boardId != null){
 			// 게시판 정보 api 요청
 			getFindOne(request);
@@ -261,6 +256,11 @@ public class ComposerActivity extends ActionBarActivity {
 				startActivity(intent);
 				prograssBar.setVisibility(View.INVISIBLE);
 
+                /**
+                 * 메인화면 게시판 초기화 될수있도록 하기 위함.
+                 */
+                sharedpreferencesUtil.put("isLoad",true);
+
 			}
 		}, new Response.ErrorListener() {  
 			@Override  
@@ -320,7 +320,7 @@ public class ComposerActivity extends ActionBarActivity {
 			emptyCheckContent();
 			requestSaveBoard();
 
-            googleTracker.sendEventView("작","버튼","추가");
+            googleTracker.sendEventView("작성","버튼","추가");
 
 			return true;
 		default:
