@@ -9,21 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ProgressBar;
-import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.handmark.pulltorefresh.library.PullToRefreshWebView;
 import com.iris.config.Config;
-import com.iris.entities.User;
 import com.iris.lolin.R;
-import com.iris.service.UserService;
 
 /**
  * 상세내용 전적 검색 프래그먼트
@@ -33,16 +22,17 @@ public class DetailRecordSearchFragment extends Fragment {
 
 	private static final String BASE_URL = "http://www.op.gg/summoner/userName=";
 
-    private ProgressBar progressBar;
 
-    private User user;
-    private UserService userService;
+    private String summonerName;
+
 	private PullToRefreshWebView mPullRefreshWebView;
 	
-	public Fragment newInstance() {
+	public Fragment newInstance(String summonerName) {
 
-		RecordSearchFragment fragment = new RecordSearchFragment();
+        DetailRecordSearchFragment fragment = new DetailRecordSearchFragment();
 		Bundle args = new Bundle();
+
+        args.putString(Config.FLAG.BOARD_SUMMERNER_NAME, summonerName);
 		fragment.setArguments(args);
 		return fragment;
 	}
@@ -62,12 +52,15 @@ public class DetailRecordSearchFragment extends Fragment {
 	}
 
 	private void dataInit() {
-        getUser();
+
+        summonerName = getArguments().getString(Config.FLAG.BOARD_SUMMERNER_NAME);
+
+        webViewInit();
+
 
 	}
 
 	private void init(View rootView) {
-        progressBar = (ProgressBar)rootView.findViewById(R.id.progressBar);
 		mPullRefreshWebView = (PullToRefreshWebView)rootView.findViewById(R.id.pull_refresh_webview);
 	}
 	
@@ -76,37 +69,10 @@ public class DetailRecordSearchFragment extends Fragment {
 		WebView webView = mPullRefreshWebView.getRefreshableView();
 		webView.getSettings().setJavaScriptEnabled(true);
 
-		webView.loadUrl(BASE_URL +user.getSummonerName());
+		webView.loadUrl(BASE_URL +summonerName);
 		webView.setWebViewClient(new BasicWebViewClient());
 	}
 
-    /**
-     * 유저 정보 조회
-     */
-    public void getUser(){
-
-        progressBar.setVisibility(View.VISIBLE);
-
-        String sub_url = userService.getUserSubUrl();
-
-        RequestQueue request = Volley.newRequestQueue(getActivity());
-        request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.USER_FIND_ONE +sub_url,new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                user = userService.getUser(response);
-                webViewInit();
-                progressBar.setVisibility(View.INVISIBLE);
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                VolleyLog.d(Config.FLAG.ERROR, error.getMessage());
-                progressBar.setVisibility(View.INVISIBLE);
-                Toast.makeText(getActivity().getApplicationContext(), Config.FLAG.NETWORK_CLEAR, Toast.LENGTH_LONG).show();
-            }
-        }));
-
-    }
 
 	private class BasicWebViewClient extends WebViewClient {
 		@Override

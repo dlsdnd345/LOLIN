@@ -20,6 +20,7 @@ import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 public class PushActivity extends Activity {
 
+    private static final String TAG = PushActivity.class.getSimpleName();
 	
 	private String boardId , message , summernerName , facebookId;
 	
@@ -77,7 +78,10 @@ public class PushActivity extends Activity {
 	 * 데이터초기화
 	 */
 	private void dataInit() {
-		
+
+        googleTracker = GoogleTracker.getInstance(this);
+        googleTracker.sendScreenView(TAG);
+
 		imageLoderInit();
 		setPushData();
 	}

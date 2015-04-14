@@ -1,13 +1,9 @@
 package com.iris.adapter;
 
-import java.util.ArrayList;
-import java.util.Locale;
-
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.util.Log;
 
 import com.iris.entities.Board;
 import com.iris.entities.Reple;
@@ -16,6 +12,8 @@ import com.iris.fragment.DetailRecordSearchFragment;
 import com.iris.fragment.RepleFragment;
 import com.iris.lolin.R;
 import com.iris.util.SharedpreferencesUtil;
+
+import java.util.ArrayList;
 
 /**
  * 게시판 상세내용 화면 페이져 어댑터
@@ -55,7 +53,7 @@ public class BoardDetailPagerAdapter extends FragmentPagerAdapter {
 		}else if(position == REPLE_FRAGMENT){
 			return repleFragment.newInstance(board.getId(),(ArrayList<Reple>) board.getRepleList(),board.getSummonerName());
 		}else{
-			return detailRecordSearchFragment.newInstance();
+			return detailRecordSearchFragment.newInstance(board.getSummonerName());
 		}
 	}
 	

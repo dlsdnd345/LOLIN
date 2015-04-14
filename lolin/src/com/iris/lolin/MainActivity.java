@@ -170,7 +170,7 @@ public class MainActivity extends ActionBarActivity  {
 			textLoginMassage.setText(getString(R.string.main_text_login_massege));
 			btnLogin.setVisibility(View.VISIBLE);
 			btnLogout.setVisibility(View.GONE);
-			imgProfile.setBackgroundResource(R.drawable.ic_launcher);
+
 		}
 	}
 
@@ -340,6 +340,7 @@ public class MainActivity extends ActionBarActivity  {
 	 */
 	public void login(View view){
 		Intent intent = new Intent(MainActivity.this, FaceBookLoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(intent);
 	}
 	

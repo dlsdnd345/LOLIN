@@ -114,6 +114,7 @@ public class Config {
 		public static final  	String FACEBOOK_ID 		= "facebookId";
 		public static final  	String FACEBOOK_NAME 	= "facebookName";
 
+        public static final  	String BOARD_SUMMERNER_NAME 	= "boardSummernerName";
 		public static final  	String SUMMERNER_NAME 	= "summernerName";
 		public static final 	String BOARD_ID 		= "boardId";
 		public static final 	String REPLE 			= "reple";	

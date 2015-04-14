@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app1="http://schemas.android.com/apk/res/com.iris.lolin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.iris.pagerslidingtab.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/background_white"
+        app1:pstsDividerColor="#00000000"
+        app1:pstsIndicatorColor="@color/background_blue_3370CD"
+        app1:pstsIndicatorHeight="5dp"
+         />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/layoutDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity" />
+
+        <include layout="@layout/layout_left_menudrawer" />
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout><!-- From: file:/Users/woong/LOLIN/lolin/res/layout/activity_main.xml -->

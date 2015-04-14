@@ -115,6 +115,7 @@
                                     android:layout_centerInParent="true"
                                     android:layout_marginLeft="40dp"
                                     android:layout_marginRight="40dp"
+                                    android:singleLine="true"
                                     android:textColorHint="@color/text_white"
                                     android:hint="@string/facebook_login_edit_info_message"
                                     android:textColor="@color/text_white"

@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -130,6 +131,8 @@ public class IntroActivity extends Activity {
 
                     @Override
                     public void onResponse(String response) {
+
+                        Log.i(TAG,response);
 
                         UpdateBoard updateBoard = introService.parseUpdateAppCheck(response);
 
