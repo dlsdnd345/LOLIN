@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -18,6 +17,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.iris.analytics.GoogleTracker;
 import com.iris.config.Config;
 import com.iris.entities.UpdateBoard;
 import com.iris.service.IntroService;
@@ -26,6 +26,8 @@ import com.iris.util.SharedpreferencesUtil;
 
 public class IntroActivity extends Activity {
 
+    private static final String TAG = IntroActivity.class.getSimpleName();
+
 	private static final int SLEEP_TIME = 2000;
 	
 	private NetworkUtil	 networkUtil;
@@ -33,6 +35,8 @@ public class IntroActivity extends Activity {
 	private SharedpreferencesUtil sharedpreferencesUtil;
 
     private ProgressBar prograssBar;
+
+    private GoogleTracker googleTracker;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,20 @@ public class IntroActivity extends Activity {
 	    }
 	}
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        googleTracker.actionActivityStart(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        googleTracker.actionActivityStop(this);
+    }
+
     /**
      * 레이아웃 초기화
      */
@@ -62,6 +80,9 @@ public class IntroActivity extends Activity {
 	 * 데이터 초기화
 	 */
 	private void dataInit() {
+
+        googleTracker = GoogleTracker.getInstance(this);
+        googleTracker.sendScreenView(TAG);
 
         introService = new IntroService(IntroActivity.this);
 		networkUtil = new NetworkUtil(IntroActivity.this);

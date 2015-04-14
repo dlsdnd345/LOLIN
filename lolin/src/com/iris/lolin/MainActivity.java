@@ -20,13 +20,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.facebook.Session;
 import com.iris.adapter.SectionsPagerAdapter;
+import com.iris.analytics.GoogleTracker;
 import com.iris.config.Config;
 import com.iris.pagerslidingtab.PagerSlidingTabStrip;
 import com.iris.util.SharedpreferencesUtil;
@@ -39,6 +39,8 @@ import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 @SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity  {
+
+    private static final String TAG = MainActivity.class.getSimpleName();
 
 	private final static int WRITE_TEXT 	= 1;
 	private final static int RECORD_SEARCH 	= 2;
@@ -62,7 +64,9 @@ public class MainActivity extends ActionBarActivity  {
 	private ViewPager 					mViewPager;
 	private PagerSlidingTabStrip 		tabs;
 	private SectionsPagerAdapter 		mSectionsPagerAdapter;
-	
+
+    private GoogleTracker googleTracker;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -71,8 +75,22 @@ public class MainActivity extends ActionBarActivity  {
 		init();
 		dataInit();
 	}
-	
-	@Override
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        googleTracker.actionActivityStart(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        googleTracker.actionActivityStop(this);
+    }
+
+    @Override
 	protected void onResume() {
 		super.onResume();
 		//화면이 켜져 있을때 푸시화면을 보여주기 않기 위함.
@@ -119,7 +137,10 @@ public class MainActivity extends ActionBarActivity  {
 	 * 데이터 초기화
 	 */
 	private void dataInit() {
-		
+
+        googleTracker = GoogleTracker.getInstance(this);
+        googleTracker.sendScreenView(TAG);
+
 		sharedpreferencesUtil = new SharedpreferencesUtil(getApplicationContext());
 
         actionBarInit();
@@ -232,6 +253,9 @@ public class MainActivity extends ActionBarActivity  {
 		case R.id.ic_action_new:
 			Intent composerActivityintent = new Intent(MainActivity.this, ComposerActivity.class);
 			startActivity(composerActivityintent);
+
+            googleTracker.sendEventView("메인","버튼","글쓰기");
+
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);

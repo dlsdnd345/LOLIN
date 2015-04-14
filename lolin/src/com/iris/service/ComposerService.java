@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.iris.config.Config;
 import com.iris.libs.TrippleDes;
@@ -35,6 +36,7 @@ public class ComposerService {
         String os = "android";
 
 		String encodeBoardId 	= null;
+        String encodeFacebookId = null;
 		String encodeTitle 		= null;
 		String encodeContent	= null;
 		String encodeRank 		= null;
@@ -57,6 +59,7 @@ public class ComposerService {
 			hash = SignatureUtil.getHash(signatureData);
 			
 			encodeHash   	= URLEncoder.encode(hash,"UTF-8");
+            encodeFacebookId= URLEncoder.encode(facebookId,"UTF-8");
 			encodeBoardId   = URLEncoder.encode(boardId,"UTF-8");
 			encodeTitle 	= URLEncoder.encode(title,"UTF-8");
 			encodeContent 	= URLEncoder.encode(content,"UTF-8");
@@ -71,8 +74,8 @@ public class ComposerService {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		String sub_url="?boardId="+encodeBoardId+"&facebookId="+facebookId+"&title="+encodeTitle+"&content="+encodeContent+
+
+		String sub_url="?boardId="+encodeBoardId+"&facebookId="+encodeFacebookId+"&title="+encodeTitle+"&content="+encodeContent+
 				"&position="+encodePosition+"&rank="+encodeRank+"&playTime="+ encodePlayTime +"&tea="+encodeTea+
                 "&os="+encodeOs+ "&hash="+encodeHash;
 		return sub_url;

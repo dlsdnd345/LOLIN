@@ -26,7 +26,9 @@
             android:text="@string/reple_fragment_text_no_reple_message"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:visibility="gone" />
+            android:visibility="gone"
+            android:textColor="@color/text_white"
+            />
 
         <LinearLayout
             android:id="@+id/bottom_reple_bar"

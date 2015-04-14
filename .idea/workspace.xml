@@ -18,232 +18,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8be538fb-d273-4635-a2cd-3b26fa1aa9c3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lolin/src/com/iris/service/IntroService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lolin/src/com/iris/entities/UpdateBoard.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/android/support/v7/appcompat/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/android/support/v7/appcompat/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/android/support/v7/appcompat/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/android/support/v7/appcompat/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/android/support/v7/appcompat/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/android/support/v7/appcompat/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/android/support/v7/appcompat/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/android/support/v7/appcompat/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/android/support/v7/appcompat/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/android/support/v7/appcompat/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/android/support/v7/appcompat/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/android/support/v7/appcompat/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/android/support/v7/appcompat/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/facebook/android/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/facebook/android/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/facebook/android/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/facebook/android/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/facebook/android/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/facebook/android/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/facebook/android/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/facebook/android/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/facebook/android/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/facebook/android/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/handmark/pulltorefresh/library/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/handmark/pulltorefresh/library/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/handmark/pulltorefresh/library/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/handmark/pulltorefresh/library/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/handmark/pulltorefresh/library/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/handmark/pulltorefresh/library/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/handmark/pulltorefresh/library/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/handmark/pulltorefresh/library/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/handmark/pulltorefresh/library/R$xml.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/handmark/pulltorefresh/library/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/BoardFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/BoardFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/BoardFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/BoardFragment$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/BoardFragment$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/BoardFragment$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/BoardFragment$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/BoardFragment$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/BoardFragment$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/ComposerFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/ComposerFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/ComposerFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RecordSearchFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RecordSearchFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment$11.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment$12.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/SettingFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/SettingFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/SettingFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/SettingFragment$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/SettingFragment$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/SettingFragment$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/SettingFragment$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/ComposerActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/ComposerActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/ComposerActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/ComposerActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/ComposerActivity$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/ComposerActivity$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/ComposerActivity$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/ComposerActivity$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/FaceBookLoginActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/FaceBookLoginActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/FaceBookLoginActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/FaceBookLoginActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/FaceBookLoginActivity$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/FaceBookLoginActivity$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/MainActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/MainActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/MainActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/MainActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/Manifest$permission.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/Manifest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$array.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R$xml.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/BoardService$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/RecordSearchFragmentService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/util/NetworkUtil$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/gen/android/support/v7/appcompat/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/gen/com/facebook/android/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/gen/com/handmark/pulltorefresh/library/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/gen/com/iris/lolin/Manifest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/gen/com/iris/lolin/R.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/library/internal/AbstractDefaultGoogleStyleViewLayout.class" afterPath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/library/internal/AbstractDefaultGoogleStyleViewLayout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/AppEventsLogger$AppEvent.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/AppEventsLogger$AppEvent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/AppLinkData.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/AppLinkData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/AuthorizationClient$3.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/AuthorizationClient$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/AuthorizationClient$4.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/AuthorizationClient$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/AuthorizationClient.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/AuthorizationClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/entities/Board.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/entities/Board.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/adapter/BoardAdapter.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/adapter/BoardAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity$SessionStatusCallback.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity$SessionStatusCallback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/BoardDetailActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/adapter/BoardDetailPagerAdapter.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/adapter/BoardDetailPagerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/BoardDetailService$1.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/BoardDetailService$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/BoardDetailService.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/BoardDetailService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/BoardFragment$GetDataTask.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/BoardFragment$GetDataTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/BoardFragment.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/BoardFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/BoardService.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/BoardService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/ComposerActivity.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/ComposerActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/adapter/ComposerAdapter.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/adapter/ComposerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/ComposerFragment.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/ComposerFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/ComposerFragmentService$1.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/ComposerFragmentService$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/ComposerFragmentService.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/ComposerFragmentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/ComposerService.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/ComposerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$API.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$API.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$BOARD.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$BOARD.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$FACEBOOK.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$FACEBOOK.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$FLAG.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$FLAG.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$GCM.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$GCM.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$KEY.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$KEY.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$NUMBER.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$NUMBER.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$POSITION.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$POSITION.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$RANK.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$RANK.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$TEA.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$TEA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$TIME.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/config/Config$TIME.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/ContentFragment.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/ContentFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/DetailRecordSearchFragment$BasicWebViewClient.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/DetailRecordSearchFragment$BasicWebViewClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/DetailRecordSearchFragment.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/DetailRecordSearchFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/FaceBookLoginActivity$SessionStatusCallback.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/FaceBookLoginActivity$SessionStatusCallback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/FaceBookLoginActivity.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/FaceBookLoginActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/entities/FaceBookUser.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/entities/FaceBookUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/android/Facebook$TokenRefreshConnectionHandler.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/android/Facebook$TokenRefreshConnectionHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/FacebookLoginService.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/FacebookLoginService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/internal/FileLruCache.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/internal/FileLruCache.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/library/internal/FlipLoadingLayout.class" afterPath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/library/internal/FlipLoadingLayout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/GraphObjectAdapter.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/GraphObjectAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/GraphObjectPagingLoader.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/GraphObjectPagingLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/internal/ImageDownloader.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/internal/ImageDownloader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/internal/ImageResponseCache.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/internal/ImageResponseCache.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/IntroActivity.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/IntroActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/library/internal/LoadingLayout.class" afterPath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/library/internal/LoadingLayout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/LoginButton$LoginClickListener.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/LoginButton$LoginClickListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/LoginButton.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/LoginButton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/MainActivity.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/util/NetworkUtil.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/util/NetworkUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/library/OverscrollHelper.class" afterPath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/library/OverscrollHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/PlacePickerFragment$3.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/PlacePickerFragment$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/ProfilePictureView.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/ProfilePictureView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/library/PullToRefreshAdapterViewBase.class" afterPath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/library/PullToRefreshAdapterViewBase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/library/PullToRefreshBase.class" afterPath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/library/PullToRefreshBase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/configuration/xml/PullToRefreshConfigXmlParser$LayoutNodeCallback.class" afterPath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/configuration/xml/PullToRefreshConfigXmlParser$LayoutNodeCallback.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/configuration/xml/PullToRefreshXmlConfiguration.class" afterPath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/configuration/xml/PullToRefreshXmlConfiguration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/PushActivity.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/lolin/PushActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RecordSearchFragment$BasicWebViewClient.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RecordSearchFragment$BasicWebViewClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RecordSearchFragment.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RecordSearchFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/RecordSearchService$1.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/RecordSearchService$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/RecordSearchService.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/RecordSearchService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/entities/Reple.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/entities/Reple.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/adapter/RepleAdapter.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/adapter/RepleAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/RepleFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/RepleService$1.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/RepleService$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/RepleService.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/RepleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/Request.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/Request.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/util/ScreenshotUtil.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/util/ScreenshotUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/adapter/SectionsPagerAdapter.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/adapter/SectionsPagerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/Session.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/Session.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/internal/SessionTracker.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/internal/SessionTracker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/SettingFragment.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/fragment/SettingFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/SettingService$1.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/SettingService$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/SettingService.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/service/SettingService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/Settings.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/Settings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/SharedPreferencesTokenCachingStrategy.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/SharedPreferencesTokenCachingStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/util/SignatureUtil.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/util/SignatureUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/libs/TrippleDes.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/libs/TrippleDes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/UiLifecycleHelper$ActiveSessionBroadcastReceiver.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/UiLifecycleHelper$ActiveSessionBroadcastReceiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/entities/User.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/entities/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/UserSettingsFragment.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/widget/UserSettingsFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/android/Util.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/android/Util.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/internal/Utility.class" afterPath="$PROJECT_DIR$/facebook/bin/classes/com/facebook/internal/Utility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/bin/classes/com/iris/util/ViewHolder.class" afterPath="$PROJECT_DIR$/lolin/bin/classes/com/iris/util/ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/configuration/xml/XmlPullNodeParser.class" afterPath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/configuration/xml/XmlPullNodeParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/configuration/xml/XmlPullParserWrapper.class" afterPath="$PROJECT_DIR$/library/bin/classes/com/handmark/pulltorefresh/configuration/xml/XmlPullParserWrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/facebooksdk.jar" afterPath="$PROJECT_DIR$/facebook/bin/facebooksdk.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/bin/library.jar" afterPath="$PROJECT_DIR$/library/bin/library.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lolin/res/drawable-xhdpi/img_rank_master.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lolin/src/com/iris/analytics/GoogleAnalyticsApp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lolin/src/com/iris/analytics/GoogleTracker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lolin/res/xml/ecommerce_tracker.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lolin/res/xml/global_tracker.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/buildConfig/release/com/iris/lolin/BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/release/android/support/v7/appcompat/R.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/release/com/facebook/android/R.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/release/com/handmark/pulltorefresh/library/R.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/release/com/iris/lolin/Manifest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/release/com/iris/lolin/R.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/classes/android/support/v7/appcompat/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/bin/jarlist.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/gen/android/support/v7/appcompat/BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/gen/android/support/v7/appcompat/R.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/project.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/tmp/dex/release/inputList.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/classes.jar" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/classes.jar" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/classes.jar" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/libs/google-play-services.jar" afterPath="$PROJECT_DIR$/lolin/libs/google-play-services.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/model_data.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/entities/Board.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/entities/Board.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/fragment/BoardFragment.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/fragment/BoardFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/service/ComposerService.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/service/ComposerService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/config/Config.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/config/Config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/IntroActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/IntroActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/gen/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/facebook/gen/com/facebook/android/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/gen/com/handmark/pulltorefresh/library/R.java" afterPath="$PROJECT_DIR$/library/gen/com/handmark/pulltorefresh/library/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/bin/R.txt" afterPath="$PROJECT_DIR$/facebook/bin/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/bin/R.txt" afterPath="$PROJECT_DIR$/library/bin/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/res/layout/activity_intro.xml" afterPath="$PROJECT_DIR$/lolin/res/layout/activity_intro.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/project.properties" afterPath="$PROJECT_DIR$/lolin/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LOLIN.iml" afterPath="$PROJECT_DIR$/LOLIN.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/MainActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/com/handmark/pulltorefresh/library/PullToRefreshListView.java" afterPath="$PROJECT_DIR$/library/src/com/handmark/pulltorefresh/library/PullToRefreshListView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/PushActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/PushActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/facebook/android/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/handmark/pulltorefresh/library/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/handmark/pulltorefresh/library/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/iris/lolin/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/iris/lolin/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/fragment/RepleFragment.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/fragment/RepleFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/adapter/SectionsPagerAdapter.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/adapter/SectionsPagerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/res/layout/acticity_board_detail.xml" afterPath="$PROJECT_DIR$/lolin/res/layout/acticity_board_detail.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appcompat_v7/appcompat_v7.iml" afterPath="$PROJECT_DIR$/appcompat_v7/appcompat_v7.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/res/values/arrays.xml" afterPath="$PROJECT_DIR$/lolin/res/values/arrays.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build.gradle" afterPath="$PROJECT_DIR$/lolin/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/facebook.iml" afterPath="$PROJECT_DIR$/facebook/facebook.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/res/layout/fragment_reple.xml" afterPath="$PROJECT_DIR$/lolin/res/layout/fragment_reple.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/library.iml" afterPath="$PROJECT_DIR$/library/library.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/lolin.iml" afterPath="$PROJECT_DIR$/lolin/lolin.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/res/values/strings.xml" afterPath="$PROJECT_DIR$/lolin/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LOLIN.iws" />
@@ -2432,7 +2273,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="8515733315000" />
+        <entry key="$PROJECT_DIR$" value="8524286533000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2448,11 +2289,69 @@
                         <option name="entries">
                           <list>
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0-sources.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/24.0.0/lint-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/24.0.0/lint-24.0.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.1/proguard-gradle-5.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.1/proguard-gradle-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.2.2/ecj-4.2.2-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.2.2/ecj-4.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/24.0.0/lint-checks-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/24.0.0/lint-checks-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/24.0.0/sdk-common-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/24.0.0/sdk-common-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/24.0.0/sdklib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/24.0.0/sdklib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/24.0.0/common-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/24.0.0/common-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/1.0.0/builder-test-api-1.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/1.0.0/builder-test-api-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/24.0.0/ddmlib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/24.0.0/ddmlib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/24.0.0/manifest-merger-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/24.0.0/manifest-merger-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.1/proguard-base-5.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.1/proguard-base-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/24.0.0/lint-api-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/24.0.0/lint-api-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/4.0/asm-analysis-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/4.0/asm-analysis-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/24.0.0/dvlib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/24.0.0/dvlib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/24.0.0/layoutlib-api-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/24.0.0/layoutlib-api-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/17.0/guava-17.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/17.0/guava-17.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/4.0/asm-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/4.0/asm-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.2/lombok-ast-0.2.2-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.2/lombok-ast-0.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/4.0/asm-tree-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/4.0/asm-tree-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$" />
@@ -2465,11 +2364,71 @@
                         <option name="entries">
                           <list>
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0-sources.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/24.0.0/lint-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/24.0.0/lint-24.0.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.1/proguard-gradle-5.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.1/proguard-gradle-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.2.2/ecj-4.2.2-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.2.2/ecj-4.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/24.0.0/lint-checks-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/24.0.0/lint-checks-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/24.0.0/sdk-common-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/24.0.0/sdk-common-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/24.0.0/sdklib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/24.0.0/sdklib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/24.0.0/common-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/24.0.0/common-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/1.0.0/builder-test-api-1.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/1.0.0/builder-test-api-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/24.0.0/ddmlib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/24.0.0/ddmlib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/24.0.0/manifest-merger-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/24.0.0/manifest-merger-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.1/proguard-base-5.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.1/proguard-base-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/24.0.0/lint-api-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/24.0.0/lint-api-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/4.0/asm-analysis-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/4.0/asm-analysis-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/24.0.0/dvlib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/24.0.0/dvlib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/24.0.0/layoutlib-api-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/24.0.0/layoutlib-api-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/17.0/guava-17.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/17.0/guava-17.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/4.0/asm-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/4.0/asm-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.2/lombok-ast-0.2.2-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.2/lombok-ast-0.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/4.0/asm-tree-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/4.0/asm-tree-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
+                            <option value="$MODULE_DIR$/libs/android-support-v4.jar" />
+                            <option value="$MODULE_DIR$/libs/android-support-v7-appcompat.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/appcompat_v7" />
@@ -2482,11 +2441,71 @@
                         <option name="entries">
                           <list>
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0-sources.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/24.0.0/lint-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/24.0.0/lint-24.0.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.1/proguard-gradle-5.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.1/proguard-gradle-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.2.2/ecj-4.2.2-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.2.2/ecj-4.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/24.0.0/lint-checks-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/24.0.0/lint-checks-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/24.0.0/sdk-common-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/24.0.0/sdk-common-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/24.0.0/sdklib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/24.0.0/sdklib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/24.0.0/common-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/24.0.0/common-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/1.0.0/builder-test-api-1.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/1.0.0/builder-test-api-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/24.0.0/ddmlib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/24.0.0/ddmlib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/24.0.0/manifest-merger-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/24.0.0/manifest-merger-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.1/proguard-base-5.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.1/proguard-base-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/24.0.0/lint-api-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/24.0.0/lint-api-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/4.0/asm-analysis-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/4.0/asm-analysis-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/24.0.0/dvlib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/24.0.0/dvlib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/24.0.0/layoutlib-api-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/24.0.0/layoutlib-api-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/17.0/guava-17.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/17.0/guava-17.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/4.0/asm-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/4.0/asm-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.2/lombok-ast-0.2.2-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.2/lombok-ast-0.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/4.0/asm-tree-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/4.0/asm-tree-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
+                            <option value="$MODULE_DIR$/libs/android-support-v4.jar" />
+                            <option value="$MODULE_DIR$/libs/bolts.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/facebook" />
@@ -2499,11 +2518,69 @@
                         <option name="entries">
                           <list>
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0-sources.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/24.0.0/lint-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/24.0.0/lint-24.0.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.1/proguard-gradle-5.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.1/proguard-gradle-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.2.2/ecj-4.2.2-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.2.2/ecj-4.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/24.0.0/lint-checks-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/24.0.0/lint-checks-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/24.0.0/sdk-common-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/24.0.0/sdk-common-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/24.0.0/sdklib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/24.0.0/sdklib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/24.0.0/common-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/24.0.0/common-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/1.0.0/builder-test-api-1.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/1.0.0/builder-test-api-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/24.0.0/ddmlib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/24.0.0/ddmlib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/24.0.0/manifest-merger-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/24.0.0/manifest-merger-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.1/proguard-base-5.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.1/proguard-base-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/24.0.0/lint-api-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/24.0.0/lint-api-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/4.0/asm-analysis-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/4.0/asm-analysis-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/24.0.0/dvlib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/24.0.0/dvlib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/24.0.0/layoutlib-api-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/24.0.0/layoutlib-api-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/17.0/guava-17.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/17.0/guava-17.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/4.0/asm-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/4.0/asm-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.2/lombok-ast-0.2.2-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.2/lombok-ast-0.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/4.0/asm-tree-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/4.0/asm-tree-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/library" />
@@ -2516,11 +2593,75 @@
                         <option name="entries">
                           <list>
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0-sources.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/24.0.0/lint-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/24.0.0/lint-24.0.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/1.0.0/builder-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.1/proguard-gradle-5.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.1/proguard-gradle-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.2.2/ecj-4.2.2-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.2.2/ecj-4.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/24.0.0/lint-checks-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/24.0.0/lint-checks-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/24.0.0/sdk-common-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/24.0.0/sdk-common-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/24.0.0/sdklib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/24.0.0/sdklib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/24.0.0/common-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/24.0.0/common-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/1.0.0/builder-test-api-1.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/1.0.0/builder-test-api-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/24.0.0/ddmlib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/24.0.0/ddmlib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/24.0.0/manifest-merger-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/24.0.0/manifest-merger-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/1.0.0/builder-model-1.0.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/1.0.0/gradle-1.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.1/proguard-base-5.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.1/proguard-base-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/24.0.0/lint-api-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/24.0.0/lint-api-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/4.0/asm-analysis-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/4.0/asm-analysis-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/24.0.0/dvlib-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/24.0.0/dvlib-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/24.0.0/layoutlib-api-24.0.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/24.0.0/layoutlib-api-24.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/17.0/guava-17.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/17.0/guava-17.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/4.0/asm-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/4.0/asm-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.2/lombok-ast-0.2.2-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.2/lombok-ast-0.2.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/4.0/asm-tree-4.0-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/4.0/asm-tree-4.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
+                            <option value="$MODULE_DIR$/libs/google-play-services.jar" />
+                            <option value="$MODULE_DIR$/libs/gson-2.2.2-javadoc.jar" />
+                            <option value="$MODULE_DIR$/libs/gson-2.2.2-sources.jar" />
+                            <option value="$MODULE_DIR$/libs/gson-2.2.2.jar" />
+                            <option value="$MODULE_DIR$/libs/universal-image-loader-1.9.0.jar" />
+                            <option value="$MODULE_DIR$/libs/volley.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/lolin" />
@@ -2598,19 +2739,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lolin/res/layout/row_write_text_list.xml" />
-        <option value="$PROJECT_DIR$/lolin/proguard-project.txt" />
-        <option value="$PROJECT_DIR$/lolin/gradle.properties" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/lolin/.gitignore" />
-        <option value="$PROJECT_DIR$/gradle.properties" />
-        <option value="$PROJECT_DIR$/lolin/res/layout/acticity_board_detail.xml" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/entities/User.java" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/entities/FaceBookUser.java" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/libs/TrippleDes.java" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/listener/MessageListener.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/adapter/BoardAdapter.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/adapter/ComposerAdapter.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/adapter/RepleAdapter.java" />
@@ -2625,37 +2753,50 @@
         <option value="$PROJECT_DIR$/lolin/src/com/iris/service/RecordSearchService.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/service/SettingService.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/service/UserService.java" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/adapter/SectionsPagerAdapter.java" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/MainActivity.java" />
-        <option value="$PROJECT_DIR$/lolin/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/fragment/ComposerFragment.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/fragment/ContentFragment.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/fragment/DetailRecordSearchFragment.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/fragment/RecordSearchFragment.java" />
         <option value="$PROJECT_DIR$/lolin/res/layout/row_left_reple.xml" />
-        <option value="$PROJECT_DIR$/lolin/build.gradle" />
         <option value="$PROJECT_DIR$/lolin/res/layout/row_right_reple.xml" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/entities/Reple.java" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/entities/Board.java" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/service/ComposerService.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/service/RepleService.java" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/fragment/RepleFragment.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/GcmIntentService.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/adapter/BoardDetailPagerAdapter.java" />
         <option value="$PROJECT_DIR$/lolin/res/layout/activity_intro.xml" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/config/Config.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/entities/UpdateBoard.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/service/IntroService.java" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/IntroActivity.java" />
-        <option value="$PROJECT_DIR$/lolin/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/adapter/SectionsPagerAdapter.java" />
+        <option value="$PROJECT_DIR$/lolin/res/values/arrays.xml" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/entities/Board.java" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/fragment/RepleFragment.java" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/service/ComposerService.java" />
+        <option value="$PROJECT_DIR$/lolin/res/layout/acticity_board_detail.xml" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/test/UserServiceTest.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/fragment/BoardFragment.java" />
+        <option value="$PROJECT_DIR$/library/src/com/handmark/pulltorefresh/library/PullToRefreshListView.java" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/config/Config.java" />
+        <option value="$PROJECT_DIR$/lolin/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/analytics/GoogleTracker.java" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/MainActivity.java" />
+        <option value="$PROJECT_DIR$/lolin/build.gradle" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/IntroActivity.java" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/PushActivity.java" />
+        <option value="$PROJECT_DIR$/lolin/res/layout/fragment_reple.xml" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java" />
+        <option value="$PROJECT_DIR$/lolin/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/lolin/res/xml/global_tracker.xml" />
+        <option value="$PROJECT_DIR$/lolin/res/xml/ecommerce_tracker.xml" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/analytics/GoogleAnalyticsApp.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1439" />
-    <option name="height" value="830" />
+    <option name="width" value="1280" />
+    <option name="height" value="730" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -2683,6 +2824,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2690,10 +2832,6 @@
               <option name="myItemId" value="LOLIN" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2703,32 +2841,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="lolin" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lolin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2831,7 +2947,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fragment" />
+              <option name="myItemId" value="analytics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOLIN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOLIN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lolin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2853,8 +2991,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOLIN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOLIN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lolin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2879,17 +3040,40 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lolin/src/com/iris/analytics" />
+      <recent name="$PROJECT_DIR$/lolin/res/xml" />
+      <recent name="$PROJECT_DIR$/lolin/res/drawable-xhdpi" />
       <recent name="$PROJECT_DIR$/lolin/res/drawable-mdpi" />
       <recent name="$PROJECT_DIR$/lolin/res/drawable-xxhdpi" />
-      <recent name="$PROJECT_DIR$/lolin/res/drawable-xhdpi" />
-      <recent name="$PROJECT_DIR$/lolin/res/drawable-hdpi" />
-      <recent name="$PROJECT_DIR$/lolin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.iris.service" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.lolin">
+    <configuration default="false" name="Tests in 'com.iris.test'" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+      <module name="lolin" />
+      <option name="TESTING_TYPE" value="1" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.iris.test" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -3031,9 +3215,15 @@
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Android Application.lolin" />
+      <item index="1" class="java.lang.String" itemvalue="Android Tests.Tests in 'com.iris.test'" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Android Tests.Tests in 'com.iris.test'" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="HTML_FILE_NAME" />
@@ -3086,33 +3276,33 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1439" height="830" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="730" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32633054" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32624868" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32689556" sideWeight="0.5006605" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22174536" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277311" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22132471" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32731137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277311" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24229692" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16938111" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25411597" sideWeight="0.4993395" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29402262" sideWeight="0.4993395" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21888413" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -3174,128 +3364,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/adapter/ComposerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0066814" vertical-offset="1006" max-vertical-offset="1455">
-          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/util/ScreenshotUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5011136" vertical-offset="0" max-vertical-offset="765">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/util/SharedpreferencesUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9020045" vertical-offset="0" max-vertical-offset="1515">
-          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/util/SignatureUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16703786" vertical-offset="0" max-vertical-offset="1050">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/util/ViewHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13140312" vertical-offset="16" max-vertical-offset="510">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/service/BoardDetailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.13585746" vertical-offset="1081" max-vertical-offset="1530">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/service/ComposerFragmentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6325167" vertical-offset="391" max-vertical-offset="1245">
-          <caret line="63" column="19" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/service/RecordSearchService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66815144" vertical-offset="0" max-vertical-offset="720">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/service/SettingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1215">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/adapter/SectionsPagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.193764" vertical-offset="499" max-vertical-offset="1185">
-          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7364" max-vertical-offset="7800">
-          <caret line="172" column="16" selection-start-line="172" selection-start-column="16" selection-end-line="172" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/GcmBroadcastReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="46" max-vertical-offset="495">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/PushActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4721603" vertical-offset="721" max-vertical-offset="1770">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/ContentFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="211" max-vertical-offset="660">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/DetailRecordSearchFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
-          <caret line="97" column="58" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/RecordSearchFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1830">
-          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/res/layout/row_left_reple.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.37037" vertical-offset="494" max-vertical-offset="1215">
-          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
@@ -3318,13 +3386,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/layout/row_right_reple.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53317535" vertical-offset="510" max-vertical-offset="1260">
           <caret line="49" column="59" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/SettingFragment.java">
@@ -3341,24 +3409,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/entities/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66815144" vertical-offset="240" max-vertical-offset="3195">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/ComposerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
           <caret line="147" column="24" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/listener/MessageListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26726058" vertical-offset="0" max-vertical-offset="449">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -3369,24 +3423,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/RepleFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51834863" vertical-offset="5129" max-vertical-offset="5700">
-          <caret line="448" column="65" selection-start-line="448" selection-start-column="65" selection-end-line="448" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lolin/lolin.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1470">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/GcmIntentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43207127" vertical-offset="1156" max-vertical-offset="2220">
-          <caret line="120" column="44" selection-start-line="120" selection-start-column="44" selection-end-line="120" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -3397,82 +3437,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6533101" vertical-offset="45" max-vertical-offset="1080">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/util/NetworkUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="1140">
           <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2459" max-vertical-offset="5355">
-          <caret line="244" column="16" selection-start-line="244" selection-start-column="16" selection-end-line="244" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12369338" vertical-offset="1354" max-vertical-offset="4725">
-          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding>
-            <element signature="e#8946#8978#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.13066202" vertical-offset="330" max-vertical-offset="1245">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/layout/activity_intro.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="330">
           <caret line="9" column="36" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/res/layout/fragment_board.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/res/layout/fragment_board.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-28.333334" vertical-offset="0" max-vertical-offset="1095">
           <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="57" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/service/ComposerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1233244" vertical-offset="316" max-vertical-offset="1575">
-          <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/service/BoardService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.5416667" vertical-offset="450" max-vertical-offset="2550">
           <caret line="134" column="47" selection-start-line="134" selection-start-column="47" selection-end-line="134" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3480,7 +3475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6032172" vertical-offset="45" max-vertical-offset="825">
           <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3488,7 +3482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3324397" vertical-offset="26" max-vertical-offset="3285">
           <caret line="25" column="46" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3496,9 +3489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2922252" vertical-offset="1166" max-vertical-offset="1665">
           <caret line="85" column="27" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3506,80 +3496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20107238" vertical-offset="0" max-vertical-offset="885">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="24" />
-          <folding>
-            <element signature="e#255#256#0" expanded="false" />
-            <element signature="e#280#281#0" expanded="false" />
-            <element signature="e#316#317#0" expanded="false" />
-            <element signature="e#344#345#0" expanded="false" />
-            <element signature="e#378#379#0" expanded="false" />
-            <element signature="e#408#409#0" expanded="false" />
-            <element signature="e#454#455#0" expanded="false" />
-            <element signature="e#492#493#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-            <element signature="e#550#551#0" expanded="false" />
-            <element signature="e#590#591#0" expanded="false" />
-            <element signature="e#622#623#0" expanded="false" />
-            <element signature="e#652#653#0" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#716#717#0" expanded="false" />
-            <element signature="e#746#747#0" expanded="false" />
-            <element signature="e#780#781#0" expanded="false" />
-            <element signature="e#810#811#0" expanded="false" />
-            <element signature="e#856#857#0" expanded="false" />
-            <element signature="e#894#895#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/config/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1457" max-vertical-offset="2280">
-          <caret line="108" column="44" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35632184" vertical-offset="1301" max-vertical-offset="1725">
-          <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/IntroActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1607" max-vertical-offset="2115">
-          <caret line="148" column="25" selection-start-line="148" selection-start-column="25" selection-end-line="148" selection-end-column="25" />
-          <folding>
-            <element signature="e#2897#3441#0" expanded="true" />
-            <element signature="e#3421#3422#0" expanded="true" />
-            <element signature="e#3443#3873#0" expanded="true" />
-            <element signature="e#3854#3855#0" expanded="true" />
-            <element signature="e#4079#4111#0" expanded="true" />
-            <element signature="e#4206#4238#0" expanded="true" />
-            <element signature="e#4256#4713#0" expanded="true" />
-            <element signature="e#4694#4695#0" expanded="true" />
-            <element signature="e#4733#4766#0" expanded="true" />
-            <element signature="e#4784#4978#0" expanded="true" />
-            <element signature="e#4959#4960#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1395">
-          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5833333" vertical-offset="2595" max-vertical-offset="6585">
-          <caret line="252" column="11" selection-start-line="252" selection-start-column="11" selection-end-line="252" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3587,14 +3503,296 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="10812" max-vertical-offset="11325">
           <caret line="793" column="0" selection-start-line="793" selection-start-column="0" selection-end-line="793" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/adapter/SectionsPagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6258503" vertical-offset="744" max-vertical-offset="1185">
+          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/res/drawable-xhdpi/img_rank_bronze.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="441">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/res/values/arrays.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34013605" vertical-offset="0" max-vertical-offset="1140">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/entities/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6122449" vertical-offset="0" max-vertical-offset="3210">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/adapter/BoardAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="1470">
+          <caret line="84" column="50" selection-start-line="84" selection-start-column="50" selection-end-line="84" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/GcmIntentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1877" max-vertical-offset="2220">
+          <caret line="162" column="53" selection-start-line="162" selection-start-column="53" selection-end-line="162" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/listener/MessageListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33707866" vertical-offset="0" max-vertical-offset="356">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/RepleFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5035629" vertical-offset="5203" max-vertical-offset="5820">
+          <caret line="448" column="55" selection-start-line="448" selection-start-column="55" selection-end-line="448" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/service/ComposerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7466307" vertical-offset="668" max-vertical-offset="1605">
+          <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/res/layout/acticity_board_detail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4622093" vertical-offset="486" max-vertical-offset="5025">
+          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/util/SignatureUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43109986" vertical-offset="259" max-vertical-offset="1050">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/service/SettingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5499368" vertical-offset="105" max-vertical-offset="1215">
+          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1245">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/com/handmark/pulltorefresh/library/PullToRefreshListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48453608" vertical-offset="5184" max-vertical-offset="5475">
+          <caret line="355" column="0" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="627">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/BoardFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15789473" vertical-offset="789" max-vertical-offset="5820">
-          <caret line="107" column="97" selection-start-line="107" selection-start-column="97" selection-end-line="107" selection-end-column="97" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="5850">
+          <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/config/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="2295">
+          <caret line="83" column="87" selection-start-line="83" selection-start-column="87" selection-end-line="83" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.5542169" vertical-offset="3998" max-vertical-offset="8805">
+          <caret line="422" column="7" selection-start-line="422" selection-start-column="7" selection-end-line="422" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#5062#5138#0" expanded="false" />
+            <element signature="e#5630#6414#0" expanded="false" />
+            <element signature="e#6407#6408#0" expanded="false" />
+            <element signature="e#6416#6731#0" expanded="false" />
+            <element signature="e#6724#6725#0" expanded="false" />
+            <element signature="e#10738#11260#0" expanded="false" />
+            <element signature="e#11254#11255#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/analytics/GoogleTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6164818" vertical-offset="719" max-vertical-offset="1350">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="1125">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.063391" vertical-offset="419" max-vertical-offset="5715">
+          <caret line="329" column="0" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
+          <folding>
+            <element signature="e#4211#4265#0" expanded="false" />
+            <element signature="e#4292#4348#0" expanded="false" />
+            <element signature="e#6243#6275#0" expanded="false" />
+            <element signature="e#9550#9614#0" expanded="false" />
+            <element signature="e#9984#10046#0" expanded="false" />
+            <element signature="e#10618#10672#0" expanded="false" />
+            <element signature="e#10710#10766#0" expanded="false" />
+            <element signature="e#10892#10946#0" expanded="false" />
+            <element signature="e#10984#11040#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3300" max-vertical-offset="5175">
+          <caret line="256" column="12" selection-start-line="256" selection-start-column="12" selection-end-line="256" selection-end-column="57" />
+          <folding>
+            <element signature="e#4752#4795#0" expanded="false" />
+            <element signature="e#5160#5203#0" expanded="false" />
+            <element signature="e#6574#6594#0" expanded="false" />
+            <element signature="e#6663#6684#0" expanded="false" />
+            <element signature="e#7542#7565#0" expanded="false" />
+            <element signature="e#9330#9362#0" expanded="false" />
+            <element signature="e#9386#9427#0" expanded="false" />
+            <element signature="e#9471#9503#0" expanded="false" />
+            <element signature="e#9509#9724#0" expanded="false" />
+            <element signature="e#9719#9720#0" expanded="false" />
+            <element signature="e#9744#9777#0" expanded="false" />
+            <element signature="e#9783#9909#0" expanded="false" />
+            <element signature="e#9904#9905#0" expanded="false" />
+            <element signature="e#10893#10928#0" expanded="false" />
+            <element signature="e#11028#11058#0" expanded="false" />
+            <element signature="e#11132#11161#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/IntroActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2220">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="40" />
+          <folding>
+            <element signature="e#4565#4597#0" expanded="false" />
+            <element signature="e#4692#4724#0" expanded="false" />
+            <element signature="e#5219#5252#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/PushActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6671949" vertical-offset="1394" max-vertical-offset="2100">
+          <caret line="137" column="5" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/res/layout/fragment_reple.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52747256" vertical-offset="105" max-vertical-offset="1080">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5912863" vertical-offset="0" max-vertical-offset="1515">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5304" max-vertical-offset="7170">
+          <caret line="439" column="82" selection-start-line="439" selection-start-column="82" selection-end-line="439" selection-end-column="82" />
+          <folding>
+            <element signature="e#7948#8075#0" expanded="true" />
+            <element signature="e#8070#8071#0" expanded="true" />
+            <element signature="e#8095#8128#0" expanded="true" />
+            <element signature="e#8134#8260#0" expanded="true" />
+            <element signature="e#8255#8256#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.24" vertical-offset="399" max-vertical-offset="1725">
+          <caret line="37" column="141" selection-start-line="37" selection-start-column="141" selection-end-line="37" selection-end-column="141" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/res/xml/global_tracker.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/res/xml/ecommerce_tracker.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/analytics/GoogleAnalyticsApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.18257262" vertical-offset="253" max-vertical-offset="735">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding />
         </state>
       </provider>

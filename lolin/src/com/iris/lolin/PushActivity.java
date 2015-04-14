@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.iris.analytics.GoogleTracker;
 import com.iris.config.Config;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -27,7 +28,9 @@ public class PushActivity extends Activity {
 	private TextView 					txtSummernerName;
 	private DisplayImageOptions 		options;
 	private ImageLoader 				imageLoader;
-	
+
+    private GoogleTracker googleTracker;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
@@ -36,6 +39,20 @@ public class PushActivity extends Activity {
 	    init();
 	    dataInit();
 	}
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        googleTracker.actionActivityStart(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        googleTracker.actionActivityStop(this);
+    }
 
 	@Override
 	protected void onResume() {
@@ -116,6 +133,8 @@ public class PushActivity extends Activity {
 		intent.putExtra(Config.FLAG.MESSAGE, message);
 		startActivity(intent);
 		finish();
+
+        googleTracker.sendEventView("푸시","버튼","확인");
 	}
 	
 	/**
@@ -124,6 +143,8 @@ public class PushActivity extends Activity {
 	 */
 	public void selectCancel(View view){
 		finish();
+
+        googleTracker.sendEventView("푸시","버튼","취소");
 	}
 	
 }

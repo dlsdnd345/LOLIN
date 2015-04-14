@@ -29,8 +29,9 @@ public class Config {
 		public final static String SILVER 		= "silver";
 		public final static String GOLD 		= "gold";
 		public final static String PLATINUM 	= "platinum";
-		public final static String DIAMOND 	= "diamond";
-		public final static String CHALLENGER = "challenge";
+		public final static String DIAMOND 	    = "diamond";
+        public final static String MASTER 	    = "master";
+		public final static String CHALLENGER   = "challenge";
 	}
 
 	public static class POSITION {
@@ -71,7 +72,7 @@ public class Config {
 
 	public static class API {
 
-		public final static String		DEFAULT_URL 				= "http://192.168.123.153:8080/";
+		public final static String		DEFAULT_URL 				= "http://182.229.82.108:8080/";
 
 		public final static String		SUB_URL 					= "?id=";
 		public final static String 		SUB_URL_BOARD_ID 	 			= "?boardId=";

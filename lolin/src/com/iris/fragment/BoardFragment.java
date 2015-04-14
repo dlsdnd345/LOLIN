@@ -182,6 +182,8 @@ public class BoardFragment extends Fragment {
 					@Override  
 					public void onResponse(String response) {  
 
+                        Log.i("response",response);
+
 						rankSpinner.setOnItemSelectedListener(rankOnItemSelectedListener);
 						positionSpinner.setOnItemSelectedListener(positionOnItemSelectedListener);
 						timeSpinner.setOnItemSelectedListener(timeOnItemSelectedListener);

@@ -346,4 +346,14 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
 
 	}
 
+    @Override
+    protected void onScrollChanged(int l, int t, int oldl, int oldt) {
+
+        Log.i("onScrollChanged","L    :  "+l);
+        Log.i("onScrollChanged","T    :  "+t);
+        Log.i("onScrollChanged","oldl    :  "+oldl);
+        Log.i("onScrollChanged","oldt    :  "+oldt);
+
+        super.onScrollChanged(l, t, oldl, oldt);
+    }
 }

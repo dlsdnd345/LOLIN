@@ -49,7 +49,7 @@ public class RepleFragment extends Fragment {
 
     private ArrayList<Reple> repleList;
 
-    private int boardId;
+    private int mBoardId;
     private String userName;
     private User user;
 
@@ -139,7 +139,7 @@ public class RepleFragment extends Fragment {
         sharedpreferencesUtil = new SharedpreferencesUtil(getActivity());
         repleList = (ArrayList<Reple>) getArguments().get(Config.FLAG.REPLE);
         userName = getArguments().getString(Config.FLAG.USER_NAME);
-        boardId = getArguments().getInt(Config.FLAG.BOARD_ID);
+        mBoardId = getArguments().getInt(Config.FLAG.BOARD_ID);
 
         getUser();
 
@@ -199,7 +199,7 @@ public class RepleFragment extends Fragment {
 
 
         request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.REPLE_SAVE +
-                repleService.getSubUrl(boardId, user.getSummonerName(), editReple.getText().toString(), faceBookId), new Response.Listener<String>() {
+                repleService.getSubUrl(mBoardId, user.getSummonerName(), editReple.getText().toString(), faceBookId), new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 
@@ -241,7 +241,7 @@ public class RepleFragment extends Fragment {
             request = Volley.newRequestQueue(getActivity());
         }
         request.add(new StringRequest
-                (Request.Method.GET, Config.API.DEFAULT_URL + Config.API.REPLE_FIND_ONE + repleService.getFindRepleSubUrl(boardId), new Response.Listener<String>() {
+                (Request.Method.GET, Config.API.DEFAULT_URL + Config.API.REPLE_FIND_ONE + repleService.getFindRepleSubUrl(mBoardId), new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
@@ -337,7 +337,7 @@ public class RepleFragment extends Fragment {
 
         request.add(new StringRequest
                 (Request.Method.GET, Config.API.DEFAULT_URL + Config.API.GCM_SEND_REPLE + repleService.getSendPushSubUrl
-                        ( String.valueOf(boardId), user.getSummonerName(), reple, faceBookId), new Response.Listener<String>() {
+                        ( String.valueOf(mBoardId), user.getSummonerName(), reple, faceBookId), new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
@@ -368,7 +368,7 @@ public class RepleFragment extends Fragment {
 
         request.add(new StringRequest
                 (Request.Method.GET, Config.API.DEFAULT_URL + Config.API.GCM_SEND_ME_REPLE + repleService.getSendPushSubUrl
-                        (String.valueOf(boardId), user.getSummonerName(), reple, faceBookId), new Response.Listener<String>() {
+                        (String.valueOf(mBoardId), user.getSummonerName(), reple, faceBookId), new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
@@ -437,18 +437,21 @@ public class RepleFragment extends Fragment {
 
             Reple reple = new Reple();
 
-            reple.setBoardId(Integer.parseInt(boardId));
-            reple.setFacebookId(facebookId);
-            reple.setUserName(summernerName);
-            reple.setRepleContent(message);
-            reple.setId(Integer.parseInt(repleId));
-            reple.setWriteTime(writeTime);
+            if(Integer.parseInt(boardId) == mBoardId) {
 
-            repleAdapter.getRepleList().add(reple);
-            repleAdapter.setRepleList(repleAdapter.getRepleList());
-            Log.i("@@@@@@@@@@@@@@@","@@@@@@@@@@@@@@@@   : "  + repleAdapter.getRepleList().size());
-            repleAdapter.notifyDataSetChanged();
-            repleListView.setSelection(repleList.size());
+                reple.setBoardId(Integer.parseInt(boardId));
+                reple.setFacebookId(facebookId);
+                reple.setUserName(summernerName);
+                reple.setRepleContent(message);
+                reple.setId(Integer.parseInt(repleId));
+                reple.setWriteTime(writeTime);
+
+                repleAdapter.getRepleList().add(reple);
+                repleAdapter.setRepleList(repleAdapter.getRepleList());
+
+                repleAdapter.notifyDataSetChanged();
+                repleListView.setSelection(repleList.size());
+            }
 
         }
     };

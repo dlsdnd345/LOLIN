@@ -1,8 +1,5 @@
 package com.iris.lolin;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
@@ -19,10 +16,6 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -48,6 +41,7 @@ import com.facebook.SessionState;
 import com.facebook.Settings;
 import com.facebook.model.GraphObject;
 import com.iris.adapter.BoardDetailPagerAdapter;
+import com.iris.analytics.GoogleTracker;
 import com.iris.config.Config;
 import com.iris.entities.Board;
 import com.iris.listener.MessageListener;
@@ -56,7 +50,12 @@ import com.iris.service.BoardDetailService;
 import com.iris.util.ScreenshotUtil;
 import com.iris.util.SharedpreferencesUtil;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class BoardDetailActivity extends ActionBarActivity {
+
+    private static final String TAG = BoardDetailActivity.class.getSimpleName();
 
 	private static final int CONTENT_FRAGMENT = 0;
 	private static final int RECORD_SEARCH_FRAGMENT = 1;
@@ -97,6 +96,8 @@ public class BoardDetailActivity extends ActionBarActivity {
 
     private MessageListener             messageListener;
 
+    private GoogleTracker googleTracker;
+
 
     @Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -109,12 +110,16 @@ public class BoardDetailActivity extends ActionBarActivity {
         this.messageListener = messageListener;
     }
 
+
     @Override
 	protected void onResume() {
 		super.onResume();
 
 		init();
 		dataInit();
+
+        googleTracker.actionActivityStart(this);
+
 		//화면이 켜져 있을때 푸시화면을 보여주기 않기 위함.
 		sharedpreferencesUtil.put(Config.FLAG.NOTIBLOCK, Config.FLAG.TRUE);
 	}
@@ -127,6 +132,15 @@ public class BoardDetailActivity extends ActionBarActivity {
 
         this.unregisterReceiver(broadcastReceiver);
 	}
+
+
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        googleTracker.actionActivityStop(this);
+    }
 
 	/**
 	 * 레이아웃 초기화
@@ -161,6 +175,9 @@ public class BoardDetailActivity extends ActionBarActivity {
 	 * 데이터 초기화
 	 */
 	private void dataInit() {
+
+        googleTracker = GoogleTracker.getInstance(this);
+        googleTracker.sendScreenView(TAG);
 
         /**
          * 리시버 등록
@@ -244,6 +261,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 				new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int id) {
 				delete(request);
+
 			}
 		}).setNegativeButton(getString(R.string.dialog_cancel),
 				new DialogInterface.OnClickListener() {
@@ -271,18 +289,18 @@ public class BoardDetailActivity extends ActionBarActivity {
 
 						board = boardDetailService.getBoardFindOne(response);
 
-						if(board != null){
-							textDetailTitle.setText(board.getTitle());
-							textSummernerName.setText(board.getSummonerName());
-							textPosition.setText(board.getPosition());
-							textPlayTime.setText(board.getPlayTime());
+						if(board != null) {
+                            textDetailTitle.setText(board.getTitle());
+                            textSummernerName.setText(board.getSummonerName());
+                            textPosition.setText(board.getPosition());
+                            textPlayTime.setText(board.getPlayTime());
                             textContent.setText(board.getContent());
-						}
-						// 이름별 랭크 이미지 삽입
-						int resource = getResources().getIdentifier
-								( "img_rank_"+board.getRank(), "drawable", getApplicationContext().getPackageName());
-						imgRank.setBackgroundResource(resource);
 
+                            // 이름별 랭크 이미지 삽입
+                            int resource = getResources().getIdentifier
+                                    ("img_rank_" + board.getRank(), "drawable", getApplicationContext().getPackageName());
+                            imgRank.setBackgroundResource(resource);
+                        }
 						viewPagerInit();
 
 						prograssBar.setVisibility(View.INVISIBLE);
@@ -312,7 +330,9 @@ public class BoardDetailActivity extends ActionBarActivity {
 					@Override  
 					public void onResponse(String response) {
 						Intent intent = new Intent(BoardDetailActivity.this, MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 						startActivity(intent);
+                        finish();
 
 						prograssBar.setVisibility(View.INVISIBLE);
 
@@ -493,7 +513,9 @@ public class BoardDetailActivity extends ActionBarActivity {
 	private void selectLayoutUpdate() {
 		Intent intent = new Intent(BoardDetailActivity.this,ComposerActivity.class);
 		intent.putExtra(Config.BOARD.BOARD_ID, boardId);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(intent);
+
 	}
 	
 	/**
@@ -505,14 +527,20 @@ public class BoardDetailActivity extends ActionBarActivity {
 			//공유하기 버튼
 			case R.id.layoutFacebookSharing:
 				publishPhoto();
+
+                googleTracker.sendEventView("상세","버튼","공유");
 				break;
 				//수정버튼
 			case R.id.layoutUpdate:
 				selectLayoutUpdate();
+
+                googleTracker.sendEventView("상세","버튼","수정");
 				break;
 				//삭제버튼
 			case R.id.layoutDelete:
 				deleteDialog();
+
+                googleTracker.sendEventView("상세","버튼","삭제");
 				break;
 			}
 		}

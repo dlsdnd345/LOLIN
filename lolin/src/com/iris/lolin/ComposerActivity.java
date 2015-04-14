@@ -28,6 +28,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.iris.analytics.GoogleTracker;
 import com.iris.config.Config;
 import com.iris.entities.Board;
 import com.iris.service.BoardDetailService;
@@ -42,6 +43,7 @@ import com.iris.util.SharedpreferencesUtil;
  */
 public class ComposerActivity extends ActionBarActivity {
 
+    private static final String TAG = ComposerActivity.class.getSimpleName();
 
 	private static final String 		UNRANK 						= "언랭크"; 
 	private static final int 			RANK_UNRANK 				= 0; 
@@ -66,6 +68,8 @@ public class ComposerActivity extends ActionBarActivity {
 	private Spinner 					rankSpinner,teaSpinner,positionSpinner,timeSpinner;		
 	private ArrayAdapter<String> 		rankSpinnerAdapter,teaSpinnerAdapter,positionSpinnerAdapter,timeSpinnerAdapter;
 
+    private GoogleTracker googleTracker;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -74,6 +78,20 @@ public class ComposerActivity extends ActionBarActivity {
 		init();
 		DataInit();
 	}
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        googleTracker.actionActivityStart(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        googleTracker.actionActivityStop(this);
+    }
 
 	/**
 	 * 레이아웃 초기화
@@ -95,7 +113,11 @@ public class ComposerActivity extends ActionBarActivity {
 	 */
 	private void DataInit() {
 
-		Intent intent = getIntent();
+        googleTracker = GoogleTracker.getInstance(this);
+        googleTracker.sendScreenView(TAG);
+
+
+        Intent intent = getIntent();
 
 		boardId = intent.getStringExtra(Config.BOARD.BOARD_ID);
 		RequestQueue request = Volley.newRequestQueue(getApplicationContext());  
@@ -231,14 +253,15 @@ public class ComposerActivity extends ActionBarActivity {
 		String subUrl = composerService.getSubUrl(boardId ,facebookId, board.getTitle(), board.getContent(),
 				board.transformRank(board.getRank()), board.getPosition(), board.getPlayTime(),board.getTea());
 
-		request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.BOARD_SAVE+subUrl,new Response.Listener<String>() {  
+		request.add(new StringRequest(Request.Method.GET, Config.API.DEFAULT_URL + Config.API.BOARD_SAVE+subUrl,new Response.Listener<String>() {
 			@Override  
 			public void onResponse(String response) {
 				Intent intent = new Intent(ComposerActivity.this , MainActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(intent);
 				prograssBar.setVisibility(View.INVISIBLE);
-			}  
+
+			}
 		}, new Response.ErrorListener() {  
 			@Override  
 			public void onErrorResponse(VolleyError error) {  
@@ -296,6 +319,8 @@ public class ComposerActivity extends ActionBarActivity {
 			emptyCheckTitle();
 			emptyCheckContent();
 			requestSaveBoard();
+
+            googleTracker.sendEventView("작","버튼","추가");
 
 			return true;
 		default:

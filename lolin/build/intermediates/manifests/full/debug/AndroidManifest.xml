@@ -22,6 +22,7 @@
         android:protectionLevel="signature" />
 
     <application
+        android:name="com.iris.analytics.GoogleAnalyticsApp"
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
@@ -83,6 +84,14 @@
         <service android:name="com.iris.lolin.GcmIntentService" />
 
         <!-- 서비스명 변경하면 안됨 -->
+
+
+        <!-- 구글 통계 -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- 구글 통계 -->
+
     </application>
 
 </manifest>

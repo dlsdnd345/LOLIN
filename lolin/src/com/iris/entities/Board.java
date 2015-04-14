@@ -136,8 +136,11 @@ public class Board implements Serializable {
 		if(rankPosition.equals(Config.RANK.DIAMOND)){
 			return 5;
 		}
+        if(rankPosition.equals(Config.RANK.MASTER)){
+            return 6;
+        }
 		if(rankPosition.equals(Config.RANK.CHALLENGER)){
-			return 6;
+			return 7;
 		}
 		return -1;
 	}
@@ -169,7 +172,6 @@ public class Board implements Serializable {
 	
 	/**
 	 * 시간 를 스피너에서 사용할 수 있도록 position 으로 변경
-	 * @param position
 	 * @return
 	 */
 	public int converterTime(String time){
@@ -191,7 +193,6 @@ public class Board implements Serializable {
 	
 	/**
 	 * 티어 를 스피너에서 사용할 수 있도록 position 으로 변경
-	 * @param position
 	 * @return
 	 */
 	public int converterTea(String tea){
@@ -229,7 +230,9 @@ public class Board implements Serializable {
 			return "platinum";
 		}else if(rank.equals("다이아")){
 			return "diamond";
-		}else if(rank.equals("챌린져")){
+		}else if(rank.equals("마스터")){
+            return "master";
+        }else if(rank.equals("챌린져")){
 			return "challenger";
 		}else{
 			return "";
@@ -250,7 +253,9 @@ public class Board implements Serializable {
 			return "플래티넘";
 		}else if(rank.equals("diamond")){
 			return "다이아";
-		}else if(rank.equals("challenger")){
+		}else if(rank.equals("master")){
+            return "마스터";
+        }else if(rank.equals("challenger")){
 			return "챌린져";
 		}else{
 			return "";

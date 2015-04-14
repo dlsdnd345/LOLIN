@@ -72,11 +72,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
 		switch (position) {
 		case 0:
-			return context.getString(R.string.board_activity_title);
+			return context.getString(R.string.title_section1);
 		case 1:
-			return context.getString(R.string.composer_activity_title);
+			return context.getString(R.string.title_section2);
 		case 2:
-			return context.getString(R.string.my_record_activity_title);
+			return context.getString(R.string.title_section3);
 		}
 		return null;
 	}

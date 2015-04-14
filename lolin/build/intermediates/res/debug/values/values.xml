@@ -16,6 +16,7 @@
         <item>골드</item>
         <item>플래티넘</item>
         <item>다이아</item>
+        <item>마스터</item>
         <item>챌린져</item>
     </string-array>
     <string-array name="composer_tea_array_list">
@@ -47,6 +48,7 @@
         <item>골드</item>
         <item>플래티넘</item>
         <item>다이아</item>
+        <item>마스터</item>
         <item>챌린져</item>
     </string-array>
     <string-array name="main_time_array_list">
