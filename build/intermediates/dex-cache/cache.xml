@@ -5,7 +5,7 @@
         jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="1e4569a2f068fc45cd173383cc3590aa0151a9c0">
+        sha1="28069248daac3808e1fa07d741c702a27ae21160">
         <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/classes-ea6d33023176d0881da59b745d02592dff19b9ee.jar" />
     </item>
     <item
@@ -14,13 +14,6 @@
         revision="21.1.1"
         sha1="1e5ba33c837d05dcca9dc40a0ab458f8599d7aef">
         <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/bolts-d604a285aab2a7e451d846ac36af5976d5992220.jar" />
-    </item>
-    <item
-        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/libs/android-support-v4.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="cb6883d96005bc85b3e868f204507ea5b4fa9bbf">
-        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/android-support-v4-ce0ae94b1aedf899538ed10c2cce5cc2fadcfd1a.jar" />
     </item>
     <item
         jar="/Users/woong/LOLIN/lolin/libs/gson-2.2.2-javadoc.jar"
@@ -33,8 +26,15 @@
         jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="1af7c50e43dbc73ae68583ebd164cb9045ff98c2">
+        sha1="8654e85b74c04def777a7fa4282c680449aff979">
         <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/classes-829e2b0b729c398c776c269103b4e56d3276efdc.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/libs/android-support-v4.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="cb6883d96005bc85b3e868f204507ea5b4fa9bbf">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/android-support-v4-390e2860ed7ee9f27564d274c2b43233401ce98d.jar" />
     </item>
     <item
         jar="/Users/woong/LOLIN/lolin/libs/google-play-services.jar"
@@ -68,7 +68,7 @@
         jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="389e5153cdb280d09e093fd1a02a997edbfdf479">
+        sha1="256b5a93afe17336046ae4cdea48bce49f5535c3">
         <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/classes-39b63f3cd5ec46fcf3f04b2359845b79cae19cf0.jar" />
     </item>
     <item

@@ -18,554 +18,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8be538fb-d273-4635-a2cd-3b26fa1aa9c3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/generated/source/buildConfig/debug/android/support/v7/appcompat/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/generated/source/buildConfig/test/debug/android/support/v7/appcompat/test/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/generated/source/r/test/debug/android/support/v7/appcompat/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/generated/source/r/test/debug/android/support/v7/appcompat/test/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/manifests/test/debug/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/manifests/tmp/manifestMerger6989349636907438569.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/resources-debug-test.ap_" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/anim/abc_fade_in.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/anim/abc_fade_out.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/anim/abc_slide_in_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/anim/abc_slide_in_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/anim/abc_slide_out_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/anim/abc_slide_out_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/color/abc_search_url_text_holo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_bottom_solid_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_bottom_solid_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_bottom_transparent_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_bottom_transparent_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_share_pack_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_share_pack_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_solid_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_solid_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_stacked_solid_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_stacked_solid_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_stacked_transparent_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_stacked_transparent_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_transparent_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ab_transparent_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_cab_background_bottom_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_cab_background_bottom_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_cab_background_top_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_cab_background_top_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_ab_back_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_ab_back_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_cab_done_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_cab_done_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_clear_disabled.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_clear_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_clear_search_api_disabled_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_clear_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_commit_search_api_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_commit_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_go.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_go_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_menu_moreoverflow_normal_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_menu_moreoverflow_normal_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_menu_share_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_menu_share_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_voice_search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_ic_voice_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_list_divider_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_list_divider_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_list_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_list_longpressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_menu_dropdown_panel_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_menu_dropdown_panel_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_menu_hardkey_panel_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_menu_hardkey_panel_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_spinner_ab_default_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_spinner_ab_default_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_spinner_ab_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_spinner_ab_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_spinner_ab_focused_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_spinner_ab_focused_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_spinner_ab_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_spinner_ab_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_tab_selected_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_tab_selected_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_tab_selected_pressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_tab_unselected_pressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_textfield_search_default_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_textfield_search_default_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_textfield_search_right_default_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_textfield_search_right_default_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_textfield_search_right_selected_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_textfield_search_right_selected_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_textfield_search_selected_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-hdpi-v4/abc_textfield_search_selected_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_bottom_solid_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_bottom_solid_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_bottom_transparent_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_bottom_transparent_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_share_pack_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_share_pack_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_solid_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_solid_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_stacked_solid_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_stacked_solid_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_stacked_transparent_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_stacked_transparent_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_transparent_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ab_transparent_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_cab_background_bottom_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_cab_background_bottom_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_cab_background_top_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_cab_background_top_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_ab_back_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_ab_back_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_cab_done_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_cab_done_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_clear_disabled.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_clear_normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_clear_search_api_disabled_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_clear_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_commit_search_api_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_commit_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_go.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_go_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_menu_moreoverflow_normal_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_menu_moreoverflow_normal_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_menu_share_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_menu_share_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_voice_search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_ic_voice_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_list_divider_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_list_divider_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_list_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_list_longpressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_menu_dropdown_panel_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_menu_dropdown_panel_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_menu_hardkey_panel_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_menu_hardkey_panel_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_spinner_ab_default_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_spinner_ab_default_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_spinner_ab_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_spinner_ab_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_spinner_ab_focused_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_spinner_ab_focused_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_spinner_ab_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_spinner_ab_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_tab_selected_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_tab_selected_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_tab_selected_pressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_tab_unselected_pressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_textfield_search_default_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_textfield_search_default_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_textfield_search_right_default_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_textfield_search_right_default_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_textfield_search_right_selected_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_textfield_search_right_selected_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_textfield_search_selected_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-mdpi-v4/abc_textfield_search_selected_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_bottom_solid_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_bottom_solid_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_bottom_transparent_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_bottom_transparent_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_share_pack_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_share_pack_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_solid_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_solid_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_stacked_solid_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_stacked_solid_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_stacked_transparent_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_stacked_transparent_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_transparent_dark_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ab_transparent_light_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_cab_background_bottom_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_cab_background_bottom_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_cab_background_top_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_cab_background_top_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_ab_back_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_ab_back_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_cab_done_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_cab_done_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_clear_disabled.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_clear_search_api_disabled_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_clear_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_commit_search_api_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_commit_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_go.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_go_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_menu_moreoverflow_normal_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_menu_moreoverflow_normal_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_menu_share_holo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_menu_share_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_voice_search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_ic_voice_search_api_holo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_list_divider_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_list_divider_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_list_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_menu_dropdown_panel_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_menu_dropdown_panel_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_menu_hardkey_panel_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_menu_hardkey_panel_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_spinner_ab_default_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_spinner_ab_default_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_spinner_ab_disabled_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_spinner_ab_disabled_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_spinner_ab_focused_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_spinner_ab_focused_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_spinner_ab_pressed_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_spinner_ab_pressed_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_tab_selected_focused_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_tab_selected_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_tab_selected_pressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_tab_unselected_pressed_holo.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_textfield_search_default_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_textfield_search_default_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_textfield_search_right_default_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_textfield_search_right_default_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_textfield_search_right_selected_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_textfield_search_right_selected_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_textfield_search_selected_holo_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable-xhdpi-v4/abc_textfield_search_selected_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_ic_clear.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_ic_clear_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_item_background_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_item_background_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_list_selector_background_transition_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_list_selector_background_transition_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_list_selector_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_list_selector_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_search_dropdown_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_search_dropdown_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_spinner_ab_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_spinner_ab_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_tab_indicator_ab_holo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_textfield_searchview_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_textfield_searchview_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_textfield_searchview_right_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/drawable/abc_textfield_searchview_right_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout-v11/abc_action_bar_decor.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout-v14/abc_activity_chooser_view.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_action_bar_decor.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_action_bar_decor_include.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_action_bar_decor_overlay.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_action_bar_home.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_action_bar_tab.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_action_bar_tabbar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_action_bar_title_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_action_bar_view_list_nav_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_action_menu_item_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_action_menu_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_action_mode_bar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_action_mode_close_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_activity_chooser_view.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_activity_chooser_view_include.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_activity_chooser_view_list_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_expanded_menu_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_list_menu_item_checkbox.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_list_menu_item_icon.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_list_menu_item_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_list_menu_item_radio.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_popup_menu_item_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_search_dropdown_item_icons_2line.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/abc_search_view.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/layout/support_simple_spinner_dropdown_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-af/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-am/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-ar/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-bg/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-ca/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-cs/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-da/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-de/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-el/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-en-rGB/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-en-rIN/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-es-rUS/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-es/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-et-rEE/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-fa/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-fi/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-fr-rCA/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-fr/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-hi/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-hr/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-hu/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-hy-rAM/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-in/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-it/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-iw/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-ja/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-ka-rGE/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-km-rKH/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-ko/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-land/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-large-v4/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-lo-rLA/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-lt/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-lv/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-mn-rMN/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-ms-rMY/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-nb/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-nl/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-pl/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-pt-rPT/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-pt/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-ro/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-ru/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-sk/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-sl/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-sr/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-sv/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-sw/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-sw600dp-v13/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-th/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-tl/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-tr/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-uk/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-v11/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-v14/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-vi/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-w360dp-v13/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-w480dp-v13/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-w500dp-v13/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-w600dp-v13/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-w720dp-v13/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-xlarge-v4/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-zh-rCN/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-zh-rHK/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-zh-rTW/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values-zu/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/res/test/debug/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appcompat_v7/build/intermediates/symbols/test/debug/R.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/generated/source/buildConfig/debug/com/facebook/android/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/generated/source/buildConfig/test/debug/com/facebook/android/test/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/generated/source/r/debug/com/facebook/android/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/generated/source/r/test/debug/com/facebook/android/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/generated/source/r/test/debug/com/facebook/android/test/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/manifests/test/debug/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/manifests/tmp/manifestMerger5209725707665402334.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/resources-debug-test.ap_" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_button_blue_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_button_blue_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_button_blue_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_button_grey_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_button_grey_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_button_grey_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_inverse_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_picker_magnifier.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_tooltip_black_background.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_tooltip_black_bottomnub.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_tooltip_black_topnub.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_tooltip_black_xout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_tooltip_blue_background.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_tooltip_blue_bottomnub.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_tooltip_blue_topnub.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-hdpi-v4/com_facebook_tooltip_blue_xout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-ldpi-v4/com_facebook_close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-mdpi-v4/com_facebook_button_blue_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-mdpi-v4/com_facebook_button_blue_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-mdpi-v4/com_facebook_button_blue_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-mdpi-v4/com_facebook_inverse_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-mdpi-v4/com_facebook_picker_magnifier.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-mdpi-v4/com_facebook_tooltip_black_background.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-mdpi-v4/com_facebook_tooltip_black_bottomnub.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-mdpi-v4/com_facebook_tooltip_black_topnub.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-mdpi-v4/com_facebook_tooltip_black_xout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-mdpi-v4/com_facebook_tooltip_blue_background.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-mdpi-v4/com_facebook_tooltip_blue_bottomnub.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-mdpi-v4/com_facebook_tooltip_blue_topnub.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-mdpi-v4/com_facebook_tooltip_blue_xout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_button_blue_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_button_blue_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_button_blue_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_button_grey_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_button_grey_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_button_grey_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_inverse_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_picker_magnifier.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_tooltip_black_background.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_tooltip_black_bottomnub.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_tooltip_black_topnub.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_tooltip_black_xout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_tooltip_blue_background.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_tooltip_blue_bottomnub.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_tooltip_blue_topnub.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable-xhdpi-v4/com_facebook_tooltip_blue_xout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_button_blue.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_button_blue_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_button_blue_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_button_blue_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_button_check.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_button_check_off.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_button_check_on.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_button_grey_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_button_grey_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_button_grey_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_inverse_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_list_divider.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_list_section_header_background.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_loginbutton_silver.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_picker_item_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_picker_list_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_picker_list_longpressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_picker_list_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_picker_list_selector.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_picker_list_selector_background_transition.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_picker_list_selector_disabled.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_picker_top_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_place_default_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_profile_default_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_profile_picture_blank_portrait.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_profile_picture_blank_square.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_top_background.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_top_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/drawable/com_facebook_usersettingsfragment_background_gradient.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_friendpickerfragment.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_login_activity_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_picker_activity_circle_row.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_picker_checkbox.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_picker_image.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_picker_list_row.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_picker_list_section_header.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_picker_search_box.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_picker_title_bar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_picker_title_bar_stub.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_placepickerfragment.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_placepickerfragment_list_row.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_search_bar_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_tooltip_bubble.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/layout/com_facebook_usersettingsfragment.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/values-es/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/values-hdpi-v4/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/values-he/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/values-iw/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/values-ldpi-v4/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/values-mdpi-v4/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/values-xhdpi-v4/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/res/test/debug/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/facebook/build/intermediates/symbols/test/debug/R.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/generated/source/buildConfig/debug/com/handmark/pulltorefresh/library/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/generated/source/buildConfig/test/debug/com/handmark/pulltorefresh/library/test/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/generated/source/r/debug/com/handmark/pulltorefresh/library/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/generated/source/r/test/debug/com/handmark/pulltorefresh/library/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/generated/source/r/test/debug/com/handmark/pulltorefresh/library/test/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/manifests/test/debug/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/manifests/tmp/manifestMerger4910002098871560525.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/resources-debug-test.ap_" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/anim/slide_in_from_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/anim/slide_in_from_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/anim/slide_out_to_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/anim/slide_out_to_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/progress_bg_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/progress_primary_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/progress_secondary_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/progressbar_indeterminate_holo1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/progressbar_indeterminate_holo2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/progressbar_indeterminate_holo3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/progressbar_indeterminate_holo4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/progressbar_indeterminate_holo5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/progressbar_indeterminate_holo6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/progressbar_indeterminate_holo7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-hdpi-v4/progressbar_indeterminate_holo8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/progress_bg_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/progress_primary_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/progress_secondary_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/progressbar_indeterminate_holo1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/progressbar_indeterminate_holo2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/progressbar_indeterminate_holo3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/progressbar_indeterminate_holo4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/progressbar_indeterminate_holo5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/progressbar_indeterminate_holo6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/progressbar_indeterminate_holo7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-mdpi-v4/progressbar_indeterminate_holo8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/default_ptr_flip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/default_ptr_rotate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/indicator_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/progress_bg_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/progress_primary_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/progress_secondary_holo_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/progressbar_indeterminate_holo1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/progressbar_indeterminate_holo2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/progressbar_indeterminate_holo3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/progressbar_indeterminate_holo4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/progressbar_indeterminate_holo5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/progressbar_indeterminate_holo6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/progressbar_indeterminate_holo7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable-xhdpi-v4/progressbar_indeterminate_holo8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable/indicator_bg_bottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable/indicator_bg_top.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable/progress_horizontal_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable/progress_horizontal_holo_light_right.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/drawable/progress_indeterminate_horizontal_holo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/layout/pull_to_refresh_header_google_style.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/layout/pull_to_refresh_header_horizontal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/layout/pull_to_refresh_header_vertical.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/layout/pull_to_refresh_progress_google_style.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/layout/pulling_progress_layout.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-ar/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-cs/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-de/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-es/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-fi/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-fr/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-he/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-it/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-iw/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-ja/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-ko/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-nl/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-pl/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-pt-rBR/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-pt/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-ro/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-ru/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values-zh/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/res/test/debug/xml/pulltorefresh.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/build/intermediates/symbols/test/debug/R.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/buildConfig/debug/com/iris/lolin/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/buildConfig/test/debug/com/iris/lolin/test/BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/facebook/android/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/handmark/pulltorefresh/library/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/iris/lolin/Manifest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/iris/lolin/R.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/classes.jar" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/classes.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/classes.jar" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/classes.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/classes.jar" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/classes.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/res/drawable-xxhdpi/intro_bg.png" afterPath="$PROJECT_DIR$/lolin/res/drawable-xxhdpi/intro_bg.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/buildConfig/release/com/iris/lolin/BuildConfig.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/buildConfig/release/com/iris/lolin/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/res/layout/activity_facebook_login.xml" afterPath="$PROJECT_DIR$/lolin/res/layout/activity_facebook_login.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/res/layout/fragment_detail_record_search.xml" afterPath="$PROJECT_DIR$/lolin/res/layout/fragment_detail_record_search.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/tmp/dex/release/inputList.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/tmp/dex/release/inputList.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LOLIN.iws" />
@@ -588,18 +49,7 @@
     <favorites_list name="LOLIN" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lolin/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53246754" vertical-offset="50" max-vertical-offset="1515">
-              <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -3231,7 +2681,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/adapter/RepleAdapter.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/util/NetworkUtil.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/util/ScreenshotUtil.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/util/SignatureUtil.java" />
@@ -3281,6 +2730,7 @@
         <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/adapter/BoardDetailPagerAdapter.java" />
         <option value="$PROJECT_DIR$/lolin/res/layout/activity_facebook_login.xml" />
+        <option value="$PROJECT_DIR$/lolin/res/layout/fragment_detail_record_search.xml" />
         <option value="$PROJECT_DIR$/lolin/AndroidManifest.xml" />
       </list>
     </option>
@@ -3337,7 +2787,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3508,6 +2957,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3584,10 +3034,7 @@
       </option>
       <envs />
       <patterns />
-      <method>
-        <option name="Make" enabled="true" />
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -3771,8 +3218,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="730" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="730" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3786,11 +3233,11 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22132471" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3257329" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32736155" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3257329" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39739415" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29321486" sideWeight="0.4993395" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25928918" sideWeight="0.4993395" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -3830,16 +3277,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lolin/res/layout/fragment_board.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.333334" vertical-offset="0" max-vertical-offset="1095">
-          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="57" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/service/BoardService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.5416667" vertical-offset="450" max-vertical-offset="2550">
@@ -4147,13 +3584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/DetailRecordSearchFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3318584" vertical-offset="720" max-vertical-offset="1185">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17840375" vertical-offset="4439" max-vertical-offset="5100">
@@ -4206,8 +3636,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53246754" vertical-offset="50" max-vertical-offset="1515">
-          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.8937824" vertical-offset="0" max-vertical-offset="1515">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/res/layout/fragment_detail_record_search.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54317546" vertical-offset="0" max-vertical-offset="359">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/DetailRecordSearchFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.738342" vertical-offset="270" max-vertical-offset="1185">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>

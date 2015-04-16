@@ -8,6 +8,6 @@
 /Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/gson-2.2.2-sources-b694b551622d0f27333980c88f0aacb8b0854078.jar
 /Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/android-support-v7-appcompat-4bc5dabfdf8cd8cecff6c0bd849d393fc1e1ea1f.jar
 /Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/classes-829e2b0b729c398c776c269103b4e56d3276efdc.jar
-/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/android-support-v4-ce0ae94b1aedf899538ed10c2cce5cc2fadcfd1a.jar
+/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/android-support-v4-390e2860ed7ee9f27564d274c2b43233401ce98d.jar
 /Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/gson-2.2.2-javadoc-0fb5652f21e927142ab15c487b05b5904ad624dc.jar
 /Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/google-play-services-72596ef19fbe1e43ac07922b5478515500db4d28.jar
