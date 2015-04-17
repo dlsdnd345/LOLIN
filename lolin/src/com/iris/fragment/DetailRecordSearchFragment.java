@@ -2,14 +2,16 @@ package com.iris.fragment;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.handmark.pulltorefresh.library.PullToRefreshWebView;
 import com.iris.config.Config;
 import com.iris.lolin.R;
@@ -26,6 +28,8 @@ public class DetailRecordSearchFragment extends Fragment {
     private String summonerName;
 
 	private PullToRefreshWebView mPullRefreshWebView;
+
+    private AdView adView;
 	
 	public Fragment newInstance(String summonerName) {
 
@@ -51,7 +55,40 @@ public class DetailRecordSearchFragment extends Fragment {
 		return rootView;
 	}
 
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if (adView != null) {
+            adView.resume();
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        if (adView != null) {
+            adView.pause();
+        }
+
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        if (adView != null) {
+            adView.destroy();
+        }
+    }
+
 	private void dataInit() {
+
+        String deviceid = Settings.Secure.getString(getActivity().getContentResolver(), Settings.Secure.ANDROID_ID);
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice(deviceid).build();
+        adView.loadAd(adRequest);
 
         summonerName = getArguments().getString(Config.FLAG.BOARD_SUMMERNER_NAME);
 
@@ -61,6 +98,8 @@ public class DetailRecordSearchFragment extends Fragment {
 	}
 
 	private void init(View rootView) {
+
+        adView = (AdView) rootView.findViewById(R.id.adView);
 		mPullRefreshWebView = (PullToRefreshWebView)rootView.findViewById(R.id.pull_refresh_webview);
 	}
 	

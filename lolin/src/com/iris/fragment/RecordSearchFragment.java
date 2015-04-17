@@ -3,14 +3,13 @@ package com.iris.fragment;
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +21,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.handmark.pulltorefresh.library.PullToRefreshWebView;
 import com.iris.config.Config;
 import com.iris.entities.User;
@@ -47,6 +48,8 @@ public class RecordSearchFragment extends Fragment {
     private PullToRefreshWebView mPullRefreshWebView;
     private UserService userService;
 
+    private AdView adView;
+
     public Fragment newInstance() {
         RecordSearchFragment fragment = new RecordSearchFragment();
         return fragment;
@@ -64,10 +67,44 @@ public class RecordSearchFragment extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if (adView != null) {
+            adView.resume();
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        if (adView != null) {
+            adView.pause();
+        }
+
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        if (adView != null) {
+            adView.destroy();
+        }
+    }
+
     /**
      * 데이터 초기화
      */
     private void dataInit() {
+
+        String deviceid = Settings.Secure.getString(getActivity().getContentResolver(), Settings.Secure.ANDROID_ID);
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice(deviceid).build();
+        adView.loadAd(adRequest);
+
+
         sharedpreferencesUtil = new SharedpreferencesUtil(getActivity());
         recordSearchService = new RecordSearchService();
         userService = new UserService(getActivity());
@@ -120,6 +157,7 @@ public class RecordSearchFragment extends Fragment {
      */
     private void init(View rootView) {
 
+        adView = (AdView) rootView.findViewById(R.id.adView);
         txtSearching = (TextView) rootView.findViewById(R.id.txt_searching);
         prograssBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
         mPullRefreshWebView = (PullToRefreshWebView) rootView.findViewById(R.id.pull_refresh_webview);

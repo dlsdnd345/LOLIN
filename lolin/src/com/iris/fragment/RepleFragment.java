@@ -1,13 +1,9 @@
 package com.iris.fragment;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +37,8 @@ import com.iris.service.RepleService;
 import com.iris.service.SettingService;
 import com.iris.service.UserService;
 import com.iris.util.SharedpreferencesUtil;
+
+import java.util.ArrayList;
 
 /**
  * 상세내용 댓글 프래그먼트
@@ -416,12 +414,13 @@ public class RepleFragment extends Fragment {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-            if (userName.equals(repleList.get(position).getUserName())) {
-
-                deleteDialog(position);
-            } else {
-                Toast.makeText(getActivity(), getString(R.string.reple_fragment_text_not_delete) , Toast.LENGTH_SHORT).show();
-            }
+            //TODO : 상대방 전적 검색 기능으로대체
+//            if (userName.equals(repleList.get(position).getUserName())) {
+//
+//                deleteDialog(position);
+//            } else {
+//                Toast.makeText(getActivity(), getString(R.string.reple_fragment_text_not_delete) , Toast.LENGTH_SHORT).show();
+//            }
         }
     };
 

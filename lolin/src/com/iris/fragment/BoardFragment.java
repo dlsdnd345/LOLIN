@@ -117,8 +117,6 @@ public class BoardFragment extends Fragment {
 
         boolean isLoad = sharedpreferencesUtil.getValue("isLoad",true);
 
-        Log.i("@@@@@@@@@@  ", "@@@@@@@@@@@@@@@  isLoad  :" + isLoad);
-
         if(isLoad) {
             dataInit();
         }

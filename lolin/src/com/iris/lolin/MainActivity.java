@@ -28,6 +28,7 @@ import com.facebook.Session;
 import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.analytics.GoogleTracker;
 import com.iris.config.Config;
+import com.iris.entities.LeftMenu;
 import com.iris.pagerslidingtab.PagerSlidingTabStrip;
 import com.iris.util.SharedpreferencesUtil;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
@@ -36,6 +37,9 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity  {
@@ -47,7 +51,9 @@ public class MainActivity extends ActionBarActivity  {
 	private final static int SETTING 		= 3;
 
 	private int 						viewPagerPosition;
-	
+
+    private List<LeftMenu>              leftMenuList;
+
     private ActionBarDrawerToggle 		mDrawerToggle;
     
     private DisplayImageOptions 		options;
@@ -64,6 +70,8 @@ public class MainActivity extends ActionBarActivity  {
 	private ViewPager 					mViewPager;
 	private PagerSlidingTabStrip 		tabs;
 	private SectionsPagerAdapter 		mSectionsPagerAdapter;
+
+    //private RecyclerView                recyclerReftMenu;
 
     private GoogleTracker googleTracker;
 
@@ -131,12 +139,15 @@ public class MainActivity extends ActionBarActivity  {
 		mDrawerLayout 		= (DrawerLayout) findViewById(R.id.layoutDrawer);
 		textLoginMassage 	= (TextView)findViewById(R.id.textLoginMassage);
 		imgProfile 			= (ImageView)findViewById(R.id.imgProfile);
+        //recyclerReftMenu    = (RecyclerView) findViewById(R.id.recyclerReftMenu);
 	}
 
 	/**
 	 * 데이터 초기화
 	 */
 	private void dataInit() {
+
+        leftMenuDataInit();
 
         googleTracker = GoogleTracker.getInstance(this);
         googleTracker.sendScreenView(TAG);
@@ -148,7 +159,33 @@ public class MainActivity extends ActionBarActivity  {
         drawerLayoutInit();
 		imageLodearInit();
 		visibleMenuDrawer();
+
+
+//        StaggeredGridLayoutManager categoryLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
+//        categoryLayoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS);
+//        recyclerReftMenu.setLayoutManager(categoryLayoutManager);
+//
+//        ReftMenuListAdapter reftMenuListAdapter = new ReftMenuListAdapter(leftMenuList);
+//        recyclerReftMenu.setAdapter(reftMenuListAdapter);
 	}
+
+    /**
+     * 왼쪽 메뉴 데이터 초기화
+     */
+    private void leftMenuDataInit(){
+
+        leftMenuList = new ArrayList<>();
+
+        LeftMenu leftMenu01 = new LeftMenu();
+        leftMenu01.setIcon(R.drawable.ic_launcher);
+        leftMenu01.setTitle("개발자 페이지");
+        leftMenuList.add(leftMenu01);
+
+        LeftMenu leftMenu02 = new LeftMenu();
+        leftMenu02.setIcon(R.drawable.ic_launcher);
+        leftMenu02.setTitle("의견 보내기");
+        leftMenuList.add(leftMenu02);
+    }
 
 	/**
 	 * 로그인시 /로그아웃시 메뉴 드로어

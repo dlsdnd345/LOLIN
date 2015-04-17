@@ -2,88 +2,235 @@
 <items version="2" >
 
     <item
-        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="28069248daac3808e1fa07d741c702a27ae21160">
-        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/classes-ea6d33023176d0881da59b745d02592dff19b9ee.jar" />
-    </item>
-    <item
-        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/libs/bolts.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="1e5ba33c837d05dcca9dc40a0ab458f8599d7aef">
-        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/bolts-d604a285aab2a7e451d846ac36af5976d5992220.jar" />
-    </item>
-    <item
-        jar="/Users/woong/LOLIN/lolin/libs/gson-2.2.2-javadoc.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="0e1d35feabcb2624d969a01c9d3f2733729ff113">
-        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/gson-2.2.2-javadoc-0fb5652f21e927142ab15c487b05b5904ad624dc.jar" />
-    </item>
-    <item
-        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="8654e85b74c04def777a7fa4282c680449aff979">
-        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/classes-829e2b0b729c398c776c269103b4e56d3276efdc.jar" />
-    </item>
-    <item
-        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/libs/android-support-v4.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="cb6883d96005bc85b3e868f204507ea5b4fa9bbf">
-        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/android-support-v4-390e2860ed7ee9f27564d274c2b43233401ce98d.jar" />
-    </item>
-    <item
         jar="/Users/woong/LOLIN/lolin/libs/google-play-services.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="9b63d9aba531aa7ff5dd30e0c872e8ca550b363a">
-        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/google-play-services-72596ef19fbe1e43ac07922b5478515500db4d28.jar" />
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/google-play-services-72596ef19fbe1e43ac07922b5478515500db4d28.jar" />
     </item>
     <item
-        jar="/Users/woong/LOLIN/lolin/libs/volley.jar"
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="0fdefe4bbb44ca636cc773ade9f040053c65e30e">
-        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/volley-97704d492c4c7efdc79a8fb924b58b2a12aa8e38.jar" />
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-e29ab18a5d70d5ec8807d2f9bbb2935fc5013d39.jar" />
     </item>
     <item
-        jar="/Users/woong/LOLIN/lolin/libs/gson-2.2.2.jar"
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="53bfcd3c8e310d1493b2691484525ed90b04e236">
-        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/gson-2.2.2-53c6b2b04563b1d20d45def910e94b9cf6323a6d.jar" />
-    </item>
-    <item
-        jar="/Users/woong/LOLIN/lolin/libs/gson-2.2.2-sources.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="d9e0944251e58af3dc984cb183a66ed6ce7163bd">
-        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/gson-2.2.2-sources-b694b551622d0f27333980c88f0aacb8b0854078.jar" />
-    </item>
-    <item
-        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="256b5a93afe17336046ae4cdea48bce49f5535c3">
-        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/classes-39b63f3cd5ec46fcf3f04b2359845b79cae19cf0.jar" />
-    </item>
-    <item
-        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/appcompat_v7/unspecified/libs/android-support-v7-appcompat.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="6c77cd21db2ca4fe31aa1fd31417fe63be29e733">
-        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/android-support-v7-appcompat-4bc5dabfdf8cd8cecff6c0bd849d393fc1e1ea1f.jar" />
+        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-4656e3d6b4e766d97f303e63cc6ce6049460bf4f.jar" />
     </item>
     <item
         jar="/Users/woong/LOLIN/lolin/libs/universal-image-loader-1.9.0.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="f667a2f4f27542fe11a6781f5f7ac572d27afcec">
-        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/release/universal-image-loader-1.9.0-508d64a315e7bff893f4086893734e7f728f9fcc.jar" />
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.0-508d64a315e7bff893f4086893734e7f728f9fcc.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-727c0f613b185607eb552a4dea52a888c0a34e09.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-a90db05bd56e910c497d5bcc1b6a4c50a10bb723.jar" />
+    </item>
+    <item
+        jar="/Users/woong/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-b6f1a305f03d51d8fff8fdd6c605f58f7a3feaa8.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-080271cb34a9f8c08992aad2718de0c0c3efe88d.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/libs/gson-2.2.2-sources.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="d9e0944251e58af3dc984cb183a66ed6ce7163bd">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/gson-2.2.2-sources-b694b551622d0f27333980c88f0aacb8b0854078.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="27960641207ee44f434c1141c8554d0a10490b61">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-ea6d33023176d0881da59b745d02592dff19b9ee.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-761c3ea3e33a7483dd2bfd2baf6ed8aa86a149d6.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-13cc9a3d06bb32b5dbc83791b74889502c1c831f.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-8a6cbbc75f2362b122328526d46fd28bbb816d34.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-6cca854bf927f21a2303202be49a77f4689e2e10.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="33a024706be1e07f2102b551d1200101b32c1c1b">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-829e2b0b729c398c776c269103b4e56d3276efdc.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/libs/gson-2.2.2.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="53bfcd3c8e310d1493b2691484525ed90b04e236">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/gson-2.2.2-53c6b2b04563b1d20d45def910e94b9cf6323a6d.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-25395b525f25be599153552d1a01045336b394e6.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-92318d8b4364c4980360ebbe2bf651ca5a0e23f2.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-37b8af503e4cb3a3aae9b6136c8e8d6ff5f4712d.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/libs/bolts.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="1e5ba33c837d05dcca9dc40a0ab458f8599d7aef">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/bolts-d604a285aab2a7e451d846ac36af5976d5992220.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-5d6684d967ed629413c992cb80944d7b9df152af.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-0f0768d6b83425d31b05b6c69cbc4b9e45fc7ada.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/libs/volley.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="0fdefe4bbb44ca636cc773ade9f040053c65e30e">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/volley-97704d492c4c7efdc79a8fb924b58b2a12aa8e38.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-403dffee831954cd8ec759fc0d8172ef45c97d2d.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-6d3a0a0b1b81b3811b233826f76270b40afc64aa.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/libs/android-support-v4.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="cb6883d96005bc85b3e868f204507ea5b4fa9bbf">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/android-support-v4-390e2860ed7ee9f27564d274c2b43233401ce98d.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-ad52c28bdebbc3f5f75a97cac05fa84531c0f728.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="055783146ba9654a725442563be78cad303aad1f">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-7ca98d1506ecfd484792494cea6510f143059aa9.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-cb5fd6600bc578975cbabc5998670e1f250561dc.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-f8c67be9284b8af2cc4b0adc6949af881d8c6a22.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-72095d119f7f8ddb3b2870dca1646dbbb94f2a8e.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/classes-4df4bc2a080d988bd2cb9de9e6126e3a3d401235.jar" />
+    </item>
+    <item
+        jar="/Users/woong/LOLIN/lolin/libs/gson-2.2.2-javadoc.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="0e1d35feabcb2624d969a01c9d3f2733729ff113">
+        <dex dex="/Users/woong/LOLIN/lolin/build/intermediates/pre-dexed/debug/gson-2.2.2-javadoc-0fb5652f21e927142ab15c487b05b5904ad624dc.jar" />
     </item>
 
 </items>
