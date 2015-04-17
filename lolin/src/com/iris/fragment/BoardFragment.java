@@ -58,7 +58,7 @@ public class BoardFragment extends Fragment {
 	private static final String POSITION_DATA__POSITION 	= "PositionDataPosition";
 	private static final String TIME_DATA_POSITION 			= "TimeDataPosition";
 
-	private int						pageCount =1;
+	private int						pageCount;
 	private int						totalPageCount;
 
 	// 하단 계속 스크롤시 않될수 있도록 방지
@@ -118,6 +118,7 @@ public class BoardFragment extends Fragment {
         boolean isLoad = sharedpreferencesUtil.getValue("isLoad",true);
 
         if(isLoad) {
+
             dataInit();
         }
 
@@ -152,6 +153,9 @@ public class BoardFragment extends Fragment {
 	 * 데이터 초기화
 	 */
 	private void dataInit(){
+
+        //뷰페이져 이동으로 인해서 초기화 진행
+        pageCount = 1;
 
 		settingService = new SettingService();
 		boardService = new BoardService(getActivity());

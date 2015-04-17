@@ -399,6 +399,8 @@ public class MainActivity extends ActionBarActivity  {
 				getActionBar().setTitle(R.string.composer_my_activity_title);
 				invalidateOptionsMenu();
 			}else if(position == RECORD_SEARCH){
+
+
 				getActionBar().setTitle(R.string.record_activity_title);
 				invalidateOptionsMenu();
 			}
