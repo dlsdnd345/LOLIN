@@ -477,6 +477,7 @@ public class BoardDetailActivity extends ActionBarActivity {
 	 */
 	private void viewPagerInit() {
 		mPagerAdapter = new BoardDetailPagerAdapter(getApplicationContext(),getSupportFragmentManager(),board);
+        mViewPager.setOffscreenPageLimit(2);
 		mViewPager.setAdapter(mPagerAdapter);
 
 		tabs.setIndicatorColor(Color.parseColor("#0099cc"));

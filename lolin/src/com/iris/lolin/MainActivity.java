@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
@@ -19,12 +20,15 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.facebook.Session;
+import com.iris.adapter.LeftMenuAdapter;
 import com.iris.adapter.SectionsPagerAdapter;
 import com.iris.analytics.GoogleTracker;
 import com.iris.config.Config;
@@ -71,7 +75,7 @@ public class MainActivity extends ActionBarActivity  {
 	private PagerSlidingTabStrip 		tabs;
 	private SectionsPagerAdapter 		mSectionsPagerAdapter;
 
-    //private RecyclerView                recyclerReftMenu;
+    private ListView                    listViewLeftMenu;
 
     private GoogleTracker googleTracker;
 
@@ -139,7 +143,9 @@ public class MainActivity extends ActionBarActivity  {
 		mDrawerLayout 		= (DrawerLayout) findViewById(R.id.layoutDrawer);
 		textLoginMassage 	= (TextView)findViewById(R.id.textLoginMassage);
 		imgProfile 			= (ImageView)findViewById(R.id.imgProfile);
-        //recyclerReftMenu    = (RecyclerView) findViewById(R.id.recyclerReftMenu);
+        listViewLeftMenu    = (ListView) findViewById(R.id.listViewLeftMenu);
+
+
 	}
 
 	/**
@@ -160,13 +166,10 @@ public class MainActivity extends ActionBarActivity  {
 		imageLodearInit();
 		visibleMenuDrawer();
 
+        LeftMenuAdapter leftMenuAdapter = new LeftMenuAdapter(getApplicationContext(),R.layout.row_left_menu,leftMenuList);
+        listViewLeftMenu.setOnItemClickListener(mItemClickListener);
+        listViewLeftMenu.setAdapter(leftMenuAdapter);
 
-//        StaggeredGridLayoutManager categoryLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
-//        categoryLayoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS);
-//        recyclerReftMenu.setLayoutManager(categoryLayoutManager);
-//
-//        ReftMenuListAdapter reftMenuListAdapter = new ReftMenuListAdapter(leftMenuList);
-//        recyclerReftMenu.setAdapter(reftMenuListAdapter);
 	}
 
     /**
@@ -177,12 +180,12 @@ public class MainActivity extends ActionBarActivity  {
         leftMenuList = new ArrayList<>();
 
         LeftMenu leftMenu01 = new LeftMenu();
-        leftMenu01.setIcon(R.drawable.ic_launcher);
+        leftMenu01.setIcon(R.drawable.ic_action_search);
         leftMenu01.setTitle("개발자 페이지");
         leftMenuList.add(leftMenu01);
 
         LeftMenu leftMenu02 = new LeftMenu();
-        leftMenu02.setIcon(R.drawable.ic_launcher);
+        leftMenu02.setIcon(R.drawable.ic_action_email);
         leftMenu02.setTitle("의견 보내기");
         leftMenuList.add(leftMenu02);
     }
@@ -198,7 +201,7 @@ public class MainActivity extends ActionBarActivity  {
 			(sharedpreferencesUtil.getValue(Config.FLAG.FACEBOOK_NAME, getString(R.string.main_text_login_massege)));
 			
 			String facebookId = sharedpreferencesUtil.getValue(Config.FACEBOOK.FACEBOOK_ID, "");
-			String url = Config.FACEBOOK.FACEBOOK_BASE_URL+ facebookId+Config.FACEBOOK.PICTURE_SMALL;
+			String url = Config.FACEBOOK.FACEBOOK_BASE_URL+ facebookId+Config.FACEBOOK.PICTURE_TYPE_LARGE;
 			imageLoader.displayImage(url, imgProfile, options);
 			
 			btnLogin.setVisibility(View.GONE);
@@ -380,7 +383,31 @@ public class MainActivity extends ActionBarActivity  {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(intent);
 	}
-	
+
+    private AdapterView.OnItemClickListener mItemClickListener = new AdapterView.OnItemClickListener() {
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            //개발자 페이지
+            if(position == 0){
+
+                String url = "http://blog.naver.com/dlsdnd345";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+            //의견 보내기
+            else if(position == 1){
+
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto","dlsdnd345@naver.com", null));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "");
+                startActivity(Intent.createChooser(emailIntent, "Send email..."));
+            }
+        }
+    };
+
 	/**
 	 * 페이지 이동
 	 * @param page

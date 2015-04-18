@@ -7,31 +7,31 @@
 
 
         <RelativeLayout
-            android:id="@+id/cardRowVideo"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:padding="5dp"
             >
 
             <ImageView
-                android:id="@+id/imgCategory"
-                android:layout_width="8dp"
-                android:layout_height="8dp"
+                android:id="@+id/imgMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:background="@drawable/dot_red"
                 />
 
             <TextView
-                android:id="@+id/textCategoryTitle"
+                android:id="@+id/textMenuTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="2"
                 android:layout_marginLeft="5dp"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/imgCategory"
+                android:layout_toRightOf="@+id/imgMenu"
                 android:padding="5dp"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textSize="17sp"
+                android:textColor="@color/text_black"
+                />
 
 
         </RelativeLayout>

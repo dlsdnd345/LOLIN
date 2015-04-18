@@ -62,18 +62,14 @@ android {
         compile project(':facebook')
         compile project(':library')
 
-        compile ('com.google.android.gms:play-services:7.0.0'){
-            exclude module: 'support-v4'
+        configurations {
+            // to avoid double inclusion of support libraries
+            all*.exclude group: 'com.android.support', module: 'support-v4'
         }
 
-        compile ('com.android.support:appcompat-v7:19.1.+'){
-            exclude module: 'support-v4'
-        }
+        compile 'com.google.android.gms:play-services:7.0.0'
 
-//        //recyclerview 라이브러리
-//        compile ('com.android.support:recyclerview-v7:+'){
-//            exclude module: 'support-v4'
-//        }
+        compile 'com.android.support:appcompat-v7:19.1.+'
 
     }
 

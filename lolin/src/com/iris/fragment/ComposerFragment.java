@@ -1,10 +1,5 @@
 package com.iris.fragment;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.w3c.dom.Text;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ListView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -29,13 +24,13 @@ import com.android.volley.toolbox.Volley;
 import com.iris.adapter.ComposerAdapter;
 import com.iris.config.Config;
 import com.iris.entities.Board;
-import com.iris.entities.User;
 import com.iris.lolin.BoardDetailActivity;
 import com.iris.lolin.R;
 import com.iris.service.ComposerFragmentService;
-import com.iris.service.SettingService;
 import com.iris.util.SharedpreferencesUtil;
 import com.iris.vo.BoardResponseVO;
+
+import java.util.List;
 
 /**
  * 내가쓴글 프래그먼트
@@ -151,7 +146,7 @@ public class ComposerFragment extends Fragment {
 			
 			Intent intent = new Intent(getActivity(), BoardDetailActivity.class);
 			sharedpreferencesUtil.put(Config.BOARD.BOARD_ID, String.valueOf(boardList.get(position).getId()));
-			intent.putExtra("editState", true);
+            sharedpreferencesUtil.put(Config.FLAG.EDIT_STATE, true);
 			startActivity(intent);
 		}
 		
