@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.iris.lolin.MainActivity$PlaceholderFragment"
+    android:orientation="vertical"
+     >
+
+    <com.handmark.pulltorefresh.library.PullToRefreshWebView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_webview"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        ptr:ptrMode="both" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        ads:adUnitId="ca-app-pub-5994474575179078/9982969347"
+        ads:adSize="BANNER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+
+    
+</RelativeLayout>
+<!-- From: file:/Users/woong/LOLIN/lolin/res/layout/fragment_detail_record_search.xml -->
