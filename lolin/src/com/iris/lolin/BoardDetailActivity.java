@@ -401,10 +401,11 @@ public class BoardDetailActivity extends ActionBarActivity {
 			Bundle postParams = new Bundle();
 			postParams.putByteArray(Config.FLAG.PICTURE, data);
 
-            //공유하기 권한
-            session.requestNewPublishPermissions(new Session.NewPermissionsRequest(this, Arrays.asList("publish_actions")));
-
-			com.facebook.Request.Callback callback = new com.facebook.Request.Callback() 
+//            공유하기 권한
+            if(!session.getPermissions().contains("publish_actions")) {
+                session.requestNewPublishPermissions(new Session.NewPermissionsRequest(this, Arrays.asList("publish_actions")));
+            }
+			com.facebook.Request.Callback callback = new com.facebook.Request.Callback()
 			{
 				@Override
 				public void onCompleted(com.facebook.Response response) {
