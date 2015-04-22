@@ -18,23 +18,426 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8be538fb-d273-4635-a2cd-3b26fa1aa9c3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/aapt/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/classes.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/aapt/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/aidl/android/support/v4/media/MediaMetadataCompat.aidl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/aidl/android/support/v4/media/RatingCompat.aidl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/aidl/android/support/v4/media/session/MediaSessionCompat.aidl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/aidl/android/support/v4/media/session/ParcelableVolumeInfo.aidl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/aidl/android/support/v4/media/session/PlaybackStateCompat.aidl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lolin/build/intermediates/tmp/dex/debug/inputList.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\buildConfig\release\com\iris\lolin\BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\android\support\v7\appcompat\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\facebook\android\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\ads\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\all\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\analytics\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\appindexing\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\appstate\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\cast\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\drive\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\fitness\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\games\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\gcm\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\identity\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\location\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\maps\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\nearby\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\panorama\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\plus\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\safetynet\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\wallet\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\google\android\gms\wearable\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\handmark\pulltorefresh\library\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\iris\lolin\Manifest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\generated\source\r\release\com\iris\lolin\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\shoki\AndroidStudioProjects\LOLIN\lolin\build\intermediates\tmp\dex\release\inputList.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/classes.jar" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/classes.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/classes.jar" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services/7.0.0/AndroidManifest.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services/7.0.0/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/build/generated/source/buildConfig/debug/com/facebook/android/BuildConfig.java" afterPath="$PROJECT_DIR$/facebook/build/generated/source/buildConfig/debug/com/facebook/android/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/build/generated/source/buildConfig/release/com/facebook/android/BuildConfig.java" afterPath="$PROJECT_DIR$/facebook/build/generated/source/buildConfig/release/com/facebook/android/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/build/generated/source/buildConfig/test/debug/com/facebook/android/test/BuildConfig.java" afterPath="$PROJECT_DIR$/facebook/build/generated/source/buildConfig/test/debug/com/facebook/android/test/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/generated/source/buildConfig/debug/com/handmark/pulltorefresh/library/BuildConfig.java" afterPath="$PROJECT_DIR$/library/build/generated/source/buildConfig/debug/com/handmark/pulltorefresh/library/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/generated/source/buildConfig/release/com/handmark/pulltorefresh/library/BuildConfig.java" afterPath="$PROJECT_DIR$/library/build/generated/source/buildConfig/release/com/handmark/pulltorefresh/library/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/generated/source/buildConfig/test/debug/com/handmark/pulltorefresh/library/test/BuildConfig.java" afterPath="$PROJECT_DIR$/library/build/generated/source/buildConfig/test/debug/com/handmark/pulltorefresh/library/test/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/buildConfig/debug/com/iris/lolin/BuildConfig.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/buildConfig/debug/com/iris/lolin/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/buildConfig/test/debug/com/iris/lolin/test/BuildConfig.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/buildConfig/test/debug/com/iris/lolin/test/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java" afterPath="$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook/build/generated/source/r/test/debug/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/facebook/build/generated/source/r/test/debug/com/facebook/android/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/build/generated/source/r/test/debug/com/handmark/pulltorefresh/library/R.java" afterPath="$PROJECT_DIR$/library/build/generated/source/r/test/debug/com/handmark/pulltorefresh/library/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/facebook/android/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/ads/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/ads/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/all/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/all/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/analytics/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/analytics/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/appstate/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/appstate/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/cast/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/cast/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/drive/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/drive/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/fitness/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/fitness/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/games/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/games/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/gcm/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/gcm/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/identity/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/identity/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/location/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/location/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/maps/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/maps/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/nearby/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/nearby/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/panorama/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/panorama/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/plus/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/plus/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/safetynet/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/safetynet/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/wallet/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/wallet/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/handmark/pulltorefresh/library/R.java" afterPath="$PROJECT_DIR$/lolin/build/generated/source/r/debug/com/handmark/pulltorefresh/library/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/R.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_decor.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_decor.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout-v11/abc_action_bar_decor.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout-v11/abc_action_bar_decor.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_decor_include.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_decor_include.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_decor_overlay.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_decor_overlay.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_home.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_home.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_tab.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_tab.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_tabbar.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_tabbar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_title_item.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_title_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_view_list_nav_layout.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_view_list_nav_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_menu_item_layout.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_menu_item_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_menu_layout.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_menu_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_mode_bar.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_mode_bar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_mode_close_item.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_mode_close_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_activity_chooser_view.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_activity_chooser_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout-v14/abc_activity_chooser_view.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout-v14/abc_activity_chooser_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_activity_chooser_view_include.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_activity_chooser_view_include.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_activity_chooser_view_list_item.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_activity_chooser_view_list_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_expanded_menu_layout.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_expanded_menu_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/anim/abc_fade_in.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/anim/abc_fade_in.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/anim/abc_fade_out.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/anim/abc_fade_out.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_ic_clear.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_ic_clear.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_ic_clear_holo_light.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_ic_clear_holo_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_item_background_holo_dark.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_item_background_holo_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_item_background_holo_light.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_item_background_holo_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_checkbox.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_checkbox.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_icon.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_icon.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_layout.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_radio.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_radio.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_list_selector_background_transition_holo_dark.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_list_selector_background_transition_holo_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_list_selector_background_transition_holo_light.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_list_selector_background_transition_holo_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_list_selector_holo_dark.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_list_selector_holo_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_list_selector_holo_light.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_list_selector_holo_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_popup_menu_item_layout.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_popup_menu_item_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_search_dropdown_dark.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_search_dropdown_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_search_dropdown_item_icons_2line.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_search_dropdown_item_icons_2line.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_search_dropdown_light.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_search_dropdown_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/color/abc_search_url_text_holo.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/color/abc_search_url_text_holo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_search_view.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_search_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_simple_decor.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_simple_decor.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout-v11/abc_simple_decor.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout-v11/abc_simple_decor.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/anim/abc_slide_in_bottom.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/anim/abc_slide_in_bottom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/anim/abc_slide_in_top.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/anim/abc_slide_in_top.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/anim/abc_slide_out_bottom.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/anim/abc_slide_out_bottom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/anim/abc_slide_out_top.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/anim/abc_slide_out_top.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_spinner_ab_holo_dark.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_spinner_ab_holo_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_spinner_ab_holo_light.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_spinner_ab_holo_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_tab_indicator_ab_holo.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_tab_indicator_ab_holo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_textfield_searchview_holo_dark.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_textfield_searchview_holo_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_textfield_searchview_holo_light.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_textfield_searchview_holo_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_textfield_searchview_right_holo_dark.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_textfield_searchview_right_holo_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_textfield_searchview_right_holo_light.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/drawable/abc_textfield_searchview_right_holo_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_ads_attrs.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_ads_attrs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_iap_style.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_iap_style.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/res/values/admob_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build.gradle" afterPath="$PROJECT_DIR$/lolin/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_button_blue.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_button_blue.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_button_check.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_button_check.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_friendpickerfragment.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_friendpickerfragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_login_activity_layout.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_login_activity_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_loginbutton_silver.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_loginbutton_silver.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_activity_circle_row.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_activity_circle_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_checkbox.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_checkbox.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_image.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_image.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_picker_item_background.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_picker_item_background.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_list_row.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_list_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_list_section_header.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_list_section_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_picker_list_selector.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_picker_list_selector.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_picker_list_selector_background_transition.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_picker_list_selector_background_transition.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_search_box.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_search_box.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_title_bar.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_title_bar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_title_bar_stub.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_picker_title_bar_stub.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_picker_top_button.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_picker_top_button.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_placepickerfragment.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_placepickerfragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_placepickerfragment_list_row.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_placepickerfragment_list_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_search_bar_layout.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_search_bar_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_tooltip_bubble.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_tooltip_bubble.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_top_background.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_top_background.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_top_button.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_top_button.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_usersettingsfragment.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/layout/com_facebook_usersettingsfragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_usersettingsfragment_background_gradient.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/drawable/com_facebook_usersettingsfragment_background_gradient.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/common_attrs.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/common_attrs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/common_colors.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/common_colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/drawable/common_signin_btn_icon_dark.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/drawable/common_signin_btn_icon_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/drawable/common_signin_btn_icon_light.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/drawable/common_signin_btn_icon_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/color/common_signin_btn_text_dark.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/color/common_signin_btn_text_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/drawable/common_signin_btn_text_dark.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/drawable/common_signin_btn_text_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/color/common_signin_btn_text_light.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/color/common_signin_btn_text_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/drawable/common_signin_btn_text_light.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/drawable/common_signin_btn_text_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-af/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-af/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-am/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-am/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ar/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ar/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-bg/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-bg/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-bn-rBD/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-bn-rBD/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ca/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ca/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-cs/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-cs/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-da/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-da/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-de/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-de/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-el/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-el/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-en-rGB/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-en-rGB/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-en-rIN/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-en-rIN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-es/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-es/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-es-rUS/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-es-rUS/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-et-rEE/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-et-rEE/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-eu-rES/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-eu-rES/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-fa/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-fa/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-fi/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-fi/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-fr/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-fr/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-fr-rCA/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-fr-rCA/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-gl-rES/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-gl-rES/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-hi/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-hi/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-hr/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-hr/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-hu/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-hu/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-hy-rAM/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-hy-rAM/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-in/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-in/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-is-rIS/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-is-rIS/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-it/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-it/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-iw/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-iw/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ja/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ja/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ka-rGE/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ka-rGE/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-kk-rKZ/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-kk-rKZ/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-km-rKH/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-km-rKH/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-kn-rIN/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-kn-rIN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ko/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ko/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ky-rKG/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ky-rKG/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-lo-rLA/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-lo-rLA/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-lt/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-lt/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-lv/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-lv/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-mk-rMK/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-mk-rMK/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ml-rIN/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ml-rIN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-mn-rMN/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-mn-rMN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-mr-rIN/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-mr-rIN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ms-rMY/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ms-rMY/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-my-rMM/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-my-rMM/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-nb/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-nb/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ne-rNP/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ne-rNP/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-nl/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-nl/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pl/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pl/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pt/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pt/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pt-rBR/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pt-rBR/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pt-rPT/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-pt-rPT/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ro/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ro/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ru/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ru/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-si-rLK/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-si-rLK/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sk/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sk/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sl/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sl/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sr/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sr/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sv/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sv/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sw/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-sw/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ta-rIN/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ta-rIN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-te-rIN/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-te-rIN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-th/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-th/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-tl/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-tl/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-tr/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-tr/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-uk/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-uk/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ur-rPK/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-ur-rPK/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-uz-rUZ/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-uz-rUZ/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-vi/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-vi/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-zh-rCN/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-zh-rCN/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-zh-rHK/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-zh-rHK/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-zh-rTW/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-zh-rTW/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-zu/common_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values-zu/common_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/drawable/indicator_bg_bottom.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/drawable/indicator_bg_bottom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/drawable/indicator_bg_top.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/drawable/indicator_bg_top.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/res/values/maps_attrs.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/res/values/maps_attrs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_analytics_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_analytics_7_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_appindexing_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_appindexing_7_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_appstate_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_appstate_7_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_7_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_location_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_location_7_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_maps_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_maps_7_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_panorama_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_panorama_7_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_plus_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_plus_7_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_safetynet_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_safetynet_7_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_wearable_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_wearable_7_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/drawable/progress_horizontal_holo_light.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/drawable/progress_horizontal_holo_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/drawable/progress_horizontal_holo_light_right.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/drawable/progress_horizontal_holo_light_right.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/drawable/progress_indeterminate_horizontal_holo.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/drawable/progress_indeterminate_horizontal_holo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/proguard.txt" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/proguard.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/layout/pull_to_refresh_header_google_style.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/layout/pull_to_refresh_header_google_style.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/layout/pull_to_refresh_header_horizontal.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/layout/pull_to_refresh_header_horizontal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/layout/pull_to_refresh_header_vertical.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/layout/pull_to_refresh_header_vertical.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/layout/pull_to_refresh_progress_google_style.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/layout/pull_to_refresh_progress_google_style.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/layout/pulling_progress_layout.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/layout/pulling_progress_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/xml/pulltorefresh.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/xml/pulltorefresh.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/anim/slide_in_from_bottom.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/anim/slide_in_from_bottom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/anim/slide_in_from_top.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/anim/slide_in_from_top.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/anim/slide_out_to_bottom.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/anim/slide_out_to_bottom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/anim/slide_out_to_top.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/anim/slide_out_to_top.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/support_simple_spinner_dropdown_item.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/support_simple_spinner_dropdown_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-es/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-es/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-hdpi-v4/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-hdpi-v4/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-he/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-he/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-iw/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-iw/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-ldpi-v4/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-ldpi-v4/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-mdpi-v4/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-mdpi-v4/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-xhdpi-v4/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/facebook/unspecified/res/values-xhdpi-v4/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-ar/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-ar/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-cs/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-cs/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-de/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-de/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-es/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-es/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-fi/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-fi/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-fr/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-fr/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-he/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-he/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-it/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-it/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-iw/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-iw/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-ja/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-ja/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-ko/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-ko/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-nl/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-nl/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-pl/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-pl/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-pt/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-pt/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-pt-rBR/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-pt-rBR/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-ro/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-ro/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-ru/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-ru/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-zh/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/LOLIN/library/unspecified/res/values-zh/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-af/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-af/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-am/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-am/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ar/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ar/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-bg/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-bg/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ca/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ca/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-cs/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-cs/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-da/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-da/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-de/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-de/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-el/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-el/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-en-rGB/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-en-rGB/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-en-rIN/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-en-rIN/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-es/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-es/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-es-rUS/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-es-rUS/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-et-rEE/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-et-rEE/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-fa/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-fa/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-fi/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-fi/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-fr/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-fr/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-fr-rCA/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-fr-rCA/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-hi/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-hi/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-hr/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-hr/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-hu/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-hu/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-hy-rAM/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-hy-rAM/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-in/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-in/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-it/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-it/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-iw/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-iw/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ja/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ja/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ka-rGE/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ka-rGE/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-km-rKH/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-km-rKH/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ko/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ko/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-land/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-land/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-large/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-large/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-large-v14/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-large-v14/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-lo-rLA/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-lo-rLA/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-lt/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-lt/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-lv/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-lv/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-mn-rMN/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-mn-rMN/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ms-rMY/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ms-rMY/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-nb/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-nb/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-nl/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-nl/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-pl/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-pl/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-pt/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-pt/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-pt-rPT/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-pt-rPT/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ro/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ro/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ru/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ru/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-sk/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-sk/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-sl/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-sl/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-sr/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-sr/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-sv/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-sv/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-sw/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-sw/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-sw600dp/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-sw600dp/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-th/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-th/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-tl/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-tl/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-tr/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-tr/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-uk/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-uk/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-v11/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-v11/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-v14/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-v14/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-vi/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-vi/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-w360dp/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-w360dp/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-w480dp/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-w480dp/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-w500dp/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-w500dp/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-w600dp/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-w600dp/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-w720dp/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-w720dp/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-xlarge/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-xlarge/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-zh-rCN/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-zh-rCN/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-zh-rHK/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-zh-rHK/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-zh-rTW/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-zh-rTW/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-zu/values.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-zu/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/version.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/version.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_attrs.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_attrs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_colors.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/color/wallet_primary_text_holo_light.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/color/wallet_primary_text_holo_light.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/color/wallet_secondary_text_holo_dark.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/color/wallet_secondary_text_holo_dark.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values-es/wallet_strings.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values-es/wallet_strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_styles.xml" afterPath="$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/res/values/wallet_styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LOLIN.iws" />
@@ -57,11 +460,82 @@
     <favorites_list name="LOLIN" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="AppEventsLogger.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/facebook/src/com/facebook/AppEventsLogger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4413" max-vertical-offset="32578">
+              <caret line="198" column="47" selection-start-line="198" selection-start-column="47" selection-end-line="198" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoardDetailActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.56782335" vertical-offset="8090" max-vertical-offset="12402">
+              <caret line="403" column="21" selection-start-line="403" selection-start-column="21" selection-end-line="403" selection-end-column="21" />
+              <folding>
+                <element signature="e#12422#13123#0" expanded="true" />
+                <element signature="e#13117#13118#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComposerActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5408" max-vertical-offset="9906">
+              <caret line="249" column="0" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/config/Config.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4004">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FaceBookLoginActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="7488" max-vertical-offset="13702">
+              <caret line="356" column="10" selection-start-line="356" selection-start-column="8" selection-end-line="356" selection-end-column="8" />
+              <folding>
+                <element signature="e#6441#6756#0" expanded="true" />
+                <element signature="e#6749#6750#0" expanded="true" />
+                <element signature="e#10763#11285#0" expanded="true" />
+                <element signature="e#11279#11280#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="8261" max-vertical-offset="10244">
+              <caret line="381" column="75" selection-start-line="381" selection-start-column="54" selection-end-line="381" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
-      <setting name="OPEN_NEW_TAB" value="true" />
+      <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
@@ -1623,11 +2097,6 @@
                 <option name="name" value="installDebugTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Installs the Release build" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/lolin" />
-                <option name="name" value="installRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Runs lint on all variants." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/lolin" />
                 <option name="name" value="lint" />
@@ -1900,15 +2369,7 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/lolin" />
-                <option name="name" value="validateReleaseWithPropsSigning" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/lolin" />
                 <option name="name" value="zipalignDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/lolin" />
-                <option name="name" value="zipalignRelease" />
               </ExternalTaskPojo>
             </list>
           </value>
@@ -1917,7 +2378,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="7115803242000" />
+        <entry key="$PROJECT_DIR$" value="7148345377815" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2300,27 +2761,27 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services/7.0.0/play-services-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/19.1.0/appcompat-v7-19.1.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-ads/7.0.0/play-services-ads-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-analytics/7.0.0/play-services-analytics-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-appindexing/7.0.0/play-services-appindexing-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-appstate/7.0.0/play-services-appstate-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-base/7.0.0/play-services-base-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-cast/7.0.0/play-services-cast-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-drive/7.0.0/play-services-drive-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-fitness/7.0.0/play-services-fitness-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-games/7.0.0/play-services-games-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-gcm/7.0.0/play-services-gcm-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-identity/7.0.0/play-services-identity-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-location/7.0.0/play-services-location-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-maps/7.0.0/play-services-maps-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-nearby/7.0.0/play-services-nearby-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-panorama/7.0.0/play-services-panorama-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-plus/7.0.0/play-services-plus-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-safetynet/7.0.0/play-services-safetynet-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-wallet/7.0.0/play-services-wallet-7.0.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-wearable/7.0.0/play-services-wearable-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services/7.0.0/play-services-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/19.1.0/appcompat-v7-19.1.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-ads/7.0.0/play-services-ads-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-analytics/7.0.0/play-services-analytics-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-appindexing/7.0.0/play-services-appindexing-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-appstate/7.0.0/play-services-appstate-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-base/7.0.0/play-services-base-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-cast/7.0.0/play-services-cast-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-drive/7.0.0/play-services-drive-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-fitness/7.0.0/play-services-fitness-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-games/7.0.0/play-services-games-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-gcm/7.0.0/play-services-gcm-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-identity/7.0.0/play-services-identity-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-location/7.0.0/play-services-location-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-maps/7.0.0/play-services-maps-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-nearby/7.0.0/play-services-nearby-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-panorama/7.0.0/play-services-panorama-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-plus/7.0.0/play-services-plus-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-safetynet/7.0.0/play-services-safetynet-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-wallet/7.0.0/play-services-wallet-7.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-wearable/7.0.0/play-services-wearable-7.0.0.aar" />
                             <option value="$MODULE_DIR$/libs/gson-2.2.2-javadoc.jar" />
                             <option value="$MODULE_DIR$/libs/gson-2.2.2-sources.jar" />
                             <option value="$MODULE_DIR$/libs/gson-2.2.2.jar" />
@@ -2414,7 +2875,6 @@
         <option value="$PROJECT_DIR$/lolin/src/com/iris/service/ComposerService.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/test/UserServiceTest.java" />
         <option value="$PROJECT_DIR$/library/src/com/handmark/pulltorefresh/library/PullToRefreshListView.java" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/analytics/GoogleTracker.java" />
         <option value="$PROJECT_DIR$/lolin/res/layout/fragment_reple.xml" />
         <option value="$PROJECT_DIR$/lolin/res/values/strings.xml" />
@@ -2445,8 +2905,6 @@
         <option value="$PROJECT_DIR$/lolin/res/layout/fragment_record_search.xml" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/fragment/BoardFragment.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/fragment/ComposerFragment.java" />
-        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java" />
-        <option value="$PROJECT_DIR$/lolin/build.gradle" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/adapter/ReftMenuAdapter.java" />
         <option value="$PROJECT_DIR$/lolin/src/com/iris/adapter/LeftMenuAdapter.java" />
         <option value="$PROJECT_DIR$/lolin/res/layout/row_left_menu.xml" />
@@ -2454,13 +2912,17 @@
         <option value="$PROJECT_DIR$/lolin/res/layout/acticity_board_detail.xml" />
         <option value="$PROJECT_DIR$/lolin/res/layout/layout_left_menudrawer.xml" />
         <option value="$PROJECT_DIR$/lolin/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/lolin/build.gradle" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java" />
+        <option value="$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="830" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -2488,26 +2950,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lolin" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2588,128 +3031,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="AndroidView">
+        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lolin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fragment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lolin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lolin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iris" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adapter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lolin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LOLIN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lolin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2720,8 +3064,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="42f6c41d5134110b" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD_for_Galaxy_1440_2560" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="41002ed9e4ffb1fd" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21" />
     <property name="FullScreen" value="false" />
     <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -2975,26 +3319,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="830" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32492998" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32475248" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32689556" sideWeight="0.5006605" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32212886" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32178217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32492998" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30952382" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21287128" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30891088" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25894135" sideWeight="0.4993395" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19017094" sideWeight="0.4993395" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3006,7 +3351,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22132471" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -3030,17 +3374,24 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java</url>
+          <line>401</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java</url>
+          <line>410</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/library/src/com/handmark/pulltorefresh/library/PullToRefreshListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48453608" vertical-offset="5184" max-vertical-offset="5475">
-          <caret line="355" column="0" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="627">
@@ -3048,29 +3399,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5542169" vertical-offset="3998" max-vertical-offset="8805">
-          <caret line="422" column="7" selection-start-line="422" selection-start-column="7" selection-end-line="422" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/analytics/GoogleTracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6164818" vertical-offset="719" max-vertical-offset="1350">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/layout/fragment_reple.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52747256" vertical-offset="105" max-vertical-offset="1080">
           <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/values/strings.xml">
@@ -3121,20 +3458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/PushActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6890547" vertical-offset="1909" max-vertical-offset="2400">
-          <caret line="82" column="40" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/IntroActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57511735" vertical-offset="1435" max-vertical-offset="2325">
-          <caret line="138" column="30" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/ContentFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="660">
@@ -3142,39 +3465,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/layout/activity_facebook_login.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3077" max-vertical-offset="4200">
           <caret line="219" column="12" selection-start-line="219" selection-start-column="12" selection-end-line="219" selection-end-column="51" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/res/layout/activity_intro.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/res/layout/activity_intro.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
           <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2943" max-vertical-offset="5715">
-          <caret line="249" column="0" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -3193,14 +3502,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/layout/fragment_board.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/values/arrays.xml">
@@ -3208,13 +3517,6 @@
         <state vertical-scroll-proportion="0.72074467" vertical-offset="779" max-vertical-offset="1155">
           <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/facebook/src/com/facebook/AppEventsLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.20107238" vertical-offset="300" max-vertical-offset="18795">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -3237,14 +3539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="454">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/res/values/version.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06993007" vertical-offset="0" max-vertical-offset="429">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3271,25 +3565,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/layout/fragment_detail_record_search.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6506024" vertical-offset="0" max-vertical-offset="495">
           <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/res/layout/fragment_record_search.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/res/layout/fragment_record_search.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.84819275" vertical-offset="263" max-vertical-offset="705">
           <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/BoardFragment.java">
@@ -3314,35 +3608,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/RepleFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17086332" vertical-offset="2020" max-vertical-offset="5760">
-          <caret line="181" column="16" selection-start-line="181" selection-start-column="16" selection-end-line="181" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65023476" vertical-offset="5783" max-vertical-offset="7050">
-          <caret line="488" column="15" selection-start-line="488" selection-start-column="15" selection-end-line="488" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.666667" vertical-offset="147" max-vertical-offset="585">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1230">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state vertical-scroll-proportion="-10.666667" vertical-offset="147" max-vertical-offset="585">
+          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -3371,29 +3643,15 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/config/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="880" max-vertical-offset="2310">
-          <caret line="68" column="53" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693" vertical-offset="2160" max-vertical-offset="5970">
-          <caret line="204" column="63" selection-start-line="204" selection-start-column="63" selection-end-line="204" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/layout/row_left_menu.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65068495" vertical-offset="180" max-vertical-offset="675">
           <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/adapter/LeftMenuAdapter.java">
@@ -3401,48 +3659,48 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="1245">
           <caret line="30" column="84" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="84" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#1226#1227#0" expanded="true" />
-            <element signature="e#1275#1276#0" expanded="true" />
-            <element signature="e#1332#1333#0" expanded="true" />
-            <element signature="e#1363#1364#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1125#1126#0" expanded="false" />
+            <element signature="e#1167#1168#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="false" />
+            <element signature="e#1275#1276#0" expanded="false" />
+            <element signature="e#1332#1333#0" expanded="false" />
+            <element signature="e#1363#1364#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/layout/row_board_list.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6164383" vertical-offset="330" max-vertical-offset="3345">
           <caret line="40" column="69" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="69" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/layout/acticity_board_detail.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5040">
           <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="56" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/res/layout/layout_left_menudrawer.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41095892" vertical-offset="0" max-vertical-offset="1155">
           <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lolin/AndroidManifest.xml">
@@ -3450,6 +3708,128 @@
         <state vertical-scroll-proportion="0.6277533" vertical-offset="0" max-vertical-offset="1575">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1144" max-vertical-offset="2132">
+          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/analytics/GoogleTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1343" max-vertical-offset="2236">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/PushActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1690" max-vertical-offset="3744">
+          <caret line="82" column="40" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/IntroActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3326" max-vertical-offset="3900">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/facebook/src/com/facebook/AppEventsLogger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4413" max-vertical-offset="32578">
+          <caret line="198" column="47" selection-start-line="198" selection-start-column="47" selection-end-line="198" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/ComposerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5408" max-vertical-offset="9906">
+          <caret line="249" column="0" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/facebook/src/com/facebook/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="11407" max-vertical-offset="58058">
+          <caret line="482" column="22" selection-start-line="482" selection-start-column="22" selection-end-line="482" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/fragment/RepleFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.2620153" vertical-offset="6051" max-vertical-offset="9984">
+          <caret line="167" column="7" selection-start-line="167" selection-start-column="7" selection-end-line="167" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/entities/FaceBookUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2015504" vertical-offset="0" max-vertical-offset="645">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/config/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4004">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8261" max-vertical-offset="10244">
+          <caret line="381" column="75" selection-start-line="381" selection-start-column="54" selection-end-line="381" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/service/FacebookLoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44341084" vertical-offset="156" max-vertical-offset="1430">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/FaceBookLoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7488" max-vertical-offset="13702">
+          <caret line="356" column="10" selection-start-line="356" selection-start-column="8" selection-end-line="356" selection-end-column="8" />
+          <folding>
+            <element signature="e#6441#6756#0" expanded="true" />
+            <element signature="e#6749#6750#0" expanded="true" />
+            <element signature="e#10763#11285#0" expanded="true" />
+            <element signature="e#11279#11280#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lolin/src/com/iris/lolin/BoardDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56782335" vertical-offset="8090" max-vertical-offset="12402">
+          <caret line="403" column="21" selection-start-line="403" selection-start-column="21" selection-end-line="403" selection-end-column="21" />
+          <folding>
+            <element signature="e#12422#13123#0" expanded="true" />
+            <element signature="e#13117#13118#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

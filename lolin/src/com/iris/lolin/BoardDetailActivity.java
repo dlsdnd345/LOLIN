@@ -53,6 +53,8 @@ import com.iris.util.SharedpreferencesUtil;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Arrays;
+
 public class BoardDetailActivity extends ActionBarActivity {
 
     private static final String TAG = BoardDetailActivity.class.getSimpleName();
@@ -397,7 +399,10 @@ public class BoardDetailActivity extends ActionBarActivity {
 			prograssBar.setVisibility(View.VISIBLE);
 
 			Bundle postParams = new Bundle();
-			postParams.putByteArray(Config.FLAG.PICTURE,data);
+			postParams.putByteArray(Config.FLAG.PICTURE, data);
+
+            //공유하기 권한
+            session.requestNewPublishPermissions(new Session.NewPermissionsRequest(this, Arrays.asList("publish_actions")));
 
 			com.facebook.Request.Callback callback = new com.facebook.Request.Callback() 
 			{

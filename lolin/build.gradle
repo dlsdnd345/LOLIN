@@ -34,22 +34,22 @@ android {
         release.setRoot('build-types/release')
     }
 
-    signingConfigs{
-
-        releaseWithProps{
-            storeFile file(keystore) // 파일경로 Root app
-            storePassword keystore_pass // 1차 비밀번호
-            keyAlias key_alias // 키 이름
-            keyPassword key_pass // 키 비밀번호
-        }
-
-    }
+//    signingConfigs{
+//
+//        releaseWithProps{
+//            storeFile file(keystore) // 파일경로 Root app
+//            storePassword keystore_pass // 1차 비밀번호
+//            keyAlias key_alias // 키 이름
+//            keyPassword key_pass // 키 비밀번호
+//        }
+//
+//    }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.releaseWithProps
+//            signingConfig signingConfigs.releaseWithProps
         }
     }
 
