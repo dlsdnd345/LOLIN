@@ -13,4 +13,4 @@
     <GoogleStyleProgressLayouts>
        <layout name="default">com.handmark.pulltorefresh.library.internal.DefaultGoogleStyleProgressLayout</layout> 
     </GoogleStyleProgressLayouts>    
-</PullToRefresh><!-- From: file:/C:/Users/shoki/AndroidStudioProjects/LOLIN/library/res/xml/pulltorefresh.xml -->
+</PullToRefresh><!-- From: file:/Users/woong/LOLIN/library/res/xml/pulltorefresh.xml -->
