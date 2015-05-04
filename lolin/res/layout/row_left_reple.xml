@@ -35,6 +35,16 @@
                 android:textSize="13sp" />
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_white"
+                android:text="삭제하기"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/text_reple_user_name"
+                android:textSize="13sp" />
+
+            <TextView
                 android:id="@+id/text_reple_content"
                 android:layout_width="wrap_content"
                 android:maxWidth="200dp"

@@ -104,6 +104,9 @@
     <!-- 네트워크 팝업 -->
     <string name="dialog_network_warning_title">경고</string>
     <string name="dialog_network_warning_message">네트워크를 활성화 시켜 주세요.</string>
+    <string name="title_activity_record_search">RecordSearchActivity</string>
+
+    <string name="hello_world">Hello world!</string>
 
 
 

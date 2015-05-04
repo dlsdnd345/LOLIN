@@ -76,8 +76,6 @@ android {
         compile 'com.google.android.gms:play-services:7.0.0'
         compile 'com.android.support:appcompat-v7:19.1.+'
 
-
-
     }
 
 }

@@ -123,6 +123,7 @@ public class Config {
 		public static final  	String NETWORK_CLEAR 	= "네트워크 상태를 확인해 주세요.";
 		public static final 	String BOARD_CONTENT 	= "boardContent";
 		public static final 	String NOTIBLOCK 		= "notiblock";
+        public static final 	String REFRESH_BLOCK 		= "refreshBlock";
 		public static final 	String PICTURE 			= "picture";
 		public static final 	String ID 				= "id";
 		public static final 	String NAME				= "name";

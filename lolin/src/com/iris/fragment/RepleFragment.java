@@ -2,6 +2,7 @@ package com.iris.fragment;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -33,6 +34,7 @@ import com.iris.entities.User;
 import com.iris.listener.MessageListener;
 import com.iris.lolin.BoardDetailActivity;
 import com.iris.lolin.R;
+import com.iris.lolin.RecordSearchActivity;
 import com.iris.service.RepleService;
 import com.iris.service.SettingService;
 import com.iris.service.UserService;
@@ -415,12 +417,15 @@ public class RepleFragment extends Fragment {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
             //TODO : 상대방 전적 검색 기능으로대체
-//            if (userName.equals(repleList.get(position).getUserName())) {
-//
-//                deleteDialog(position);
-//            } else {
-//                Toast.makeText(getActivity(), getString(R.string.reple_fragment_text_not_delete) , Toast.LENGTH_SHORT).show();
-//            }
+            if (userName.equals(repleList.get(position).getUserName()) && userName.equals(user.getSummonerName())) {
+
+                deleteDialog(position);
+            } else {
+
+                Intent inetnt = new Intent(getActivity(), RecordSearchActivity.class);
+                inetnt.putExtra("summernerName",repleList.get(position).getUserName());
+                startActivity(inetnt);
+            }
         }
     };
 

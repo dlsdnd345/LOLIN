@@ -37,6 +37,17 @@
                 android:textSize="13sp" />
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_white"
+                android:layout_toLeftOf="@+id/text_reple_user_name"
+                android:text="전적보기"
+                android:textSize="13sp" />
+
+
+            <TextView
                 android:id="@+id/text_reple_content"
                 android:layout_width="wrap_content"
                 android:maxWidth="200dp"

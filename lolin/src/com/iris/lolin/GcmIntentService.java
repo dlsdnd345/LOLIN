@@ -16,10 +16,6 @@
 
 package com.iris.lolin;
 
-import com.google.android.gms.gcm.GoogleCloudMessaging;
-import com.iris.config.Config;
-import com.iris.util.SharedpreferencesUtil;
-
 import android.app.Activity;
 import android.app.IntentService;
 import android.app.Notification;
@@ -28,9 +24,12 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+
+import com.google.android.gms.gcm.GoogleCloudMessaging;
+import com.iris.config.Config;
+import com.iris.util.SharedpreferencesUtil;
 
 /**
  * This {@code IntentService} does the actual handling of the GCM message.
@@ -109,9 +108,22 @@ public class GcmIntentService extends IntentService {
 		NotificationManager notificationManager = (NotificationManager)context.getSystemService(Activity.NOTIFICATION_SERVICE);
 		
 		//노티 선택시 화면 이동 설정
-		PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, new Intent(context, BoardDetailActivity.class)
-		.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-		.putExtra(Config.FLAG.MESSAGE, msg), 0); // 노티 선택시 화면전환
+
+        PendingIntent pendingIntent = null;
+
+        if(facebookId == null){
+
+            //전체 푸시 경우
+            pendingIntent = PendingIntent.getActivity(context, 0, new Intent(context, MainActivity.class)
+                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK), 0); // 노티 선택시 화면전환
+        }else{
+            // 댓글 푸시 경우
+            pendingIntent = PendingIntent.getActivity(context, 1, new Intent(context, BoardDetailActivity.class)
+                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    .putExtra(Config.FLAG.MESSAGE, msg), PendingIntent.FLAG_UPDATE_CURRENT); // 노티 선택시 화면전환
+        }
+
+
 		NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
     	
 		sharedpreferencesUtil.put(Config.BOARD.BOARD_ID, boardId);
@@ -143,6 +155,12 @@ public class GcmIntentService extends IntentService {
 		 *  스크린이 꺼져있는지 안꺼져있는지 확인이 필요하다.
 		 */
 		if(sharedpreferencesUtil.getValue("notiblock", "").equals("false")){
+
+            //전체 푸시 경우 화면을 보여줄 필요가 없다.
+            if(facebookId == null){
+                return;
+            }
+
 			Intent newIntent = new Intent(context, PushActivity.class);  
 			newIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			newIntent.putExtra(Config.FLAG.MESSAGE, msg);
@@ -160,13 +178,19 @@ public class GcmIntentService extends IntentService {
      */
     private void sendMessageBroadCast(Intent intent){
 
-        Intent i = new Intent("BoardDetailActivity");
-        i.putExtra("message", intent.getExtras().getString("message"));
-        i.putExtra("boardId", intent.getExtras().getString("boardId"));
-        i.putExtra("summernerName", intent.getExtras().getString("summernerName"));
-        i.putExtra("facebookId", intent.getExtras().getString("facebookId"));
-        i.putExtra("repleId", intent.getExtras().getString("repleId"));
-        i.putExtra("writeTime", intent.getExtras().getString("writeTime"));
-        sendBroadcast(i);
+        //전체 푸시 경우 화면을 보여줄 필요가 없다.
+        if(intent.getExtras().getString("facebookId") != null) {
+            return;
+        }
+
+            Intent i = new Intent("BoardDetailActivity");
+            i.putExtra("message", intent.getExtras().getString("message"));
+            i.putExtra("boardId", intent.getExtras().getString("boardId"));
+            i.putExtra("summernerName", intent.getExtras().getString("summernerName"));
+            i.putExtra("facebookId", intent.getExtras().getString("facebookId"));
+            i.putExtra("repleId", intent.getExtras().getString("repleId"));
+            i.putExtra("writeTime", intent.getExtras().getString("writeTime"));
+            sendBroadcast(i);
+
     }
 }

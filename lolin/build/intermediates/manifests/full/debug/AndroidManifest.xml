@@ -21,6 +21,11 @@
         android:name="com.iris.lolin.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
     <application
         android:name="com.iris.analytics.GoogleAnalyticsApp"
         android:allowBackup="true"
@@ -95,6 +100,10 @@
             android:value="@integer/google_play_services_version" />
         <!-- 구글 통계 -->
 
+        <activity
+            android:name="com.iris.lolin.RecordSearchActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
     </application>
 
 </manifest>

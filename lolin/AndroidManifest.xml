@@ -17,10 +17,14 @@
     <uses-permission android:name="com.iris.lolin.permission.C2D_MESSAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-
     <permission
         android:name="com.iris.lolin.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
+
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
 
     <application
         android:name="com.iris.analytics.GoogleAnalyticsApp"
@@ -29,17 +33,17 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.Actionbarstyle" >
         <activity
-            android:name="com.iris.lolin.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
         </activity>
-        <activity android:name="ComposerActivity" >
+        <activity android:name=".ComposerActivity" >
         </activity>
         <activity
-            android:name="BoardDetailActivity"
+            android:name=".BoardDetailActivity"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="IntroActivity"
+            android:name=".IntroActivity"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,7 +52,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.iris.lolin.FaceBookLoginActivity"
+            android:name=".FaceBookLoginActivity"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
         </activity>
         <activity
@@ -56,23 +60,22 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
         </activity>
         <activity
-            android:name="PushActivity"
+            android:name=".PushActivity"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
 
-        <!--구글 애드몹-->
+        <!-- 구글 애드몹 -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
-            android:theme="@android:style/Theme.Translucent"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/app_id" />
 
         <receiver
-            android:name="com.iris.lolin.GcmBroadcastReceiver"
+            android:name=".GcmBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
 
@@ -86,15 +89,21 @@
         </receiver>
 
         <!-- GCM 리시버에서 돌리는 서비스 -->
-        <service android:name="com.iris.lolin.GcmIntentService" />
+        <service android:name=".GcmIntentService" />
 
         <!-- 서비스명 변경하면 안됨 -->
 
+
         <!-- 구글 통계 -->
-        <meta-data android:name="com.google.android.gms.version"
+        <meta-data
+            android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <!-- 구글 통계 -->
 
+        <activity
+            android:name=".RecordSearchActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
     </application>
 
 </manifest>

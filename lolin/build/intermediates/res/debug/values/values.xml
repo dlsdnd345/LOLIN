@@ -432,6 +432,7 @@ available. Please contact the developer for assistance.</string>
     <string name="facebooklogint_activity_edit_summernername_empty_message">소환사 명을 입력해 주세요.</string>
     <string name="facebooklogint_activity_text_hello_message">HELLO</string>
     <string name="gcm_service_noti_title">롤인 앱으로 부터 메세지가 도착했습니다.</string>
+    <string name="hello_world">Hello world!</string>
     <string name="ic_action_new">올리기</string>
     <string name="ic_action_next">다음</string>
     <string name="ic_action_remove">삭제</string>
@@ -468,6 +469,7 @@ available. Please contact the developer for assistance.</string>
     <string name="store_picture_title">Save image</string>
     <!-- From: file:/Users/woong/LOLIN/lolin/res/values/strings.xml -->
     <eat-comment/>
+    <string name="title_activity_record_search">RecordSearchActivity</string>
     <string name="title_facebook_login">login</string>
     <string name="title_section1">게시판</string>
     <string name="title_section2">내가 쓴글</string>

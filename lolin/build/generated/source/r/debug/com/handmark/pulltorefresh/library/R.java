@@ -83,8 +83,8 @@ public final class R {
 	public static final class id {
 		public static final int both = 0x7f0b0021;
 		public static final int disabled = 0x7f0b0022;
-		public static final int fl_inner = 0x7f0b00bd;
-		public static final int fl_inner_for_google_style = 0x7f0b00ba;
+		public static final int fl_inner = 0x7f0b00be;
+		public static final int fl_inner_for_google_style = 0x7f0b00bb;
 		public static final int google = 0x7f0b0023;
 		public static final int gridview = 0x7f0b0003;
 		public static final int manualOnly = 0x7f0b0024;
@@ -92,31 +92,31 @@ public final class R {
 		public static final int pullFromEnd = 0x7f0b0026;
 		public static final int pullFromStart = 0x7f0b0027;
 		public static final int pullUpFromBottom = 0x7f0b0028;
-		public static final int pull_to_refresh_image = 0x7f0b00be;
-		public static final int pull_to_refresh_progress = 0x7f0b00bf;
-		public static final int pull_to_refresh_sub_text = 0x7f0b00bc;
-		public static final int pull_to_refresh_text = 0x7f0b00bb;
-		public static final int pulling_left_progressbar = 0x7f0b00c2;
-		public static final int pulling_progress = 0x7f0b00c0;
-		public static final int pulling_right_progressbar = 0x7f0b00c3;
-		public static final int refreshing_progress = 0x7f0b00c1;
+		public static final int pull_to_refresh_image = 0x7f0b00bf;
+		public static final int pull_to_refresh_progress = 0x7f0b00c0;
+		public static final int pull_to_refresh_sub_text = 0x7f0b00bd;
+		public static final int pull_to_refresh_text = 0x7f0b00bc;
+		public static final int pulling_left_progressbar = 0x7f0b00c3;
+		public static final int pulling_progress = 0x7f0b00c1;
+		public static final int pulling_right_progressbar = 0x7f0b00c4;
+		public static final int refreshing_progress = 0x7f0b00c2;
 		public static final int scrollview = 0x7f0b0007;
 		public static final int webview = 0x7f0b0008;
 	}
 	public static final class layout {
-		public static final int pull_to_refresh_header_google_style = 0x7f030037;
-		public static final int pull_to_refresh_header_horizontal = 0x7f030038;
-		public static final int pull_to_refresh_header_vertical = 0x7f030039;
-		public static final int pull_to_refresh_progress_google_style = 0x7f03003a;
-		public static final int pulling_progress_layout = 0x7f03003b;
+		public static final int pull_to_refresh_header_google_style = 0x7f030038;
+		public static final int pull_to_refresh_header_horizontal = 0x7f030039;
+		public static final int pull_to_refresh_header_vertical = 0x7f03003a;
+		public static final int pull_to_refresh_progress_google_style = 0x7f03003b;
+		public static final int pulling_progress_layout = 0x7f03003c;
 	}
 	public static final class string {
-		public static final int pull_to_refresh_from_bottom_pull_label = 0x7f0d0080;
-		public static final int pull_to_refresh_from_bottom_refreshing_label = 0x7f0d0081;
-		public static final int pull_to_refresh_from_bottom_release_label = 0x7f0d0082;
-		public static final int pull_to_refresh_pull_label = 0x7f0d0083;
-		public static final int pull_to_refresh_refreshing_label = 0x7f0d0084;
-		public static final int pull_to_refresh_release_label = 0x7f0d0085;
+		public static final int pull_to_refresh_from_bottom_pull_label = 0x7f0d0081;
+		public static final int pull_to_refresh_from_bottom_refreshing_label = 0x7f0d0082;
+		public static final int pull_to_refresh_from_bottom_release_label = 0x7f0d0083;
+		public static final int pull_to_refresh_pull_label = 0x7f0d0084;
+		public static final int pull_to_refresh_refreshing_label = 0x7f0d0085;
+		public static final int pull_to_refresh_release_label = 0x7f0d0086;
 	}
 	public static final class styleable {
 		public static final int[] PullToRefresh = { 0x7f010082, 0x7f010083, 0x7f010084, 0x7f010085, 0x7f010086, 0x7f010087, 0x7f010088, 0x7f010089, 0x7f01008a, 0x7f01008b, 0x7f01008c, 0x7f01008d, 0x7f01008e, 0x7f01008f, 0x7f010090, 0x7f010091, 0x7f010092, 0x7f010093, 0x7f010094, 0x7f010095, 0x7f010096, 0x7f010097, 0x7f010098, 0x7f010099, 0x7f01009a, 0x7f01009b, 0x7f01009c, 0x7f01009d, 0x7f01009e, 0x7f01009f, 0x7f0100a0, 0x7f0100a1, 0x7f0100a2, 0x7f0100a3, 0x7f0100a4, 0x7f0100a5, 0x7f0100a6 };
